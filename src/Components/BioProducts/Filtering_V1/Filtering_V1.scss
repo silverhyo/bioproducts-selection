@@ -1,0 +1,136 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sunflower:wght@300&display=swap');
+
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundVeryDarkColor: rgb(11, 11, 11);
+  --backGroundDarkColor: rgb(18, 18, 17);
+  --backGroundColor: rgb(44, 44, 41);
+  --whiteTextColor: rgb(240, 240, 232);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  --XXXLargeSpace: 100px;
+  --SmallSpace: 20px;
+  /* Font Size (Default) */
+  --XXXBigFontSize: 3.125rem;
+  --XBigFontSize: 1.375rem;
+  --XXXLargeFontSize: 1.25rem;
+  --XXLargeFontSize: 1.125rem; 
+  --XLargeFontSize: 1.06rem; 
+  --normalFontSize: 1rem; 
+}
+
+
+.Filtering_V1_Container {
+  width: 100%;
+  height: 100%;
+  background: var(--backGroundDarkColor);
+
+  .Filtering_V1_Container_Box {
+    padding: 10px;
+
+    .Filtering_V1_Container_Box_Form {
+      width: 100%;
+      height: 100%;
+
+      .Filtering_V1_Container_Box_Form_Filtering {
+        color: var(--whiteTextColor);
+        font-size: 14px;;
+
+        .Filtering_V1_Container_Box_Form_Filtering_Query01 {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 15px;
+
+          .Filtering_V1_Container_Box_Form_Filtering_Query01_Label {
+            margin-bottom: 5px;
+          }
+          .Filtering_V1_Container_Box_Form_Filtering_Query01_Select {
+            max-width: 500px;
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+
+
+            .Filtering_V1_Container_Box_Form_Filtering_Query01_Options {
+              color: var(--backGroundVeryDarkColor);
+            }
+          }
+        }
+        .Filtering_V1_Container_Box_Form_Filtering_Search {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 15px;
+          .Filtering_V1_Container_Box_Form_Filtering_Search_Label {
+            margin-bottom: 5px;
+          }
+          .Filtering_V1_Container_Box_Form_Filtering_Search_Box {
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+            height: 30px;
+
+            .Filtering_V1_Container_Box_Form_Filtering_Search_Input{
+              max-width: 500px;
+              flex-basis: 75%;
+              padding: 5px;
+              color: var(--backGroundColor);
+              
+              &::placeholder {
+                color: red;
+                font-weight: 600;
+              }
+
+            }
+            .Filtering_V1_Container_Box_Form_Filtering_Search_Button{
+              flex-basis: 25%;
+              padding: 5px;
+              font-weight: 500;
+
+            }
+          }
+
+        }
+      }
+      .Filtering_V1_Container_Box_Form_Filtering_Button {
+        width: 150px;
+        height: 30px;
+        display: flex;
+        margin: 0 auto;
+        cursor: pointer;
+        display: none;
+      }
+    }
+    .Filtering_V1_Container_Box_Count {
+      width: 100%;
+      height: 60px;
+      color: var(--whiteTextColor);
+      padding: 20px;
+      background: var(--backGroundVeryDarkColor);
+      margin-top: 20px;
+      
+      .Filtering_V1_Container_Box_Count_Text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+
+@keyframes fading02 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

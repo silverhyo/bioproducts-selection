@@ -1,0 +1,274 @@
+{
+  "ProductType" : [
+    {
+      "ID": "1",
+      "Value": "Media",
+      "Title": "Media"
+    },
+    {
+      "ID": "2",
+      "Value": "Reagent",
+      "Title": "Reagent"
+    },
+    {
+      "ID": "3",
+      "Value": "Filter",
+      "Title": "Filter"
+    },
+    {
+      "ID": "4",
+      "Value": "Chromatography",
+      "Title": "Chromatography"
+    },
+    {
+      "ID" : "5",
+      "Value" : "Service(Confidence/ect)",
+      "Title" : "Service(Confidence/ect)"
+    }
+  ],
+  "Filtration": [
+    {
+      "ID": "1",
+      "Value": "BufferSterileFiltration",
+      "Title": "Buffer Sterile Filtration"
+    },
+    {
+      "ID": "2",
+      "Value": "MediaSterileFiltration",
+      "Title": "Media Sterile Filtration"
+    },
+    {
+      "ID": "3",
+      "Value": "DepthFiltration",
+      "Title": "Depth Filtration"
+    },
+    {
+      "ID": "4",
+      "Value": "DsPreFiltration",
+      "Title": "DS Pre Filtration"
+    },
+    {
+      "ID": "5",
+      "Value": "DsSterileFiltration",
+      "Title": "DS Sterile Filtration"
+    },
+    {
+      "ID": "6",
+      "Value": "FinalSterileFiltration",
+      "Title": "Final Sterile Filtration"
+    },
+    {
+      "ID": "7",
+      "Value": "TffUltraFiltration",
+      "Title": "TFF Ultra Filtration"
+    },
+    {
+      "ID": "8",
+      "Value": "TffMicroFiltration",
+      "Title": "TFF Micro Filtration"
+    },
+    {
+      "ID": "9",
+      "Value": "VirusRemovalFiltration",
+      "Title": "Virus Removal Filtration"
+    },
+    {
+      "ID": "10",
+      "Value": "AirGasFiltration",
+      "Title": "Air/Gas Filtration"
+    }
+  ],
+  "Modality" : [
+    {
+      "ID" : "1",
+      "Value": "mAb",
+      "Title": "mAb"
+    },
+    {
+      "ID" : "2",
+      "Value": "ADC",
+      "Title": "ADC"
+    },
+    {
+      "ID" : "3",
+      "Value": "Vaccine",
+      "Title": "Vaccine"
+    },
+    {
+      "ID" : "4",
+      "Value": "CGT",
+      "Title": "CGT"
+    },
+    {
+      "ID" : "5",
+      "Value": "Exosome",
+      "Title": "Exosome"
+    },
+    {
+      "ID" : "6",
+      "Value": "Plasma",
+      "Title": "Plasma"
+    }
+  ],
+  "Manufacturer" : [
+    {
+      "ID" : "1",
+      "Value": "Sartorius",
+      "Title": "Sartorius"
+    },
+    {
+      "ID" : "2",
+      "Value": "Merck",
+      "Title": "Merck"
+    },
+    {
+      "ID" : "3",
+      "Value": "Cytiva",
+      "Title": "Cytiva"
+    },
+    {
+      "ID" : "4",
+      "Value": "Thermofisher",
+      "Title": "Thermo Fisher"
+    }
+  ],
+  "ApplicationCellLine" : [
+    {
+      "ID" : "1",
+      "Value": "CHO",
+      "Title": "CHO"
+    },
+    {
+      "ID" : "2",
+      "Value": "DG44",
+      "Title": "DG44"
+    },
+    {
+      "ID" : "3",
+      "Value": "K1",
+      "Title": "K1"
+    },
+    {
+      "ID" : "4",
+      "Value": "S",
+      "Title": "S"
+    },
+    {
+      "ID" : "5",
+      "Value": "GS",
+      "Title": "GS"
+    },
+    {
+      "ID" : "6",
+      "Value": "HEK293",
+      "Title": "HEK293"
+    },
+    {
+      "ID" : "7",
+      "Value": "MDCK",
+      "Title": "MDCK"
+    },
+    {
+      "ID" : "8",
+      "Value": "MDBK",
+      "Title": "MDBK"
+    },
+    {
+      "ID" : "9",
+      "Value": "BHK21",
+      "Title": "BHK21"
+    },
+    {
+      "ID" : "10",
+      "Value": "VERO",
+      "Title": "VERO"
+    },
+    {
+      "ID" : "11",
+      "Value": "HSC",
+      "Title": "HSC"
+    },
+    {
+      "ID" : "12",
+      "Value": "NK",
+      "Title": "NK"
+    },
+    {
+      "ID" : "13",
+      "Value": "CARNK",
+      "Title": "CAR-NK"
+    },
+    {
+      "ID" : "14",
+      "Value": "DendriticCell",
+      "Title": "Dendritic Cell"
+    },
+    {
+      "ID" : "15",
+      "Value": "TCELL",
+      "Title": "T-CELL"
+    },
+    {
+      "ID" : "16",
+      "Value": "CART",
+      "Title": "CAR-T"
+    },
+    {
+      "ID" : "17",
+      "Value": "MSC",
+      "Title": "Mesenchymal Stem Cell(MSC)"
+    },
+    {
+      "ID" : "18",
+      "Value": "hPSC(iP5)",
+      "Title": "hPSC(iP5)"
+    },
+    {
+      "ID" : "19",
+      "Value": "Exosome",
+      "Title": "Exosome"
+    },
+    {
+      "ID" : "20",
+      "Value": "EndothelialCell",
+      "Title": "Endothelial Cell"
+    }
+  ],
+  "Boolean" : [
+    {
+      "ID" : "0",
+      "Value" : "Yes"
+    }
+  ],
+  "Contact" : [
+    {
+      "ID" : "0",
+      "Sartorius" : "https://www.sartorius.co.kr/help",
+      "Merck" : "https://www.naver.com",
+      "Cytiva" : "https://www.daum.net",
+      "Thermo" : "https://www.google.com"
+    }
+  ],
+  "Service" : [
+    {
+      "ID" : "1",
+      "Value" : "EXSIM",
+      "Title" : "EXSIM"
+    },
+    {
+      "ID" : "2",
+      "Value" : "Container_Validation",
+      "Title" : "Container Validation"
+    },
+    {
+      "ID" : "3",
+      "Value" : "Filter_Validation",
+      "Title" : "Filter Validation"
+    },
+    {
+      "ID" : "4",
+      "Value" : "Virus_Clearance_Study",
+      "Title" : "Virus Clearance Study"
+    }
+  ]
+}

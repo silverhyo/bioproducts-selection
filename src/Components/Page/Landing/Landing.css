@@ -1,0 +1,91 @@
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --whiteTextColor: rgb(240, 240, 232);
+  --requiredBlank: rgba(171, 250, 164, 0.991);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  /* Space (Default) */
+  --100pxSpace: 100px;
+  --50pxSpace: 50px;
+  --30pxSpace: 30px;
+  --20pxSpace: 20px;
+  /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --2d275rem: 2.375rem;
+  --1d875rem: 1.875rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem;
+  --1d05rem: 1.05rem;
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem;
+}
+
+.Landing_Container {
+  width: 100%;
+  height: 100vh;
+  animation-name: fadeIn09;
+  animation-duration: 3s;
+  position: relative;
+  margin: 0 auto;
+  background-size: cover;
+  background: var(--whiteTextColor);
+}
+.Landing_Container .Landing_Container_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.Landing_Container .Landing_Container_box .Landing_Container_box_ImageBox {
+  overflow: hidden;
+}
+.Landing_Container .Landing_Container_box .Landing_Container_box_ImageBox .Landing_Container_box_ImageBox_Image {
+  width: 100%;
+  opacity: 0.6;
+  object-fit: cover;
+}
+.Landing_Container .Landing_Container_box .Landing_Container_box_TextBox {
+  position: absolute;
+  background: rgba(240, 240, 232, 0.466);
+  width: 70%;
+  top: 10%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+.Landing_Container .Landing_Container_box .Landing_Container_box_TextBox .Landing_Container_box_TextBox_Text {
+  font-size: var(--2d275rem);
+  font-weight: 700;
+}
+.Landing_Container .Landing_Container_box .Landing_Container_box_ButtonBox {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Landing_Container .Landing_Container_box .Landing_Container_box_ButtonBox .Landing_Container_box_ButtonBox_Button {
+  width: 120px;
+  height: 120px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(23, 23, 22, 0.694);
+  color: var(--whiteTextColor);
+  font-size: var(--1d125rem);
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+@keyframes fadeIn09 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Landing.css.map */

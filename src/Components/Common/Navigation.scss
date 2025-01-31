@@ -1,0 +1,75 @@
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --whiteTextColor: rgb(240, 240, 232);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  --XXXLargeSpace: 100px;
+  --SmallSpace: 20px;
+  /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem; 
+  --1d05rem: 1.05rem; 
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem; 
+}
+
+.HomeChildNav01_Container {
+  width: 100%;
+  height: 120px;
+  background: var(--backGroundColor);
+  position: relative;
+
+  .HomeChildNav01_Container_NavBox {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    .HomeChildNav01_Container_NavBox_Menu {
+      text-decoration: none;
+      color: white;
+      font-size: var(--1rem);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      &:hover {
+        transition: 1s;
+        color: #FFF100;
+      }
+    }
+    
+  }
+  .HomeChildNav01_Container_Hr {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid gray;
+  }
+
+  .HomeChildNav01_Container_UserBox {
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--whiteTextColor);
+    position: absolute;
+    right: 10px;
+    margin-top: 13px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .HomeChildNav01_Container_UserBox_Image {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

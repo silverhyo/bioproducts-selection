@@ -1,0 +1,49 @@
+import React from 'react';
+// import Style CSS
+import "./Contact.css"
+// import ICONS
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdContactMail } from "react-icons/md";
+
+// ! 아래 Prop은 ProductDetailModal로부터 받아온 것 (CONTACTINFO(mobile, manufacturer))
+export default function Contact({CONTACTINFO, JSONDATA01}) {
+
+  // ! a Tag의 정보를 넣기 위해 받아옴
+  const contactInfo = CONTACTINFO;
+  const jsonData = JSONDATA01.Contact;
+
+  
+  // ! 내가 부여한 조건에 맞는 값을 변수에 할당할 수 있다!!!
+  let vendorEmail;
+  if(contactInfo.manufacturer === 'Sartorius') {
+    vendorEmail = jsonData[0].Sartorius;
+  }else if (contactInfo.manufacturer === 'Merck') {
+    vendorEmail = jsonData[0].Merck;
+  }else if (contactInfo.manufacturer === 'Cytiva') {
+    vendorEmail = jsonData[0].Cytiva;
+  }else if (contactInfo.manufacturer === 'Thermo') {
+    vendorEmail = jsonData[0].Thermo;
+  }
+  
+  console.log("vendorEmail :", vendorEmail);
+
+
+  return (
+    <div className='Contact_Container'>
+      <div className='Contact_Container_Box'>
+        <p>이 제품에 대해서 궁금하세요? 아래 연락처로 문의 주세요!</p>
+        <div className='Contact_Container_Box_SmallBox'>
+          <div className='Contact_Container_Box_SmallBox_EmailBox'>
+            <a href={`tel:${contactInfo.mobile}`} className='Contact_Container_Box_SmallBox_EmailBox_Icon'><FaPhoneAlt /></a>
+            <a className='Contact_Container_Box_SmallBox_EmailBox_Text'></a>
+          </div>
+            
+          <div className='Contact_Container_Box_SmallBox_MobileBox'>
+            <a href={`${vendorEmail}`} className='Contact_Container_Box_SmallBox_MobileBox_Icon'><MdContactMail /></a>
+            <a className='Contact_Container_Box_SmallBox_MobileBox_Text'></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+};

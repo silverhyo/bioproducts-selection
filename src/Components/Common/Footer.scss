@@ -1,0 +1,61 @@
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundColor: rgb(44, 44, 41);
+  --iconColor: rgb(167, 162, 162);
+  --whiteTextColor: rgb(240, 240, 232);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  --XXXLargeSpace: 100px;
+  --SmallSpace: 20px;
+  /* Font Size (Default) */
+  --XXXBigFontSize: 3.125rem;
+  --XXBigFontSize: 1.5rem
+  --XBigFontSize: 1.375rem;
+  --XXXLargeFontSize: 1.25rem;
+  --XXLargeFontSize: 1.125rem; 
+  --XLargeFontSize: 1.06rem; 
+  --normalFontSize: 1rem; 
+}
+
+.FooterSection_Container {
+  width: 100%;
+  height: 30vh;
+  background: var(--backGroundColor);
+
+  .FooterSection_Container_Box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .FooterSection_Container_Box_Email {
+      width: 50px;
+      height: 50px;
+      text-decoration: none;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-25px);
+      font-size: 25px;
+      color: (var(--iconColor));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .FooterSection_Container_Box_Text {
+      width: 100%;
+      // border: 1px solid red;
+      color: white;
+      position: absolute;
+      bottom: 30px;
+
+      p {
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --whiteTextColor: rgb(240, 240, 232);
+  --requiredBlank: rgba(171, 250, 164, 0.991);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  /* Space (Default) */
+  --100pxSpace: 100px;
+  --50pxSpace: 50px;
+  --30pxSpace: 30px;
+  --20pxSpace: 20px;
+  /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --2d275rem: 2.375rem;
+  --1d875rem: 1.875rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem;
+  --1d05rem: 1.05rem;
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem;
+}
+
+.ProductsRelated_Container {
+  width: 100%;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box {
+  padding: 10px;
+  padding-top: 50px;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_Title {
+  font-size: var(--1d25rem);
+  margin-bottom: 30px;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_Description {
+  text-align: justify;
+  font-size: var(--0d94rem);
+  margin-bottom: 40px;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  row-gap: 3px;
+  margin-bottom: 40px;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid orange;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox {
+  width: 100%;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image {
+  width: 100%;
+  object-fit: cover;
+  scale: 1.3;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Title {
+  width: 100%;
+  bottom: 0;
+  font-size: var(--0d75rem);
+  background: var(--whiteTextColor);
+  opacity: 0.6;
+  text-align: center;
+  padding: 5px;
+  z-index: 10;
+  position: absolute;
+  color: var(--backGroundDarkColor);
+  font-weight: 500;
+}/*# sourceMappingURL=ProductsRelated.css.map */

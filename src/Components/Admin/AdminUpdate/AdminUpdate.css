@@ -1,0 +1,644 @@
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --whiteTextColor: rgb(240, 240, 232);
+  --requiredBlank: rgba(171, 250, 164, 0.991);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  /* Space (Default) */
+  --100pxSpace: 100px;
+  --50pxSpace: 50px;
+  --30pxSpace: 30px;
+  --20pxSpace: 20px;
+  /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --2d275rem: 2.375rem;
+  --1d875rem: 1.875rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem;
+  --1d05rem: 1.05rem;
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem;
+}
+
+.Edit_EditForm_Container {
+  background: rgb(44, 44, 41);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_EditForm_Container_Box_P {
+  width: 100%;
+  height: 150px;
+  color: var(--whiteTextColor);
+  font-size: var(--2d275rem);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductName_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductName_Container .Edit_ProductName_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductName_Container .Edit_ProductName_Container_Box .Edit_ProductName_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductName_Container .Edit_ProductName_Container_Box .Edit_ProductName_Container_Box_Label {
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductName_Container .Edit_ProductName_Container_Box .Edit_ProductName_Container_Box_Input {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_MainProductImage_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_MainProductImage_Container .Edit_MainProductImage_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_MainProductImage_Container .Edit_MainProductImage_Container_Box .Edit_MainProductImage_Container_Box_Asking {
+  width: 100%;
+  margin-bottom: var(--20pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_MainProductImage_Container .Edit_MainProductImage_Container_Box .Edit_MainProductImage_Container_Box_Asking .Edit_MainProductImage_Container_Box_Asking_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_MainProductImage_Container .Edit_MainProductImage_Container_Box .Edit_MainProductImage_Container_Box_Register {
+  color: var(--whiteTextColor);
+  max-width: 500px;
+  overflow: hidden;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_MainProductImage_Container .Edit_MainProductImage_Container_Box .Edit_MainProductImage_Container_Box_Register .Edit_MainProductImage_Container_Box_Register_Image {
+  border: 1px solid red;
+  width: 100%;
+  margin-bottom: var(--20pxSpace);
+  object-fit: cover;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_MainProductImage_Container .Edit_MainProductImage_Container_Box .Edit_MainProductImage_Container_Box_Register .Edit_MainProductImage_Container_Box_Register_Input {
+  width: 100%;
+  border: none;
+  margin-bottom: 30px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductTitle_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductTitle_Container .Edit_ProductTitle_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductTitle_Container .Edit_ProductTitle_Container_Box .Edit_ProductTitle_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductTitle_Container .Edit_ProductTitle_Container_Box .Edit_ProductTitle_Container_Box_Label {
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductTitle_Container .Edit_ProductTitle_Container_Box .Edit_ProductTitle_Container_Box_Input {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductType_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductType_Container .Edit_ProductType_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductType_Container .Edit_ProductType_Container_Box .Edit_ProductType_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductType_Container .Edit_ProductType_Container_Box .Edit_ProductType_Container_Box_Label {
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductType_Container .Edit_ProductType_Container_Box .Edit_ProductType_Container_Box_Select {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductType_Container .Edit_ProductType_Container_Box .Edit_ProductType_Container_Box_Select .Edit_ProductType_Container_Box_Option {
+  color: var(--blackTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ModalityProducts_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ModalityProducts_Container .Edit_ModalityProducts_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ModalityProducts_Container .Edit_ModalityProducts_Container_Box .Edit_ModalityProducts_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ModalityProducts_Container .Edit_ModalityProducts_Container_Box .Edit_ModalityProducts_Container_Box_Small {
+  display: flex;
+  margin-bottom: 5px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ModalityProducts_Container .Edit_ModalityProducts_Container_Box .Edit_ModalityProducts_Container_Box_Small .Edit_ModalityProducts_Container_Box_Small_Input {
+  padding: 10px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ModalityProducts_Container .Edit_ModalityProducts_Container_Box .Edit_ModalityProducts_Container_Box_Small .Edit_ModalityProducts_Container_Box_Small_Label {
+  margin-left: 5px;
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationFilterProducts_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationFilterProducts_Container .Edit_ApplicationFilterProducts_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationFilterProducts_Container .Edit_ApplicationFilterProducts_Container_Box .Edit_ApplicationFilterProducts_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationFilterProducts_Container .Edit_ApplicationFilterProducts_Container_Box .Edit_ApplicationFilterProducts_Container_Box_Small {
+  display: flex;
+  margin-bottom: 5px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationFilterProducts_Container .Edit_ApplicationFilterProducts_Container_Box .Edit_ApplicationFilterProducts_Container_Box_Small .Edit_ApplicationFilterProducts_Container_Box_Small_Input {
+  padding: 5px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationFilterProducts_Container .Edit_ApplicationFilterProducts_Container_Box .Edit_ApplicationFilterProducts_Container_Box_Small .Edit_ApplicationFilterProducts_Container_Box_Small_Label {
+  margin-left: 5px;
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationCellLine_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationCellLine_Container .Edit_ApplicationCellLine_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationCellLine_Container .Edit_ApplicationCellLine_Container_Box .Edit_ApplicationCellLine_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationCellLine_Container .Edit_ApplicationCellLine_Container_Box .Edit_ApplicationCellLine_Container_Box_Small {
+  display: flex;
+  margin-bottom: 5px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationCellLine_Container .Edit_ApplicationCellLine_Container_Box .Edit_ApplicationCellLine_Container_Box_Small .Edit_ApplicationCellLine_Container_Box_Small_Input {
+  padding: 10px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationCellLine_Container .Edit_ApplicationCellLine_Container_Box .Edit_ApplicationCellLine_Container_Box_Small .Edit_ApplicationCellLine_Container_Box_Small_Label {
+  margin-left: 5px;
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_Manufacturer_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_Manufacturer_Container .Edit_Manufacturer_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_Manufacturer_Container .Edit_Manufacturer_Container_Box .Edit_Manufacturer_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_Manufacturer_Container .Edit_Manufacturer_Container_Box .Edit_Manufacturer_Container_Box_Label {
+  color: white;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_Manufacturer_Container .Edit_Manufacturer_Container_Box .Edit_Manufacturer_Container_Box_Select {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_Manufacturer_Container .Edit_Manufacturer_Container_Box .Edit_Manufacturer_Container_Box_Select .Edit_Manufacturer_Container_Box_Select_Option {
+  color: var(--blackTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box .Edit_DescriptionA_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box .Edit_DescriptionA_Container_Box_P_Small {
+  color: var(--whiteTextColor);
+  max-width: 500px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box .Edit_DescriptionA_Container_Box_P_Small .Edit_DescriptionA_Container_Box_P_Small_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box .Edit_DescriptionA_Container_Box_P_Small .Edit_DescriptionA_Container_Box_P_Small_Image {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid red;
+  margin-bottom: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box .Edit_DescriptionA_Container_Box_P_Small .Edit_DescriptionA_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box .Edit_DescriptionA_Container_Box_P_Small .Edit_DescriptionA_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionA_Container .Edit_DescriptionA_Container_Box .Edit_DescriptionA_Container_Box_P_Small .Edit_DescriptionA_Container_Box_P_Small_Textarea {
+  width: 100%;
+  min-height: 150px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box .Edit_DescriptionB_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box .Edit_DescriptionB_Container_Box_P_Small {
+  max-width: 500px;
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box .Edit_DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box .Edit_DescriptionB_Container_Box_P_Small .Edit_DescriptionB_Container_Box_P_Small_Image {
+  width: 100%;
+  border: 1px solid red;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box .Edit_DescriptionB_Container_Box_P_Small .Edit_DescriptionB_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box .Edit_DescriptionB_Container_Box_P_Small .Edit_DescriptionB_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionB_Container .Edit_DescriptionB_Container_Box .Edit_DescriptionB_Container_Box_P_Small .Edit_DescriptionB_Container_Box_P_Small_Textarea {
+  width: 100%;
+  min-height: 150px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box .Edit_DescriptionC_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box .Edit_DescriptionC_Container_Box_P_Small {
+  max-width: 500px;
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box .Edit_DescriptionC_Container_Box_P_Small .Edit_DescriptionC_Container_Box_P_Small_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box .Edit_DescriptionC_Container_Box_P_Small .Edit_DescriptionC_Container_Box_P_Small_Image {
+  width: 100%;
+  border: 1px solid red;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box .Edit_DescriptionC_Container_Box_P_Small .Edit_DescriptionC_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box .Edit_DescriptionC_Container_Box_P_Small .Edit_DescriptionC_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionC_Container .Edit_DescriptionC_Container_Box .Edit_DescriptionC_Container_Box_P_Small .Edit_DescriptionC_Container_Box_P_Small_Textarea {
+  width: 100%;
+  min-height: 150px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box .Edit_DescriptionD_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box .Edit_DescriptionD_Container_Box_P_Small {
+  max-width: 500px;
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box .Edit_DescriptionD_Container_Box_P_Small .Edit_DescriptionD_Container_Box_P_Small_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box .Edit_DescriptionD_Container_Box_P_Small .Edit_DescriptionD_Container_Box_P_Small_Image {
+  width: 100%;
+  border: 1px solid red;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box .Edit_DescriptionD_Container_Box_P_Small .Edit_DescriptionD_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box .Edit_DescriptionD_Container_Box_P_Small .Edit_DescriptionD_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionD_Container .Edit_DescriptionD_Container_Box .Edit_DescriptionD_Container_Box_P_Small .Edit_DescriptionD_Container_Box_P_Small_Textarea {
+  width: 100%;
+  height: 150px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container {
+  width: 100%;
+  margin-bottom: var(--30pxSpace);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box .Edit_DescriptionE_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box .Edit_DescriptionE_Container_Box_P_Small {
+  max-width: 500px;
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box .Edit_DescriptionE_Container_Box_P_Small .Edit_DescriptionE_Container_Box_P_Small_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box .Edit_DescriptionE_Container_Box_P_Small .Edit_DescriptionE_Container_Box_P_Small_Image {
+  width: 100%;
+  border: 1px solid red;
+  margin-bottom: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box .Edit_DescriptionE_Container_Box_P_Small .Edit_DescriptionE_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box .Edit_DescriptionE_Container_Box_P_Small .Edit_DescriptionE_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_DescriptionE_Container .Edit_DescriptionE_Container_Box .Edit_DescriptionE_Container_Box_P_Small .Edit_DescriptionE_Container_Box_P_Small_Textarea {
+  width: 100%;
+  height: 150px;
+  border: none;
+  padding: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductRelated_Container {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductRelated_Container .Edit_ProductRelated_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductRelated_Container .Edit_ProductRelated_Container_Box .Edit_ProductRelated_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 30px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductRelated_Container .Edit_ProductRelated_Container_Box .Edit_ProductRelated_Container_Box_Related {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductRelated_Container .Edit_ProductRelated_Container_Box .Edit_ProductRelated_Container_Box_Related .Edit_ProductRelated_Container_Box_Related_Text {
+  margin-bottom: 10px;
+  font-size: var(--0d875rem);
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ProductRelated_Container .Edit_ProductRelated_Container_Box .Edit_ProductRelated_Container_Box_Related .Edit_ProductRelated_Container_Box_Related_Text_Key {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container .Edit_ApplicationSpecialist_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container .Edit_ApplicationSpecialist_Container_Box .Edit_ApplicationSpecialist_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 30px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container .Edit_ApplicationSpecialist_Container_Box .Edit_ApplicationSpecialist_Container_Box_Specialist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container .Edit_ApplicationSpecialist_Container_Box .Edit_ApplicationSpecialist_Container_Box_Specialist .Edit_ApplicationSpecialist_Container_Box_Specialist_Text {
+  margin-bottom: 10px;
+  font-size: var(--0d875rem);
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container .Edit_ApplicationSpecialist_Container_Box .Edit_ApplicationSpecialist_Container_Box_Specialist .Edit_ApplicationSpecialist_Container_Box_Specialist_Text_Name {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container .Edit_ApplicationSpecialist_Container_Box .Edit_ApplicationSpecialist_Container_Box_Specialist .Edit_ApplicationSpecialist_Container_Box_Specialist_Text_Position {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .Edit_ApplicationSpecialist_Container .Edit_ApplicationSpecialist_Container_Box .Edit_ApplicationSpecialist_Container_Box_Specialist .Edit_ApplicationSpecialist_Container_Box_Specialist_Text_Mobile {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseDo_Container {
+  width: 100%;
+  background: var(--backGroundColor);
+  margin-bottom: var(--20pxSpace);
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseDo_Container .AdvertiseDo_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseDo_Container .AdvertiseDo_Container_Box .AdvertiseDo_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseDo_Container .AdvertiseDo_Container_Box .AdvertiseDo_Container_Box_Small {
+  display: flex;
+  margin-bottom: 5px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseDo_Container .AdvertiseDo_Container_Box .AdvertiseDo_Container_Box_Small .AdvertiseDo_Container_Box_Small_Input {
+  padding: 5px;
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseDo_Container .AdvertiseDo_Container_Box .AdvertiseDo_Container_Box_Small .AdvertiseDo_Container_Box_Small_Label {
+  margin-left: 5px;
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseText_Container {
+  background: var(--backGroundColor);
+  width: 100%;
+  margin-bottom: var(--20pxSpace);
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseText_Container .AdvertiseText_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseText_Container .AdvertiseText_Container_Box .AdvertiseText_Container_Box_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+  margin-bottom: 10px;
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseText_Container .AdvertiseText_Container_Box .AdvertiseText_Container_Box_Label {
+  color: var(--whiteTextColor);
+}
+.Edit_EditForm_Container .Edit_EditForm_Container_Box .AdvertiseText_Container .AdvertiseText_Container_Box .AdvertiseText_Container_Box_Input {
+  border: none;
+  padding: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-size: var(--0d94rem);
+  background: var(--requiredBlank);
+}
+
+.Edit_Submit_Button {
+  display: flex;
+  margin: 0 auto;
+  width: 120px;
+  height: 30px;
+  font-size: var(--0d94rem);
+  font-weight: 500;
+  letter-spacing: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.Edit_Cancel_Button_Box {
+  display: flex;
+  background: var(--backGroundColor);
+  justify-content: center;
+}
+.Edit_Cancel_Button_Box .Edit_Cancel_Button {
+  background: var(--backGroundColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 120px;
+  height: 30px;
+  font-size: var(--0d94rem);
+  font-weight: 500;
+  letter-spacing: 3px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--blackTextColor);
+  background: var(--whiteTextColor);
+  margin-top: 10px;
+}/*# sourceMappingURL=AdminUpdate.css.map */

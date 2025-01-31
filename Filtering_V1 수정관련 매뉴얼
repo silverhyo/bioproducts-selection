@@ -1,0 +1,72 @@
+분류항목 추가할 시
+; ! 1. Filtering_V1에서 아래 항목을 적절한 위치에 삽입
+
+  {/* PRODUCT TYPE */}
+  {/* 아래 다른 분류로 추가할 경우 변경해야 할 부분 : label(htmlFor, textNode), select(id, name, onChange함수), option(없음), Map 함수(jsonData01이후 정확한 데이터 선택택)  */}
+  <div className='Filtering_V1_Container_Box_Form_Filtering_Query01'>
+    <label className='Filtering_V1_Container_Box_Form_Filtering_Query01_Label' htmlFor="productType">Product Type을 선택해 주세요</label>
+    <select id="productType" className='Filtering_V1_Container_Box_Form_Filtering_Query01_Select' name="productType" onChange={firstSelectFilter}>
+      <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' value="">Select...</option>
+      {jsonData01.ProductType.map((item, index) => {
+        return (
+          <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' key={item.ID} value={item.Value}>{item.Title}</option>
+        )
+      })}
+    </select>
+  </div>
+
+  ; ! 2. onChange 함수 정의
+
+  아래 자동 클릭을 위해 추가 필요
+
+  // 10. Select에서 Option 선택시 자동 Click 함수 적용시켜보자!
+  function firstSelectFilter() {
+    let submitButton = document.getElementById('submit');
+    submitButton.click();
+  }
+
+  ; ! 3.  아래와 같이 option에 표시 될 시 중복 및 null값을 제거하기 위해 설정 (아래서 ProductFiltration는 database에 있어야 함함)
+  // 02. 자 이제 Select의 Option 사항에 따라 Filtering을 해보자. 먼저 Product Type
+  // TODO Filtration 중복, null 제거 / 분리
+  let productFiltrationOptionArr = filteredProducts.map(filteredProduct => {
+    return (
+      filteredProduct.ProductFiltration
+    );
+  });
+  let newProductFiltrationOptionArr = productFiltrationOptionArr
+    .filter(item => item != null) // null 값 제거
+    .flatMap(item => item.split(',')) // 쉽표로 분리
+    .filter(item => item.trim() != ''); // 빈문자열 제거
+  let finalNewProductFiltrationOptionArr = [...new Set(newProductFiltrationOptionArr)];
+  let sortFinalNewProductFiltrationOptionArr = finalNewProductFiltrationOptionArr.sort(); // 알파벳 순서대로 정열
+  console.log("sortFinalNewProductFiltrationOptionArr ;", sortFinalNewProductFiltrationOptionArr)
+
+  ; ! 3-1. 03 : Filtering 구현 위한 조건에 if 조건 삽입
+  ; ! 4.  Database에 추가 필요할 경우 새로운 컬럼 추가
+  
+
+  ; ! 5.  Admin 수정 필요 (AdminCreate, AdminUpdate, Nodejs server)
+  ; ! AdmiCreate에 아래 추가
+  {/* Service */}
+  {/* 변경해야할 곳 (strong(textNode) / label(htmlFor) / select(id, onChange함수) / option(name, textNode) / map함수(jsonData) */}
+  <div className='ProductType_Container'>
+    <div className='ProductType_Container_Box'>
+      <p className='ProductType_Container_Box_P'><span>😜</span> <strong>Service</strong>를 선택해 주세요.</p>
+      <label className='ProductType_Container_Box_Label' htmlFor='service_type'></label>
+      <select className='ProductType_Container_Box_Select' id="service_type" required onChange={e => setServiceType(e.target.value)}>
+        <option className='ProductType_Container_Box_Option' name="ServiceType" value="">Service를 선택해 주세요</option>
+        {jsonData.Service.map((item, index) => {
+          return (
+            <option className='ProductType_Container_Box_Option' key={index} name="ProductType" value={item.Value}>{item.Title}</option>
+          )
+        })};
+      </select>
+    </div>
+  </div>
+
+  ; ! 06 : state 정의 내리는 곳에 onChange 함수 정의해야 함
+  ; ! 07 : input data가 image 또는 check box일 경우 AdminCreate의 02번에 변수 정의하고 01에 state 정의
+  ; ! 08 : formData에 추가할 것
+  ; ! 09 : server.js에서 server.post("/admin/create" 부분에 SQL함수에서 column 추가하고 value에 추가한다. 주의 순서 맞출것!!
+  ; ! 10 : 마지막으로 AdminUpdate 수정
+  ; ! 11 : server.js에서 server.put 수정
