@@ -8,8 +8,9 @@ import Footer from '../Common/Footer';
 import Filtering_V1 from './Filtering_V1/Filtering_V1';
 
 import { ImageAddressContext } from '../../Context/ImageAddressContext';
+import { WebInformation } from '../../Context/WebInformation';
 
-export default function Bioproducts({DATABASEDATA, JSONDATA01, LOCALADDRESS}) {
+export default function Bioproducts({DATABASEDATA, JSONDATA01}) {
 
   // =============================================Props : Start
   const imageAddress = useContext(ImageAddressContext).imageAddress;
@@ -22,7 +23,7 @@ export default function Bioproducts({DATABASEDATA, JSONDATA01, LOCALADDRESS}) {
       <Navigation />
       <div className='Bioproducts_Container'>
         <div className='Bioproducts_Container_Box'>
-          <Filtering_V1 DATABASEDATA={dtBaseData} JSONDATA01={jsonData01} LOCALADDRESS={LOCALADDRESS}/>
+          <Filtering_V1 DATABASEDATA={dtBaseData} JSONDATA01={jsonData01} />
         </div>
       </div>
       <Footer />

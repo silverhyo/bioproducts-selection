@@ -148,9 +148,9 @@ export default function App() {
 
           <Route path="/" element={<Landing />}></Route>
           <Route path="/home" element={<Home DATABASEDATA={dtBaseData}/>} ></Route>
-          <Route path="/newbioproducts" element={<NewBioProducts IMAGEADDRESS={imageAddress} DATABASEDATA={dtBaseData} LOCALADDRESS={localAddress}/>}></Route>
-          <Route path="/bioproducts" element={<Bioproducts IMAGEADDRESS={imageAddress} DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
-          <Route path="/bioproducts/:id" element={<ProductDetailModal IMAGEADDRESS={imageAddress} LOCALADDRESS={localAddress} JSONDATA01={jsonData_01} />}></Route>
+          <Route path="/newbioproducts" element={<NewBioProducts DATABASEDATA={dtBaseData} />}></Route>
+          <Route path="/bioproducts" element={<Bioproducts DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
+          <Route path="/bioproducts/:id" element={<ProductDetailModal LOCALADDRESS={localAddress} JSONDATA01={jsonData_01} />}></Route>
 
 
 

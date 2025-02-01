@@ -7,11 +7,14 @@ import "./Filtering_V1.css";
 import BioProductsFiltered from '../BioProductsFiltered/BioProductsFiltered';
 // import useCOntext
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
+import { WebInformation } from '../../../Context/WebInformation';
 
-export default function Filtering_V1({DATABASEDATA, JSONDATA01, localAddress }) {
+export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
   // 아래는 Bioproducts Component로부터 전달받은 props
   const imageAddress = useContext(ImageAddressContext).imageAddress;
+  const localAddress = useContext(WebInformation);
+  console.log("localAddress :", localAddress);
   let dataBaseData = DATABASEDATA;
   const jsonData01 = JSONDATA01;
 
