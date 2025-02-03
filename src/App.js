@@ -149,8 +149,8 @@ export default function App() {
           <Route path="/" element={<Landing />}></Route>
           <Route path="/home" element={<Home DATABASEDATA={dtBaseData}/>} ></Route>
           <Route path="/newbioproducts" element={<NewBioProducts DATABASEDATA={dtBaseData} />}></Route>
-          <Route path="/bioproducts" element={<Bioproducts DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
-          <Route path="/bioproducts/:id" element={<ProductDetailModal LOCALADDRESS={localAddress} JSONDATA01={jsonData_01} />}></Route>
+          <Route path="/bioproducts" element={<Bioproducts DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} />}></Route>
+          <Route path="/bioproducts/:id" element={<ProductDetailModal JSONDATA01={jsonData_01} />}></Route>
 
 
 
@@ -163,13 +163,13 @@ export default function App() {
             }>
           </Route> */}
 
-          <Route path="/admin/create" element={<AdminCreate JSONDATA01={jsonData_01} LOCALADDRESS={localAddress} />}></Route>
-          <Route path="/admin/list" element={<AdminList DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
-          <Route path="/admin/update/:id" element={<AdminUpdate DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
+          <Route path="/admin/create" element={<AdminCreate JSONDATA01={jsonData_01} />}></Route>
+          <Route path="/admin/list" element={<AdminList DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} />}></Route>
+          <Route path="/admin/update/:id" element={<AdminUpdate DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} />}></Route>
 
 
 
-          <Route path="/admin/home" element={<AdminHome LOCALADDRESS={localAddress} />}></Route>
+          <Route path="/admin/home" element={<AdminHome />}></Route>
           {/* <Route path="/admin/create" element={<AdminCreate JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
           <Route path="/admin/list" element={<AdminList DATABASEDATA={dtBaseData} IMAGEADDRESS={imageAddress} JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
           <Route path="/admin/update/:id" element={<AdminUpdate DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} IMAGEADDRESS={imageAddress} LOCALADDRESS={localAddress}/>}></Route> */}

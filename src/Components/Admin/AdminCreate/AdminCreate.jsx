@@ -12,20 +12,19 @@ import NotFound from '../../Common/NotFound';
 // useContext
 import { AuthContext } from '../../../Context/AuthContext';
 import { useContext } from 'react';
+import { WebInformation } from '../../../Context/WebInformation';
 
-
-export default function AdminCreate({JSONDATA01, LOCALADDRESS}) {
+export default function AdminCreate({JSONDATA01}) {
 
   // ! 자 이 페이지는 Admin 인 user만 접근할 수 있어야 하겠지? User 중에서 Admin 레벨인 user에게만 접근 가능!!
   // ! 데이터베이스 Users 정보에서 Level이 Admin인 사람을 찾고 이 사람에게만 권한 부여
   // ! 아래 userInformation의 UserId 정보와 데이터베이스에서 가져와야하며 정보는 App.js로부터 가져온다.
 
   const userInformation = useContext(AuthContext).userDatabaseInfo;
-
+  const LocalAddress = useContext(WebInformation).localAddress
 
   // ! 01 : state 정의 내리는 곳
   const jsonData = JSONDATA01;
-  const LocalAddress = LOCALADDRESS;
 
   const [productName, setProductName] = useState('');
   const [productMainImage, setProductMainImage] = useState('');

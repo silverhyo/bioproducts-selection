@@ -15,15 +15,15 @@ import CommentsReact from '../../Comments/CommentsReact';
 import ProductsRelated from '../ProductsRelated/ProductsRelated';
 // import useContext
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
+import { WebInformation } from '../../../Context/WebInformation';
 
 
 // ! 아래 Props는 APP.js로부터 받아옴
-export default function ProductDetailModal({LOCALADDRESS, JSONDATA01}) {
+export default function ProductDetailModal({JSONDATA01}) {
 
   const imageAddress = useContext(ImageAddressContext).imageAddress;
-  const LocalAddress = LOCALADDRESS;
+  const LocalAddress = useContext(WebInformation).localAddress;
   const jsonData = JSONDATA01;
-  console.log("LocalAddress :", LocalAddress);
   
   const {id} = useParams();
 

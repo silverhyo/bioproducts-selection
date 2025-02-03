@@ -13,8 +13,8 @@ import { AuthContext } from '../../../Context/AuthContext';
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 
 export default function Home({DATABASEDATA}) {
-  const userInformation = useContext(AuthContext).userStatus;
 
+  const userInformation = useContext(AuthContext).userStatus;
   const imageAddress = useContext(ImageAddressContext).imageAddress;
 
   const [dtBaseData, setDtBaseData] = useState(DATABASEDATA);

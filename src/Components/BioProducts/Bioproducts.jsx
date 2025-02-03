@@ -8,7 +8,6 @@ import Footer from '../Common/Footer';
 import Filtering_V1 from './Filtering_V1/Filtering_V1';
 
 import { ImageAddressContext } from '../../Context/ImageAddressContext';
-import { WebInformation } from '../../Context/WebInformation';
 
 export default function Bioproducts({DATABASEDATA, JSONDATA01}) {
 

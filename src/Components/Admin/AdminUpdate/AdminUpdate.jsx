@@ -11,14 +11,15 @@ import Footer from '../../Common/Footer';
 
 // import Context
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
+import { WebInformation } from '../../../Context/WebInformation';
 
 // ! 아래 Props는 App.js로부터
-export default function AdminUpdate({DATABASEDATA, JSONDATA01, LOCALADDRESS}) {
+export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
   const imageAddress = useContext(ImageAddressContext).imageAddress;
+  const LocalAddress = useContext(WebInformation).localAddress;
 
   const jsonData = JSONDATA01;
-  const LocalAddress = LOCALADDRESS;
   const {id} = useParams();
   const navigate = useNavigate();
 
