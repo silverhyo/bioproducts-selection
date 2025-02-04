@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useContext } from 'react';
+import { Outlet } from 'react-router-dom';
 // import Style css
 import "./ProductDetailModal.css";
 // import Components
@@ -37,6 +38,9 @@ export default function ProductDetailModal({JSONDATA01}) {
     .catch(err => console.log(err))
   },[]);
   console.log("productInfo :", productInfo)
+
+
+
 
 
 
@@ -86,6 +90,7 @@ export default function ProductDetailModal({JSONDATA01}) {
 
   return (
     <>
+    <Outlet />
     <div className='ProductDetail_Container'>
       <div className='ProductDetail_Container_Box'>
       {/* <div className='ProductDetail_Container_Box' style={{display:"none"}}> */}
