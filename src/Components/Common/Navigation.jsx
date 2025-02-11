@@ -51,19 +51,19 @@ export default function Navigation() {
   return (
     <div className='HomeChildNav01_Container'>
       <nav className='HomeChildNav01_Container_NavBox'>
-        <Link to="/home"><div className='HomeChildNav01_Container_NavBox_Menu'><GrHomeRounded /></div></Link>
-        <Link to="/newbioproducts"><div className='HomeChildNav01_Container_NavBox_Menu'><SlDiamond style={{fontSize:"18px"}}/></div></Link>
-        <Link to="/bioproducts"><div className='HomeChildNav01_Container_NavBox_Menu'><LiaProductHunt style={{fontSize:"20px"}}/></div></Link>
+        <Link to="/home"><div className='HomeChildNav01_Container_NavBox_Menu'>HOME</div></Link>
+        <Link to="/Event"><div className='HomeChildNav01_Container_NavBox_Menu'>EVENT</div></Link>
+        <Link to="/newbioproducts"><div className='HomeChildNav01_Container_NavBox_Menu'>AD</div></Link>
+        <Link to="/bioproducts"><div className='HomeChildNav01_Container_NavBox_Menu'>SEARCH</div></Link>
         
         {userInformation.isLoggedIn ?
-        <Link to="/login/kakao"><div className='HomeChildNav01_Container_NavBox_Menu' onClick={handleLogout}>Logout</div></Link>
+        <Link to="/login/kakao"><div className='HomeChildNav01_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div></Link>
         :
-        <Link to="/login/kakao"><div className='HomeChildNav01_Container_NavBox_Menu'>Login</div></Link>
+        <Link to="/login/kakao"><div className='HomeChildNav01_Container_NavBox_Menu'>LOGIN</div></Link>
         }
-        
       </nav>
       
-      <hr className='HomeChildNav01_Container_Hr'></hr>
+      {/* <hr className='HomeChildNav01_Container_Hr'></hr> */}
       
       {userInformation.isLoggedIn ?
         <>

@@ -141,10 +141,11 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
             <Link to={`/bioproducts/${filteredProduct.ID}`} style={{textDecoration:"none"}}><p className='BioProductsFiltered_Box_Text_Detail p2' data-id={filteredProduct.ID} onClick={callProductDetailWindow}>{filteredProduct.ProductMainTitle}</p></Link>
             <Link to={`/bioproducts/${filteredProduct.ID}`} style={{textDecoration:"none"}}><p className='BioProductsFiltered_Box_Text_Detail p3' data-id={filteredProduct.ID} onClick={callProductDetailWindow}>{filteredProduct.ProductManufacturer}</p></Link>
             <div className='BioProductsFiltered_Box_Text_Emotion'>
-              <div className='BioProductsFiltered_Box_Text_Emotion_Detail emotion'><BiMessageDetail /></div>
+              {/* 기능을 만들고 있는 중입니다. */}
+              {/* <div className='BioProductsFiltered_Box_Text_Emotion_Detail emotion'><BiMessageDetail /></div>
               <div className='BioProductsFiltered_Box_Text_Emotion_Voc emotion'><RiUserVoiceLine /></div>
               <div className='BioProductsFiltered_Box_Text_Emotion_Heart emotion'><GoHeartFill /></div>
-              <div className='BioProductsFiltered_Box_Text_Emotion_Like emotion' onClick={handleLikeCount}>{isLiked ? <AiOutlineLike /> : <AiFillLike />} {filteredProduct.LikeCount}</div>
+              <div className='BioProductsFiltered_Box_Text_Emotion_Like emotion' onClick={handleLikeCount}>{isLiked ? <AiOutlineLike /> : <AiFillLike />} {filteredProduct.LikeCount}</div> */}
             </div>
           </div>
         </div>

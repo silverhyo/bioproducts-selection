@@ -20,6 +20,7 @@ import AdminUpdate from './Components/Admin/AdminUpdate/AdminUpdate';
 import LoginKakao from './Components/Log_in_out_Kakao/LoginKakao/LoginKakao';
 import LogoutKakao from './Components/Log_in_out_Kakao/LogoutKakao/LogoutKakao';
 import UserInfo from './Components/Log_in_out_Kakao/UserInfo/UserInfo';
+import Event from './Components/Event/Event';
 
 // import Context
 import { WebInformation } from './Context/WebInformation';
@@ -148,6 +149,7 @@ export default function App() {
 
           <Route path="/" element={<Landing />}></Route>
           <Route path="/home" element={<Home DATABASEDATA={dtBaseData}/>} ></Route>
+          <Route path="/event" element={<Event />} ></Route>
           <Route path="/newbioproducts" element={<NewBioProducts DATABASEDATA={dtBaseData} />}></Route>
           <Route path="/bioproducts" element={<Bioproducts DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} />}></Route>
           <Route path="/bioproducts/:id" element={<ProductDetailModal JSONDATA01={jsonData_01} />}></Route>

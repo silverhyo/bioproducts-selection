@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 //import Style css
@@ -188,38 +188,85 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
 
   // 10. Select에서 Option 선택시 자동 Click 함수 적용시켜보자!
+  
+  const [quantityOfCellLine, setQuantityOfCellLine] = useState('');
   function firstSelectFilter() {
-    let submitButton = document.getElementById('submit');
-    submitButton.click();
+    document.getElementById('submit').click();
   }
   function secondSelectFilter() {
-    let submitButton = document.getElementById('submit');
-    submitButton.click();
+    document.getElementById('submit').click();
   }
   function cellLineSelectFilter() {
-    let submitButton = document.getElementById('submit');
-    submitButton.click();
+    document.getElementById('submit').click();
   }
   function filtrationSelectFilter() {
-    let submitButton = document.getElementById('submit');
-    submitButton.click();
+    document.getElementById('submit').click();
   }
   function manufacturerSelectFilter() {
-    let submitButton = document.getElementById('submit');
-    submitButton.click();
+    document.getElementById('submit').click();
   }
   function searchFilter(targetValue) {
-    let submitButton = document.getElementById('submit');
     setSearchValue(targetValue);
-    submitButton.click();
+    document.getElementById('submit').click();
   }
   function serviceSelectFilter() {
-    let submitButton = document.getElementById('submit');
-    submitButton.click();
+    document.getElementById('submit').click();
   }
 
-  
 
+
+  // ! Filtering에서 Option 항목이 1개만 있을 때 Select Element를 숨기고자 함. 관련 있는 분류만 남겨 놓고자 함
+  // * 설명 : 서로 연관이 없을 경우 option의 내용은 '' 이렇게 하나만 나온다. 이 경우 이것을 안보이게 하는 것이다.
+  useEffect (() => {
+    let divOfProductType = document.querySelector('.classProductType');
+    let numberOfProductTypeOption = document.querySelectorAll('.optionProductType').length;
+    if(numberOfProductTypeOption === 1) {
+      divOfProductType.style.display = 'none';
+    } else {
+      divOfProductType.style.display = 'flex';
+    }
+
+    let divOfModality = document.querySelector('.classModality');
+    let numberOfModality = document.querySelectorAll('.optionModality').length;
+    if(numberOfModality === 1) {
+      divOfModality.style.display = 'none';
+    } else {
+      divOfModality.style.display = 'flex';
+    }
+
+    let divOfCellLine = document.querySelector('.classCellLine');
+    let numberOfCellLineOption = document.querySelectorAll('.optionCellLine').length;
+    if(numberOfCellLineOption === 1) {
+      divOfCellLine.style.display = 'none';
+    } else {
+      divOfCellLine.style.display = 'flex';
+    }
+
+    let divOfFiltration = document.querySelector('.classFiltration');
+    let numberOfFiltration = document.querySelectorAll('.optionFiltration').length;
+    if(numberOfFiltration === 1) {
+      divOfFiltration.style.display = 'none';
+    } else {
+      divOfFiltration.style.display = 'flex';
+    }
+
+    let divOfService = document.querySelector('.classService');
+    let numberOfService = document.querySelectorAll('.optionService').length;
+    if(numberOfService === 1) {
+      divOfService.style.display = 'none';
+    } else {
+      divOfService.style.display = 'flex';
+    }
+
+    let divOfManufacturer = document.querySelector('.classManufacturer');
+    let numberOfManufacturer = document.querySelectorAll('.optionManufacturer').length;
+    if(numberOfManufacturer === 1) {
+      divOfManufacturer.style.display = 'none';
+    } else {
+      divOfManufacturer.style.display = 'flex';
+    }
+
+  },[filteredProducts])
 
 
 
@@ -230,6 +277,9 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
       setSearchValue('');
   };
 
+  function handleReset() {
+    window.location.reload();
+  }
 
 
 
@@ -243,13 +293,13 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
             {/* PRODUCT TYPE */}
             {/* 아래 다른 분류로 추가할 경우 변경해야 할 부분 : label(htmlFor, textNode), select(id, name, onChange함수), option(없음), Map 함수(jsonData01이후 정확한 데이터 선택택)  */}
-            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01'>
+            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01 classProductType'>
               <label className='Filtering_V1_Container_Box_Form_Filtering_Query01_Label' htmlFor="productType">Product Type을 선택해 주세요</label>
               <select id="productType" className='Filtering_V1_Container_Box_Form_Filtering_Query01_Select' name="productType" onChange={firstSelectFilter}>
-                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' value="">Select...</option>
+                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionProductType' value="">Select...</option>
                 {sortFinalNewProductTypeOptionArr.map((item, index) => {
                   return (
-                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' key={item} value={item}>{item}</option>
+                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionProductType' key={item} value={item}>{item}</option>
                   )
                 })}
               </select>
@@ -257,13 +307,13 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
 
             {/* PRODUCT MODALITY */}
-            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01'>
+            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01 classModality'>
               <label className='Filtering_V1_Container_Box_Form_Filtering_Query01_Label' htmlFor="productModality">Modality를 선택해 주세요</label>
               <select id="productModality" className='Filtering_V1_Container_Box_Form_Filtering_Query01_Select' name="productModality" onChange={secondSelectFilter}>
-                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' value="">Select...</option>
+                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionModality' value="">Select...</option>
                 {sortFinalNewProductModalityOptionArr.map((item, index) => {
                   return (
-                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' key={item} value={item}>{item}</option>
+                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionModality' key={item} value={item}>{item}</option>
                   )
                 })}
               </select>
@@ -271,13 +321,13 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
 
             {/* CELL LINE */}
-            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01'>
+            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01 classCellLine'>
               <label className='Filtering_V1_Container_Box_Form_Filtering_Query01_Label' htmlFor="productCellLine">Cell Line을 선택해 주세요</label>
               <select id="productCellLine" className='Filtering_V1_Container_Box_Form_Filtering_Query01_Select' name="productCellLine" onChange={cellLineSelectFilter}>
-                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' value="">Select...</option>
+                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionCellLine' value="">Select...</option>
                 {sortFinalNewProductCellLineOptionArr.map((item, index) => {
                   return (
-                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' key={item} value={item}>{item}</option>
+                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionCellLine' key={item} value={item}>{item}</option>
                   )
                 })}
               </select>
@@ -285,13 +335,13 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
 
             {/* FILTRATION */}
-            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01'>
+            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01 classFiltration'>
               <label className='Filtering_V1_Container_Box_Form_Filtering_Query01_Label' htmlFor="productFiltration">Filtration 목적을 선택해 주세요</label>
               <select id="productFiltration" className='Filtering_V1_Container_Box_Form_Filtering_Query01_Select' name="productFiltration" onChange={filtrationSelectFilter}>
-                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' value="">Select...</option>
+                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionFiltration' value="">Select...</option>
                 {sortFinalNewProductFiltrationOptionArr.map((item, index) => {
                   return (
-                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' key={item} value={item}>{item}</option>
+                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionFiltration' key={item} value={item}>{item}</option>
                   )
                 })}
               </select>
@@ -299,13 +349,13 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
             {/* Service */}
             {/* 아래 다른 분류로 추가할 경우 변경해야 할 부분 : label(htmlFor, textNode), select(id, name, onChange함수), option(없음), Map 함수(jsonData01이후 정확한 데이터 선택택)  */}
-            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01'>
+            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01 classService'>
               <label className='Filtering_V1_Container_Box_Form_Filtering_Query01_Label' htmlFor="services">Service를 선택해 주세요</label>
               <select id="services" className='Filtering_V1_Container_Box_Form_Filtering_Query01_Select' name="services" onChange={serviceSelectFilter}>
-                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' value="">Select...</option>
+                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionService' value="">Select...</option>
                 {sortFinalNewServiceOptionArr.map((item, index) => {
                   return (
-                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' key={item} value={item}>{item}</option>
+                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionService' key={item} value={item}>{item}</option>
                   )
                 })}
               </select>
@@ -316,13 +366,13 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
 
 
             {/* MANUFACTURER */}
-            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01'>
+            <div className='Filtering_V1_Container_Box_Form_Filtering_Query01 classManufacturer'>
               <label className='Filtering_V1_Container_Box_Form_Filtering_Query01_Label' htmlFor="productManufacturer">Manufacturer를 선택해 주세요</label>
               <select id="productManufacturer" className='Filtering_V1_Container_Box_Form_Filtering_Query01_Select' name="productManufacturer" onChange={manufacturerSelectFilter}>
-                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' value="">Select...</option>
+                <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionManufacturer' value="">Select...</option>
                 {sortFinalNewProductManufacturerOptionArr.map((item, index) => {
                   return (
-                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options' key={item} value={item}>{item}</option>
+                    <option className='Filtering_V1_Container_Box_Form_Filtering_Query01_Options optionManufacturer' key={item} value={item}>{item}</option>
                   )
                 })}
               </select>
@@ -338,6 +388,14 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
               </div>
             </div>
 
+            {/* SEARCH : PRODUXT NAME */}
+            <div className='Filtering_V1_Container_Box_Form_Filtering_Reset'>
+              <div className='Filtering_V1_Container_Box_Form_Filtering_Reset_Box'>
+                <button className='Filtering_V1_Container_Box_Form_Filtering_Reset_Button' onClick={handleReset}>Reset</button>
+              </div>
+            </div>
+            
+
 
           </div>
 
@@ -349,7 +407,7 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
         </div>
     
       </div>
-      <BioProductsFiltered FILTEREDPRODUCTS={filteredProducts} IMAGEADDRESS={imageAddress}/>
+      <BioProductsFiltered FILTEREDPRODUCTS={filteredProducts} />
     </div>
     
   )

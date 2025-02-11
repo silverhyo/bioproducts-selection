@@ -95,18 +95,21 @@ export default function ProductDetailModal({JSONDATA01}) {
       <div className='ProductDetail_Container_Box'>
       {/* <div className='ProductDetail_Container_Box' style={{display:"none"}}> */}
 
-        <div className='ProductDetail_Container_Box_ImageBox'>
+        {/* <div className='ProductDetail_Container_Box_ImageBox'>
           <img className='ProductDetail_Container_Box_Image' src={imageAddress+productInfo.ProductMainImage} alt="" />
-        </div>
+        </div> */}
+
         <div className='ProductDetail_Container_Box_Product_Info'>
-          <p className='ProductDetail_Container_Box_Product_Info_P p1'><strong>{productInfo.ProductName}</strong></p>
+          <p className='ProductDetail_Container_Box_Product_Info_P p1'>{productInfo.ProductName}</p>
           <hr className='ProductDetail_Container_Box_Product_Info_hr'/>
           <p className='ProductDetail_Container_Box_Product_Info_P p2'>{productInfo.ProductType}</p>
-          <p className='ProductDetail_Container_Box_Product_Info_P p3'><strong>{productInfo.ProductManufacturer}</strong></p>
+          <p className='ProductDetail_Container_Box_Product_Info_P p3'>{productInfo.ProductManufacturer}</p>
         </div>
+
         <div className='ProductDetail_Container_Box_Product_Brief'>
           <p className='ProductDetail_Container_Box_Product_Brief_P'>{productInfo.ProductMainTitle}</p>
         </div>
+
         <div className='ProductDetail_Container_Box_Product_Detail'>
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl01} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle01}</p>
@@ -119,6 +122,7 @@ export default function ProductDetailModal({JSONDATA01}) {
             )
           })}</p>
         </div>
+
         <div className='ProductDetail_Container_Box_Product_Detail'>
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl02} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle02}</p>
@@ -131,6 +135,7 @@ export default function ProductDetailModal({JSONDATA01}) {
             )
           })}</p>
         </div>
+
         <div className='ProductDetail_Container_Box_Product_Detail'>
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl03} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle03}</p>
@@ -143,6 +148,7 @@ export default function ProductDetailModal({JSONDATA01}) {
             )
           })}</p>
         </div>
+
         <div className='ProductDetail_Container_Box_Product_Detail'>
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl04} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle04}</p>
@@ -155,6 +161,7 @@ export default function ProductDetailModal({JSONDATA01}) {
             )
           })}</p>
         </div>
+
         <div className='ProductDetail_Container_Box_Product_Detail'>
           {imageAddress+productInfo.ProductImageUrl05 ?
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl05} alt="" />
@@ -193,10 +200,15 @@ export default function ProductDetailModal({JSONDATA01}) {
       
     </div>
     <Contact CONTACTINFO={contactInfo} JSONDATA01={jsonData} />
-    <CommentsReact />
+
+    {/* <CommentsReact /> */}
+
     <ProductsRelated PRODUCTINFO={productInfo} />
+
     {/* <Comments /> */}
+
     <Footer />
+
     <div className='ProductDetail_Container_Bottom'>
       <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
     </div>
