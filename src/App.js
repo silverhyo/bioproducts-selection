@@ -137,7 +137,7 @@ export default function App() {
 
   const [user, setUser] = useState(null);
   useEffect(() => {
-    fetch('https://bioproducts-selection.ap-northeast-2.elasticbeanstalk.com/auth/user', {
+    fetch('https://silverhyo.com/auth/user', {
         method: 'GET',
         credentials: 'include'
     })
