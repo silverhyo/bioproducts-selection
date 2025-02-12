@@ -53,6 +53,7 @@ export default function App() {
   console.log("dtBaseData :", dtBaseData);
 
 
+
   // ! LogIn01 코드 삽입 부
   // ! 새로운 코드(kakao로부터 전달 받은 고객 정보)
 
@@ -130,6 +131,28 @@ export default function App() {
     }
   },[userStatus?.isLoggedIn]);
   console.log("userDatabaseInfo :", userDatabaseInfo);
+
+
+
+
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    fetch('https://bioproducts-selection.ap-northeast-2.elasticbeanstalk.com/auth/user', {
+        method: 'GET',
+        credentials: 'include'
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data && !data.error) {
+            setUser(data); // 사용자 정보를 상태에 저장
+        }
+    })
+    .catch(err => console.error('Error fetching user:', err));
+  }, []); // 컴포넌트가 마운트될 때 한 번 실행
+
+
+
+
 
 
   

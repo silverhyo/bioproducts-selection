@@ -12,7 +12,6 @@ export default function LoginKakao() {
   const handleLogin = () => {
     window.location.href = process.env.REACT_APP_SERVER_URL;
   };
-  // console.log("process.env.REACT_APP_SERVER_URL :", process.env.REACT_APP_SERVER_URL)
 
   return (
     <div className='LoginKakao_Container'>
