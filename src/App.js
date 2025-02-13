@@ -135,23 +135,12 @@ export default function App() {
 
 
 
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    fetch('https://silverhyo.com/auth/user', {
-        method: 'GET',
-        credentials: 'include'
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data && !data.error) {
-            setUser(data); // 사용자 정보를 상태에 저장
-        }
-    })
-    .catch(err => console.error('Error fetching user:', err));
-  }, []); // 컴포넌트가 마운트될 때 한 번 실행
 
-
-
+  useEffect (() => {
+    axios.get("https://your-backend-api.com/data", { withCredentials: true })
+    .then(response => console.log(response.data))
+    .catch(error => console.error("CORS 에러:", error));
+  }, []);
 
 
 
