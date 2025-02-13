@@ -136,11 +136,11 @@ export default function App() {
 
 
 
-  useEffect (() => {
-    axios.get("https://your-backend-api.com/data", { withCredentials: true })
-    .then(response => console.log(response.data))
-    .catch(error => console.error("CORS 에러:", error));
-  }, []);
+  
+  axios.get("https://your-backend-api.com/data", { withCredentials: true })
+  .then(response => console.log(response.data))
+  .catch(error => console.error("CORS 에러:", error));
+  
 
 
 
