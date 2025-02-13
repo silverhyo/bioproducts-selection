@@ -137,7 +137,7 @@ export default function App() {
 
 
   
-  axios.get("https://your-backend-api.com/data", { withCredentials: true })
+  axios.get("https://silverhyo.com", { withCredentials: true })
   .then(response => console.log(response.data))
   .catch(error => console.error("CORS 에러:", error));
   
