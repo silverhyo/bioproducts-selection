@@ -158,9 +158,17 @@ export default function App() {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6518d708fdbf1a324b5adb7f7f37353a0f721e3f
 
+  
+  axios.get("https://silverhyo.com", { withCredentials: true })
+  .then(response => console.log(response.data))
+  .catch(error => console.error("CORS 에러:", error));
+  
 
 
 
