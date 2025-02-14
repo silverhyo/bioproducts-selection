@@ -39,7 +39,32 @@ export default function ProductDetailModal({JSONDATA01}) {
   },[]);
   console.log("productInfo :", productInfo)
 
+  useEffect(() => {
+    brandColor()
+  },[productInfo])
 
+  // ! Manufacturer에 따른 Top 색깔 변화
+  function brandColor() {
+    let colorBox1 = document.querySelector('.ProductDetail_Container_Box_Product_Info');
+    let colorBox2 = document.querySelector('.ProductDetail_Container_Box_Product_Brief');
+    if(productInfo.ProductManufacturer === 'Sartorius') {
+      colorBox1.style.background = '#FFF100';
+      colorBox2.style.background = '#FFF100';
+    } else {
+      if(productInfo.ProductManufacturer === 'Cytiva'){
+        colorBox1.style.background = 'rgba(255, 166, 0, 1)';
+        colorBox2.style.background = 'rgba(255, 166, 0, 1)';
+      }
+      if(productInfo.ProductManufacturer === 'Merck'){
+        colorBox1.style.background = 'rgba(112, 1, 112, 1)';
+        colorBox2.style.background = 'rgba(112, 1, 112, 1)';
+      }
+      if(productInfo.ProductManufacturer === 'Thermofisher'){
+        colorBox1.style.background = 'rgba(255, 0, 0, 1)';
+        colorBox2.style.background = 'rgba(255, 0, 0, 1)';
+      }
+    }
+  };
 
 
 

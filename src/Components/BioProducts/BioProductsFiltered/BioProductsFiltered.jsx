@@ -80,7 +80,7 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
   // Manufacturer에 따라 제조사 글씨 다르게 설정하는 것은 제품이 필터링에 의해 매번 업데이트 되기에 이때마다 실행될 수 있도록 한다. 그러므로 },[]); 안하는것임
   useEffect(() => {
     brandColor();
-  });
+  },[filteredProducts]);
 
 
   const [isLiked, setIsLiked] = useState(false)

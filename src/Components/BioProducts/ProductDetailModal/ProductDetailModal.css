@@ -43,9 +43,8 @@
 }
 .ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info {
   padding: 10px;
-  padding-top: 25px;
+  padding-top: 15px;
   padding-bottom: 20px;
-  background: var(--sartoriusColor);
 }
 .ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .p1 {
   font-size: var(--1d125rem);
@@ -75,7 +74,6 @@
 .ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Brief {
   width: 100%;
   padding: 10px;
-  background: var(--sartoriusColor);
 }
 .ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Brief .ProductDetail_Container_Box_Product_Brief_P {
   font-size: var(--0d94rem);

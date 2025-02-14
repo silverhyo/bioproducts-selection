@@ -9,6 +9,12 @@ import './ProductsRelated.css';
 // import Context
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
+// import Image
+import ImageOfSartorius from '../../../Sources/image_logo/sartorius-logo-black.png';
+import ImageOfMerck from '../../../Sources/image_logo/sartorius-logo-black.png';
+import ImageOfCytiva from '../../../Sources/image_logo/sartorius-logo-black.png';
+import ImageOfThermo from '../../../Sources/image_logo/sartorius-logo-black.png';
+
 
 export default function ProductsRelated({PRODUCTINFO}) {
   const productsList = useContext(ProductsDataBaseContext).dtBaseData;
@@ -31,6 +37,44 @@ export default function ProductsRelated({PRODUCTINFO}) {
     navigate(0);
   }
 
+
+    // Manufacturer에 따라 박스의 테두리 색을 다르게 설정하기!
+    function brandColor() {
+      let productBrandColor = document.querySelectorAll('.ProductsRelated_Container_Box_ProductsRelated_Item');
+      let logoImage = document.querySelectorAll('.ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1_Image')
+      console.log('productBrandColor :', productBrandColor);
+      console.log('productBrandColor.length :', productBrandColor.length);
+      
+      for(let i = 0; i < productBrandColor.length; i++ ) {
+        if(ProductRelated[i].ProductManufacturer === "Sartorius") {
+          productBrandColor[i].style.border = "3px solid #FFF100"
+          logoImage[i].src = `${ImageOfSartorius}`
+        } else {
+          if(ProductRelated[i].ProductManufacturer === "Cytiva") {
+            productBrandColor[i].style.border = "3px solid rgba(255, 166, 0, 1)"
+            logoImage[i].src = `${ImageOfCytiva}`
+          }
+          if(ProductRelated[i].ProductManufacturer === "Merck") {
+            productBrandColor[i].style.border = "3px solid rgba(112, 1, 112, 1)"
+            logoImage[i].src = `${ImageOfMerck}`
+          }
+          if(ProductRelated[i].ProductManufacturer === "Thermofisher") {
+            productBrandColor[i].style.border = "3px solid rgba(255, 0, 0, 1)"
+            logoImage[i].src = `${ImageOfThermo}`
+          }
+        }
+      }
+    }
+    // Manufacturer에 따라 제조사 글씨 다르게 설정하는 것은 제품이 필터링에 의해 매번 업데이트 되기에 이때마다 실행될 수 있도록 한다. 그러므로 },[]); 안하는것임
+    useEffect(() => {
+      brandColor();
+    },[ProductRelated]);
+
+
+
+
+
+
   return (
     <div className='ProductsRelated_Container'>
       <div className='ProductsRelated_Container_Box'>
@@ -51,6 +95,9 @@ export default function ProductsRelated({PRODUCTINFO}) {
                 
                 <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox'>
                   <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image' src={imageAddress+item.ProductMainImage} alt=''></img>
+                </div>
+                <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1'>
+                  <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1_Image'src='' alt=''></img>
                 </div>
                 <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Title'>{item.ProductName}</div>
                 

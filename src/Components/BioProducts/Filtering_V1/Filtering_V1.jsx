@@ -403,7 +403,7 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
         </form>
 
         <div className='Filtering_V1_Container_Box_Count'>
-          <span className='Filtering_V1_Container_Box_Count_Text'><strong style={{color:"orange"}}>{filteredProducts.length}</strong>개의 제품을 찾았어요</span>
+          <div className='Filtering_V1_Container_Box_Count_Text'><strong style={{color:"orange"}}>{filteredProducts.length}</strong>개의 제품을 찾았어요</div>
         </div>
     
       </div>
