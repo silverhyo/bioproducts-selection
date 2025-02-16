@@ -48,7 +48,7 @@ export default function App() {
   useEffect(() => {
     axios.get(`${localAddress.localServer}`, {
       headers: {
-        'host': 'silverhyo',
+        'host': 'asdfl876345vhjdft89q3rgyuiashjdgfagjsftyuawet',
         'Content-Type': 'application/json'
       }
     })
