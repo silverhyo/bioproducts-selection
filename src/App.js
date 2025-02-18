@@ -43,6 +43,9 @@ export default function App() {
   });
 
 
+
+
+
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
@@ -59,6 +62,13 @@ export default function App() {
   console.log("dtBaseData :", dtBaseData);
   
 
+
+
+
+
+
+
+  
 
 
   // ! LogIn01 코드 삽입 부
@@ -140,7 +150,6 @@ export default function App() {
   console.log("userDatabaseInfo :", userDatabaseInfo);
 
 
-<<<<<<< HEAD
 
   // useEffect (() => {
   //   axios.get(process.env.REACT_APP_CORS, { withCredentials: true })
@@ -150,8 +159,6 @@ export default function App() {
 
 
 
-=======
->>>>>>> 79c042842003e9da93276fb854e42c0c2d183706
   
   return (
     <div className="App_Container">
