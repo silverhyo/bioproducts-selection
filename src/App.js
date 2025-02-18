@@ -46,11 +46,18 @@ export default function App() {
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    axios.get(`${localAddress.localServer}`)
+    axios.get(`${localAddress.localServer}`+`/api`, {
+      headers: {
+        'host': 'www://localhost:3000',
+        "Content-Type": "application/json"
+      },
+      withCredentials : true
+    })
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err));
   }, []);
   console.log("dtBaseData :", dtBaseData);
+  
 
 
 
@@ -134,27 +141,11 @@ export default function App() {
 
 
 
-  // const [user, setUser] = useState(null);
-  // useEffect(() => {
-  //   fetch('https://silverhyo.com/home', {
-  //       method: 'GET',
-  //       credentials: 'include'
-  //   })
-  //   .then(res => res.json())
-  //   .then(data => {
-  //       if (data && !data.error) {
-  //           setUser(data); // 사용자 정보를 상태에 저장
-  //       }
-  //   })
-  //   .catch(err => console.error('Error fetching user:', err));
-  // }, []); // 컴포넌트가 마운트될 때 한 번 실행
-
-
-  useEffect (() => {
-    axios.get(process.env.REACT_APP_CORS, { withCredentials: true })
-    .then(response => console.log(response.data))
-    .catch(error => console.error("CORS 에러:", error));
-  }, []);
+  // useEffect (() => {
+  //   axios.get(process.env.REACT_APP_CORS, { withCredentials: true })
+  //   .then(response => console.log(response.data))
+  //   .catch(error => console.error("CORS 에러:", error));
+  // }, []);
 
 
 
