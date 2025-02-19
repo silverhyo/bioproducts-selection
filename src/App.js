@@ -86,6 +86,7 @@ export default function App() {
     axios.create({
       baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
+      credentials: true,
       headers: {
         "Content-Type": "application/json",
         "X-Custom-Header": "silverhyo",
