@@ -30,6 +30,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://bioproducts-selection.ap-northeast-2.elasticbeanstalk.com",
+  "homepage": "https://bioproducts-selection.ap-northeast-2.elasticbeanstalk.com",
   "eslintConfig": {
     "extends": [
       "react-app",
