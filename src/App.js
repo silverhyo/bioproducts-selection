@@ -51,7 +51,17 @@ export default function App() {
   useEffect(() => {
     axios.get(`${localAddress.localServer}`+`/api`)
     .then(res => setDtBaseData(res.data))
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
+    axios.create({
+      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      withCredentials: true,
+      credentials: true,
+      headers: {
+        "Content-Type": "application/json",
+        "X-Custom-Header": "silverhyo",
+        Accept: "application/json",
+      }
+    })
   }, []);
   console.log("dtBaseData :", dtBaseData);
 
