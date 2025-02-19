@@ -88,6 +88,7 @@ export default function App() {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
+        host: "bioproducts-selection.netlify.app",
         Accept: "application/json",
       }
     })
