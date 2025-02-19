@@ -30,8 +30,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://silverhyo.com",
-  "homepage": "https://silverhyo.com",
   "eslintConfig": {
     "extends": [
       "react-app",
