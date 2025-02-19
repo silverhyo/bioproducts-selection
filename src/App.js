@@ -49,17 +49,27 @@ export default function App() {
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    axios.get(`${localAddress.localServer}`+`/api`, {
-      headers: {
-        'host': 'https://bioproducts-selection.netlify.app',
-        "Content-Type": "application/json"
-      },
-      withCredentials : true
-    })
+    axios.get(`${localAddress.localServer}`+`/api`)
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err));
   }, []);
   console.log("dtBaseData :", dtBaseData);
+
+  // const [dtBaseData, setDtBaseData] = useState('' || '')
+  // useEffect(() => {
+  //   axios.get(`${localAddress.localServer}`+`/api`, {
+  //     headers: {
+  //       // "host": "https://bioproducts-selection.netlify.app",
+  //       "host": "http://localhost:3000",
+  //       "Content-Type": "application/json"
+  //     },
+  //     credentials : true
+  //     // withCredentials : true
+  //   })
+  //   .then(res => setDtBaseData(res.data))
+  //   .catch(err => console.log(err));
+  // }, []);
+  // console.log("dtBaseData :", dtBaseData);
   
 
 
@@ -68,7 +78,29 @@ export default function App() {
 
 
 
-  
+
+
+
+
+  useEffect(() => {
+    axios.create({
+      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      }
+    })
+  },[])
+
+
+
+
+
+
+
+
+
 
 
   // ! LogIn01 코드 삽입 부
