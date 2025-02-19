@@ -93,7 +93,7 @@ export default function App() {
         Accept: "application/json",
       }
     })
-  },[])
+  },[dtBaseData])
 
 
 
