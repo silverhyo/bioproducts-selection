@@ -46,40 +46,25 @@ export default function App() {
 
 
 
+
+
+
+
+
+
+
+
+
+
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
     axios.get(`${localAddress.localServer}`+`/api`)
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err))
-    axios.create({
-      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
-      withCredentials: true,
-      credentials: true,
-      headers: {
-        "Content-Type": "application/json",
-        "X-Custom-Header": "silverhyo",
-        Accept: "application/json",
-      }
-    })
   }, []);
   console.log("dtBaseData :", dtBaseData);
 
-  // const [dtBaseData, setDtBaseData] = useState('' || '')
-  // useEffect(() => {
-  //   axios.get(`${localAddress.localServer}`+`/api`, {
-  //     headers: {
-  //       // "host": "https://bioproducts-selection.netlify.app",
-  //       "host": "http://localhost:3000",
-  //       "Content-Type": "application/json"
-  //     },
-  //     credentials : true
-  //     // withCredentials : true
-  //   })
-  //   .then(res => setDtBaseData(res.data))
-  //   .catch(err => console.log(err));
-  // }, []);
-  // console.log("dtBaseData :", dtBaseData);
   
   useEffect(() => {
     axios.create({
@@ -195,11 +180,6 @@ export default function App() {
 
 
 
-  // useEffect (() => {
-  //   axios.get(process.env.REACT_APP_CORS, { withCredentials: true })
-  //   .then(response => console.log(response.data))
-  //   .catch(error => console.error("CORS 에러:", error));
-  // }, []);
 
 
 

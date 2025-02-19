@@ -20,14 +20,7 @@ import { AuthContext } from '../../Context/AuthContext';
 export default function Navigation() {
 
   const userInformation = useContext(AuthContext).userStatus;
-  // const [userStatus, setUserStatus] = useState(userInformation.isLoggedIn || false)
-  // const storedLoginState = sessionStorage.getItem('userStatus.isLoggedIn');
-  // console.log("storedLoginState :", storedLoginState)
-  // useEffect(() => {
-  //   console.log(userStatus);
-    
-    
-  // },[userStatus])
+
 
 
   // ! Logout 구현하기기

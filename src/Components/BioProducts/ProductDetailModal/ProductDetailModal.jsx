@@ -28,10 +28,20 @@ export default function ProductDetailModal({JSONDATA01}) {
   
   const {id} = useParams();
 
+
+
+
   const [productInfo, setProductInfo] = useState('' || '');
   useEffect(() => {
-    axios.get(`${LocalAddress.localServer}`+`/bioproducts/`+id)
-    // axios.get(`${LocalAddress.localServer}`+`/bioproducts/`+id)
+    axios.get(`${LocalAddress.localServer}`+`/bioproducts/`+id, {
+      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      withCredentials: true,
+      headers: {
+        "Content-Type": "application/json",
+        "X-Custom-Header": "silverhyo",
+        Accept: "application/json",
+      }
+    })
     .then(res => {
       setProductInfo(res.data[0])
     })
@@ -39,9 +49,35 @@ export default function ProductDetailModal({JSONDATA01}) {
   },[]);
   console.log("productInfo :", productInfo)
 
+
+
+  // useEffect(() => {
+  //   axios.get(`${LocalAddress.localServer}`+`/bioproducts/`+id)
+  //   .then(res => {
+  //     setProductInfo(res.data[0])
+  //   })
+  //   .catch(err => console.log(err))
+  // },[]);
+  // console.log("productInfo :", productInfo)
+
+
+
+
+
+
+
+
+
+
+
   useEffect(() => {
     brandColor()
   },[productInfo])
+
+
+
+
+
 
   // ! Manufacturer에 따른 Top 색깔 변화
   function brandColor() {

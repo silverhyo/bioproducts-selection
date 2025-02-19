@@ -1,5 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
+import { useEffect } from 'react';
+import axios from 'axios';
 // import Style css
 import "./Bioproducts.css";
 // import Components
@@ -16,6 +18,7 @@ export default function Bioproducts({DATABASEDATA, JSONDATA01}) {
   const dtBaseData = DATABASEDATA;
   const jsonData01 = JSONDATA01;
   // =============================================Props : Rnd
+
 
   return (
     <>
