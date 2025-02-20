@@ -64,8 +64,10 @@ export default function App() {
       withCredentials: true,
       credentials: true,
       headers: {
+        "Origin": "https://bioproducts-selection.netlify.app/",
         "Content-Type": "application/json",
         "X-Custom-Header": "silverhyo",
+        "Access-Control-Request-Headers": "silverhyo",
         Accept: "application/json",
       }
     })
@@ -73,7 +75,6 @@ export default function App() {
     .catch(err => console.log(err))
   }, []);
   console.log("dtBaseData :", dtBaseData);
-
   
 
 
