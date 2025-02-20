@@ -59,7 +59,16 @@ export default function App() {
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    axios.get(`${localAddress.localServer}`+`/api`)
+    axios.get(`${localAddress.localServer}`+`/api`, {
+      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      withCredentials: true,
+      credentials: true,
+      headers: {
+        "Content-Type": "application/json",
+        "X-Custom-Header": "silverhyo",
+        Accept: "application/json",
+      }
+    })
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err))
   }, []);
