@@ -64,10 +64,8 @@ export default function App() {
       withCredentials: true,
       credentials: true,
       headers: {
-        "Origin": "https://bioproducts-selection.netlify.app/",
         "Content-Type": "application/json",
         "X-Custom-Header": "silverhyo",
-        "Access-Control-Request-Headers": "silverhyo",
         Accept: "application/json",
       }
     })
