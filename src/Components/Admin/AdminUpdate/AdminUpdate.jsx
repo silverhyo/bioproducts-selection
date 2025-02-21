@@ -61,8 +61,14 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
   // ! 02 : 정보를 얻어오기 위한 useEffect
   useEffect(() => {
-    axios.get(`${LocalAddress.localServer}`+`/admin/read/`+id)
-    // axios.get("http://localhost:8000/admin/read/"+id)
+    axios.get(`${LocalAddress.localServer}`+`/admin/read/`+id, {
+      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
+      withCredentials: true,
+      headers: { 
+        "xcustomheader": "silverhyo",
+        "Content-Type": "multipart/form-data",
+      },
+    })
     .then(res => {
       console.log(res.data[0])
       setValues({
@@ -373,7 +379,12 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
     console.log("formData :", formData);
 
     axios.put('http://localhost:8000/admin/update/'+id, formData, {
-      headers: { "Content-Type": "multipart/form-data" },
+      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
+      withCredentials: true,
+      headers: {
+        "xcustomheader": "silverhyo",
+        "Content-Type": "multipart/form-data"
+      },
     })
     .then(res => {
       alert("정상적으로 수정되었습니다.")

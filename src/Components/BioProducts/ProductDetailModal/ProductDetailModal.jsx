@@ -38,7 +38,7 @@ export default function ProductDetailModal({JSONDATA01}) {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
-        "X-Custom-Header": "silverhyo",
+        "xcustomheader": "silverhyo",
         Accept: "application/json",
       }
     })
@@ -51,14 +51,6 @@ export default function ProductDetailModal({JSONDATA01}) {
 
 
 
-  // useEffect(() => {
-  //   axios.get(`${LocalAddress.localServer}`+`/bioproducts/`+id)
-  //   .then(res => {
-  //     setProductInfo(res.data[0])
-  //   })
-  //   .catch(err => console.log(err))
-  // },[]);
-  // console.log("productInfo :", productInfo)
 
 
 

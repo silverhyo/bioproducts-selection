@@ -32,7 +32,31 @@ import { ProductsDataBaseContext } from './Context/ProductsDataBaseContext';
 // import JSON Data
 import jsonData_01 from "./Data/jsonData_01.json";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function App() {
+
+
+
+
+
+
+
 
   // ========================================IMAGE 저장 경로로 : Start
   const imageAddress = process.env.REACT_APP_IMAGE_LOCATION;
@@ -61,7 +85,7 @@ export default function App() {
   useEffect(() => {
     axios.get(`${localAddress.localServer}`+`/api`, {
       origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      // baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
       headers: {
@@ -81,7 +105,7 @@ export default function App() {
   useEffect(() => {
     axios.create({
       origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      // baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
       headers: {
@@ -165,6 +189,9 @@ export default function App() {
   // ! Login 진행 시 변동된 data는 (nickname, Image, Thumbnail, Email 등등) database에 업데이트 된다.
   // ! 즉 database의  user 데이터는 user가 로그인 진행할 때마다 최신으로 update가 된다.
   // ! 그래서 database로부터 이 user의 data를 가져오는 것이며, 이 data가 바로 setUserDatabaseInfo에 전달되어 결국 userDatabaseInfo로 저장이 된다.
+
+
+
 
   
   useEffect(() => {

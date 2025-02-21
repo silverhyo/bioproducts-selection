@@ -39,7 +39,14 @@ export default function AdminList({DATABASEDATA}) {
 
   // 삭제를 위한 함수
   const handleDelete = (id) => {
-    axios.delete(`${LocalAddress.localServer}`+`/admin/delete/`+id)
+    axios.delete(`${LocalAddress.localServer}`+`/admin/delete/`+id, {
+      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
+      withCredentials: true,
+      headers: { 
+        "xcustomheader": "silverhyo",
+        "Content-Type": "multipart/form-data",
+      },
+    })
     .then(res => {
       alert("삭제되었습니다.")
       console.log(res);

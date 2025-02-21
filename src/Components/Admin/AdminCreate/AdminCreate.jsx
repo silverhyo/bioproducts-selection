@@ -14,6 +14,17 @@ import { AuthContext } from '../../../Context/AuthContext';
 import { useContext } from 'react';
 import { WebInformation } from '../../../Context/WebInformation';
 
+
+
+
+
+
+
+
+
+
+
+
 export default function AdminCreate({JSONDATA01}) {
 
   // ! 자 이 페이지는 Admin 인 user만 접근할 수 있어야 하겠지? User 중에서 Admin 레벨인 user에게만 접근 가능!!
@@ -218,7 +229,12 @@ export default function AdminCreate({JSONDATA01}) {
     console.log("formData :", formData);
     
     axios.post(`${LocalAddress.localServer}`+`/admin/create`, formData, {
-      headers: { "Content-Type": "multipart/form-data"},
+      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
+      withCredentials: true,
+      headers: { 
+        "xcustomheader": "silverhyo",
+        "Content-Type": "multipart/form-data",
+      },
     })
     .then(res => {
       alert("정상적으로 등록되었습니다.")
