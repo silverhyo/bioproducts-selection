@@ -60,12 +60,13 @@ export default function App() {
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
     axios.get(`${localAddress.localServer}`+`/api`, {
+      origin: process.env.REACT_APP_PUBLIC_BASE_URL,
       baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
       headers: {
         "Content-Type": "application/json",
-        "X-Custom-Header": "silverhyo",
+        "xcustomheader": "silverhyo",
         Accept: "application/json",
       }
     })
@@ -82,7 +83,7 @@ export default function App() {
       credentials: true,
       headers: {
         "Content-Type": "application/json",
-        "X-Custom-Header": "silverhyo",
+        "xcustomheader": "silverhyo",
         Accept: "application/json",
       }
     })

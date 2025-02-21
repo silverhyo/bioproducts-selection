@@ -17,13 +17,13 @@ export default function NewBioProducts({DATABASEDATA}) {
 
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       <div className='NewBioProducts_Container'>
         <div className='NewBioProducts_Container_Box'>
           <ProductsNew DATABASEDATA={DATABASEDATA} />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

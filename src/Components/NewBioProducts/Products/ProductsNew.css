@@ -27,55 +27,31 @@
 }
 
 .ProductsNew_Container {
-  width: 100%;
-  height: 100%;
-  animation-name: fadeIn03;
-  animation-duration: 2s;
-  background: var(--backGroundDarkColor);
+  width: 100vw;
+  max-width: 1080px;
+  height: 100vh;
+  background-color: var(--backGroundColor);
 }
-.ProductsNew_Container .ProductsNew_Container_Box {
+.ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew .ProductNew_Container_Box_ProductNew_ImageBox {
   width: 100%;
-  height: 100%;
-  padding: 10px;
+  overflow: hidden;
 }
-.ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_Text {
-  font-size: var(--1d375rem);
-  font-weight: 600;
-  color: var(--whiteTextColor);
-  margin-bottom: 50px;
-}
-.ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew {
+.ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew .ProductNew_Container_Box_ProductNew_ImageBox .ProductsNew_Container_Box_ProductNew_ImageBox_Image {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: 30px;
-  border: 3px solid var(--backGroundColor);
-}
-.ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew .ProductsNew_Container_Box_ProductNew_Image {
-  width: 100%;
+  scale: 1;
   object-fit: cover;
 }
 .ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew .ProductsNew_Container_Box_ProductNew_Info {
-  width: 100%;
-  border: 1px red;
-  font-size: 12px;
-  text-align: right;
-  background: var(--backGroundColor);
-  color: var(--whiteTextColor);
-  padding: 0px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 5px;
+  background-color: var(--backGroundDarkColor);
 }
 .ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew .ProductsNew_Container_Box_ProductNew_Info .ProductsNew_Container_Box_ProductNew_Info_Title {
-  font-size: var(--0d875rem);
-  margin-bottom: 3px;
+  color: var(--whiteTextColor);
 }
 .ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew .ProductsNew_Container_Box_ProductNew_Info .ProductsNew_Container_Box_ProductNew_Info_ShortDescription {
-  font-size: var(--0d75rem);
-  margin-bottom: 3px;
+  color: var(--whiteTextColor);
 }
 .ProductsNew_Container .ProductsNew_Container_Box .ProductsNew_Container_Box_ProductNew .ProductsNew_Container_Box_ProductNew_Info .ProductsNew_Container_Box_ProductNew_Info_Manufacturer {
-  font-size: var(--1d05rem);
+  color: var(--whiteTextColor);
 }
 
 @keyframes fadeIn03 {
