@@ -74,10 +74,13 @@ export default function App() {
     .catch(err => console.log(err))
   }, []);
   console.log("dtBaseData :", dtBaseData);
-
   
+
+
+
   useEffect(() => {
     axios.create({
+      origin: process.env.REACT_APP_PUBLIC_BASE_URL,
       baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
@@ -88,10 +91,6 @@ export default function App() {
       }
     })
   },[])
-
-
-
-
 
 
 
