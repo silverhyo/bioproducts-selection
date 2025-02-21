@@ -60,7 +60,7 @@ export default function App() {
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
     axios.get(`${localAddress.localServer}`+`/api`, {
-      origin: process.env.REACT_APP_PUBLIC_BASE_URL,
+      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
       baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
