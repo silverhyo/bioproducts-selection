@@ -80,7 +80,7 @@ export default function App() {
 
   useEffect(() => {
     axios.create({
-      origin: process.env.REACT_APP_PUBLIC_BASE_URL,
+      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
       baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
