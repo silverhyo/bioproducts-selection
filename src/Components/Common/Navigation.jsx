@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import Cookies from 'js-cookie';
+import { useEffect } from 'react';
 // import Style css
 import "./Navigation.css";
 // ICONS
@@ -22,8 +23,22 @@ export default function Navigation() {
   const userInformation = useContext(AuthContext).userStatus;
 
 
+  useEffect(() => {
+    console.log("hi");
+  },[userInformation]);
+  console.log("Navigation-userInformation :", userInformation)
 
-  // ! Logout 구현하기기
+
+
+
+
+
+
+
+
+
+
+  // ! Logout 구현하기
   const navigate = useNavigate();
   function handleLogout() {
     // * 쿠키 삭제
@@ -41,6 +56,17 @@ export default function Navigation() {
     navigate("/home");
   }
 
+
+
+
+
+
+
+
+
+
+
+  
   return (
     <div className='HomeChildNav01_Container'>
       <nav className='HomeChildNav01_Container_NavBox'>

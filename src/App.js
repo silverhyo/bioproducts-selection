@@ -85,7 +85,7 @@ export default function App() {
   useEffect(() => {
     axios.get(`${localAddress.localServer}`+`/api`, {
       origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      // baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
       headers: {
@@ -102,10 +102,15 @@ export default function App() {
 
 
 
+
+
+  
+
+
   useEffect(() => {
     axios.create({
       origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      // baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
       credentials: true,
       headers: {
@@ -166,7 +171,7 @@ export default function App() {
         isLoggedIn: true,
       });
       sessionStorage.setItem('isLoggedIn', 'true');
-      Cookies.set('userInfo', JSON.stringify(userInfo), {expires: 1 })
+      Cookies.set('userInfo', JSON.stringify(userInfo), {expires: 1 }) // TODO : expires 에 따라서 쿠키에 남아있는 기간 설정되나?
 
 
       
@@ -183,6 +188,17 @@ export default function App() {
   }, [setUserStatus]);
 
 
+
+
+
+
+
+
+
+
+
+
+
   // ! useContext로 App.js로부터 user 정보인 UserInformation 을 가지고 온다. 이 정보를 logInInformation 정보에 넣는다.
   // ! logInInformation에서 userId 정보를 가져오고 이 정보를 database에 요청하여 이 id에 맞는 user 정보를 database 로부터 가져온다.
   // ! 왜 여기서 가져오나?
@@ -197,7 +213,17 @@ export default function App() {
   useEffect(() => {
     if(userStatus?.isLoggedIn) {
       setUserId(userStatus.currentUserId);
-      axios.get(`${localAddress.localServer}`+`/userinfo/`+`${userStatus.currentUserId}`)
+      axios.get(`${localAddress.localServer}`+`/userinfo/`+`${userStatus.currentUserId}`, {
+        origin: process.env.REACT_APP_FRONTEND_ADDRESS,
+        baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
+        withCredentials: true,
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          "xcustomheader": "silverhyo",
+          Accept: "application/json",
+        }
+      })
       .then(res => setUserDatabaseInfo(
         {
           databaseID: res?.data[0].ID,

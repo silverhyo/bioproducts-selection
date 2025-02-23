@@ -39,4 +39,3 @@ export default function LoginKakao() {
     </div>
   )
 }
-// Login 현 02 : server.js에서 REACT_APP_SERVER_URL (http://localhost8000/auth/kaka) 에서 리다이렉트 진행한다.
