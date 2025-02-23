@@ -112,7 +112,9 @@ export default function App() {
       origin: process.env.REACT_APP_FRONTEND_ADDRESS,
       baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
       withCredentials: true,
+      secure: true,
       credentials: true,
+      sameSite: "none",
       headers: {
         "Content-Type": "application/json",
         "xcustomheader": "silverhyo",
@@ -217,6 +219,7 @@ export default function App() {
         origin: process.env.REACT_APP_FRONTEND_ADDRESS,
         baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
         withCredentials: true,
+        secure: true,
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
