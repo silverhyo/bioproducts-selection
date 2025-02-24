@@ -53,7 +53,7 @@ export default function App() {
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    axios.get(`/api`, {
+    axios.get('/api', {
       origin: `${process.env.REACT_APP_CLIENT_URL}`,
       baseURL: `${process.env.REACT_APP_BASE_URL}`,
       withCredentials: "true",
