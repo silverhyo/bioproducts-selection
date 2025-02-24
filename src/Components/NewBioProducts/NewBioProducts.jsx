@@ -10,9 +10,9 @@ import ProductsNew from './Products/ProductsNew';
 
 import { ImageAddressContext } from '../../Context/ImageAddressContext';
 
-export default function NewBioProducts({DATABASEDATA}) {
+export default function NewBioProducts() {
 
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
+  const imageURL = useContext(ImageAddressContext).imageURL;
 
 
   return (
@@ -20,7 +20,7 @@ export default function NewBioProducts({DATABASEDATA}) {
       {/* <Navigation /> */}
       <div className='NewBioProducts_Container'>
         <div className='NewBioProducts_Container_Box'>
-          <ProductsNew DATABASEDATA={DATABASEDATA} />
+          <ProductsNew />
         </div>
       </div>
       {/* <Footer /> */}

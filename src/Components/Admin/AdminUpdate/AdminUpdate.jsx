@@ -12,14 +12,17 @@ import Footer from '../../Common/Footer';
 // import Context
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { WebInformation } from '../../../Context/WebInformation';
+import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
+import { JsonDataContext } from '../../../Context/JsonDataContext';
 
 // ! 아래 Props는 App.js로부터
-export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
+export default function AdminUpdate({JSONDATA01}) {
 
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
-  const LocalAddress = useContext(WebInformation).localAddress;
+  const imageURL = useContext(ImageAddressContext).imageURL;
+  const URL = useContext(WebInformation).URL;
+  const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData; 
+  const jsonData01 = useContext(JsonDataContext).jsonData01;
 
-  const jsonData = JSONDATA01;
   const {id} = useParams();
   const navigate = useNavigate();
 
@@ -61,9 +64,10 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
   // ! 02 : 정보를 얻어오기 위한 useEffect
   useEffect(() => {
-    axios.get(`${LocalAddress.localServer}`+`/admin/read/`+id, {
-      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      withCredentials: true,
+    axios.get(`/admin/read/`+id, {
+      origin: `${process.env.REACT_APP_CLIENT_URL}`,
+      withCredentials: "true",
+      credentials: "true",
       headers: { 
         "xcustomheader": "silverhyo",
         "Content-Type": "multipart/form-data",
@@ -378,9 +382,10 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
     
     console.log("formData :", formData);
 
-    axios.put('http://localhost:8000/admin/update/'+id, formData, {
-      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      withCredentials: true,
+    axios.put('/admin/update/'+id, formData, {
+      origin: `${process.env.REACT_APP_CLIENT_URL}`,
+      withCredentials: "true",
+      credentials: "true",
       headers: {
         "xcustomheader": "silverhyo",
         "Content-Type": "multipart/form-data"
@@ -421,7 +426,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
                 <p className='Edit_MainProductImage_Container_Box_Asking_P'><span>😘</span> 제품에 대한 <strong>메인 이미지 사진</strong>을 첨부해 주세요.</p>
               </div>
               <div className='Edit_MainProductImage_Container_Box_Register'>
-                <img className='Edit_MainProductImage_Container_Box_Register_Image' src={imgFileMain ? imgFileMain : imageAddress+values.PMainImage} alt='' />
+                <img className='Edit_MainProductImage_Container_Box_Register_Image' src={imgFileMain ? imgFileMain : imageURL+values.PMainImage} alt='' />
                 <input className='Edit_MainProductImage_Container_Box_Register_Input' type="file" accept="image/*" ref={imgRefMain} name="Edit_MainProductImage" onChange={setProductMainImaging} />
               </div>
 
@@ -446,7 +451,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
               <label className='Edit_ProductType_Container_Box_Label' htmlFor='Edit_product_type'></label>
               <select className='Edit_ProductType_Container_Box_Select' id="Edit_product_type" value={values.PType} onChange={e => setValues({...values, PType: e.target.value})}>
                 <option className='Edit_ProductType_Container_Box_Option' name="Edit_ProductType" value="">Product Type을 선택해 주세요</option>
-                {jsonData.ProductType.map((Product, index) => {
+                {jsonData01.ProductType.map((Product, index) => {
                   return (
                     <option className='Edit_ProductType_Container_Box_Option' key={index} name="Edit_ProductType" value={Product.Value}>{Product.Title}</option>
                   )
@@ -460,7 +465,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
           <div className='Edit_ModalityProducts_Container'>
             <div className='Edit_ModalityProducts_Container_Box'>
               <p className='Edit_ModalityProducts_Container_Box_P'><span>😘</span> 적용 가능한 <strong>Modality</strong>을 선택해 주세요. (중복 선택 가능)</p>
-              {jsonData.Modality.map((modality, index) => {
+              {jsonData01.Modality.map((modality, index) => {
                   return (
                     <div className='Edit_ModalityProducts_Container_Box_Small' key={modality.ID}>
                       <input className='Edit_ModalityProducts_Container_Box_Small_Input' id={'Edit_'+modality.Value} type="checkbox" name="Edit_ModalityProducts" value={modality.Value} onChange={e => settingModalityProducts(e.target.checked, e.target.value)}/>
@@ -478,7 +483,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
             <div className='Edit_ApplicationFilterProducts_Container_Box'>
 
               <p className='Edit_ApplicationFilterProducts_Container_Box_P'><span>😘</span> <strong>Filtration</strong>의 목적을 선택해 주세요. (중복 선택 가능)</p>
-              {jsonData.Filtration.map((filtration, index) => {
+              {jsonData01.Filtration.map((filtration, index) => {
                 return (
                   <div className='Edit_ApplicationFilterProducts_Container_Box_Small' key={filtration.ID}>
                     <input className='Edit_ApplicationFilterProducts_Container_Box_Small_Input' id={'Edit_'+filtration.Value} type="checkbox" name="Edit_FilterProduct" value={filtration.Value} onChange={e => settingFilterProducts(e.target.checked, e.target.value)}/>
@@ -495,7 +500,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
           <div className='Edit_ApplicationCellLine_Container'>
             <div className='Edit_ApplicationCellLine_Container_Box'>
               <p className='Edit_ApplicationCellLine_Container_Box_P'><span>😘</span> <strong>Cell Line</strong>을 선택해 주세요. (중복 선택 가능)</p>
-              {jsonData.ApplicationCellLine.map((cellLine, index) => {
+              {jsonData01.ApplicationCellLine.map((cellLine, index) => {
                 return (
                   <div className='Edit_ApplicationCellLine_Container_Box_Small' key={cellLine.ID}>
                     <input className='Edit_ApplicationCellLine_Container_Box_Small_Input' name="Edit_ApplicationCellLine" id={cellLine.Value} type="checkbox" value={cellLine.Value} onChange={e => settingCellLine(e.target.checked, e.target.value)}/>
@@ -514,7 +519,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
               <label className='Edit_ProductType_Container_Box_Label' htmlFor='Edit_service_type'></label>
               <select className='Edit_ProductType_Container_Box_Select' id="Edit_service_type" value={values.PService} onChange={e => setValues({...values, PService: e.target.value})}>
                 <option className='Edit_ProductType_Container_Box_Option' name="Edit_ServiceType" value="">Service를 선택해 주세요</option>
-                {jsonData.Service.map((item, index) => {
+                {jsonData01.Service.map((item, index) => {
                   return (
                     <option className='Edit_ProductType_Container_Box_Option' key={index} name="Edit_ProductType" value={item.Value}>{item.Title}</option>
                   )
@@ -533,7 +538,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
               <label className='Edit_Manufacturer_Container_Box_Label' htmlFor='Edit_manufacturer'></label>
               <select className='Edit_Manufacturer_Container_Box_Select' id="Edit_manufacturer" value={values.PManufacturer} onChange={e => setValues({...values, PManufacturer: e.target.value})}>
                 <option className='Edit_Manufacturer_Container_Box_Select_Option' value="">Manufacturer를 선택해 주세요</option>
-                {jsonData.Manufacturer.map((manufacture, index) => {
+                {jsonData01.Manufacturer.map((manufacture, index) => {
                   return (
                     <option className='Edit_Manufacturer_Container_Box_Select_Option' key={index} name="Manufacturer" value={manufacture.Value}>{manufacture.Title}</option>
                   )
@@ -551,7 +556,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
               <div className="Edit_DescriptionA_Container_Box_P_Small">
                 <p className='Edit_DescriptionA_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : imageAddress+values.PFileA1} alt="" /><br />
+                <img className='Edit_DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : imageURL+values.PFileA1} alt="" /><br />
                 <input className='Edit_DescriptionA_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionA1" id="Edit_fileInputA" ref={imgRefA} accept="image/*" onChange={settingDetailA1} /><br/><br/>
                 <input className='Edit_DescriptionA_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionA2" value={values.PTitleA2} onChange={e => setValues({...values, PTitleA2: e.target.value})}></input><br/><br/>
                 <textarea className='Edit_DescriptionA_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionA3" value={values.PDescriptionA3} onChange={e => setValues({...values, PDescriptionA3: e.target.value})} />
@@ -569,7 +574,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
               <div className="Edit_DescriptionB_Container_Box_P_Small">
                 <p className='Edit_DescriptionB_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : imageAddress+values.PFileB1} alt="" /><br />
+                <img className='Edit_DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : imageURL+values.PFileB1} alt="" /><br />
                 <input className='Edit_DescriptionB_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionB1" ref={imgRefB} id="Edit_fileInputB" accept="image/*" onChange={settingDetailB1} /><br/><br/>
                 <input className='Edit_DescriptionB_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionB2" value={values.PTitleB2} onChange={e => setValues({...values, PTitleB2: e.target.value})}></input><br/><br/>
                 <textarea className='Edit_DescriptionB_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionB3" value={values.PDescriptionB3} onChange={e => setValues({...values, PDescriptionB3: e.target.value})} />
@@ -588,7 +593,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
               <div className="Edit_DescriptionC_Container_Box_P_Small">
                 <p className='Edit_DescriptionC_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : imageAddress+values.PFileC1} alt="" /><br />
+                <img className='Edit_DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : imageURL+values.PFileC1} alt="" /><br />
                 <input className='Edit_DescriptionC_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionC1" ref={imgRefC} id="Edit_fileInputC" accept="image/*" onChange={settingDetailC1} /><br/><br/>
                 <input className='Edit_DescriptionC_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionC2" value={values.PTitleC2} onChange={e => setValues({...values, PTitleC2: e.target.value})}></input><br/><br/>
                 <textarea className='Edit_DescriptionC_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionC3" value={values.PDescriptionC3} onChange={e => setValues({...values, PDescriptionC3: e.target.value})} />
@@ -606,7 +611,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
               <div className="Edit_DescriptionD_Container_Box_P_Small">
                 <p className='Edit_DescriptionD_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : imageAddress+values.PFileD1} alt="" /><br />
+                <img className='Edit_DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : imageURL+values.PFileD1} alt="" /><br />
                 <input className='Edit_DescriptionD_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionD1" ref={imgRefD} id="Edit_fileInputD" accept="image/*" onChange={settingDetailD1} /><br/><br/>
                 <input className='Edit_DescriptionD_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionD2" value={values.PTitleD2} onChange={e => setValues({...values, PTitleD2: e.target.value})} ></input><br/><br/>
                 <textarea className='Edit_DescriptionD_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionD3" value={values.PDescriptionD3} onChange={e => setValues({...values, PDescriptionD3: e.target.value})} />
@@ -624,7 +629,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
               <div className="Edit_DescriptionE_Container_Box_P_Small">
                 <p className='Edit_DescriptionE_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : imageAddress+values.PFileE1} alt="" /><br />
+                <img className='Edit_DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : imageURL+values.PFileE1} alt="" /><br />
                 <input className='Edit_DescriptionE_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionE1" id="Edit_fileInputE" ref={imgRefE} accept="image/*" onChange={settingDetailE1} /><br/><br/>
                 <input className='Edit_DescriptionE_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionE2" value={values.PTitleE2} onChange={e => setValues({...values, PTitleE2: e.target.value})} ></input><br/><br/>
                 <textarea className='Edit_DescriptionE_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionE3" value={values.PDescriptionE3} onChange={e => setValues({...values, PDescriptionE3: e.target.value})} />
@@ -677,7 +682,7 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
           <div className='AdvertiseDo_Container'>
             <div className='AdvertiseDo_Container_Box'>
               <p className='AdvertiseDo_Container_Box_P'><span>❤️</span> <strong>광고 진행</strong>여부를 선택해 주세요.</p>
-              {jsonData.Boolean.map((item, index) => {
+              {jsonData01.Boolean.map((item, index) => {
                   return (
                     <div className='AdvertiseDo_Container_Box_Small' key={item.ID}>
                       <input className='AdvertiseDo_Container_Box_Small_Input' id={item.Value} type="checkbox" name="Advertise" onChange={e => settingBoolean(e.target.checked)}/>
@@ -707,9 +712,9 @@ export default function AdminUpdate({DATABASEDATA, JSONDATA01}) {
 
         </div>
       </form>
-      <dvi className='Edit_Cancel_Button_Box'>
+      <div className='Edit_Cancel_Button_Box'>
         <Link to='/admin/list' style={{textDecoration:"none"}}><div className='Edit_Cancel_Button'>취소하기</div></Link>
-      </dvi>
+      </div>
       <Footer />
     </>
   )

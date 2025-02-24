@@ -17,15 +17,15 @@ import ProductsRelated from '../ProductsRelated/ProductsRelated';
 // import useContext
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { WebInformation } from '../../../Context/WebInformation';
+import { JsonDataContext } from '../../../Context/JsonDataContext';
 
 
 // ! 아래 Props는 APP.js로부터 받아옴
 export default function ProductDetailModal({JSONDATA01}) {
 
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
-  const LocalAddress = useContext(WebInformation).localAddress;
-  const jsonData = JSONDATA01;
-  
+  const imageURL = useContext(ImageAddressContext).imageURL;
+  const URL = useContext(WebInformation).URL;
+  const jsonData01 = useContext(JsonDataContext).jsonData01;
   const {id} = useParams();
 
 
@@ -33,9 +33,10 @@ export default function ProductDetailModal({JSONDATA01}) {
 
   const [productInfo, setProductInfo] = useState('' || '');
   useEffect(() => {
-    axios.get(`${LocalAddress.localServer}`+`/bioproducts/`+id, {
-      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
-      withCredentials: true,
+    axios.get(`/bioproducts/`+id, {
+      baseURL: `${process.env.REACT_APP_BASE_URL}`,
+      withCredentials: "true",
+      credentials: "true",
       headers: {
         "Content-Type": "application/json",
         "xcustomheader": "silverhyo",
@@ -47,18 +48,6 @@ export default function ProductDetailModal({JSONDATA01}) {
     })
     .catch(err => console.log(err))
   },[]);
-  console.log("productInfo :", productInfo)
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -95,8 +84,6 @@ export default function ProductDetailModal({JSONDATA01}) {
   };
 
 
-
-
   const [descriptionTextA, setDescriptionTextA] = useState();
   const [descriptionTextB, setDescriptionTextB] = useState();
   const [descriptionTextC, setDescriptionTextC] = useState();
@@ -109,7 +96,6 @@ export default function ProductDetailModal({JSONDATA01}) {
   let descriptionC = productInfo.ProductDescription03;
   let descriptionD = productInfo.ProductDescription04;
   let descriptionE = productInfo.ProductDescription05;
-  console.log("descriptionA :", descriptionA)
 
 
   useEffect(() => {
@@ -123,13 +109,6 @@ export default function ProductDetailModal({JSONDATA01}) {
     }
   },[productInfo]);
 
-
-
-  // 이 페이지가 불러져올때 페이지의 위치를 최상단으로 하고 싶어!!
-
-  function closePopupWindow() {
-
-  }
   
 
   // ! 아래는 Contact Component에 Prop으로 전달 (이 제품에 대한 담당자 연락처, 제조사 정보)
@@ -164,7 +143,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl01} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl01} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle01}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextA?.split('\n').map((line) => {
             return (
@@ -177,7 +156,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl02} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl02} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle02}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextB?.split('\n').map((line) => {
             return (
@@ -190,7 +169,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl03} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl03} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle03}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextC?.split('\n').map((line) => {
             return (
@@ -203,7 +182,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl04} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl04} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle04}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextD?.split('\n').map((line) => {
             return (
@@ -216,10 +195,10 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          {imageAddress+productInfo.ProductImageUrl05 ?
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageAddress+productInfo.ProductImageUrl05} alt="" />
+          {imageURL+productInfo.ProductImageUrl05 ?
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl05} alt="" />
           :
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' style={{display:"none"}} src={imageAddress+productInfo.ProductImageUrl05} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' style={{display:"none"}} src={imageURL+productInfo.ProductImageUrl05} alt="" />
           }
 
           {productInfo.ProductTitle05 ?
@@ -252,7 +231,7 @@ export default function ProductDetailModal({JSONDATA01}) {
       </div>
       
     </div>
-    <Contact CONTACTINFO={contactInfo} JSONDATA01={jsonData} />
+    <Contact CONTACTINFO={contactInfo} />
 
     {/* <CommentsReact /> */}
 

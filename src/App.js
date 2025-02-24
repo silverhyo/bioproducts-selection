@@ -27,22 +27,9 @@ import { WebInformation } from './Context/WebInformation';
 import { AuthContext } from './Context/AuthContext';
 import { ImageAddressContext } from './Context/ImageAddressContext';
 import { ProductsDataBaseContext } from './Context/ProductsDataBaseContext';
-// import PrivateRoute from './Components/Log_in_out_Kakao/PrivateRoute/PrivateRoute';
-
+import { JsonDataContext } from './Context/JsonDataContext';
 // import JSON Data
-import jsonData_01 from "./Data/jsonData_01.json";
-
-
-
-
-
-
-
-
-
-
-
-
+import jsonData01 from "./Data/jsonData_01.json";
 
 
 
@@ -51,29 +38,12 @@ import jsonData_01 from "./Data/jsonData_01.json";
 
 export default function App() {
 
-
-
-
-
-
-
-
-  // ========================================IMAGE 저장 경로로 : Start
-  const imageAddress = process.env.REACT_APP_IMAGE_LOCATION;
-  // ========================================FrontEnd 및 Server 주소 : START
-  const localAddress = ({
-    localFrontEnd:process.env.REACT_APP_FRONTEND_ADDRESS,
-    localServer:process.env.REACT_APP_SERVER_ADDRESS,
+  const imageURL = process.env.REACT_APP_IMAGE_URL; // * Image 저장 URL
+  const URL = ({
+    clientURL:process.env.REACT_APP_CLIENT_URL, // * Client URL
+    serverURL:process.env.REACT_APP_SERVER_URL, // * Server URL
   });
-
-
-
-
-
-
-
-
-
+  console.log("[App]-URL :", URL);
 
 
 
@@ -83,42 +53,35 @@ export default function App() {
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    axios.get(`${localAddress.localServer}`+`/api`, {
-      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
-      withCredentials: true,
-      credentials: true,
+    axios.get(`/api`, {
+      origin: `${process.env.REACT_APP_CLIENT_URL}`,
+      baseURL: `${process.env.REACT_APP_BASE_URL}`,
+      withCredentials: "true",
+      credentials: "true",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
         "xcustomheader": "silverhyo",
-        Accept: "application/json",
       }
     })
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err))
-  }, []);
-  console.log("dtBaseData :", dtBaseData);
+  }, [setDtBaseData]);
+  console.log("[APP]-dtBaseData :", dtBaseData);
   
-
-
-
-
-
-  
-
 
   useEffect(() => {
     axios.create({
-      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
-      withCredentials: true,
-      secure: true,
-      credentials: true,
+      origin: `${process.env.REACT_APP_CLIENT_URL}`,
+      baseURL: `${process.env.REACT_APP_BASE_URL}`,
+      withCredentials: "true",
+      secure: "true",
+      credentials: "true",
       sameSite: "none",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
         "xcustomheader": "silverhyo",
-        Accept: "application/json",
       }
     })
   },[])
@@ -128,22 +91,8 @@ export default function App() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  // ! LogIn01 코드 삽입 부
   // ! 새로운 코드(kakao로부터 전달 받은 고객 정보)
 
-  const [userId, setUserId] = useState('')
   const [userDatabaseInfo, setUserDatabaseInfo] = useState({
     databaseID: '',
     databaseLevel: '',
@@ -159,11 +108,11 @@ export default function App() {
     isLoggedIn: false,
   });
 
+  // ! USERINFORMATION를 Cookie로부터 전달 받기
   useEffect(() => {
     const userInfo = Cookies.get('userInfo')
       ? JSON.parse(Cookies.get('userInfo'))
       : null;
-
     if (userInfo) {
       setUserStatus({
         currentUserId: userInfo?.id,
@@ -173,10 +122,7 @@ export default function App() {
         isLoggedIn: true,
       });
       sessionStorage.setItem('isLoggedIn', 'true');
-      Cookies.set('userInfo', JSON.stringify(userInfo), {expires: 1 }) // TODO : expires 에 따라서 쿠키에 남아있는 기간 설정되나?
-
-
-      
+      Cookies.set('userInfo', JSON.stringify(userInfo), {expires: 0.1 }) // TODO : expires 에 따라서 쿠키에 남아있는 기간 설정(2시간간)
     } else {
       setUserStatus({
         currentUserId: '',
@@ -196,36 +142,25 @@ export default function App() {
 
 
 
-
-
-
-
-
   // ! useContext로 App.js로부터 user 정보인 UserInformation 을 가지고 온다. 이 정보를 logInInformation 정보에 넣는다.
   // ! logInInformation에서 userId 정보를 가져오고 이 정보를 database에 요청하여 이 id에 맞는 user 정보를 database 로부터 가져온다.
   // ! 왜 여기서 가져오나?
   // ! Login 진행 시 변동된 data는 (nickname, Image, Thumbnail, Email 등등) database에 업데이트 된다.
   // ! 즉 database의  user 데이터는 user가 로그인 진행할 때마다 최신으로 update가 된다.
   // ! 그래서 database로부터 이 user의 data를 가져오는 것이며, 이 data가 바로 setUserDatabaseInfo에 전달되어 결국 userDatabaseInfo로 저장이 된다.
-
-
-
-
-  
   useEffect(() => {
     if(userStatus?.isLoggedIn) {
-      setUserId(userStatus.currentUserId);
-      axios.get(`${localAddress.localServer}`+`/userinfo/`+`${userStatus.currentUserId}`, {
-        origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-        baseURL: process.env.REACT_APP_PUBLIC_BASE_URL,
-        withCredentials: true,
-        secure: true,
+      axios.get(`/userinfo/`+`${userStatus.currentUserId}`, {
+        origin: `${process.env.REACT_APP_CLIENT_URL}`,
+        baseURL: `${process.env.REACT_APP_BASE_URL}`,
+        withCredentials: "true",
+        secure: "true",
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
           "xcustomheader": "silverhyo",
           Accept: "application/json",
-        }
+        },
       })
       .then(res => setUserDatabaseInfo(
         {
@@ -245,32 +180,27 @@ export default function App() {
 
 
 
-
-
-
   
   return (
     <div className="App_Container">
       <BrowserRouter>
         <ScrollToTop />
         <ProductsDataBaseContext.Provider value={{dtBaseData}} >
-        <ImageAddressContext.Provider value={{imageAddress}} >
-        <WebInformation.Provider value={{localAddress}} >
+        <JsonDataContext.Provider value={{jsonData01}} >
+        <ImageAddressContext.Provider value={{imageURL}} >
+        <WebInformation.Provider value={{URL}} >
         <AuthContext.Provider value={{userStatus, userDatabaseInfo}}>
         <Routes>
           <Route path="/login/kakao" element={<LoginKakao />} />
-          {/* <Route path="/login/kakao/user" element={<KakaoLogin />} /> */}
           <Route path="/logout/kakao" element={<LogoutKakao />} />
           <Route path="/user/userinfo" element={<UserInfo />} />
 
           <Route path="/" element={<Landing />}></Route>
-          <Route path="/home" element={<Home DATABASEDATA={dtBaseData}/>} ></Route>
+          <Route path="/home" element={<Home />} ></Route>
           <Route path="/event" element={<Event />} ></Route>
-          <Route path="/newbioproducts" element={<NewBioProducts DATABASEDATA={dtBaseData} />}></Route>
-          <Route path="/bioproducts" element={<Bioproducts DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} />}></Route>
-          <Route path="/bioproducts/:id" element={<ProductDetailModal JSONDATA01={jsonData_01} />}></Route>
-
-
+          <Route path="/newbioproducts" element={<NewBioProducts />}></Route>
+          <Route path="/bioproducts" element={<Bioproducts />}></Route>
+          <Route path="/bioproducts/:id" element={<ProductDetailModal />}></Route>
 
           {/* <Route 
             path="/admin/home"
@@ -281,28 +211,18 @@ export default function App() {
             }>
           </Route> */}
 
-          <Route path="/admin/create" element={<AdminCreate JSONDATA01={jsonData_01} />}></Route>
-          <Route path="/admin/list" element={<AdminList DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} />}></Route>
-          <Route path="/admin/update/:id" element={<AdminUpdate DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} />}></Route>
-
-
-
+          <Route path="/admin/create" element={<AdminCreate />}></Route>
+          <Route path="/admin/list" element={<AdminList />}></Route>
+          <Route path="/admin/update/:id" element={<AdminUpdate />}></Route>
           <Route path="/admin/home" element={<AdminHome />}></Route>
-          {/* <Route path="/admin/create" element={<AdminCreate JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
-          <Route path="/admin/list" element={<AdminList DATABASEDATA={dtBaseData} IMAGEADDRESS={imageAddress} JSONDATA01={jsonData_01} LOCALADDRESS={localAddress}/>}></Route>
-          <Route path="/admin/update/:id" element={<AdminUpdate DATABASEDATA={dtBaseData} JSONDATA01={jsonData_01} IMAGEADDRESS={imageAddress} LOCALADDRESS={localAddress}/>}></Route> */}
-
-
-
 
         </Routes>
         </AuthContext.Provider>
         </WebInformation.Provider>
         </ImageAddressContext.Provider>
+        </JsonDataContext.Provider>
         </ProductsDataBaseContext.Provider>
       </BrowserRouter>
-
-
     </div>
   );
 };

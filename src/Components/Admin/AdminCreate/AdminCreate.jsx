@@ -13,14 +13,7 @@ import NotFound from '../../Common/NotFound';
 import { AuthContext } from '../../../Context/AuthContext';
 import { useContext } from 'react';
 import { WebInformation } from '../../../Context/WebInformation';
-
-
-
-
-
-
-
-
+import { JsonDataContext } from '../../../Context/JsonDataContext';
 
 
 
@@ -32,10 +25,10 @@ export default function AdminCreate({JSONDATA01}) {
   // ! 아래 userInformation의 UserId 정보와 데이터베이스에서 가져와야하며 정보는 App.js로부터 가져온다.
 
   const userInformation = useContext(AuthContext).userDatabaseInfo;
-  const LocalAddress = useContext(WebInformation).localAddress
+  const URL = useContext(WebInformation).URL;
+  const jsonData01 = useContext(JsonDataContext).jsonData01;
 
   // ! 01 : state 정의 내리는 곳
-  const jsonData = JSONDATA01;
 
   const [productName, setProductName] = useState('');
   const [productMainImage, setProductMainImage] = useState('');
@@ -228,9 +221,10 @@ export default function AdminCreate({JSONDATA01}) {
     
     console.log("formData :", formData);
     
-    axios.post(`${LocalAddress.localServer}`+`/admin/create`, formData, {
-      origin: process.env.REACT_APP_FRONTEND_ADDRESS,
-      withCredentials: true,
+    axios.post(`/admin/create`, formData, {
+      origin: `${process.env.REACT_APP_CLIENT_URL}`,
+      withCredentials: "true",
+      credentials: "true",
       headers: { 
         "xcustomheader": "silverhyo",
         "Content-Type": "multipart/form-data",
@@ -273,7 +267,7 @@ export default function AdminCreate({JSONDATA01}) {
               <p className='MainProductImage_Container_Box_Asking_P'><span>😜</span> 제품에 대한 <strong>메인 이미지 사진</strong>을 첨부해 주세요.</p>
             </div>
             <div className='MainProductImage_Container_Box_Register'>
-              <img className='MainProductImage_Container_Box_Register_Image' src={imgFile ? imgFile : `/images/icon/user.png`} alt='' />
+              <img className='MainProductImage_Container_Box_Register_Image' src={imgFile ? imgFile : ``} alt='' />
               <input className='MainProductImage_Container_Box_Register_Input' type="file" accept="image/*" ref={imgRef} name="MainProductImage" required onChange={handleSetProductMainImage} />
             </div>
 
@@ -298,7 +292,7 @@ export default function AdminCreate({JSONDATA01}) {
             <label className='ProductType_Container_Box_Label' htmlFor='product_type'></label>
             <select className='ProductType_Container_Box_Select' id="product_type" required onChange={e => setProductType(e.target.value)}>
               <option className='ProductType_Container_Box_Option' name="ProductType" value="">Product Type을 선택해 주세요</option>
-              {jsonData.ProductType.map((Product, index) => {
+              {jsonData01.ProductType.map((Product, index) => {
                 return (
                   <option className='ProductType_Container_Box_Option' key={index} name="ProductType" value={Product.Value}>{Product.Title}</option>
                 )
@@ -312,7 +306,7 @@ export default function AdminCreate({JSONDATA01}) {
         <div className='ModalityProducts_Container'>
           <div className='ModalityProducts_Container_Box'>
             <p className='ModalityProducts_Container_Box_P'><span>😜</span> 적용 가능한 <strong>Modality</strong>을 선택해 주세요. (중복 선택)</p>
-            {jsonData.Modality.map((modality, index) => {
+            {jsonData01.Modality.map((modality, index) => {
                 return (
                   <div className='ModalityProducts_Container_Box_Small' key={modality.ID}>
                     <input className='ModalityProducts_Container_Box_Small_Input' id={modality.Value} type="checkbox" name="ModalityProducts" value={modality.Value} onChange={e => settingModalityProducts(e.target.checked, e.target.value)}/>
@@ -330,7 +324,7 @@ export default function AdminCreate({JSONDATA01}) {
           <div className='ApplicationFilterProducts_Container_Box'>
 
             <p className='ApplicationFilterProducts_Container_Box_P'><span>😜</span> <strong>Filtration</strong>의 목적을 선택해 주세요. (중복 선택)</p>
-            {jsonData.Filtration.map((filter, index) => {
+            {jsonData01.Filtration.map((filter, index) => {
               return (
                 <div className='ApplicationFilterProducts_Container_Box_Small' key={filter.ID}>
                   <input className='ApplicationFilterProducts_Container_Box_Small_Input' id={filter.Value} type="checkbox" name="FilterProduct" value={filter.Value} onChange={e => settingFilterProducts(e.target.checked, e.target.value)}/>
@@ -347,7 +341,7 @@ export default function AdminCreate({JSONDATA01}) {
         <div className='ApplicationCellLine_Container'>
           <div className='ApplicationCellLine_Container_Box'>
             <p className='ApplicationCellLine_Container_Box_P'><span>😜</span> <strong>Cell Line</strong>을 선택해 주세요. (중복 선택)</p>
-            {jsonData.ApplicationCellLine.map((cellLine, index) => {
+            {jsonData01.ApplicationCellLine.map((cellLine, index) => {
               return (
                 <div className='ApplicationCellLine_Container_Box_Small' key={cellLine.ID}>
                   <input className='ApplicationCellLine_Container_Box_Small_Input' name="ApplicationCellLine" id={cellLine.Value} type="checkbox" value={cellLine.Value} onChange={e => settingCellLine(e.target.checked, e.target.value)}/>
@@ -368,7 +362,7 @@ export default function AdminCreate({JSONDATA01}) {
             <label className='ProductType_Container_Box_Label' htmlFor='service_type'></label>
             <select className='ProductType_Container_Box_Select' id="service_type" onChange={e => setService(e.target.value)}>
               <option className='ProductType_Container_Box_Option' name="ServiceType" value="">Service를 선택해 주세요</option>
-              {jsonData.Service.map((item, index) => {
+              {jsonData01.Service.map((item, index) => {
                 return (
                   <option className='ProductType_Container_Box_Option' key={index} name="ProductType" value={item.Value}>{item.Title}</option>
                 )
@@ -387,7 +381,7 @@ export default function AdminCreate({JSONDATA01}) {
             <label className='Manufacturer_Container_Box_Label' htmlFor='manufacturer'></label>
             <select className='Manufacturer_Container_Box_Select' id="manufacturer" required onChange={e => setManufacturer(e.target.value)}>
               <option className='Manufacturer_Container_Box_Select_Option' value="">Manufacturer를 선택해 주세요</option>
-              {jsonData.Manufacturer.map((manufacture, index) => {
+              {jsonData01.Manufacturer.map((manufacture, index) => {
                 return (
                   <option className='Manufacturer_Container_Box_Select_Option' key={index} name="Manufacturer" value={manufacture.Value}>{manufacture.Title}</option>
                 )
@@ -406,7 +400,7 @@ export default function AdminCreate({JSONDATA01}) {
 
             <div className="DescriptionA_Container_Box_P_Small">
               <p className='DescriptionA_Container_Box_P_Small_P'></p>
-              <img className='DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : `/images/icon/user.png`} alt="" /><br />
+              <img className='DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : ``} alt="" /><br />
               <input className='DescriptionA_Container_Box_P_Small_Input1' type="file" name="DescriptionA1" id="fileInputA" ref={imgRefA} accept="image/*" onChange={settingDetailA1} /><br/><br/>
               <input className='DescriptionA_Container_Box_P_Small_Input2' type="text" name="DescriptionA2" placeholder="주요 문구를 입력해 주세요" onChange={e => setDescriptionA2(e.target.value)}></input><br/><br/>
               <textarea className='DescriptionA_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionA3" placeholder="간단한 설명을 입력해 주세요" onChange={e => setDescriptionA3(e.target.value)} />
@@ -424,7 +418,7 @@ export default function AdminCreate({JSONDATA01}) {
 
             <div className="DescriptionB_Container_Box_P_Small">
               <p className='DescriptionB_Container_Box_P_Small_P'></p>
-              <img className='DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : `/images/icon/user.png`} alt="" /><br />
+              <img className='DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : ``} alt="" /><br />
               <input className='DescriptionB_Container_Box_P_Small_Input1' type="file" name="DescriptionB1" ref={imgRefB} id="fileInputB" accept="image/*" onChange={settingDetailB1} /><br/><br/>
               <input className='DescriptionB_Container_Box_P_Small_Input2' type="text" name="DescriptionB2" placeholder="주요 문구를 입력해 주세요" onChange={e => setDescriptionB2(e.target.value)}></input><br/><br/>
               <textarea className='DescriptionB_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionB3" placeholder="간단한 설명을 입력해 주세요" onChange={e => setDescriptionB3(e.target.value)} />
@@ -443,7 +437,7 @@ export default function AdminCreate({JSONDATA01}) {
 
             <div className="DescriptionC_Container_Box_P_Small">
               <p className='DescriptionC_Container_Box_P_Small_P'></p>
-              <img className='DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : `/images/icon/user.png`} alt="" /><br />
+              <img className='DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : ``} alt="" /><br />
               <input className='DescriptionC_Container_Box_P_Small_Input1' type="file" name="DescriptionC1" ref={imgRefC} id="fileInputC" accept="image/*" onChange={settingDetailC1} /><br/><br/>
               <input className='DescriptionC_Container_Box_P_Small_Input2' type="text" name="DescriptionC2" placeholder="주요 문구를 입력해 주세요" onChange={e => setDescriptionC2(e.target.value)}></input><br/><br/>
               <textarea className='DescriptionC_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionC3" placeholder="간단한 설명을 입력해 주세요" onChange={e => setDescriptionC3(e.target.value)} />
@@ -462,7 +456,7 @@ export default function AdminCreate({JSONDATA01}) {
 
             <div className="DescriptionD_Container_Box_P_Small">
               <p className='DescriptionD_Container_Box_P_Small_P'></p>
-              <img className='DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : `/images/icon/user.png`} alt="" /><br />
+              <img className='DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : ``} alt="" /><br />
               <input className='DescriptionD_Container_Box_P_Small_Input1' type="file" name="DescriptionD1" ref={imgRefD} id="fileInputD" accept="image/*" onChange={settingDetailD1} /><br/><br/>
               <input className='DescriptionD_Container_Box_P_Small_Input2' type="text" name="DescriptionD2" placeholder="주요 문구를 입력해 주세요" onChange={e => setDescriptionD2(e.target.value)}></input><br/><br/>
               <textarea className='DescriptionD_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionD3" placeholder="간단한 설명을 입력해 주세요" onChange={e => setDescriptionD3(e.target.value)} />
@@ -480,7 +474,7 @@ export default function AdminCreate({JSONDATA01}) {
 
             <div className="DescriptionE_Container_Box_P_Small">
               <p className='DescriptionE_Container_Box_P_Small_P'></p>
-              <img className='DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : `/images/icon/user.png`} alt="" /><br />
+              <img className='DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : ``} alt="" /><br />
               <input className='DescriptionE_Container_Box_P_Small_Input1' type="file" name="DescriptionE1" ref={imgRefE} id="fileInputE" accept="image/*" onChange={settingDetailE1} /><br/><br/>
               <input className='DescriptionE_Container_Box_P_Small_Input2' type="text" name="DescriptionE2" placeholder="주요 문구를 입력해 주세요" onChange={e => setDescriptionE2(e.target.value)}></input><br/><br/>
               <textarea className='DescriptionE_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionE3" placeholder="간단한 설명을 입력해 주세요" onChange={e => setDescriptionE3(e.target.value)} />

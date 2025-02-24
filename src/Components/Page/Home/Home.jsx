@@ -11,21 +11,23 @@ import Navigation from '../../Common/Navigation';
 // import Context
 import { AuthContext } from '../../../Context/AuthContext';
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
+import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
 
-export default function Home({DATABASEDATA}) {
+export default function Home() {
 
   const userInformation = useContext(AuthContext).userStatus;
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
+  const imageURL = useContext(ImageAddressContext).imageURL;
+  const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
 
-  const [dtBaseData, setDtBaseData] = useState(DATABASEDATA);
-  const [productRegisteredNewly, setProductRegisteredNewly] = useState(DATABASEDATA);
-  const [productsOfThisMonth, setProductsOfThisMonth] =useState(DATABASEDATA);
+  const [dtBaseData, setDtBaseData] = useState(productsDataBase);
+  const [productRegisteredNewly, setProductRegisteredNewly] = useState(productsDataBase);
+  const [productsOfThisMonth, setProductsOfThisMonth] =useState(productsDataBase);
 
   useEffect(() => {
-    setDtBaseData(DATABASEDATA)
-    setProductRegisteredNewly(DATABASEDATA)
-    setProductsOfThisMonth(DATABASEDATA)
-  }, [DATABASEDATA]);
+    setDtBaseData(productsDataBase)
+    setProductRegisteredNewly(productsDataBase)
+    setProductsOfThisMonth(productsDataBase)
+  }, [productsDataBase]);
 
   
   //! 아래는 server에서 userInfo를 redirect 통해서 전달할 경우 아래 코드를 사용!!!
@@ -35,7 +37,6 @@ export default function Home({DATABASEDATA}) {
   //   const urlParams = new URLSearchParams(window.location.search); 
   //   const accessToken = urlParams.get("accessToken"); 
   //   const userName = urlParams.get("userName");
-
   //   if (accessToken && userName) {
   //     localStorage.setItem('accessToken', accessToken);
   //     localStorage.setItem('userName', userName);
@@ -44,7 +45,6 @@ export default function Home({DATABASEDATA}) {
   //     navigate('/login/kakao'); // 정보가 없으면 로그인 페이지로 이동동
   //   }
   // }, [navigate]);
-
   // console.log('userName :', userName);
 
 
@@ -56,15 +56,12 @@ export default function Home({DATABASEDATA}) {
   //   const userInfo = Cookies.get("userInfo")
   //     ? JSON.parse(Cookies.get("userInfo"))
   //     : null;
-
-    
   //   console.log("User Info:", userInfo);
   //   const userInformation = ({
   //     id: userInfo.id,
   //     nickName: userInfo.properties.nickname,
   //     profile_image: userInfo.properties.profile_image,
   //   });
-
   //   setUserNickName(userInformation.nickName)
   // }, []);
 
@@ -114,7 +111,7 @@ export default function Home({DATABASEDATA}) {
                     return (
                       <Link key={index} to={`/bioproducts/${item.ID}`}>
                       <div className='Product_New_Registered_Container_Box_ProductBox_ImageBox'>
-                        <img className='Product_New_Registered_Container_Box_ProductBox_ImageBox_Image' src={imageAddress+item.ProductMainImage} alt='' ></img>
+                        <img className='Product_New_Registered_Container_Box_ProductBox_ImageBox_Image' src={imageURL+item.ProductMainImage} alt='' ></img>
                       </div>
                       </Link>
                     )
@@ -136,7 +133,7 @@ export default function Home({DATABASEDATA}) {
                     return (
                       <Link key={index} to={`/bioproducts/${item.ID}`}>
                       <div className='Product_Of_This_Month_Container_Box_ProductBox_ImageBox'>
-                        <img className='Product_Of_This_Month_Container_Box_ProductBox_ImageBox_Image' src={imageAddress+item.ProductMainImage} alt='' ></img>
+                        <img className='Product_Of_This_Month_Container_Box_ProductBox_ImageBox_Image' src={imageURL+item.ProductMainImage} alt='' ></img>
                       </div>
                       </Link>
                     )

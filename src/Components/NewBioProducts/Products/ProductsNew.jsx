@@ -6,43 +6,29 @@ import { SectionsContainer, Section } from 'react-fullpage';
 import "./ProductsNew.css";
 
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
+import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
 
 
 
 
+export default function ProductsNew() {
 
-
-
-
-
-
-
-
-
-export default function ProductsNew({DATABASEDATA}) {
-
-
-
-  const dataBaseData = DATABASEDATA;
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
-
-  const [productList, setProductList] = useState(dataBaseData || []);
+  const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
+  const imageURL = useContext(ImageAddressContext).imageURL;
+  const [productList, setProductList] = useState(productsDataBase || []);
 
   useEffect(() => {
-    if(dataBaseData) {
-      setProductList(dataBaseData)
+    if(productsDataBase) {
+      setProductList(productsDataBase)
     }
-  },[dataBaseData]);
+  },[productsDataBase]);
 
-  console.log("dataBaseData :", dataBaseData);
-
-  const adProducts = productList.filter((item, index) => {
+  const adProducts = productsDataBase.filter((item, index) => {
     if(item.Advertise === 'true') {
       return true
     }
   });
   console.log("adProducts :", adProducts);
-
 
 
 
@@ -62,13 +48,6 @@ export default function ProductsNew({DATABASEDATA}) {
 
 
 
-
-
-
-
-
-
-
   return (
     <SectionsContainer {...options}>
       
@@ -79,7 +58,7 @@ export default function ProductsNew({DATABASEDATA}) {
               <div className='ProductsNew_Container_Box'>
                 <div className='ProductsNew_Container_Box_ProductNew'>
                   <div className='ProductNew_Container_Box_ProductNew_ImageBox'>
-                    <img className='ProductsNew_Container_Box_ProductNew_ImageBox_Image' src={imageAddress+item.ProductMainImage} alt=""></img>
+                    <img className='ProductsNew_Container_Box_ProductNew_ImageBox_Image' src={imageURL+item.ProductMainImage} alt=""></img>
                   </div>
                   <div className='ProductsNew_Container_Box_ProductNew_Info'>
                     <div className='ProductsNew_Container_Box_ProductNew_Info_Title'>{item.ProductName} ({item.ProductManufacturer})</div>

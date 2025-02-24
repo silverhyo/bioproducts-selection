@@ -17,11 +17,11 @@ import ImageOfThermo from '../../../Sources/image_logo/sartorius-logo-black.png'
 
 
 export default function ProductsRelated({PRODUCTINFO}) {
-  const productsList = useContext(ProductsDataBaseContext).dtBaseData;
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
+  const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
+  const imageURL = useContext(ImageAddressContext).imageURL;
 
   // ! 아래 매우 중요 : 주어진 조건을 만족하기 위해 두 데이터(PRODUCTINFO.ProductRelated와 item.ProductRelated)를 쉼표로 구분된 문자열로 간주하고, 이를 배열로 변환한 후 공통 요소가 있는지 확인해야 합니다. 이 경우 split(', ')를 활용해 문자열을 배열로 나누고, 배열 간의 교집합을 확인하여 일치 항목이 있는지를 판단합니다.
-  const ProductRelated = [...productsList].filter((item, index) => {
+  const ProductRelated = [...productsDataBase].filter((item, index) => {
     const productInfoArray = PRODUCTINFO.ProductRelated?.split(', ').map((s) => s.trim());
     const itemProductArray = item.ProductRelated?.split(', ').map((s) => s.trim());
     return productInfoArray?.some((value) => itemProductArray?.includes(value));
@@ -73,8 +73,6 @@ export default function ProductsRelated({PRODUCTINFO}) {
 
 
 
-
-
   return (
     <div className='ProductsRelated_Container'>
       <div className='ProductsRelated_Container_Box'>
@@ -94,7 +92,7 @@ export default function ProductsRelated({PRODUCTINFO}) {
               <div className='ProductsRelated_Container_Box_ProductsRelated_Item' onClick={(e) => pageMove(item.ID)}>
                 
                 <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox'>
-                  <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image' src={imageAddress+item.ProductMainImage} alt=''></img>
+                  <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image' src={imageURL+item.ProductMainImage} alt=''></img>
                 </div>
                 <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1'>
                   <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1_Image'src='' alt=''></img>

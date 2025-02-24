@@ -5,27 +5,30 @@ import { useContext } from 'react';
 import "./Filtering_V1.css";
 // import Components
 import BioProductsFiltered from '../BioProductsFiltered/BioProductsFiltered';
-// import useCOntext
+// import useContext
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { WebInformation } from '../../../Context/WebInformation';
+import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
+import { JsonDataContext } from '../../../Context/JsonDataContext';
 
-export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
+export default function Filtering_V1() {
 
   // 아래는 Bioproducts Component로부터 전달받은 props
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
-  const localAddress = useContext(WebInformation);
-  console.log("localAddress :", localAddress);
-  let dataBaseData = DATABASEDATA;
-  const jsonData01 = JSONDATA01;
+  const imageURL = useContext(ImageAddressContext).imageURL;
+  const URL = useContext(WebInformation).URL;
+  const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
+  const jsonData01 = useContext(JsonDataContext).jsonData01;
 
-  const [filteredProducts, setFilteredProducts] = useState(dataBaseData || []);
+  console.log("[Filtering_V1]-URL :", URL);
+
+  const [filteredProducts, setFilteredProducts] = useState(productsDataBase || []);
   
   // 01. Filter가 적용된 Products를 BioProductsFiltered에 Props로 전달해야 함, 처음엔 모든 아이템이 보여야 함
   useEffect(() => {
-    if (dataBaseData) {
-      setFilteredProducts(dataBaseData)
+    if (productsDataBase) {
+      setFilteredProducts(productsDataBase)
     }
-  },[dataBaseData]);
+  },[productsDataBase]);
   console.log("filteredProducts :", filteredProducts);
 
 
@@ -127,8 +130,8 @@ export default function Filtering_V1({DATABASEDATA, JSONDATA01}) {
   function handleSubmit(event) {
     event.preventDefault();
     let valueFilter = event.target;
-    let originalData = dataBaseData;
-    originalData = dataBaseData.filter(datum => {
+    let originalData = productsDataBase;
+    originalData = productsDataBase.filter(datum => {
       if(valueFilter.productType?.value !== '') {
         if(!datum.ProductType?.includes(valueFilter.productType.value)) {  //productType은 <select> tag안의 name 값이며, 같은 name값을 가지는 tag안에서의 value값 
           return false;

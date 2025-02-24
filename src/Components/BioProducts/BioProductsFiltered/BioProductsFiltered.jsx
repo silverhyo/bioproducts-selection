@@ -23,7 +23,7 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
 
   const filteredProducts = [...FILTEREDPRODUCTS].reverse();
   console.log("filteredProducts :", filteredProducts)
-  const imageAddress = useContext(ImageAddressContext).imageAddress;
+  const imageURL = useContext(ImageAddressContext).imageURL;
 
 
   // 이미지 클릭 시 클릭된 아이템만 return될 수 있도록 한다.
@@ -49,9 +49,6 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
     })
     setDetailProduct(clickedItem);
   }
-  // console.log("detailProduct :",detailProduct);
-
-
   
   // 매번 같은 화면만 나오면 지루하니 gridbox의 items를 random하게 배치해 보도록 해보자
 
@@ -101,9 +98,7 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
   return (
     <>
     <div className='BioProductsFiltered_Container'>
-
     {filteredProducts.map((filteredProduct, index) => {
-
 
       // ! Database 날짜 계산의 조건에 따라서 CSS의 Before 가 시행되거나 제거되게 한다.
       let databaseDate = filteredProduct.RegiDate; //YYYY-MM-DD 형식
@@ -117,7 +112,6 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
       // 조건 : 20일 이하인 경우에만 ::before 활성화
       // dDays 조건을 만들어 20보다 적게 남으면 true이고 20보다 클 경우 false
       // 이 dDays를 BioProductsFiltered_Box_Image_Part className에 잘 이용
-
 
       const isBeforeActive = diffInDays <= 20;
 
@@ -133,7 +127,7 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
       return (
         <div key={filteredProduct.ID} className='BioProductsFiltered_Box'>
           <div className={`BioProductsFiltered_Box_Image ${isBeforeActive ? 'active' : ''}`} onClick={callProductDetailWindow}>
-            <Link to={`/bioproducts/${filteredProduct.ID}`} style={{textDecoration:"none"}}><img className={`BioProductsFiltered_Box_Image_Part ${isBeforeActive ? 'active' : ''}`} data-id={filteredProduct.ID} src={imageAddress+filteredProduct.ProductMainImage} alt=""/></Link>
+            <Link to={`/bioproducts/${filteredProduct.ID}`} style={{textDecoration:"none"}}><img className={`BioProductsFiltered_Box_Image_Part ${isBeforeActive ? 'active' : ''}`} data-id={filteredProduct.ID} src={imageURL+filteredProduct.ProductMainImage} alt=""/></Link>
           </div>
       
           <div className='BioProductsFiltered_Box_Text'>
