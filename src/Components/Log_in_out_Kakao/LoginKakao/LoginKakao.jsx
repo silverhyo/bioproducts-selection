@@ -10,7 +10,7 @@ export default function LoginKakao() {
 
   // Login 현 01 : Node js 서버를 거쳐 Kakao에게 Access Token을 요청한다.
   const handleLogin = () => {
-    window.location.href = process.env.REACT_APP_SERVER_URL;
+    window.location.href = process.env.REACT_APP_LOGIN;
   };
 
   return (
