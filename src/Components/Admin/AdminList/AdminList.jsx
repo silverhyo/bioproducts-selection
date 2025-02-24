@@ -27,7 +27,6 @@ export default function AdminList() {
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
   const userInformation = useContext(AuthContext).userDatabaseInfo;
   const imageURL = useContext(ImageAddressContext).imageURL;
-  const URL= useContext(WebInformation).URL;
 
   const [dtBaseData, setDtBaseData] = useState(productsDataBase || []);
   useEffect(() => {

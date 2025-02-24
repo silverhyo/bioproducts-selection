@@ -42,8 +42,7 @@ export default function ProductsRelated({PRODUCTINFO}) {
     function brandColor() {
       let productBrandColor = document.querySelectorAll('.ProductsRelated_Container_Box_ProductsRelated_Item');
       let logoImage = document.querySelectorAll('.ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1_Image')
-      console.log('productBrandColor :', productBrandColor);
-      console.log('productBrandColor.length :', productBrandColor.length);
+
       
       for(let i = 0; i < productBrandColor.length; i++ ) {
         if(ProductRelated[i].ProductManufacturer === "Sartorius") {

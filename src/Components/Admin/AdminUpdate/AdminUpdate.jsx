@@ -16,7 +16,7 @@ import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContex
 import { JsonDataContext } from '../../../Context/JsonDataContext';
 
 // ! 아래 Props는 App.js로부터
-export default function AdminUpdate({JSONDATA01}) {
+export default function AdminUpdate() {
 
   const imageURL = useContext(ImageAddressContext).imageURL;
   const URL = useContext(WebInformation).URL;
