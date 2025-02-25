@@ -64,7 +64,7 @@ export default function AdminUpdate() {
 
   // ! 02 : 정보를 얻어오기 위한 useEffect
   useEffect(() => {
-    axios.get(`/admin/read/`+id, {
+    axios.get('/admin/read/'+id, {
       origin: `${process.env.REACT_APP_CLIENT_URL}`,
       withCredentials: "true",
       credentials: "true",

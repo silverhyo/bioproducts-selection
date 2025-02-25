@@ -33,7 +33,7 @@ export default function ProductDetailModal({JSONDATA01}) {
 
   const [productInfo, setProductInfo] = useState('' || '');
   useEffect(() => {
-    axios.get(`/bioproducts/`+id, {
+    axios.get('/bioproducts/'+id, {
       baseURL: `${process.env.REACT_APP_BASE_URL}`,
       withCredentials: "true",
       credentials: "true",

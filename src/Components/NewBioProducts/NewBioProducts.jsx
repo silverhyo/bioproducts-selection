@@ -1,7 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 // import Style css
 import "./NewBioProducts.css";
+// import ICONS
+import { MdOutlineArrowBackIosNew } from "react-icons/md";
 
 //import Components
 import Navigation from '../Common/Navigation';
@@ -22,6 +25,10 @@ export default function NewBioProducts() {
         <div className='NewBioProducts_Container_Box'>
           <ProductsNew />
         </div>
+      </div>
+
+      <div className='ProductDetail_Container_Bottom'>
+        <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
       </div>
       {/* <Footer /> */}
     </>

@@ -38,7 +38,7 @@ export default function AdminList() {
 
   // 삭제를 위한 함수
   const handleDelete = (id) => {
-    axios.delete(`/admin/delete/`+id, {
+    axios.delete('/admin/delete/'+id, {
       origin: `${process.env.REACT_APP_CLIENT_URL}`,
       withCredentials: "true",
       credentials: "true",

@@ -48,16 +48,29 @@ export default function App() {
 
 
 
+  const api = axios.create({
+    // origin: `${process.env.REACT_APP_CLIENT_URL}`, // * axios.create() 설정에서는 존재하지 않는 옵션
+    // secure: "true", // * axios에서 지원하지 않는 옵션
+    // credentials: "true", // * axios에서 지원하지 않는 옵션
+    // sameSite: "none", // * axios에서 지원하지 않는 옵션, 서버에서 쿠키를 설정할 때 사용하는 옵션임
+    baseURL: `${process.env.REACT_APP_BASE_URL}`,
+    withCredentials: true, // * withCredentials는 boolean값이어야 하므로 string인 "true" 가 아니라 true로 설정
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      "xcustomheader": "silverhyo",
+    }
+  })
+
+
 
 
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    axios.get('/api', {
-      origin: `${process.env.REACT_APP_CLIENT_URL}`,
+    api.get('/api', {
       baseURL: `${process.env.REACT_APP_BASE_URL}`,
       withCredentials: "true",
-      credentials: "true",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -70,22 +83,21 @@ export default function App() {
   console.log("[APP]-dtBaseData :", dtBaseData);
   
 
-  useEffect(() => {
-    axios.create({
-      origin: `${process.env.REACT_APP_CLIENT_URL}`,
-      baseURL: `${process.env.REACT_APP_BASE_URL}`,
-      withCredentials: "true",
-      secure: "true",
-      credentials: "true",
-      sameSite: "none",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        "xcustomheader": "silverhyo",
-      }
-    })
-  },[])
-
+  // useEffect(() => {
+  //   const api = axios.create({
+  //     // origin: `${process.env.REACT_APP_CLIENT_URL}`, // * axios.create() 설정에서는 존재하지 않는 옵션
+  //     // secure: "true", // * axios에서 지원하지 않는 옵션
+  //     // credentials: "true", // * axios에서 지원하지 않는 옵션
+  //     // sameSite: "none", // * axios에서 지원하지 않는 옵션, 서버에서 쿠키를 설정할 때 사용하는 옵션임
+  //     baseURL: `${process.env.REACT_APP_BASE_URL}`,
+  //     withCredentials: true, // * withCredentials는 boolean값이어야 하므로 string인 "true" 가 아니라 true로 설정
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //       "xcustomheader": "silverhyo",
+  //     }
+  //   })
+  // },[])
 
 
 
@@ -150,11 +162,9 @@ export default function App() {
   // ! 그래서 database로부터 이 user의 data를 가져오는 것이며, 이 data가 바로 setUserDatabaseInfo에 전달되어 결국 userDatabaseInfo로 저장이 된다.
   useEffect(() => {
     if(userStatus?.isLoggedIn) {
-      axios.get(`/userinfo/`+`${userStatus.currentUserId}`, {
-        origin: `${process.env.REACT_APP_CLIENT_URL}`,
+      axios.get('/userinfo/'+`${userStatus.currentUserId}`, {
         baseURL: `${process.env.REACT_APP_BASE_URL}`,
-        withCredentials: "true",
-        secure: "true",
+        withCredentials: true,
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
