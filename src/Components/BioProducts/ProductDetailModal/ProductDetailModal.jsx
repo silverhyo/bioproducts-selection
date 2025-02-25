@@ -18,6 +18,7 @@ import ProductsRelated from '../ProductsRelated/ProductsRelated';
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { WebInformation } from '../../../Context/WebInformation';
 import { JsonDataContext } from '../../../Context/JsonDataContext';
+import { AxiosContext } from '../../../Context/AxiosContext';
 
 
 // ! 아래 Props는 APP.js로부터 받아옴
@@ -26,6 +27,7 @@ export default function ProductDetailModal({JSONDATA01}) {
   const imageURL = useContext(ImageAddressContext).imageURL;
   const URL = useContext(WebInformation).URL;
   const jsonData01 = useContext(JsonDataContext).jsonData01;
+  const api = useContext(AxiosContext).api;
   const {id} = useParams();
 
 
@@ -33,16 +35,7 @@ export default function ProductDetailModal({JSONDATA01}) {
 
   const [productInfo, setProductInfo] = useState('' || '');
   useEffect(() => {
-    axios.get('/bioproducts/'+id, {
-      baseURL: `${process.env.REACT_APP_BASE_URL}`,
-      withCredentials: "true",
-      credentials: "true",
-      headers: {
-        "Content-Type": "application/json",
-        "xcustomheader": "silverhyo",
-        Accept: "application/json",
-      }
-    })
+    api.get('/bioproducts/'+id)
     .then(res => {
       setProductInfo(res.data[0])
     })

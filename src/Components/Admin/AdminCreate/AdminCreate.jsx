@@ -14,6 +14,7 @@ import { AuthContext } from '../../../Context/AuthContext';
 import { useContext } from 'react';
 import { WebInformation } from '../../../Context/WebInformation';
 import { JsonDataContext } from '../../../Context/JsonDataContext';
+import { AxiosContext } from '../../../Context/AxiosContext';
 
 
 
@@ -27,6 +28,7 @@ export default function AdminCreate() {
   const userInformation = useContext(AuthContext).userDatabaseInfo;
   const URL = useContext(WebInformation).URL;
   const jsonData01 = useContext(JsonDataContext).jsonData01;
+  const api = useContext(AxiosContext).api;
 
   // ! 01 : state 정의 내리는 곳
 
@@ -221,15 +223,18 @@ export default function AdminCreate() {
     
     console.log("formData :", formData);
     
-    axios.post('/admin/create', formData, {
-      origin: `${process.env.REACT_APP_CLIENT_URL}`,
-      withCredentials: "true",
-      credentials: "true",
-      headers: { 
-        "xcustomheader": "silverhyo",
-        "Content-Type": "multipart/form-data",
-      },
-    })
+
+    // axios.post('/admin/create', formData, {
+    //   origin: `${process.env.REACT_APP_CLIENT_URL}`,
+    //   withCredentials: "true",
+    //   credentials: "true",
+    //   headers: { 
+    //     "xcustomheader": "silverhyo",
+    //     "Content-Type": "multipart/form-data",
+    //   },
+    // })
+
+    api.post('/admin/create', formData)
     .then(res => {
       alert("정상적으로 등록되었습니다.")
       console.log(res)

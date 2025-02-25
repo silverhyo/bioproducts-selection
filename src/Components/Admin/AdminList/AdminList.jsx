@@ -17,6 +17,7 @@ import { AuthContext } from '../../../Context/AuthContext';
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { WebInformation } from '../../../Context/WebInformation';
 import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
+import { AxiosContext } from '../../../Context/AxiosContext';
 
 export default function AdminList() {
 
@@ -27,6 +28,7 @@ export default function AdminList() {
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
   const userInformation = useContext(AuthContext).userDatabaseInfo;
   const imageURL = useContext(ImageAddressContext).imageURL;
+  const api = useContext(AxiosContext).api;
 
   const [dtBaseData, setDtBaseData] = useState(productsDataBase || []);
   useEffect(() => {
@@ -38,15 +40,7 @@ export default function AdminList() {
 
   // 삭제를 위한 함수
   const handleDelete = (id) => {
-    axios.delete('/admin/delete/'+id, {
-      origin: `${process.env.REACT_APP_CLIENT_URL}`,
-      withCredentials: "true",
-      credentials: "true",
-      headers: { 
-        "xcustomheader": "silverhyo",
-        "Content-Type": "multipart/form-data",
-      },
-    })
+    api.delete('/admin/delete/'+id)
     .then(res => {
       alert("삭제되었습니다.")
       console.log(res);
@@ -54,6 +48,8 @@ export default function AdminList() {
     })
     .catch(err => console.log(err))
   }
+
+  
 
 
   return (

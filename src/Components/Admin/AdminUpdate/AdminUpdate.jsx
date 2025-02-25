@@ -14,6 +14,7 @@ import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { WebInformation } from '../../../Context/WebInformation';
 import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
 import { JsonDataContext } from '../../../Context/JsonDataContext';
+import { AxiosContext } from '../../../Context/AxiosContext';
 
 // ! 아래 Props는 App.js로부터
 export default function AdminUpdate() {
@@ -22,6 +23,7 @@ export default function AdminUpdate() {
   const URL = useContext(WebInformation).URL;
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData; 
   const jsonData01 = useContext(JsonDataContext).jsonData01;
+  const api = useContext(AxiosContext).api;
 
   const {id} = useParams();
   const navigate = useNavigate();
@@ -64,15 +66,7 @@ export default function AdminUpdate() {
 
   // ! 02 : 정보를 얻어오기 위한 useEffect
   useEffect(() => {
-    axios.get('/admin/read/'+id, {
-      origin: `${process.env.REACT_APP_CLIENT_URL}`,
-      withCredentials: "true",
-      credentials: "true",
-      headers: { 
-        "xcustomheader": "silverhyo",
-        "Content-Type": "multipart/form-data",
-      },
-    })
+    api.get('/admin/read/'+id)
     .then(res => {
       console.log(res.data[0])
       setValues({
@@ -382,15 +376,7 @@ export default function AdminUpdate() {
     
     console.log("formData :", formData);
 
-    axios.put('/admin/update/'+id, formData, {
-      origin: `${process.env.REACT_APP_CLIENT_URL}`,
-      withCredentials: "true",
-      credentials: "true",
-      headers: {
-        "xcustomheader": "silverhyo",
-        "Content-Type": "multipart/form-data"
-      },
-    })
+    api.put('/admin/update/'+id, formData)
     .then(res => {
       alert("정상적으로 수정되었습니다.")
       console.log(res)

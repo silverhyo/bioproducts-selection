@@ -23,13 +23,6 @@ export default function Navigation() {
   const userInformation = useContext(AuthContext).userStatus;
 
 
-  useEffect(() => {
-    console.log("hi");
-  },[userInformation]);
-  console.log("Navigation-userInformation :", userInformation)
-
-
-
 
 
 

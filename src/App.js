@@ -28,6 +28,7 @@ import { AuthContext } from './Context/AuthContext';
 import { ImageAddressContext } from './Context/ImageAddressContext';
 import { ProductsDataBaseContext } from './Context/ProductsDataBaseContext';
 import { JsonDataContext } from './Context/JsonDataContext';
+import { AxiosContext } from './Context/AxiosContext';
 // import JSON Data
 import jsonData01 from "./Data/jsonData_01.json";
 
@@ -65,18 +66,10 @@ export default function App() {
 
 
 
-  // ! 아래는 database로부터 products 정보를 가져오기 위한 code임임
+  // ! 아래는 database로부터 products 정보를 가져오기 위한 code임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    api.get('/api', {
-      baseURL: `${process.env.REACT_APP_BASE_URL}`,
-      withCredentials: "true",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        "xcustomheader": "silverhyo",
-      }
-    })
+    api.get('/api')
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err))
   }, [setDtBaseData]);
@@ -195,6 +188,7 @@ export default function App() {
     <div className="App_Container">
       <BrowserRouter>
         <ScrollToTop />
+        <AxiosContext.Provider value={{api}} >
         <ProductsDataBaseContext.Provider value={{dtBaseData}} >
         <JsonDataContext.Provider value={{jsonData01}} >
         <ImageAddressContext.Provider value={{imageURL}} >
@@ -232,6 +226,7 @@ export default function App() {
         </ImageAddressContext.Provider>
         </JsonDataContext.Provider>
         </ProductsDataBaseContext.Provider>
+        </AxiosContext.Provider>
       </BrowserRouter>
     </div>
   );
