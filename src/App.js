@@ -52,7 +52,7 @@ export default function App() {
   const api = axios.create({
     // origin: `${process.env.REACT_APP_CLIENT_URL}`, // * axios.create() 설정에서는 존재하지 않는 옵션
     // secure: "true", // * axios에서 지원하지 않는 옵션
-    // credentials: "true", // * axios에서 지원하지 않는 옵션
+    // credentials: "true", // * axios에서 지원하지 않는 옵션, fetch에서 지원하는 옵션
     // sameSite: "none", // * axios에서 지원하지 않는 옵션, 서버에서 쿠키를 설정할 때 사용하는 옵션임
     baseURL: `${process.env.REACT_APP_BASE_URL}`,
     withCredentials: true, // * withCredentials는 boolean값이어야 하므로 string인 "true" 가 아니라 true로 설정
