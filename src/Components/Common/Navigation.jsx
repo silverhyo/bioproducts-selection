@@ -17,15 +17,12 @@ import { CiLogout } from "react-icons/ci";
 import { UserInfoContext } from '../../Context/UserInfoContext';
 import { AuthContext } from '../../Context/AuthContext';
 
+// import Image
+import LogoSartoriusWhite from '../../Sources/image_logo/sartorius-logo-white.png';
 
 export default function Navigation() {
 
   const userInformation = useContext(AuthContext).userStatus;
-
-
-
-
-
 
 
 
@@ -62,6 +59,9 @@ export default function Navigation() {
   
   return (
     <div className='HomeChildNav01_Container'>
+      <div className='HomeChildNav01_Container_ImageBox'>
+        <img className='HomeChildNav01_Container_ImageBox_Image' src={LogoSartoriusWhite} alt=""></img>
+      </div>
       <nav className='HomeChildNav01_Container_NavBox'>
         <Link to="/home"><div className='HomeChildNav01_Container_NavBox_Menu'>HOME</div></Link>
         <Link to="/Event"><div className='HomeChildNav01_Container_NavBox_Menu'>EVENT</div></Link>

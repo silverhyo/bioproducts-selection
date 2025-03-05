@@ -16,6 +16,9 @@ import AdminCreate from './Components/Admin/AdminCreate/AdminCreate';
 import AdminHome from './Components/Admin/AdminHome/AdminHome';
 import AdminList from './Components/Admin/AdminList/AdminList';
 import AdminUpdate from './Components/Admin/AdminUpdate/AdminUpdate';
+import AdminEventsCreate from './Components/Admin/AdminEvents/AdminEventsCreate';
+import AdminEventsList from './Components/Admin/AdminEvents/AdminEventsList';
+import AdminEventsUpdate from './Components/Admin/AdminEvents/AdminEventsUpdate';
 
 import LoginKakao from './Components/Log_in_out_Kakao/LoginKakao/LoginKakao';
 import LogoutKakao from './Components/Log_in_out_Kakao/LogoutKakao/LogoutKakao';
@@ -29,8 +32,11 @@ import { ImageAddressContext } from './Context/ImageAddressContext';
 import { ProductsDataBaseContext } from './Context/ProductsDataBaseContext';
 import { JsonDataContext } from './Context/JsonDataContext';
 import { AxiosContext } from './Context/AxiosContext';
+import { JsonDataContextEvent } from './Context/JsonDataContextEvent';
+import { UserEventDataBaseContext } from './Context/UserEventDataBaseContext';
 // import JSON Data
 import jsonData01 from "./Data/jsonData_01.json";
+import jsonDataEvent from "./Data/jsonData_02.json";
 
 
 
@@ -58,7 +64,7 @@ export default function App() {
     withCredentials: true, // * withCredentials는 boolean값이어야 하므로 string인 "true" 가 아니라 true로 설정
     headers: {
       Accept: "application/json",
-      "Content-Type": "application/json",
+      // "Content-Type": "application/json",
       "xcustomheader": "silverhyo",
     }
   })
@@ -75,6 +81,17 @@ export default function App() {
   }, [setDtBaseData]);
   console.log("[APP]-dtBaseData :", dtBaseData);
   
+
+  // ! 아래는 database로부터 Event Data 가져오게하기
+  const [eventBaseData, setEventDtBaseData] = useState('' || '')
+  useEffect(() => {
+    api.get('/api/event')
+    .then(res => setEventDtBaseData(res.data))
+    .catch(err => console.log(err))
+  }, [setEventDtBaseData]);
+  console.log("[APP]-eventBaseData :", eventBaseData);
+
+
 
   // useEffect(() => {
   //   const api = axios.create({
@@ -189,8 +206,10 @@ export default function App() {
       <BrowserRouter>
         <ScrollToTop />
         <AxiosContext.Provider value={{api}} >
+        <UserEventDataBaseContext.Provider value={{eventBaseData}}>
         <ProductsDataBaseContext.Provider value={{dtBaseData}} >
         <JsonDataContext.Provider value={{jsonData01}} >
+        <JsonDataContextEvent.Provider value={{jsonDataEvent}} >
         <ImageAddressContext.Provider value={{imageURL}} >
         <WebInformation.Provider value={{URL}} >
         <AuthContext.Provider value={{userStatus, userDatabaseInfo}}>
@@ -214,18 +233,25 @@ export default function App() {
               </PrivateRoute>
             }>
           </Route> */}
-
-          <Route path="/admin/create" element={<AdminCreate />}></Route>
-          <Route path="/admin/list" element={<AdminList />}></Route>
-          <Route path="/admin/update/:id" element={<AdminUpdate />}></Route>
           <Route path="/admin/home" element={<AdminHome />}></Route>
+
+          <Route path="/admin/products/create" element={<AdminCreate />}></Route>
+          <Route path="/admin/products/list" element={<AdminList />}></Route>
+          <Route path="/admin/products/update/:id" element={<AdminUpdate />}></Route>
+          
+          <Route path="/admin/events/create" element={<AdminEventsCreate />}></Route>
+          <Route path="/admin/events/list" element={<AdminEventsList />}></Route>
+          <Route path="/admin/events/update/:id" element={<AdminEventsUpdate />}></Route>
+          
 
         </Routes>
         </AuthContext.Provider>
         </WebInformation.Provider>
         </ImageAddressContext.Provider>
+        </JsonDataContextEvent.Provider>
         </JsonDataContext.Provider>
         </ProductsDataBaseContext.Provider>
+        </UserEventDataBaseContext.Provider>
         </AxiosContext.Provider>
       </BrowserRouter>
     </div>

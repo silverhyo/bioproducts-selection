@@ -40,7 +40,7 @@ export default function AdminList() {
 
   // 삭제를 위한 함수
   const handleDelete = (id) => {
-    api.delete('/admin/delete/'+id)
+    api.delete('/admin/products/delete/'+id)
     .then(res => {
       alert("삭제되었습니다.")
       console.log(res);
@@ -77,7 +77,7 @@ export default function AdminList() {
                 </div>
                 <div className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox'>
                   <button className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox_Button_Delete' onClick={() => handleDelete(item.ID)}><MdDeleteOutline /></button>
-                  <Link to={`/admin/update/${item.ID}`}><div className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox_Button_Update'><CiEdit /></div></Link>
+                  <Link to={`/admin/products/update/${item.ID}`}><div className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox_Button_Update'><CiEdit /></div></Link>
                 </div>
               </div>
             )

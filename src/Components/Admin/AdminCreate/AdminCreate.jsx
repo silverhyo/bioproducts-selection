@@ -234,11 +234,11 @@ export default function AdminCreate() {
     //   },
     // })
 
-    api.post('/admin/create', formData)
+    api.post('/admin/products/create', formData)
     .then(res => {
       alert("정상적으로 등록되었습니다.")
       console.log(res)
-      navigate('/admin/list')
+      navigate('/admin/products/list')
     })
     .catch(err => console.log(err))
   }

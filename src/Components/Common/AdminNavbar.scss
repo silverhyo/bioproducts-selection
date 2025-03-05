@@ -37,7 +37,10 @@
   color: var(--whiteTextColor);
 
   .AdminNavbar_Container_Box {
-    padding: 30px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
 
     .AdminNavbar_Container_Box_Title {
       display: flex;
@@ -45,22 +48,74 @@
       font-size: var(--1d375rem);
       font-weight: 600;
       margin-bottom: 50px;
-
     }
-    .AdminNavbar_Container_Box_Div {
+    .AdminNavbar_Container_Box_Contents {
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
 
-      .AdminNavbar_Container_Box_Div_P {
-        padding: 10px;
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--whiteTextColor);
+      .AdminNavbar_Container_Box_Contents_HomeBox {
+        margin-bottom: 40px;
 
-        &:hover {
-          color: orange;
-          transition: 2s easy;
+        .AdminNavbar_Container_Box_Contents_HomeBox_Hr {
+          margin-bottom: 10px;
+          border: 3px solid yellow;
         }
+
+        .AdminNavbar_Container_Box_Contents_HomeBox_Home {
+          font-size: var(--1d25rem);
+
+        }
+      }
+
+      .AdminNavbar_Container_Box_Contents_EventBox {
+        margin-bottom: 40px;
+
+        .AdminNavbar_Container_Box_Contents_EventBox_Text {
+          margin-bottom: 5px;
+          // border: 1px solid red;
+          font-size: var(--1d25rem);
+          font-weight: 600;
+        }
+        .AdminNavbar_Container_Box_Contents_EventBox_Hr {
+          margin-bottom: 10px;
+          border: 3px solid yellow;
+
+        }
+        .AdminNavbar_Container_Box_Contents_EventBox_Event_Register {
+          padding-left: 10px;
+          margin-bottom: 5px;
+        }
+
+        .AdminNavbar_Container_Box_Contents_EventBox_Event_Edit {
+          padding-left: 10px;
+        }
+        
+      }
+
+      .AdminNavbar_Container_Box_Contents_ProductBox {
+        margin-bottom: 20px;
+
+        .AdminNavbar_Container_Box_Contents_ProductBox_Text {
+          margin-bottom: 5px;
+          // border: 1px solid red;
+          font-size: var(--1d25rem);
+          font-weight: 600;
+        }
+        .AdminNavbar_Container_Box_Contents_ProductBox_Hr {
+          margin-bottom: 10px;
+          border: 3px solid yellow;
+        }
+
+        .AdminNavbar_Container_Box_Contents_ProductBox_Product_Register {
+          padding-left: 10px;
+          margin-bottom: 5px;
+        }
+
+        .AdminNavbar_Container_Box_Contents_ProductBox_Product_Edit {
+          padding-left: 10px;
+        }
+        
       }
     }
   }

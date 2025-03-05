@@ -28,29 +28,37 @@
 
 .HomeChildNav01_Container {
   width: 100%;
-  height: 120px;
-  background: var(--backGroundColor);
+  background: var(--backGroundDarkColor);
   position: relative;
+}
+.HomeChildNav01_Container .HomeChildNav01_Container_ImageBox {
+  width: 150px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.HomeChildNav01_Container .HomeChildNav01_Container_ImageBox .HomeChildNav01_Container_ImageBox_Image {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .HomeChildNav01_Container nav {
   width: 100%;
-  height: 50px;
+  height: 40px;
   background: var(--backGroundDarkColor);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 15px;
-  padding-top: 15px;
 }
 .HomeChildNav01_Container nav .HomeChildNav01_Container_NavBox_Menu {
   text-decoration: none;
   color: white;
-  font-size: var(--0d875rem);
+  font-size: var(--0d94rem);
   cursor: pointer;
   display: flex;
-  justify-content: center;
-  text-align: center;
   letter-spacing: -1px;
 }
 .HomeChildNav01_Container nav .HomeChildNav01_Container_NavBox_Menu:hover {

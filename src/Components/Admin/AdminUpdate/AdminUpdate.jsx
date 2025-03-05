@@ -376,7 +376,7 @@ export default function AdminUpdate() {
     
     console.log("formData :", formData);
 
-    api.put('/admin/update/'+id, formData)
+    api.put('/admin/products/update/'+id, formData)
     .then(res => {
       alert("정상적으로 수정되었습니다.")
       console.log(res)

@@ -4,8 +4,10 @@
 :root {
   /* Colors and Styles (Default) */
   --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundWhiteColor: rgb(255, 255, 255);
   --backGroundColor: rgb(44, 44, 41);
   --whiteTextColor: rgb(240, 240, 232);
+  --blackTextColor: rgb(0, 0, 0);
   --requiredBlank: rgba(171, 250, 164, 0.991);
   /* Colors and Styles (Default) */
   /* Space (Default) */
@@ -32,7 +34,7 @@
 .Filtering_V1_Container {
   width: 100%;
   height: 100%;
-  background: var(--backGroundDarkColor);
+  background: var(--backGroundWhiteColor);
 }
 .Filtering_V1_Container .Filtering_V1_Container_Box {
   padding: 10px;
@@ -58,6 +60,8 @@
   width: 100%;
   height: 30px;
   padding: 5px;
+  border: 2px solid black;
+  margin-bottom: 1px;
 }
 .Filtering_V1_Container .Filtering_V1_Container_Box .Filtering_V1_Container_Box_Form .Filtering_V1_Container_Box_Form_Filtering .Filtering_V1_Container_Box_Form_Filtering_Query01 .Filtering_V1_Container_Box_Form_Filtering_Query01_Select .Filtering_V1_Container_Box_Form_Filtering_Query01_Options {
   color: var(--backGroundVeryDarkColor);
@@ -83,7 +87,7 @@
   color: var(--backGroundColor);
 }
 .Filtering_V1_Container .Filtering_V1_Container_Box .Filtering_V1_Container_Box_Form .Filtering_V1_Container_Box_Form_Filtering .Filtering_V1_Container_Box_Form_Filtering_Search .Filtering_V1_Container_Box_Form_Filtering_Search_Box .Filtering_V1_Container_Box_Form_Filtering_Search_Input::placeholder {
-  color: red;
+  color: var(--blackTextColor);
   font-weight: 600;
 }
 .Filtering_V1_Container .Filtering_V1_Container_Box .Filtering_V1_Container_Box_Form .Filtering_V1_Container_Box_Form_Filtering .Filtering_V1_Container_Box_Form_Filtering_Search .Filtering_V1_Container_Box_Form_Filtering_Search_Box .Filtering_V1_Container_Box_Form_Filtering_Search_Button {
@@ -130,6 +134,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--blackTextColor);
 }
 
 @keyframes fading02 {
