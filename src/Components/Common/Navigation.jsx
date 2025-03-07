@@ -73,7 +73,8 @@ export default function Navigation() {
           <Link to="/bioproducts"><div className='Navigation_Container_NavBox_Menu'>SEARCH</div></Link>
 
           {userInformation.isLoggedIn ?
-          <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div></Link>
+          <div className='Navigation_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div>
+          // <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div></Link>
           :
           <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu'>LOGIN</div></Link>
           }
