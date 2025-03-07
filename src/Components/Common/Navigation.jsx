@@ -31,7 +31,6 @@ export default function Navigation() {
 
   // ! Logout 구현하기
   function handleLogout() {
-    const navigate = useNavigate();
     // * 쿠키 삭제
     axios('api/logout', {
       method: "POST",
