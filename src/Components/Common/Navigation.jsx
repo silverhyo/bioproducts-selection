@@ -39,8 +39,8 @@ export default function Navigation() {
       if(response.status === 200) {
         Cookies.remove("accessToken", {path: '/'});
         Cookies.remove("userInfo", {path: '/'});
-        // Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
-        // Cookies.remove("userInfo");
+        Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
+        Cookies.remove("userInfo");
         // * 로컬 스토리지 초기화
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userInfo");
