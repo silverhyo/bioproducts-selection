@@ -35,14 +35,15 @@ export default function Navigation() {
     
     Cookies.remove("accessToken", {path: '/'});
     Cookies.remove("userInfo", {path: '/'});
+    Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
+    Cookies.remove("userInfo");
 
     // * 로컬 스토리지 초기화
     localStorage.removeItem("accessToken");
     localStorage.removeItem("userInfo");
 
     // * 리다이렉트 처리
-    setTimeout(window.location.reload(), 1000);
-    // window.location.reload();
+    setTimeout(window.location.reload(), 100);
     navigate("/home");
   }
 
@@ -58,34 +59,38 @@ export default function Navigation() {
 
   
   return (
-    <div className='HomeChildNav01_Container'>
-      <div className='HomeChildNav01_Container_ImageBox'>
-        <img className='HomeChildNav01_Container_ImageBox_Image' src={LogoSartoriusWhite} alt=""></img>
-      </div>
-      <nav className='HomeChildNav01_Container_NavBox'>
-        <Link to="/home"><div className='HomeChildNav01_Container_NavBox_Menu'>HOME</div></Link>
-        <Link to="/Event"><div className='HomeChildNav01_Container_NavBox_Menu'>EVENT</div></Link>
-        <Link to="/newbioproducts"><div className='HomeChildNav01_Container_NavBox_Menu'>AD</div></Link>
-        <Link to="/bioproducts"><div className='HomeChildNav01_Container_NavBox_Menu'>SEARCH</div></Link>
-        
+    <div className='Navigation_Container'>
+      <div className='Navigation_Container_Box'>
+
+        <div className='Navigation_Container_ImageBox'>
+          <img className='Navigation_Container_ImageBox_Image' src={LogoSartoriusWhite} alt=""></img>
+        </div>
+
+        <div className='Navigation_Container_NavBox'>
+          <Link to="/home"><div className='Navigation_Container_NavBox_Menu'>HOME</div></Link>
+          <Link to="/event"><div className='Navigation_Container_NavBox_Menu'>EVENT</div></Link>
+          <Link to="/newbioproducts"><div className='Navigation_Container_NavBox_Menu'>AD</div></Link>
+          <Link to="/bioproducts"><div className='Navigation_Container_NavBox_Menu'>SEARCH</div></Link>
+
+          {userInformation.isLoggedIn ?
+          <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div></Link>
+          :
+          <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu'>LOGIN</div></Link>
+          }
+        </div>
+
+
         {userInformation.isLoggedIn ?
-        <Link to="/login/kakao"><div className='HomeChildNav01_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div></Link>
-        :
-        <Link to="/login/kakao"><div className='HomeChildNav01_Container_NavBox_Menu'>LOGIN</div></Link>
-        }
-      </nav>
-      
-      {/* <hr className='HomeChildNav01_Container_Hr'></hr> */}
-      
-      {userInformation.isLoggedIn ?
-        <>
-          <div className='HomeChildNav01_Container_UserBox'>
-          <img className='HomeChildNav01_Container_UserBox_Image' src={userInformation.currentUserThumbnailImage} alt=''></img>
+        <div className='Navigation_Container_UserBox'>
+          <div className='Navigation_Container_UserBox_ImageBox'>
+            <img className='Navigation_Container_UserBox_ImageBox_Image' src={userInformation.currentUserThumbnailImage} alt=''></img>
           </div>
-        </>
+        </div>
         :
         ''
-      }
+        }
+
+      </div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 :root {
   /* Colors and Styles (Default) */
   --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundBlackColor: rgb(0, 0, 0);
   --backGroundColor: rgb(44, 44, 41);
   --whiteTextColor: rgb(240, 240, 232);
   --requiredBlank: rgba(171, 250, 164, 0.991);
@@ -26,62 +27,63 @@
   --0d625rem: 0.625rem;
 }
 
-.HomeChildNav01_Container {
+.Navigation_Container {
   width: 100%;
-  background: var(--backGroundDarkColor);
+  height: 90px;
+  background: var(--backGroundBlackColor);
+}
+.Navigation_Container .Navigation_Container_Box {
   position: relative;
 }
-.HomeChildNav01_Container .HomeChildNav01_Container_ImageBox {
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_ImageBox {
   width: 150px;
   padding-left: 20px;
   padding-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
-.HomeChildNav01_Container .HomeChildNav01_Container_ImageBox .HomeChildNav01_Container_ImageBox_Image {
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_ImageBox .Navigation_Container_ImageBox_Image {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-.HomeChildNav01_Container nav {
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_NavBox {
   width: 100%;
-  height: 40px;
-  background: var(--backGroundDarkColor);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
 }
-.HomeChildNav01_Container nav .HomeChildNav01_Container_NavBox_Menu {
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_NavBox .Navigation_Container_NavBox_Menu {
   text-decoration: none;
-  color: white;
+  color: var(--whiteTextColor);
   font-size: var(--0d94rem);
   cursor: pointer;
   display: flex;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
 }
-.HomeChildNav01_Container nav .HomeChildNav01_Container_NavBox_Menu:hover {
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_NavBox .Navigation_Container_NavBox_Menu:hover {
   transition: 1s;
   color: #FFF100;
 }
-.HomeChildNav01_Container .HomeChildNav01_Container_Hr {
-  width: 95%;
-  display: flex;
-  margin: 0 auto;
-  border: 1px solid gray;
-}
-.HomeChildNav01_Container .HomeChildNav01_Container_UserBox {
-  width: 45px;
-  height: 45px;
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_UserBox {
+  width: 35px;
+  height: 35px;
   border: 2px solid var(--whiteTextColor);
   position: absolute;
-  right: 10px;
-  margin-top: 13px;
+  top: 15px;
+  right: 15px;
   border-radius: 50%;
   overflow: hidden;
 }
-.HomeChildNav01_Container .HomeChildNav01_Container_UserBox .HomeChildNav01_Container_UserBox_Image {
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_UserBox .Navigation_Container_UserBox_ImageBox {
+  overflow: hidden;
+  width: 100%;
+}
+.Navigation_Container .Navigation_Container_Box .Navigation_Container_UserBox .Navigation_Container_UserBox_ImageBox .Navigation_Container_UserBox_ImageBox_Image {
   width: 100%;
   object-fit: contain;
 }/*# sourceMappingURL=Navigation.css.map */
