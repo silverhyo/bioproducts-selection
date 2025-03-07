@@ -34,22 +34,22 @@ export default function Navigation() {
   // ! Logout 구현하기
   function handleLogout() {
     // * 쿠키 삭제
-    api.post('api/logout', {
-      credentials: "include",
+    api.post('api/logout', {}, {
+      withCredentials: true,
     })
     .then((response) => {
-      if(response.ok) {
+      if(response.status === 200) {
         Cookies.remove("accessToken", {path: '/'});
         Cookies.remove("userInfo", {path: '/'});
-        Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
-        Cookies.remove("userInfo");
+        // Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
+        // Cookies.remove("userInfo");
         // * 로컬 스토리지 초기화
         localStorage.removeItem("accessToken");
         localStorage.removeItem("userInfo");
 
         setTimeout(() => window.location.reload(), 100);
       } else {
-      console.error("Logout failed")
+        
       }
     })
     .catch((error) => console.error("Error logging out:", error));
