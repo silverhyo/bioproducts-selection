@@ -17,6 +17,7 @@ import { CiLogout } from "react-icons/ci";
 // import Context
 import { UserInfoContext } from '../../Context/UserInfoContext';
 import { AuthContext } from '../../Context/AuthContext';
+import { AxiosContext } from '../../Context/AxiosContext';
 
 // import Image
 import LogoSartoriusWhite from '../../Sources/image_logo/sartorius-logo-white.png';
@@ -24,6 +25,7 @@ import LogoSartoriusWhite from '../../Sources/image_logo/sartorius-logo-white.pn
 export default function Navigation() {
 
   const userInformation = useContext(AuthContext).userStatus;
+  const api = useContext(AxiosContext).api;
 
 
 
@@ -32,9 +34,8 @@ export default function Navigation() {
   // ! Logout 구현하기
   function handleLogout() {
     // * 쿠키 삭제
-    axios('api/logout', {
-      method: "POST",
-      credentials: "inclusde",
+    api.post('api/logout', {
+      credentials: "include",
     })
     .then((response) => {
       if(response.ok) {
