@@ -34,9 +34,7 @@ export default function Navigation() {
   // ! Logout 구현하기
   function handleLogout() {
     // * 쿠키 삭제
-    api.post('api/logout', {}, {
-      withCredentials: true,
-    })
+    api.post('/api/logout')
     .then((response) => {
       if(response.status === 200) {
         Cookies.remove("accessToken", {path: '/'});
