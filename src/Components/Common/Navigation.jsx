@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import Cookies from 'js-cookie';
 import { useEffect } from 'react';
+import axios from 'axios';
 // import Style css
 import "./Navigation.css";
 // ICONS
@@ -29,23 +30,51 @@ export default function Navigation() {
 
 
   // ! Logout 구현하기
-  const navigate = useNavigate();
   function handleLogout() {
+    const navigate = useNavigate();
     // * 쿠키 삭제
-    
-    Cookies.remove("accessToken", {path: '/'});
-    Cookies.remove("userInfo", {path: '/'});
-    Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
-    Cookies.remove("userInfo");
+    axios('api/logout', {
+      method: "POST",
+      credentials: "inclusde",
+    })
+    .then((response) => {
+      if(response.ok) {
+        Cookies.remove("accessToken", {path: '/'});
+        Cookies.remove("userInfo", {path: '/'});
+        Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
+        Cookies.remove("userInfo");
+        // * 로컬 스토리지 초기화
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("userInfo");
 
-    // * 로컬 스토리지 초기화
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("userInfo");
-
-    // * 리다이렉트 처리
-    setTimeout(window.location.reload(), 100);
-    navigate("/home");
+        setTimeout(() => window.location.reload(), 100);
+      } else {
+      console.error("Logout failed")
+      }
+    })
+    .catch((error) => console.error("Error logging out:", error));
   }
+
+
+  // // ! Logout 구현하기
+  // const navigate = useNavigate();
+  // function handleLogout() {
+  //   const navigate = useNavigate();
+  //   // * 쿠키 삭제
+    
+  //   Cookies.remove("accessToken", {path: '/'});
+  //   Cookies.remove("userInfo", {path: '/'});
+  //   Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
+  //   Cookies.remove("userInfo");
+
+  //   // * 로컬 스토리지 초기화
+  //   localStorage.removeItem("accessToken");
+  //   localStorage.removeItem("userInfo");
+
+  //   // * 리다이렉트 처리
+  //   setTimeout(window.location.reload(), 100);
+  //   navigate("/home");
+  // }
 
 
 
