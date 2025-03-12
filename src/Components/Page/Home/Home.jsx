@@ -111,7 +111,7 @@ export default function Home() {
                     return (
                       <Link key={index} to={`/bioproducts/${item.ID}`}>
                       <div className='Product_New_Registered_Container_Box_ProductBox_ImageBox'>
-                        <img className='Product_New_Registered_Container_Box_ProductBox_ImageBox_Image' src={imageURL+item.ProductMainImage} alt='' ></img>
+                        <img className='Product_New_Registered_Container_Box_ProductBox_ImageBox_Image' src={item.ProductMainImage} alt='' ></img>
                       </div>
                       </Link>
                     )
@@ -133,7 +133,7 @@ export default function Home() {
                     return (
                       <Link key={index} to={`/bioproducts/${item.ID}`}>
                       <div className='Product_Of_This_Month_Container_Box_ProductBox_ImageBox'>
-                        <img className='Product_Of_This_Month_Container_Box_ProductBox_ImageBox_Image' src={imageURL+item.ProductMainImage} alt='' ></img>
+                        <img className='Product_Of_This_Month_Container_Box_ProductBox_ImageBox_Image' src={item.ProductMainImage} alt='' ></img>
                       </div>
                       </Link>
                     )
