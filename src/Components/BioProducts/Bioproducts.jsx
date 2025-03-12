@@ -21,8 +21,8 @@ export default function Bioproducts() {
             <Filtering_V1 />
           </div>
         </div>
-        <div className='Bioproducts_Container_Box_01'>
-          <NavigationBottom />
+        <div className='Bioproducts_Container_Box_01' style={{position: "sticky"}}>
+        <NavigationBottom />
         </div>
       </div>
       <Footer />

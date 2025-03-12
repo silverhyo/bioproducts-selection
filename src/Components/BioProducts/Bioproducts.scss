@@ -34,12 +34,16 @@
   position: relative;
 
   .Bioproducts_Container_Box {
+    width: 100%;
 
+    .Bioproducts_Container_Component01 {
+      width: 100%;
+    }
   }
   .Bioproducts_Container_Box_01 {
     width: 100%;
     position: sticky;
-    bottom: 0;
+    bottom: 0px;
   }
 }
 

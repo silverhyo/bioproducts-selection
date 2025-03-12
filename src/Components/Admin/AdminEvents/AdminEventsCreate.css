@@ -76,6 +76,88 @@
     object-fit: cover;
   }
 }
+.EventImageURL_Container {
+  width: 100%;
+  background: var(--backGroundColor);
+  margin-bottom: var(--20pxSpace);
+  color: var(--whiteTextColor);
+}
+.EventImageURL_Container .EventImageURL_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.EventImageURL_Container .EventImageURL_Container_Box .EventImageURL_Container_Box_Asking {
+  width: 100%;
+  margin-bottom: var(--20pxSpace);
+}
+.EventImageURL_Container .EventImageURL_Container_Box .EventImageURL_Container_Box_Asking .EventImageURL_Container_Box_Asking_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+}
+.EventImageURL_Container .EventImageURL_Container_Box .EventImageURL_Container_Box_Register {
+  color: var(--whiteTextColor);
+  width: 100%;
+  overflow: hidden;
+}
+.EventImageURL_Container .EventImageURL_Container_Box .EventImageURL_Container_Box_Register .EventImageURL_Container_Box_Register_Image {
+  max-width: 500px;
+  margin-bottom: var(--20pxSpace);
+  object-fit: cover;
+}
+.EventImageURL_Container .EventImageURL_Container_Box .EventImageURL_Container_Box_Register .EventImageURL_Container_Box_Register_Input {
+  width: 100%;
+  border: none;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .EventImageURL_Container_Box_Register_Image {
+    width: 100%;
+    margin-bottom: var(--SmallSpace);
+    object-fit: cover;
+  }
+}
+.EventBannerImageURL_Container {
+  width: 100%;
+  background: var(--backGroundColor);
+  margin-bottom: var(--20pxSpace);
+  color: var(--whiteTextColor);
+}
+.EventBannerImageURL_Container .EventBannerImageURL_Container_Box {
+  width: 100%;
+  padding: 15px;
+}
+.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Asking {
+  width: 100%;
+  margin-bottom: var(--20pxSpace);
+}
+.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Asking .EventBannerImageURL_Container_Box_Asking_P {
+  color: var(--whiteTextColor);
+  font-size: var(--0d94rem);
+}
+.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register {
+  color: var(--whiteTextColor);
+  width: 100%;
+  overflow: hidden;
+}
+.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register .EventBannerImageURL_Container_Box_Register_Image {
+  max-width: 500px;
+  margin-bottom: var(--20pxSpace);
+  object-fit: cover;
+}
+.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register .EventBannerImageURL_Container_Box_Register_Input {
+  width: 100%;
+  border: none;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .EventBannerImageURL_Container_Box_Register_Image {
+    width: 100%;
+    margin-bottom: var(--SmallSpace);
+    object-fit: cover;
+  }
+}
 .EventName_Container {
   background: var(--backGroundColor);
   width: 100%;

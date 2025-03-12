@@ -54,31 +54,6 @@ export default function Navigation() {
   }
 
 
-  // // ! Logout 구현하기
-  // const navigate = useNavigate();
-  // function handleLogout() {
-  //   const navigate = useNavigate();
-  //   // * 쿠키 삭제
-    
-  //   Cookies.remove("accessToken", {path: '/'});
-  //   Cookies.remove("userInfo", {path: '/'});
-  //   Cookies.remove("accessToken"); // 옵션 없이 한 번 더 삭제 시도
-  //   Cookies.remove("userInfo");
-
-  //   // * 로컬 스토리지 초기화
-  //   localStorage.removeItem("accessToken");
-  //   localStorage.removeItem("userInfo");
-
-  //   // * 리다이렉트 처리
-  //   setTimeout(window.location.reload(), 100);
-  //   navigate("/home");
-  // }
-
-
-
-
-
-
 
 
 
@@ -94,9 +69,9 @@ export default function Navigation() {
         </div>
 
         <div className='Navigation_Container_NavBox'>
-          <Link to="/home"><div className='Navigation_Container_NavBox_Menu'>HOME</div></Link>
+          {/* <Link to="/home"><div className='Navigation_Container_NavBox_Menu'>HOME</div></Link> */}
           <Link to="/event"><div className='Navigation_Container_NavBox_Menu'>EVENT</div></Link>
-          <Link to="/newbioproducts"><div className='Navigation_Container_NavBox_Menu'>AD</div></Link>
+          {/* <Link to="/newbioproducts"><div className='Navigation_Container_NavBox_Menu'>AD</div></Link> */}
           <Link to="/bioproducts"><div className='Navigation_Container_NavBox_Menu'>SEARCH</div></Link>
 
           {userInformation.isLoggedIn ?

@@ -27,6 +27,7 @@ export default function AdminEventsCreate() {
   
     
     const [eventMainImage, setEventMainImage] = useState('');
+    const [eventBannerImage, setEventBannerImage] = useState('');
     const [eventName, setEventName] = useState('');
     const [eventTitle, setEventTitle] = useState('');
     const [eventURL, setEventURL] = useState('');
@@ -58,6 +59,20 @@ export default function AdminEventsCreate() {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
         setImgFile(reader.result)
+      }
+    }
+
+
+    // Event Banner Image
+    const [imgFileBanner, setImgFileBanner] = useState('');
+    const imgRefBanner = useRef();
+    const handleEventBannerImageURL = (e) => {
+      setEventBannerImage(e.target.files[0]);
+      const file = imgRefBanner.current.files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setImgFileBanner(reader.result)
       }
     }
   
@@ -121,6 +136,7 @@ export default function AdminEventsCreate() {
       e.preventDefault();
       const formData = new FormData();
       formData.append('EMainImage', eventMainImage || '');
+      formData.append('EBannerImage', eventBannerImage || '');
       formData.append('EName', eventName);
       formData.append('ETitle', eventTitle);
       formData.append('EUrl', eventURL);
@@ -168,6 +184,23 @@ export default function AdminEventsCreate() {
             <div className='EventImageURL_Container_Box_Register'>
               <img className='EventImageURL_Container_Box_Register_Image' src={imgFile ? imgFile : ``} alt='' />
               <input className='EventImageURL_Container_Box_Register_Input' type="file" accept="image/*" ref={imgRef} name="EventImageURL" required onChange={handleEventImageURL} />
+            </div>
+
+          </div>
+        </div>
+
+
+
+        {/* Banner Image */}
+        <div className='EventBannerImageURL_Container'>
+          <div className='EventBannerImageURL_Container_Box'>
+
+            <div className='EventBannerImageURL_Container_Box_Asking'>
+              <p className='EventBannerImageURL_Container_Box_Asking_P'><span>😜</span><strong> Banner 이미지</strong>를 첨부해 주세요.</p>
+            </div>
+            <div className='EventBannerImageURL_Container_Box_Register'>
+              <img className='EventBannerImageURL_Container_Box_Register_Image' src={imgFileBanner ? imgFileBanner : ``} alt='' />
+              <input className='EventBannerImageURL_Container_Box_Register_Input' type="file" accept="image/*" ref={imgRefBanner} name="EventImageBannerURL" required onChange={handleEventBannerImageURL} />
             </div>
 
           </div>
