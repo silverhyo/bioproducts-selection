@@ -380,7 +380,7 @@ export default function AdminUpdate() {
     .then(res => {
       alert("정상적으로 수정되었습니다.")
       console.log(res)
-      navigate('/admin/list')
+      navigate('/admin/products/list')
     })
     .catch(err => console.log(err))
   }

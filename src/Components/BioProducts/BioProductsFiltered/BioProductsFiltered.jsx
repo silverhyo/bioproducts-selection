@@ -94,6 +94,8 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
     setIsLiked(!isLiked);
   }
 
+  console.log("filteredProduct :", filteredProducts);
+
   return (
     <>
     <div className='BioProductsFiltered_Container'>
