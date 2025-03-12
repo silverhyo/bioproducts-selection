@@ -65,7 +65,7 @@ export default function AdminEventsList() {
             return (
               <div key={item.ID} className='AdminListEvent_Container_Box_ProductBox'>
                 <div className='AdminListEvent_Container_Box_ProductBox_ImageBox'>
-                  <img className='AdminListEvent_Container_Box_ProductBox_ImageBox_Image' src={imageURL+item.EventImageURL} alt=""></img>
+                  <img className='AdminListEvent_Container_Box_ProductBox_ImageBox_Image' src={item.EventImageURL} alt=""></img>
                 </div>
                 <div className='AdminListEvent_Container_Box_ProductBox_TextBox'>
                   <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'>{item.EventName}_({item.ID})</p>

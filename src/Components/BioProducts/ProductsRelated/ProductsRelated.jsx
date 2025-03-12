@@ -91,7 +91,7 @@ export default function ProductsRelated({PRODUCTINFO}) {
               <div className='ProductsRelated_Container_Box_ProductsRelated_Item' onClick={(e) => pageMove(item.ID)}>
                 
                 <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox'>
-                  <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image' src={imageURL+item.ProductMainImage} alt=''></img>
+                  <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image' src={item.ProductMainImage} alt=''></img>
                 </div>
                 <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1'>
                   <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1_Image'src='' alt=''></img>

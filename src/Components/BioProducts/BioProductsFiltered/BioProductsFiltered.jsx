@@ -127,7 +127,7 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
       return (
         <div key={filteredProduct.ID} className='BioProductsFiltered_Box'>
           <div className={`BioProductsFiltered_Box_Image ${isBeforeActive ? 'active' : ''}`} onClick={callProductDetailWindow}>
-            <Link to={`/bioproducts/${filteredProduct.ID}`} style={{textDecoration:"none"}}><img className={`BioProductsFiltered_Box_Image_Part ${isBeforeActive ? 'active' : ''}`} data-id={filteredProduct.ID} src={imageURL+filteredProduct.ProductMainImage} alt=""/></Link>
+            <Link to={`/bioproducts/${filteredProduct.ID}`} style={{textDecoration:"none"}}><img className={`BioProductsFiltered_Box_Image_Part ${isBeforeActive ? 'active' : ''}`} data-id={filteredProduct.ID} src={filteredProduct.ProductMainImage} alt=""/></Link>
           </div>
       
           <div className='BioProductsFiltered_Box_Text'>

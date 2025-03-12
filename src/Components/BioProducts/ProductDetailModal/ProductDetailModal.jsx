@@ -136,7 +136,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl01} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl01} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle01}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextA?.split('\n').map((line) => {
             return (
@@ -149,7 +149,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl02} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl02} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle02}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextB?.split('\n').map((line) => {
             return (
@@ -162,7 +162,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl03} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl03} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle03}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextC?.split('\n').map((line) => {
             return (
@@ -175,7 +175,7 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl04} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl04} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle04}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextD?.split('\n').map((line) => {
             return (
@@ -188,10 +188,10 @@ export default function ProductDetailModal({JSONDATA01}) {
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Detail'>
-          {imageURL+productInfo.ProductImageUrl05 ?
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={imageURL+productInfo.ProductImageUrl05} alt="" />
+          {productInfo.ProductImageUrl05 ?
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl05} alt="" />
           :
-          <img className='ProductDetail_Container_Box_Product_Detail_Image' style={{display:"none"}} src={imageURL+productInfo.ProductImageUrl05} alt="" />
+          <img className='ProductDetail_Container_Box_Product_Detail_Image' style={{display:"none"}} src={productInfo.ProductImageUrl05} alt="" />
           }
 
           {productInfo.ProductTitle05 ?

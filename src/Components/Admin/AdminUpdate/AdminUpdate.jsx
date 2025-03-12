@@ -412,7 +412,7 @@ export default function AdminUpdate() {
                 <p className='Edit_MainProductImage_Container_Box_Asking_P'><span>😘</span> 제품에 대한 <strong>메인 이미지 사진</strong>을 첨부해 주세요.</p>
               </div>
               <div className='Edit_MainProductImage_Container_Box_Register'>
-                <img className='Edit_MainProductImage_Container_Box_Register_Image' src={imgFileMain ? imgFileMain : imageURL+values.PMainImage} alt='' />
+                <img className='Edit_MainProductImage_Container_Box_Register_Image' src={imgFileMain ? imgFileMain : values.PMainImage} alt='' />
                 <input className='Edit_MainProductImage_Container_Box_Register_Input' type="file" accept="image/*" ref={imgRefMain} name="Edit_MainProductImage" onChange={setProductMainImaging} />
               </div>
 
@@ -542,7 +542,7 @@ export default function AdminUpdate() {
 
               <div className="Edit_DescriptionA_Container_Box_P_Small">
                 <p className='Edit_DescriptionA_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : imageURL+values.PFileA1} alt="" /><br />
+                <img className='Edit_DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : values.PFileA1} alt="" /><br />
                 <input className='Edit_DescriptionA_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionA1" id="Edit_fileInputA" ref={imgRefA} accept="image/*" onChange={settingDetailA1} /><br/><br/>
                 <input className='Edit_DescriptionA_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionA2" value={values.PTitleA2} onChange={e => setValues({...values, PTitleA2: e.target.value})}></input><br/><br/>
                 <textarea className='Edit_DescriptionA_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionA3" value={values.PDescriptionA3} onChange={e => setValues({...values, PDescriptionA3: e.target.value})} />
@@ -560,7 +560,7 @@ export default function AdminUpdate() {
 
               <div className="Edit_DescriptionB_Container_Box_P_Small">
                 <p className='Edit_DescriptionB_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : imageURL+values.PFileB1} alt="" /><br />
+                <img className='Edit_DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : values.PFileB1} alt="" /><br />
                 <input className='Edit_DescriptionB_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionB1" ref={imgRefB} id="Edit_fileInputB" accept="image/*" onChange={settingDetailB1} /><br/><br/>
                 <input className='Edit_DescriptionB_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionB2" value={values.PTitleB2} onChange={e => setValues({...values, PTitleB2: e.target.value})}></input><br/><br/>
                 <textarea className='Edit_DescriptionB_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionB3" value={values.PDescriptionB3} onChange={e => setValues({...values, PDescriptionB3: e.target.value})} />
@@ -579,7 +579,7 @@ export default function AdminUpdate() {
 
               <div className="Edit_DescriptionC_Container_Box_P_Small">
                 <p className='Edit_DescriptionC_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : imageURL+values.PFileC1} alt="" /><br />
+                <img className='Edit_DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : values.PFileC1} alt="" /><br />
                 <input className='Edit_DescriptionC_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionC1" ref={imgRefC} id="Edit_fileInputC" accept="image/*" onChange={settingDetailC1} /><br/><br/>
                 <input className='Edit_DescriptionC_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionC2" value={values.PTitleC2} onChange={e => setValues({...values, PTitleC2: e.target.value})}></input><br/><br/>
                 <textarea className='Edit_DescriptionC_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionC3" value={values.PDescriptionC3} onChange={e => setValues({...values, PDescriptionC3: e.target.value})} />
@@ -597,7 +597,7 @@ export default function AdminUpdate() {
 
               <div className="Edit_DescriptionD_Container_Box_P_Small">
                 <p className='Edit_DescriptionD_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : imageURL+values.PFileD1} alt="" /><br />
+                <img className='Edit_DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : values.PFileD1} alt="" /><br />
                 <input className='Edit_DescriptionD_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionD1" ref={imgRefD} id="Edit_fileInputD" accept="image/*" onChange={settingDetailD1} /><br/><br/>
                 <input className='Edit_DescriptionD_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionD2" value={values.PTitleD2} onChange={e => setValues({...values, PTitleD2: e.target.value})} ></input><br/><br/>
                 <textarea className='Edit_DescriptionD_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionD3" value={values.PDescriptionD3} onChange={e => setValues({...values, PDescriptionD3: e.target.value})} />
@@ -615,7 +615,7 @@ export default function AdminUpdate() {
 
               <div className="Edit_DescriptionE_Container_Box_P_Small">
                 <p className='Edit_DescriptionE_Container_Box_P_Small_P'></p>
-                <img className='Edit_DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : imageURL+values.PFileE1} alt="" /><br />
+                <img className='Edit_DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : values.PFileE1} alt="" /><br />
                 <input className='Edit_DescriptionE_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionE1" id="Edit_fileInputE" ref={imgRefE} accept="image/*" onChange={settingDetailE1} /><br/><br/>
                 <input className='Edit_DescriptionE_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionE2" value={values.PTitleE2} onChange={e => setValues({...values, PTitleE2: e.target.value})} ></input><br/><br/>
                 <textarea className='Edit_DescriptionE_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionE3" value={values.PDescriptionE3} onChange={e => setValues({...values, PDescriptionE3: e.target.value})} />

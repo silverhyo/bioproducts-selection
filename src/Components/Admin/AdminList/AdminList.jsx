@@ -66,7 +66,7 @@ export default function AdminList() {
             return (
               <div key={item.ID} className='AdminList_Container_Box_ProductBox'>
                 <div className='AdminList_Container_Box_ProductBox_ImageBox'>
-                  <img className='AdminList_Container_Box_ProductBox_ImageBox_Image' src={imageURL+item.ProductMainImage} alt=""></img>
+                  <img className='AdminList_Container_Box_ProductBox_ImageBox_Image' src={item.ProductMainImage} alt=""></img>
                 </div>
                 <div className='AdminList_Container_Box_ProductBox_TextBox'>
                   <p className='AdminList_Container_Box_ProductBox_TextBox_P'>{item.ProductName}_({item.ID})</p>

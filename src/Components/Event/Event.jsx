@@ -13,8 +13,7 @@ import { ImageAddressContext } from '../../Context/ImageAddressContext';
 export default function Event() {
   
   const eventDataBase = useContext(UserEventDataBaseContext).eventBaseData || [];
-  const imageAddress = useContext(ImageAddressContext).imageURL;
-  console.log("imageAddress :", imageAddress);
+  const imageURL = useContext(ImageAddressContext).imageURL;
 
   return (
     <>
@@ -27,7 +26,7 @@ export default function Event() {
               return (
                 <div key={index} className='Event_Container_Box_EventItems_Item'>
                   <div className='Event_Container_Box_EventItems_Item_ImageBox'>
-                    <img className='Event_Container_Box_EventItems_Item_ImageBox_Image' src={imageAddress+item.EventImageURL} alt=''></img>
+                    <img className='Event_Container_Box_EventItems_Item_ImageBox_Image' src={item.EventImageURL} alt=''></img>
                   </div>
                   <div className='Event_Container_Box_EventItems_Item_TextBox0'></div>
                   <a href={item.EventURL} style={{textDecoration:"none", color:"black"}}>

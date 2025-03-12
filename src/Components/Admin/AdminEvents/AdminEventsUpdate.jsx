@@ -231,7 +231,7 @@ export default function AdminEventsUpdate() {
               <p className='EventUpdateImageURL_Container_Box_Asking_P'><span>😜</span> Event 진행하는 제품의 <strong>메인 이미지</strong>를 첨부해 주세요.</p>
             </div>
             <div className='EventUpdateImageURL_Container_Box_Register'>
-              <img className='EventUpdateImageURL_Container_Box_Register_Image' src={imgFileMain ? imgFileMain : imageURL+values.eventMainImage} alt='' />
+              <img className='EventUpdateImageURL_Container_Box_Register_Image' src={imgFileMain ? imgFileMain : values.eventMainImage} alt='' />
               <input className='EventUpdateImageURL_Container_Box_Register_Input' type="file" accept="image/*" ref={imgRef} name="EventImageURL" onChange={handleEventImageURL} />
             </div>
   
@@ -248,7 +248,7 @@ export default function AdminEventsUpdate() {
               <p className='EventBannerImageURL_Container_Box_Asking_P'><span>😜</span><strong> Banner 이미지</strong>를 첨부해 주세요.</p>
             </div>
             <div className='EventBannerImageURL_Container_Box_Register'>
-              <img className='EventBannerImageURL_Container_Box_Register_Image' src={imgFileBanner ? imgFileBanner : imageURL+values.eventBannerImage} alt='' />
+              <img className='EventBannerImageURL_Container_Box_Register_Image' src={imgFileBanner ? imgFileBanner : values.eventBannerImage} alt='' />
               <input className='EventBannerImageURL_Container_Box_Register_Input' type="file" accept="image/*" ref={imgRefBanner} name="EventImageBannerURL" onChange={handleEventBannerImageURL} />
             </div>
   
@@ -347,7 +347,7 @@ export default function AdminEventsUpdate() {
             <p className='DescriptionA_Container_Box_P'><span>Event 1</span> : Event에 대한 <strong>이미지 자료를</strong> 입력해 주세요.</p>
             <div className="DescriptionA_Container_Box_P_Small">
               <p className='DescriptionA_Container_Box_P_Small_P'></p>
-              <img className='DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : imageURL+values.descriptionA1} alt="" /><br />
+              <img className='DescriptionA_Container_Box_P_Small_Image' src={imgFileA ? imgFileA : values.descriptionA1} alt="" /><br />
               <input className='DescriptionA_Container_Box_P_Small_Input1' type="file" name="DescriptionA1" id="fileInputA" ref={imgRefA} accept="image/*" onChange={settingDetailA1} /><br/><br/>
               <input className='DescriptionA_Container_Box_P_Small_Input2' type="text" name="DescriptionA2" value={values.descriptionA2} onChange={e => setValues({...values, descriptionA2: e.target.value})}></input><br/><br/>
               <textarea className='DescriptionA_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionA3" value={values.descriptionA3} onChange={e => setValues({...values, descriptionA3: e.target.value})} />
@@ -363,7 +363,7 @@ export default function AdminEventsUpdate() {
             <p className='DescriptionB_Container_Box_P'><span>Event 2</span> : Event에 대한 <strong>이미지 자료를</strong> 입력해 주세요.</p>
             <div className="DescriptionB_Container_Box_P_Small">
               <p className='DescriptionB_Container_Box_P_Small_P'></p>
-              <img className='DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : ``} alt="" /><br />
+              <img className='DescriptionB_Container_Box_P_Small_Image' src={imgFileB ? imgFileB : values.descriptionB1} alt="" /><br />
               <input className='DescriptionB_Container_Box_P_Small_Input1' type="file" name="DescriptionB1" ref={imgRefB} id="fileInputB" accept="image/*" onChange={settingDetailB1} /><br/><br/>
               <input className='DescriptionB_Container_Box_P_Small_Input2' type="text" name="DescriptionB2" value={values.descriptionB2} onChange={e => setValues({...values, descriptionB2: e.target.value})}></input><br/><br/>
               <textarea className='DescriptionB_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionB3" value={values.descriptionB3} onChange={e => setValues({...values, descriptionB3: e.target.value})} />
@@ -379,7 +379,7 @@ export default function AdminEventsUpdate() {
             <p className='DescriptionC_Container_Box_P'><span>Event 3</span> : Event에 대한 <strong>이미지 자료를</strong> 입력해 주세요.</p>
             <div className="DescriptionC_Container_Box_P_Small">
               <p className='DescriptionC_Container_Box_P_Small_P'></p>
-              <img className='DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : ``} alt="" /><br />
+              <img className='DescriptionC_Container_Box_P_Small_Image' src={imgFileC ? imgFileC : values.descriptionC1} alt="" /><br />
               <input className='DescriptionC_Container_Box_P_Small_Input1' type="file" name="DescriptionC1" ref={imgRefC} id="fileInputC" accept="image/*" onChange={settingDetailC1} /><br/><br/>
               <input className='DescriptionC_Container_Box_P_Small_Input2' type="text" name="DescriptionC2" value={values.descriptionC2} onChange={e => setValues({...values, descriptionC2: e.target.value})}></input><br/><br/>
               <textarea className='DescriptionC_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionC3" value={values.descriptionC3} onChange={e => setValues({...values, descriptionC3: e.target.value})} />

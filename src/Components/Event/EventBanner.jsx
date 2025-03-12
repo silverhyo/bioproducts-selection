@@ -42,7 +42,7 @@ export default function EventBanner() {
         {eventDataBase.map((item, index) => {
           return (
             <div key={index} className='EventBanner_Container_Box_MapBox'>
-              <img className='EventBanner_Container_Box_MapBox_ImageBox_Image' style={{width:"100%"}} src={imageURL+item.EventBannerImageURL} alt=''></img>
+              <img className='EventBanner_Container_Box_MapBox_ImageBox_Image' style={{width:"100%"}} src={item.EventBannerImageURL} alt=''></img>
             </div>
           )
         })}

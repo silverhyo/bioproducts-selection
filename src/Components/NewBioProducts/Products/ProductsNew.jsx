@@ -58,7 +58,7 @@ export default function ProductsNew() {
               <div className='ProductsNew_Container_Box'>
                 <div className='ProductsNew_Container_Box_ProductNew'>
                   <div className='ProductNew_Container_Box_ProductNew_ImageBox'>
-                    <img className='ProductsNew_Container_Box_ProductNew_ImageBox_Image' src={imageURL+item.ProductMainImage} alt=""></img>
+                    <img className='ProductsNew_Container_Box_ProductNew_ImageBox_Image' src={item.ProductMainImage} alt=""></img>
                   </div>
                   <div className='ProductsNew_Container_Box_ProductNew_Info'>
                     <div className='ProductsNew_Container_Box_ProductNew_Info_Title'>{item.ProductName} ({item.ProductManufacturer})</div>
