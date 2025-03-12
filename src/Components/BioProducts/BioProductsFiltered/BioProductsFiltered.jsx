@@ -21,15 +21,14 @@ import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 
 export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
 
+  const imageURL = useContext(ImageAddressContext).imageURL;
+
+  // ! Data 역배열로 놓기기
   const filteredProducts = [...FILTEREDPRODUCTS].reverse();
   console.log("filteredProducts :", filteredProducts)
-  const imageURL = useContext(ImageAddressContext).imageURL;
 
 
   // 이미지 클릭 시 클릭된 아이템만 return될 수 있도록 한다.
-
-
-
 
   // 이미지 또는 Test 클릭 시 클릭한 제품에 대한 상세 정보가 아래쪽으로 나오게 한다.
   // 이 clickedItem을 가지고 modal 창같은 곳에 상세한 정보를 보여주게 한다.

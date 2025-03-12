@@ -15,6 +15,9 @@ export default function Event() {
   const eventDataBase = useContext(UserEventDataBaseContext).eventBaseData || [];
   const imageURL = useContext(ImageAddressContext).imageURL;
 
+  // ! eventDataBase 역배열로 놓기
+  const eventDataBaseReverse = eventDataBase.reverse();
+
   return (
     <>
     <Navigation />
@@ -22,7 +25,7 @@ export default function Event() {
         <div className='Event_Container_Box'>Events
           <div className='Event_Container_Box_EventItems'>
             
-            {eventDataBase?.map((item, index) => {
+            {eventDataBaseReverse?.map((item, index) => {
               return (
                 <div key={index} className='Event_Container_Box_EventItems_Item'>
                   <div className='Event_Container_Box_EventItems_Item_ImageBox'>
