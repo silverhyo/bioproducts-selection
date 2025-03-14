@@ -29,7 +29,7 @@ export default function EventBanner() {
     slidesToScroll: 1, // 한 번에 넘어가는 슬라이드의 수
     pauseOnHover: true, // Hover시 일시 정지
     cssEase: 'linear', // css easing 모션션
-    arrows: true, // 슬라이드 양 옆에 뜨는 화살표 표시 여부
+    arrows: false, // 슬라이드 양 옆에 뜨는 화살표 표시 여부
   };
 
 

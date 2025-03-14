@@ -43,6 +43,7 @@
   width: 100%;
   position: sticky;
   bottom: 0px;
+  z-index: 2;
 }
 
 @keyframes fadeIn05 {

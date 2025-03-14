@@ -22,7 +22,7 @@ export default function Bioproducts() {
           </div>
         </div>
         <div className='Bioproducts_Container_Box_01' style={{position: "sticky"}}>
-        <NavigationBottom />
+          <NavigationBottom />
         </div>
       </div>
       <Footer />
