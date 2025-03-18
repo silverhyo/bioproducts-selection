@@ -25,7 +25,7 @@
 /* !아래 overflow 적용시킬 경우 화면 밖의 것은 hidden이 되어 스크롤 되지 않는다. */
 body {
   /* overflow: hidden; */
-  max-width: 400px;
+  max-width: 450px;
   margin: 0 auto;
 }
 
