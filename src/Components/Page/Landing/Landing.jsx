@@ -12,7 +12,7 @@ export default function Landing() {
 
 
   return (
-    <Link to='/home'>
+    <Link to='/bioproducts'>
     <div className='Landing_Container'>
       <div className='Landing_Container_Box'>
         <div className='Landing_Container_Box_ImageBox'>

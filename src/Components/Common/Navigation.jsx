@@ -70,15 +70,15 @@ export default function Navigation() {
 
         <div className='Navigation_Container_NavBox'>
           {/* <Link to="/home"><div className='Navigation_Container_NavBox_Menu'>HOME</div></Link> */}
-          <Link to="/event"><div className='Navigation_Container_NavBox_Menu'>EVENT</div></Link>
+          <Link to="/event"><div className='Navigation_Container_NavBox_Menu'>Event</div></Link>
           {/* <Link to="/newbioproducts"><div className='Navigation_Container_NavBox_Menu'>AD</div></Link> */}
-          <Link to="/bioproducts"><div className='Navigation_Container_NavBox_Menu'>SEARCH</div></Link>
+          <Link to="/bioproducts"><div className='Navigation_Container_NavBox_Menu'>Home</div></Link>
 
           {userInformation.isLoggedIn ?
-          <div className='Navigation_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div>
+          <div className='Navigation_Container_NavBox_Menu' onClick={handleLogout}>Logout</div>
           // <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu' onClick={handleLogout}>LOGOUT</div></Link>
           :
-          <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu'>LOGIN</div></Link>
+          <Link to="/login/kakao"><div className='Navigation_Container_NavBox_Menu'>Login</div></Link>
           }
         </div>
 

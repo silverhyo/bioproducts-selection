@@ -28,7 +28,7 @@ export default function Contact({CONTACTINFO}) {
     vendorEmail = jsonData01[0].Thermo;
   }
   
-  console.log("vendorEmail :", vendorEmail);
+  console.log("contactInfo :", contactInfo);
 
 
   return (
@@ -38,12 +38,12 @@ export default function Contact({CONTACTINFO}) {
         <div className='Contact_Container_Box_SmallBox'>
           <div className='Contact_Container_Box_SmallBox_EmailBox'>
             <a href={`tel:${contactInfo.mobile}`} className='Contact_Container_Box_SmallBox_EmailBox_Icon'><FaPhoneAlt /></a>
-            <a className='Contact_Container_Box_SmallBox_EmailBox_Text'></a>
+            <a className='Contact_Container_Box_SmallBox_EmailBox_Text'>{contactInfo.inCharge} {contactInfo.position}</a>
           </div>
             
           <div className='Contact_Container_Box_SmallBox_MobileBox'>
             <a href={`${vendorEmail}`} className='Contact_Container_Box_SmallBox_MobileBox_Icon'><MdContactMail /></a>
-            <a className='Contact_Container_Box_SmallBox_MobileBox_Text'></a>
+            <a className='Contact_Container_Box_SmallBox_MobileBox_Text'>{contactInfo.manufacturer} Web</a>
           </div>
         </div>
       </div>

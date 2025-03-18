@@ -108,6 +108,8 @@ export default function ProductDetailModal({JSONDATA01}) {
   // ! Contact Component에서 연락처 정보를 통하여 a Tag에 연락처 정보를 넣고자 합
   // ! Contact Component에서 제조사 정보를 통하여 제조사 컨텍 홈페이지로 연결시키고자 함
   const contactInfo ={
+    position: productInfo.SpecialistPosition,
+    inCharge: productInfo.SpecialistName,
     mobile: productInfo.SpecialistPhone,
     manufacturer:productInfo.ProductManufacturer
   };
@@ -148,7 +150,7 @@ export default function ProductDetailModal({JSONDATA01}) {
           })}</p>
         </div>
 
-        <div className='ProductDetail_Container_Box_Product_Detail'>
+        <div className='ProductDetail_Container_Box_Product_Detail' style={{display:"none"}}>
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl02} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle02}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextB?.split('\n').map((line) => {
@@ -161,7 +163,7 @@ export default function ProductDetailModal({JSONDATA01}) {
           })}</p>
         </div>
 
-        <div className='ProductDetail_Container_Box_Product_Detail'>
+        <div className='ProductDetail_Container_Box_Product_Detail' style={{display:"none"}}>
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl03} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle03}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextC?.split('\n').map((line) => {
@@ -174,7 +176,7 @@ export default function ProductDetailModal({JSONDATA01}) {
           })}</p>
         </div>
 
-        <div className='ProductDetail_Container_Box_Product_Detail'>
+        <div className='ProductDetail_Container_Box_Product_Detail' style={{display:"none"}}>
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl04} alt="" />
           <p className='ProductDetail_Container_Box_Product_Detail_P1'>{productInfo.ProductTitle04}</p>
           <p className='ProductDetail_Container_Box_Product_Detail_P2'>{descriptionTextD?.split('\n').map((line) => {
@@ -187,7 +189,7 @@ export default function ProductDetailModal({JSONDATA01}) {
           })}</p>
         </div>
 
-        <div className='ProductDetail_Container_Box_Product_Detail'>
+        <div className='ProductDetail_Container_Box_Product_Detail' style={{display:"none"}}>
           {productInfo.ProductImageUrl05 ?
           <img className='ProductDetail_Container_Box_Product_Detail_Image' src={productInfo.ProductImageUrl05} alt="" />
           :
@@ -224,6 +226,11 @@ export default function ProductDetailModal({JSONDATA01}) {
       </div>
       
     </div>
+
+    <div className='ProductDetail_Container_Bottom'>
+      <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
+    </div>
+
     <Contact CONTACTINFO={contactInfo} />
 
     {/* <CommentsReact /> */}
@@ -234,9 +241,7 @@ export default function ProductDetailModal({JSONDATA01}) {
 
     <Footer />
 
-    <div className='ProductDetail_Container_Bottom'>
-      <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
-    </div>
+
     </>
   )
 }

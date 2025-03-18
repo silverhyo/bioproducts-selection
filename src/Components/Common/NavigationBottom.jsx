@@ -12,18 +12,18 @@ export default function NavigationBottom() {
       <div className='NavigationBottom_Container_Box'>
         <div className='NavigationBottom_Container_Box_IconContainer'>
 
-          <Link to='/home' style={{textDecoration:"none", color:"black"}}>
-          <div className='NavigationBottom_Container_Box_IconBox'>
-            <div className='NavigationBottom_Container_Box_IconBox_Icon'><HiOutlineHome /></div>
-            <div className='NavigationBottom_Container_Box_IconBox_Text'>Home</div>
-          </div>
-          </Link>
-
-
           <Link to='/event' style={{textDecoration:"none", color:"black"}}>
           <div className='NavigationBottom_Container_Box_IconBox'>
             <div className='NavigationBottom_Container_Box_IconBox_Icon'><HiOutlineHome /></div>
             <div className='NavigationBottom_Container_Box_IconBox_Text'>Event</div>
+          </div>
+          </Link>
+
+
+          <Link to='/bioproducts' style={{textDecoration:"none", color:"black"}}>
+          <div className='NavigationBottom_Container_Box_IconBox'>
+            <div className='NavigationBottom_Container_Box_IconBox_Icon'><HiOutlineHome /></div>
+            <div className='NavigationBottom_Container_Box_IconBox_Text'>Home</div>
           </div>
           </Link>
 

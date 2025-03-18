@@ -55,10 +55,11 @@
       // background: var(--sartoriusColor);
 
       .p1 {
-        font-size: var(--1d125rem);
+        font-size: var(--1d25rem);
         font-weight: 600;
         margin-bottom: 10px;
         color: var(--backGroundColor);
+        text-align: right;
       }
       .ProductDetail_Container_Box_Product_Info_hr{
         width: 100%;
@@ -82,6 +83,7 @@
 
     }
     .ProductDetail_Container_Box_Product_Brief {
+      display: none;
       width: 100%;
       padding: 10px;
       // background: var(--sartoriusColor);
@@ -102,14 +104,14 @@
       .ProductDetail_Container_Box_Product_Detail_Image {
         width: 100%;
         object-fit: cover;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
       }
       .ProductDetail_Container_Box_Product_Detail_P1 {
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
         font-size: var(--1d25rem);
-        margin-bottom: 10px;
+        margin-bottom: 0px;
       }
       .ProductDetail_Container_Box_Product_Detail_P2 {
         width: 100%;
