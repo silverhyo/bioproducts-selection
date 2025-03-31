@@ -108,6 +108,26 @@
       "ID" : "6",
       "Value": "Plasma",
       "Title": "Plasma"
+    },
+    {
+      "ID" : "7",
+      "Value": "Viral_Production",
+      "Title": "Viral Production"
+    },
+    {
+      "ID" : "8",
+      "Value": "Non-viral_Delivery",
+      "Title": "Non-viral delivery (DNA/RNA in vivo)"
+    },
+    {
+      "ID" : "9",
+      "Value": "Off_the_Shelf_Plasmid",
+      "Title": "Off-the Shelf Plasmid"
+    },
+    {
+      "ID" : "10",
+      "Value": "Life_Science_Transfection_Reagents",
+      "Title": "Life Science Transfection Reagents"
     }
   ],
   "Manufacturer" : [
@@ -269,6 +289,21 @@
       "ID" : "4",
       "Value" : "Virus_Clearance_Study",
       "Title" : "Virus Clearance Study"
+    },
+    {
+      "ID" : "5",
+      "Value" : "Plasmid_Engineering_Service",
+      "Title" : "Plasmid Engineering Service"
+    },
+    {
+      "ID" : "6",
+      "Value" : "Plasmid_Manufacturing_Service",
+      "Title" : "Plasmid Manufacturing Service"
+    },
+    {
+      "ID" : "7",
+      "Value" : "Protein_Antibody_Manufacturing_Service",
+      "Title" : "Protein Antibody Manufacturing Service"
     }
   ]
 }
