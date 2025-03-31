@@ -75,6 +75,7 @@
   overflow: hidden;
 }
 .RegisterForm_Container_Box_Form .MainProductImage_Container .MainProductImage_Container_Box .MainProductImage_Container_Box_Register .MainProductImage_Container_Box_Register_Image {
+  width: 100%;
   object-fit: cover;
 }
 .RegisterForm_Container_Box_Form .MainProductImage_Container .MainProductImage_Container_Box .MainProductImage_Container_Box_Register .MainProductImage_Container_Box_Register_Input {

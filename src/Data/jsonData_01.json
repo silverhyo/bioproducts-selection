@@ -252,6 +252,16 @@
       "ID" : "20",
       "Value": "EndothelialCell",
       "Title": "Endothelial Cell"
+    },
+    {
+      "ID" : "21",
+      "Value": "Primary_Cell",
+      "Title": "Primary Cell"
+    },
+    {
+      "ID" : "22",
+      "Value": "Cancer_Cell",
+      "Title": "Cancer Cell"
     }
   ],
   "Boolean" : [
