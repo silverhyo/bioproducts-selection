@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --backGroundWhiteColor: rgb(255, 255, 255);
+  --whiteTextColor: rgb(240, 240, 232);
+  --blackTextColor: rgb(0, 0, 0);
+  --requiredBlank: rgba(171, 250, 164, 0.991);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  --100pxSpace: 100px;
+  --50pxSpace: 50px;
+  --30pxSpace: 30px;
+  --20pxSpace: 20px;
+  /* Font Size (Default) */
+  --XXXBigFontSize: 3.125rem;
+  --XBigFontSize: 1.375rem;
+  --XXXLargeFontSize: 1.25rem;
+  --XXLargeFontSize: 1.125rem; 
+  --XLargeFontSize: 1.06rem; 
+  --normalFontSize: 1rem; 
+   /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem; 
+  --1d05rem: 1.05rem; 
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem; 
+}
+
+.RegisterForm_Container_Box_Form {
+  width: 100%;
+  color: var(--blackTextColor);
+  padding: 15px;
+  padding-bottom: 50px;
+
+
+  //======================================================================Product Name
+  .ProductName_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .ProductName_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .ProductName_Container_Box_P {
+        margin-bottom: var(--10pxSpace);
+      }
+      .ProductName_Container_Box_Label {
+      }
+      .ProductName_Container_Box_Input {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+      }
+    }
+  }
+
+
+
+  //========================================================================Product Main Image
+  .MainProductImage_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .MainProductImage_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .MainProductImage_Container_Box_Asking {
+        width: 100%;
+        margin-bottom: var(--10pxSpace);
+
+        .MainProductImage_Container_Box_Asking_P {
+
+        }
+      }
+
+      .MainProductImage_Container_Box_Register {
+        width: 100%;
+        overflow: hidden;
+
+        .MainProductImage_Container_Box_Register_Image {
+          object-fit: cover;
+        }
+        .MainProductImage_Container_Box_Register_Input {
+          width: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .MainProductImage_Container_Box_Register_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+
+
+
+  //========================================================================Product Main Title
+  .ProductTitle_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .ProductTitle_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .ProductTitle_Container_Box_P {
+        margin-bottom: var(--10pxSpace);
+      }
+      .ProductTitle_Container_Box_Label {
+        color: var(--whiteTextColor);
+      }
+      .ProductTitle_Container_Box_Input {
+        border: none;
+        padding: 8px;
+        max-width: 500px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+      }
+    }
+  }
+
+
+  //========================================================================Product Type
+  .ProductType_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .ProductType_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .ProductType_Container_Box_P {
+        margin-bottom: 10px;
+
+      }
+      .ProductType_Container_Box_Label {
+      }
+      .ProductType_Container_Box_Select {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+
+        .ProductType_Container_Box_Option {
+          color: var(--blackTextColor);
+        }
+      }
+    }
+  }
+
+
+  //========================================================================Product Modality
+  .ModalityProducts_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .ModalityProducts_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .ModalityProducts_Container_Box_P {
+        margin-bottom: var(--10pxSpace);
+
+      }
+      .ModalityProducts_Container_Box_Small {
+        display: flex;
+        margin-bottom: 5px;
+
+        .ModalityProducts_Container_Box_Small_Input {
+          font-size: var(--0d875rem);
+        }
+        .ModalityProducts_Container_Box_Small_Label {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+
+
+  //========================================================================Application Filtration
+  .ApplicationFilterProducts_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .ApplicationFilterProducts_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .ApplicationFilterProducts_Container_Box_P {
+        margin-bottom: var(--10pxSpace);
+
+      }
+      .ApplicationFilterProducts_Container_Box_Small {
+        display: flex;
+        margin-bottom: 5px;
+
+        .ApplicationFilterProducts_Container_Box_Small_Input {
+          padding: 5px;
+        }
+        .ApplicationFilterProducts_Container_Box_Small_Label {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+
+  //========================================================================Application Cell Line
+  .ApplicationCellLine_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .ApplicationCellLine_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+    
+      .ApplicationCellLine_Container_Box_P {
+        margin-bottom: var(--10pxSpace);
+      }
+      .ApplicationCellLine_Container_Box_Small {
+        display: flex;
+        margin-bottom: 5px;
+
+        .ApplicationCellLine_Container_Box_Small_Input {
+          padding: 5px;
+        }
+        .ApplicationCellLine_Container_Box_Small_Label {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+
+  //========================================================================Product Type
+  .Service_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .Service_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .Service_Container_Box_P {
+        margin-bottom: 10px;
+
+      }
+      .Service_Container_Box_Label {
+      }
+      .Service_Container_Box_Select {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+
+        .Service_Container_Box_Option {
+          color: var(--blackTextColor);
+        }
+      }
+    }
+  }
+
+
+
+
+  //========================================================================Manufacturer
+  .Manufacturer_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+
+    .Manufacturer_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+
+      .Manufacturer_Container_Box_P {
+        margin-bottom: var(--10pxSpace);
+        
+      }
+      .Manufacturer_Container_Box_Label {
+  
+      }
+      .Manufacturer_Container_Box_Select {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+  
+        .Manufacturer_Container_Box_Select_Option {
+          color: var(--blackTextColor);
+        }
+      }
+    }
+  }
+
+
+
+  //========================================================================DescriptionA
+  .Description01_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .Description01_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+  
+      .Description01_Container_Box_P {
+        margin-bottom: var(--10pxSpace);
+      }
+      .Description01_Container_Box_P_Small {
+  
+        .Description01_Container_Box_P_Small_P {
+          margin-bottom: var(--10pxSpace);
+        }
+        .Description01_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .Description01_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: none;
+          padding: 8px;
+          margin-bottom: 20px;
+        }
+        .Description01_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          padding: 8px;
+          background: lightgray;
+          border: none;
+
+        }
+        .Description01_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 1px solid darkgray;
+          padding: 8px;
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .Description01_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+  //========================================================================DescriptionB
+  .Description02_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .Description02_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+  
+      .Description02_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .Description02_Container_Box_P_Small {
+  
+        .Description02_Container_Box_P_Small_P {
+          color: var(--whiteTextColor);
+          margin-bottom: 10px;
+        }
+        .Description02_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .Description02_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: none;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .Description02_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          padding: 8px;
+          background: lightgray;
+          border: none;
+        }
+        .Description02_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 1px solid darkgray;
+          padding: 8px;
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .Description02_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+
+  //========================================================================DescriptionC
+  .Description03_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .Description03_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+  
+      .Description03_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .Description03_Container_Box_P_Small {
+  
+        .Description03_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .Description03_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .Description03_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: none;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .Description03_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          padding: 8px;
+          background: lightgray;
+          border: none;
+
+        }
+        .Description03_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 1px solid darkgray;
+          padding: 8px;
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .Description03_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+  
+  
+
+  //========================================================================DescriptionD
+  .Description04_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .Description04_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+  
+      .Description04_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .Description04_Container_Box_P_Small {
+  
+        .Description04_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .Description04_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+      
+        }
+        .Description04_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: none;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .Description04_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: none;
+          padding: 8px;
+          background: lightgray;
+        }
+        .Description04_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: none;
+          padding: 8px;
+          border: 1px solid darkgray;
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .Description04_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+
+  //========================================================================DescriptionE
+  .Description05_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .Description05_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+  
+      .Description05_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .Description05_Container_Box_P_Small {
+  
+        .Description05_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .Description05_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .Description05_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: none;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .Description05_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: none;
+          padding: 8px;
+          background: lightgray;
+        }
+        .Description05_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: none;
+          padding: 8px;
+          border: 1px solid darkgray;
+        }
+      }
+      
+    }
+  }
+
+
+
+  //========================================================================Related Products Information
+  .RelatedProducts_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .RelatedProducts_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+  
+      .RelatedProducts_Container_Box_P {
+        margin-bottom: 20px;
+      }
+      .RelatedProducts_Container_Box_Related {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        width: 100%;
+  
+        .RelatedProducts_Container_Box_Related_Text {
+          margin-bottom: 10px;
+        }
+        .RelatedProducts_Container_Box_Related_Text_Name {
+          border: none;
+          background: var(--requiredBlank);
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+  
+        }
+        .RelatedProducts_Container_Box_Related_Text_Position {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+        .RelatedProducts_Container_Box_Related_Text_Mobile {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+      }
+    }
+  }
+
+
+
+
+  //========================================================================Application Specialist Information
+  .ApplicationSpecialist_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .ApplicationSpecialist_Container_Box {
+      width: 100%;
+      font-size: var(--0d875rem);
+  
+      .ApplicationSpecialist_Container_Box_P {
+        margin-bottom: 20px;
+      }
+      .ApplicationSpecialist_Container_Box_Specialist {
+        width: 100%;
+
+        .ApplicationSpecialist_Container_Box_Specialist_Text_Name {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+  
+        }
+        .ApplicationSpecialist_Container_Box_Specialist_Text_Position {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+        .ApplicationSpecialist_Container_Box_Specialist_Text_Mobile {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+      }
+    }
+  }
+
+  .CreateRegisterForm_Container_Box_Form_Hr01 {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .CreateRegisterForm_Container_Box_Form_Input {
+    color: var(--blackTextColor);
+    border: none;
+    width: 100%;
+    height: 35px;
+    font-size: var(--0d875rem);
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+//========================================================================AdvertiseDo
+// ! AdminCreate에서 광고 관련 사용할 경우 아래 사용하면 됨
+// .AdvertiseDo_Container {
+//   width: 100%;
+//   background: var(--backGroundColor);
+//   margin-bottom: var(--20pxSpace);
+//   color: var(--whiteTextColor);
+
+//   .AdvertiseDo_Container_Box{
+//     width: 100%;
+//     padding: 15px;
+    
+//     .AdvertiseDo_Container_Box_P{
+//       color: var(--whiteTextColor);
+//       font-size: var(--0d94rem);
+//       margin-bottom: 10px;
+//     }
+//     .AdvertiseDo_Container_Box_Small {
+//       display: flex;
+//       margin-bottom: 5px;
+
+//       .AdvertiseDo_Container_Box_Small_Input {
+//         padding: 5px;
+//         font-size: var(--0d94rem);
+//       }
+//       .AdvertiseDo_Container_Box_Small_Label{
+//         margin-left: 5px;
+//         color: var(--whiteTextColor);
+//         font-size: var(--0d94rem);
+//       }
+//     }
+//   }
+// }
+
+
+
+//========================================================================AdvertiseText
+// ! AdminCreate에서 광고 관련 사용할 경우 아래 사용하면 됨
+// .AdvertiseText_Container {
+//   background: var(--backGroundColor);
+//   width: 100%;
+//   margin-bottom: var(--20pxSpace);
+//   color: var(--whiteTextColor);
+
+//   .AdvertiseText_Container_Box {
+//     width: 100%;
+//     padding: 15px;
+
+//     .AdvertiseText_Container_Box_P {
+//       color: var(--whiteTextColor);
+//       font-size: var(--0d94rem);
+//       margin-bottom: 10px;
+//     }
+//     .AdvertiseText_Container_Box_Label {
+//       color: var(--whiteTextColor);
+//     }
+//     .AdvertiseText_Container_Box_Input {
+//       border: none;
+//       padding: 10px;
+//       max-width: 500px;
+//       width: 100%;
+//       height: 40px;
+//       font-size: var(--0d94rem);
+//       background: var(--requiredBlank);
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+

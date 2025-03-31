@@ -44,10 +44,10 @@
   border-radius: 40%;
   object-fit: fill;
 }
-.Comments_Form_Container .Comments_Form_Container_Form .Comments_Form_Container_Form_FormBox .Comments_Form_Container_Form_TextBox {
+.Comments_Form_Container .Comments_Form_Container_Form .Comments_Form_Container_Form_TextBox {
   width: 100%;
 }
-.Comments_Form_Container .Comments_Form_Container_Form .Comments_Form_Container_Form_FormBox .Comments_Form_Container_Form_TextBox .Comments_Form_Container_Form_TextBox_Textarea {
+.Comments_Form_Container .Comments_Form_Container_Form .Comments_Form_Container_Form_TextBox .Comments_Form_Container_Form_TextBox_Textarea {
   width: 100%;
   background: transparent;
   color: var(--whiteTextColor);
@@ -110,4 +110,141 @@
   padding-bottom: 2px;
   text-align: justify;
   line-height: 18px;
+}
+
+/* 대댓글 스타일 */
+.Comment_Thread {
+  margin-bottom: 20px;
+}
+
+.Comment_Replies {
+  margin-left: 50px;
+  border-left: 1px solid var(--whiteTextColor);
+  padding-left: 10px;
+}
+
+.Comments_Container_Box_CommentsBox.Reply {
+  margin-top: 10px;
+}
+
+.Comments_Container_Box_CommentsBox_TextBox_Date {
+  color: var(--whiteTextColor);
+  font-size: var(--0d625rem);
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.Comments_Reply_Button {
+  background: transparent;
+  border: none;
+  color: var(--whiteTextColor);
+  font-size: var(--0d75rem);
+  cursor: pointer;
+  margin-left: 15px;
+  text-decoration: underline;
+}
+
+.Comments_Reply_Button:hover {
+  color: #ccc;
+}
+
+.Comments_Edit_Button, 
+.Comments_Delete_Button {
+  background: transparent;
+  border: none;
+  color: var(--whiteTextColor);
+  font-size: var(--0d75rem);
+  cursor: pointer;
+  margin-left: 15px;
+  text-decoration: underline;
+}
+
+.Comments_Edit_Button:hover, 
+.Comments_Delete_Button:hover {
+  color: #ccc;
+}
+
+.Comments_Edit_Button {
+  color: #4a9af8;
+}
+
+.Comments_Delete_Button {
+  color: #f86060;
+}
+
+.Comments_Edit_Form {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.Comments_Reply_Form {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.Comments_Container_Form_FormBox {
+  display: flex;
+  width: 100%;
+}
+
+.Comments_Container_Form_FormBox_ImageBox {
+  width: 50px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.Comments_Container_Form_FormBox_ImageBox_Image {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--whiteTextColor);
+  border-radius: 40%;
+}
+
+.Comments_Container_Form_TextBox {
+  width: 100%;
+}
+
+.Comments_Container_Form_TextBox_Textarea {
+  width: 100%;
+  resize: none;
+  background-color: var(--backGroundColor);
+  border: 1px solid var(--whiteTextColor);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--whiteTextColor);
+  font-size: var(--0d875rem);
+}
+
+.Comments_Reply_Form_Buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.Comments_Reply_Cancel_Button, 
+.Comments_Reply_Submit_Button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--0d75rem);
+}
+
+.Comments_Reply_Cancel_Button {
+  background-color: transparent;
+  border: 1px solid var(--whiteTextColor);
+  color: var(--whiteTextColor);
+}
+
+.Comments_Reply_Submit_Button {
+  background-color: var(--whiteTextColor);
+  border: 1px solid var(--whiteTextColor);
+  color: var(--backGroundBlackColor);
+}
+
+.No_Comments {
+  color: var(--whiteTextColor);
+  font-size: var(--0d875rem);
+  text-align: center;
+  margin: 20px 0;
 }/*# sourceMappingURL=Comments.css.map */

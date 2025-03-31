@@ -10,9 +10,9 @@ import "./ProductDetailModal.css";
 // import Components
 import Footer from '../../Common/Footer';
 import Contact from '../../Contact/Contact';
+import Comments from '../../Comments/Comments';
 // import ICONS
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
-import CommentsReact from '../../Comments/CommentsReact';
 import ProductsRelated from '../ProductsRelated/ProductsRelated';
 // import useContext
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
@@ -233,11 +233,9 @@ export default function ProductDetailModal({JSONDATA01}) {
 
     <Contact CONTACTINFO={contactInfo} />
 
-    {/* <CommentsReact /> */}
-
     <ProductsRelated PRODUCTINFO={productInfo} />
 
-    {/* <Comments /> */}
+    <Comments />
 
     <Footer />
 

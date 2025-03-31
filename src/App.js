@@ -233,16 +233,15 @@ export default function App() {
               </PrivateRoute>
             }>
           </Route> */}
-          <Route path="/admin/home" element={<AdminHome />}></Route>
-
-          <Route path="/admin/products/create" element={<AdminCreate />}></Route>
-          <Route path="/admin/products/list" element={<AdminList />}></Route>
-          <Route path="/admin/products/update/:id" element={<AdminUpdate />}></Route>
-          
-          <Route path="/admin/events/create" element={<AdminEventsCreate />}></Route>
-          <Route path="/admin/events/list" element={<AdminEventsList />}></Route>
-          <Route path="/admin/events/update/:id" element={<AdminEventsUpdate />}></Route>
-          
+          <Route path="admin">
+            <Route path="home" element={<AdminHome />}></Route>
+            <Route path="products/create" element={<AdminCreate />}></Route>
+            <Route path="products/list" element={<AdminList />}></Route>
+            <Route path="products/update/:id" element={<AdminUpdate />}></Route>
+            <Route path="events/create" element={<AdminEventsCreate />}></Route>
+            <Route path="events/list" element={<AdminEventsList />}></Route>
+            <Route path="events/update/:id" element={<AdminEventsUpdate />}></Route>
+          </Route>
 
         </Routes>
         </AuthContext.Provider>

@@ -8,6 +8,7 @@ import Footer from '../../Common/Footer';
 import AdminNavbar from '../../Common/AdminNavbar';
 // import Components
 import NotFound from '../../Common/NotFound';
+import Navigation from '../../Common/Navigation';
 // useContext
 import { AuthContext } from '../../../Context/AuthContext';
 import { useContext } from 'react';
@@ -168,11 +169,10 @@ export default function AdminEventsCreate() {
 
   return (
     <>
-    <AdminNavbar />
     
     {userInformation.databaseLevel == 'Admin' ?
     <>
-      <form className='RegisterForm_Container_Box_Form' onSubmit={handleSubmit} encType="multipart/form-data" style={{background:"rgb(44, 44, 41)"}}>
+      <form className='EventRegisterForm_Container_Box_Form' onSubmit={handleSubmit} encType="multipart/form-data">
         
         {/* Event Main Image */}
         <div className='EventImageURL_Container'>
@@ -341,16 +341,16 @@ export default function AdminEventsCreate() {
 
 
         {/* Manufacturer */}
-        <div className='Manufacturer_Container'>
+        <div className='EventManufacturer_Container'>
             
-          <div className='Manufacturer_Container_Box'>
-            <p className='Manufacturer_Container_Box_P'><span>😜</span> <strong>Manufacturer</strong>를 선택해 주세요.</p>
-            <label className='Manufacturer_Container_Box_Label' htmlFor='manufacturer'></label>
-            <select className='Manufacturer_Container_Box_Select' id="manufacturer" required onChange={e => setManufacturer(e.target.value)}>
-              <option className='Manufacturer_Container_Box_Select_Option' value="">Manufacturer를 선택해 주세요</option>
+          <div className='EventManufacturer_Container_Box'>
+            <p className='EventManufacturer_Container_Box_P'><span>😜</span> <strong>Manufacturer</strong>를 선택해 주세요.</p>
+            <label className='EventManufacturer_Container_Box_Label' htmlFor='manufacturer'></label>
+            <select className='EventManufacturer_Container_Box_Select' id="manufacturer" required onChange={e => setManufacturer(e.target.value)}>
+              <option className='EventManufacturer_Container_Box_Select_Option' value="">Manufacturer를 선택해 주세요</option>
               {jsonDataEvent.Manufacturer.map((item, index) => {
                 return (
-                  <option className='Manufacturer_Container_Box_Select_Option' key={index} name="Manufacturer" value={item.Value}>{item.Title}</option>
+                  <option className='EventManufacturer_Container_Box_Select_Option' key={index} name="Manufacturer" value={item.Value}>{item.Title}</option>
                 )
               })};
             </select>
@@ -358,9 +358,7 @@ export default function AdminEventsCreate() {
         </div>
 
 
-        <hr className='RegisterForm_Container_Box_Form_Hr01'></hr>
-        <input className='RegisterForm_Container_Box_Form_Input' type="submit" value="등록하기"></input>
-        <hr className='RegisterForm_Container_Box_Form_Hr02'></hr>
+        <input className='EventRegisterForm_Container_Box_Form_Input' type="submit" value="등록하기"></input>
         
 
       </form>
@@ -369,8 +367,6 @@ export default function AdminEventsCreate() {
     <NotFound />
     }
     
-
-    <Footer />
     </>
   )
 }

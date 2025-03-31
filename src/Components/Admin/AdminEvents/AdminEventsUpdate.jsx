@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 // import Components
 import AdminNavbar from '../../Common/AdminNavbar';
 import Footer from '../../Common/Footer';
+import Navigation from '../../Common/Navigation';
 
 //import Style
 import './AdminEventsUpdate.css';
@@ -220,8 +221,8 @@ export default function AdminEventsUpdate() {
 
   return (
     <>
-    <AdminNavbar />
-      <form className='RegisterForm_Container_Box_Form' onSubmit={handleSubmit} encType="multipart/form-data" style={{background:"rgb(44, 44, 41)"}}>
+    <Navigation />
+      <form className='EventUpdateRegisterForm_Container_Box_Form' onSubmit={handleSubmit} encType="multipart/form-data">
           
         {/* Event Main Image */}
         <div className='EventUpdateImageURL_Container'>
@@ -390,16 +391,16 @@ export default function AdminEventsUpdate() {
           
           
         {/* Manufacturer */}
-        <div className='Manufacturer_Container'>
+        <div className='EventManufacturer_Container'>
             
-          <div className='Manufacturer_Container_Box'>
-            <p className='Manufacturer_Container_Box_P'><span>😜</span> <strong>Manufacturer</strong>를 선택해 주세요.</p>
-            <label className='Manufacturer_Container_Box_Label' htmlFor='manufacturer'></label>
-            <select className='Manufacturer_Container_Box_Select' id="manufacturer" value={values.manufacturer} onChange={e => setValues({...values, manufacturer: e.target.value})}>
-              <option className='Manufacturer_Container_Box_Select_Option' value="">Manufacturer를 선택해 주세요</option>
+          <div className='EventManufacturer_Container_Box'>
+            <p className='EventManufacturer_Container_Box_P'><span>😜</span> <strong>Manufacturer</strong>를 선택해 주세요.</p>
+            <label className='EventManufacturer_Container_Box_Label' htmlFor='manufacturer'></label>
+            <select className='EventManufacturer_Container_Box_Select' id="manufacturer" value={values.manufacturer} onChange={e => setValues({...values, manufacturer: e.target.value})}>
+              <option className='EventManufacturer_Container_Box_Select_Option' value="">Manufacturer를 선택해 주세요</option>
               {jsonDataEvent.Manufacturer.map((item, index) => {
                 return (
-                  <option className='Manufacturer_Container_Box_Select_Option' key={index} name="Manufacturer" value={item.Value}>{item.Title}</option>
+                  <option className='EventManufacturer_Container_Box_Select_Option' key={index} name="Manufacturer" value={item.Value}>{item.Title}</option>
                 )
               })};
             </select>
@@ -411,9 +412,10 @@ export default function AdminEventsUpdate() {
               
         </form>
 
-        <div className='Edit_Cancel_Button_Box'>
+        <div className='EditUpdate_Cancel_Button_Box'>
           <Link to='/admin/events/list' style={{textDecoration:"none"}}><div className='Edit_Cancel_Button'>취소하기</div></Link>
         </div>
+        
         <Footer />
     </>
   )

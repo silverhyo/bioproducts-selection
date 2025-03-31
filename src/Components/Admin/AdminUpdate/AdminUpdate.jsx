@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 // import Style
 import "./AdminUpdate.css";
+
+// import Components
 import AdminNavbar from '../../Common/AdminNavbar';
 import Footer from '../../Common/Footer';
+import Navigation from '../../Common/Navigation';
 
 // import Context
 import { ImageAddressContext } from '../../../Context/ImageAddressContext';
@@ -389,7 +392,7 @@ export default function AdminUpdate() {
   // ! Return에 적절한 곳에 추가 (AdminCreate와 같은 구조!)
   return (
     <>
-    <AdminNavbar />
+    <Navigation />
       <form className='Edit_EditForm_Container' onSubmit={handleUpdates}>
         <div className='Edit_EditForm_Container_Box'>
           <p className='Edit_EditForm_Container_Box_P'>Update</p>
@@ -698,8 +701,9 @@ export default function AdminUpdate() {
 
         </div>
       </form>
+      
       <div className='Edit_Cancel_Button_Box'>
-        <Link to='/admin/list' style={{textDecoration:"none"}}><div className='Edit_Cancel_Button'>취소하기</div></Link>
+        <Link to='/admin/home' style={{textDecoration:"none"}}><div className='Edit_Cancel_Button'>취소하기</div></Link>
       </div>
       <Footer />
     </>

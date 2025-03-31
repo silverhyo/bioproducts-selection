@@ -32,15 +32,14 @@
 }
 
 .AdminNavbar_Container {
-  background: var(--backGroundDarkColor);
   width: 100%;
-  color: var(--whiteTextColor);
 }
 .AdminNavbar_Container .AdminNavbar_Container_Box {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 30px;
+  color: var(--blackTextColor);
 }
 .AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Title {
   display: flex;
@@ -54,51 +53,85 @@
   display: flex;
   flex-direction: column;
 }
-.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_HomeBox {
-  margin-bottom: 40px;
-}
-.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_HomeBox .AdminNavbar_Container_Box_Contents_HomeBox_Hr {
-  margin-bottom: 10px;
-  border: 3px solid yellow;
-}
-.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_HomeBox .AdminNavbar_Container_Box_Contents_HomeBox_Home {
-  font-size: var(--1d25rem);
-}
 .AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox .AdminNavbar_Container_Box_Contents_EventBox_Text {
   margin-bottom: 5px;
-  font-size: var(--1d25rem);
+  font-size: var(--1d125rem);
   font-weight: 600;
 }
 .AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox .AdminNavbar_Container_Box_Contents_EventBox_Hr {
-  margin-bottom: 10px;
-  border: 3px solid yellow;
+  margin-bottom: 20px;
+  border: 1.5px solid black;
 }
-.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox .AdminNavbar_Container_Box_Contents_EventBox_Event_Register {
+.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox .AdminNavbar_Container_Box_Contents_EventBox_Menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: var(--0d94rem);
+  cursor: pointer;
+  column-gap: 20px;
+}
+.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox .AdminNavbar_Container_Box_Contents_EventBox_Menu .AdminNavbar_Container_Box_Contents_EventBox_Event_Register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
   padding-left: 10px;
   margin-bottom: 5px;
+  width: 100%;
+  height: 40px;
+  background: lightgrey;
 }
-.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox .AdminNavbar_Container_Box_Contents_EventBox_Event_Edit {
+.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_EventBox .AdminNavbar_Container_Box_Contents_EventBox_Menu .AdminNavbar_Container_Box_Contents_EventBox_Event_Edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
   padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  background: lightgrey;
 }
 .AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox {
   margin-bottom: 20px;
 }
 .AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox .AdminNavbar_Container_Box_Contents_ProductBox_Text {
   margin-bottom: 5px;
-  font-size: var(--1d25rem);
+  font-size: var(--1d125rem);
   font-weight: 600;
 }
 .AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox .AdminNavbar_Container_Box_Contents_ProductBox_Hr {
-  margin-bottom: 10px;
-  border: 3px solid yellow;
+  margin-bottom: 20px;
+  border: 1.5px solid black;
 }
-.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox .AdminNavbar_Container_Box_Contents_ProductBox_Product_Register {
+.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox .AdminNavbar_Container_Box_Contents_ProductBox_Menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  cursor: pointer;
+  column-gap: 20px;
+  font-size: var(--0d94rem);
+}
+.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox .AdminNavbar_Container_Box_Contents_ProductBox_Menu .AdminNavbar_Container_Box_Contents_ProductBox_Menu_Register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
   padding-left: 10px;
   margin-bottom: 5px;
+  width: 100%;
+  height: 40px;
+  background: lightgrey;
 }
-.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox .AdminNavbar_Container_Box_Contents_ProductBox_Product_Edit {
+.AdminNavbar_Container .AdminNavbar_Container_Box .AdminNavbar_Container_Box_Contents .AdminNavbar_Container_Box_Contents_ProductBox .AdminNavbar_Container_Box_Contents_ProductBox_Menu .AdminNavbar_Container_Box_Contents_ProductBox_Menu_Edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
   padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  background: lightgrey;
 }/*# sourceMappingURL=AdminNavbar.css.map */

@@ -20,6 +20,7 @@ import { CiEdit } from "react-icons/ci";
 import AdminNavbar from '../../Common/AdminNavbar';
 import NotFound from '../../Common/NotFound';
 import Footer from '../../Common/Footer';
+import Navigation from '../../Common/Navigation';
 
 export default function AdminEventsList() {
 
@@ -53,7 +54,6 @@ export default function AdminEventsList() {
 
   return (
     <>
-    <AdminNavbar />
 
     {userInformation.databaseLevel == 'Admin' ?
     <>
@@ -87,8 +87,6 @@ export default function AdminEventsList() {
     :
     <NotFound />
     }
-    <Footer />  
-      
     </>
   )
 }

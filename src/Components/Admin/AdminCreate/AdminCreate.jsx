@@ -9,6 +9,7 @@ import Footer from '../../Common/Footer';
 import AdminNavbar from '../../Common/AdminNavbar';
 // import Components
 import NotFound from '../../Common/NotFound';
+import Navigation from '../../Common/Navigation';
 // useContext
 import { AuthContext } from '../../../Context/AuthContext';
 import { useContext } from 'react';
@@ -249,6 +250,7 @@ export default function AdminCreate() {
 
   return (
     <>
+    <Navigation />
     <AdminNavbar />
     
     {userInformation.databaseLevel == 'Admin' ?

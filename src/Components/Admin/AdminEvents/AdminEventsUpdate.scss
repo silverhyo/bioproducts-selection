@@ -37,599 +37,491 @@
 }
 
 
-
-//========================================================================Event Main Image
-.EventUpdateImageURL_Container {
+.EventUpdateRegisterForm_Container_Box_Form {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  padding: 15px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-size: var(--0d875rem);
 
-  .EventUpdateImageURL_Container_Box {
+  //========================================================================Event Main Image
+  .EventUpdateImageURL_Container {
     width: 100%;
-    padding: 15px;
+    margin-bottom: var(--50pxSpace);
 
-    .EventUpdateImageURL_Container_Box_Asking {
+    .EventUpdateImageURL_Container_Box {
       width: 100%;
-      margin-bottom: var(--20pxSpace);
 
-      .EventUpdateImageURL_Container_Box_Asking_P {
-        color: var(--whiteTextColor);
-        font-size: var(--0d94rem);
-      }
-    }
-
-    .EventUpdateImageURL_Container_Box_Register {
-      color: var(--whiteTextColor);
-      width: 100%;
-      overflow: hidden;
-
-      .EventUpdateImageURL_Container_Box_Register_Image {
-        max-width: 500px;
-        margin-bottom: var(--20pxSpace);
-        object-fit: cover;
-      }
-      .EventUpdateImageURL_Container_Box_Register_Input {
+      .EventUpdateImageURL_Container_Box_Asking {
         width: 100%;
-        border: none;
-        margin-bottom: 30px;
-        
+        margin-bottom: var(--10pxSpace);
+
+        .EventUpdateImageURL_Container_Box_Asking_P {
+        }
       }
-    }
-  }
-}
 
-@media screen and (max-width: 500px) {
-  .EventUpdateImageURL_Container_Box_Register_Image {
-    width: 100%;
-    margin-bottom: var(--SmallSpace);
-    object-fit: cover;
-  }
-}
-
-
-//========================================================================Banner Image
-.EventBannerImageURL_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .EventBannerImageURL_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .EventBannerImageURL_Container_Box_Asking {
-      width: 100%;
-      margin-bottom: var(--20pxSpace);
-
-      .EventBannerImageURL_Container_Box_Asking_P {
-        color: var(--whiteTextColor);
-        font-size: var(--0d94rem);
-      }
-    }
-
-    .EventBannerImageURL_Container_Box_Register {
-      color: var(--whiteTextColor);
-      width: 100%;
-      overflow: hidden;
-
-      .EventBannerImageURL_Container_Box_Register_Image {
-        max-width: 500px;
-        margin-bottom: var(--20pxSpace);
-        object-fit: cover;
-      }
-      .EventBannerImageURL_Container_Box_Register_Input {
+      .EventUpdateImageURL_Container_Box_Register {
         width: 100%;
+        overflow: hidden;
+
+        .EventUpdateImageURL_Container_Box_Register_Image {
+          margin-bottom: var(--10pxSpace);
+          object-fit: cover;
+          border: 1px solid red;
+        }
+        .EventUpdateImageURL_Container_Box_Register_Input {
+          width: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .EventUpdateImageURL_Container_Box_Register_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+  //========================================================================Banner Image
+  .EventBannerImageURL_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .EventBannerImageURL_Container_Box {
+      width: 100%;
+
+      .EventBannerImageURL_Container_Box_Asking {
+        width: 100%;
+        margin-bottom: var(--10pxSpace);
+
+        .EventBannerImageURL_Container_Box_Asking_P {
+        }
+      }
+
+      .EventBannerImageURL_Container_Box_Register {
+        width: 100%;
+        overflow: hidden;
+
+        .EventBannerImageURL_Container_Box_Register_Image {
+          margin-bottom: var(--10pxSpace);
+          border: 1px solid red;
+          object-fit: cover;
+        }
+        .EventBannerImageURL_Container_Box_Register_Input {
+          width: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .EventBannerImageURL_Container_Box_Register_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+
+
+
+  //======================================================================Event Name
+  .EventName_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .EventName_Container_Box {
+      width: 100%;
+
+      .EventName_Container_Box_P {
+        margin-bottom: 10px;
+
+      }
+      .EventName_Container_Box_Label {
+      }
+      .EventName_Container_Box_Input {
         border: none;
-        margin-bottom: 30px;
-        
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
       }
     }
   }
-}
 
-@media screen and (max-width: 500px) {
-  .EventBannerImageURL_Container_Box_Register_Image {
+
+
+
+  //========================================================================Event Main Title
+  .EventTitle_Container {
     width: 100%;
-    margin-bottom: var(--SmallSpace);
-    object-fit: cover;
-  }
-}
+    margin-bottom: var(--50pxSpace);
 
-
-
-
-
-//======================================================================Event Name
-.EventName_Container {
-  background: var(--backGroundColor);
-  width: 100%;
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .EventName_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .EventName_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-
-    }
-    .EventName_Container_Box_Label {
-      color: var(--whiteTextColor);
-    }
-    .EventName_Container_Box_Input {
-      border: none;
-      padding: 10px;
-      max-width: 500px;
+    .EventTitle_Container_Box {
       width: 100%;
-      height: 40px;
-      font-size: var(--0d94rem);
-      background: var(--requiredBlank);
-    }
-  }
-}
 
-
-
-
-//========================================================================Event Main Title
-.EventTitle_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .EventTitle_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .EventTitle_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-    }
-    .EventTitle_Container_Box_Label {
-      color: var(--whiteTextColor);
-    }
-    .EventTitle_Container_Box_Input {
-      border: none;
-      padding: 10px;
-      max-width: 500px;
-      width: 100%;
-      height: 40px;
-      font-size: var(--0d94rem);
-      background: var(--requiredBlank);
-    }
-  }
-}
-
-
-
-
-
-
-
-//========================================================================Event URL
-.EventURL_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .EventURL_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .EventURL_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-    }
-    .EventURL_Container_Box_Label {
-      color: var(--whiteTextColor);
-    }
-    .EventURL_Container_Box_Input {
-      border: none;
-      padding: 10px;
-      max-width: 500px;
-      width: 100%;
-      height: 40px;
-      font-size: var(--0d94rem);
-      background: var(--requiredBlank);
-    }
-  }
-}
-
-
-
-
-
-
-
-//========================================================================Event Type
-.EventType_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .EventType_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .EventType_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-
-    }
-    .EventType_Container_Box_Label {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-    }
-    .EventType_Container_Box_Select {
-      border: none;
-      padding: 10px;
-      max-width: 500px;
-      width: 100%;
-      height: 40px;
-      font-size: var(--0d94rem);
-      background: var(--requiredBlank);
-
-      .EventType_Container_Box_Option {
-        color: var(--blackTextColor);
-        font-size: var(--0d94rem);
-      }
-    }
-  }
-}
-
-
-
-
-//========================================================================Event Closed
-.EventClosed_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .EventClosed_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .EventClosed_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-    }
-    .EventClosed_Container_Box_Label {
-      color: var(--whiteTextColor);
-    }
-    .EventClosed_Container_Box_Input {
-      border: none;
-      padding: 10px;
-      max-width: 500px;
-      width: 100%;
-      height: 40px;
-      font-size: var(--0d94rem);
-      background: var(--requiredBlank);
-    }
-  }
-}
-
-
-
-//========================================================================Event Purpose
-.EventPurpose_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .EventPurpose_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .EventPurpose_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-
-    }
-    .EventPurpose_Container_Box_Small {
-      display: flex;
-      margin-bottom: 5px;
-
-      .EventPurpose_Container_Box_Small_Input {
-        padding: 5px;
-        font-size: var(--0d94rem);
-      }
-      .EventPurpose_Container_Box_Small_Label {
-        margin-left: 5px;
-        color: var(--whiteTextColor);
-        font-size: var(--0d94rem);
-      }
-    }
-    
-  }
-}
-
-
-
-
-
-//========================================================================DescriptionA
-.DescriptionA_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .DescriptionA_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .DescriptionA_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-    }
-    .DescriptionA_Container_Box_P_Small {
-      color: var(--whiteTextColor);
-
-      .DescriptionA_Container_Box_P_Small_P {
-        color: var(--whiteTextColor);
-        font-size: var(--0d94rem);
+      .EventTitle_Container_Box_P {
         margin-bottom: 10px;
       }
-      .DescriptionA_Container_Box_P_Small_Image {
-        max-width: 500px;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 15px;
+      .EventTitle_Container_Box_Label {
       }
-      .DescriptionA_Container_Box_P_Small_Input1 {
-        width: 100%;
+      .EventTitle_Container_Box_Input {
         border: none;
-        padding: 10px;
-        margin-bottom: 30px;
-      }
-      .DescriptionA_Container_Box_P_Small_Input2 {
+        padding: 8px;
         width: 100%;
-        max-width: 500px;
         height: 40px;
-        border: none;
-        padding: 10px;
-        font-size: var(--0d875rem);
-      }
-      .DescriptionA_Container_Box_P_Small_Textarea {
-        width: 100%;
-        max-width: 500px;
-        height: 150px;
-        border: none;
-        padding: 10px;
-        font-size: var(--0d875rem);
+        background: var(--requiredBlank);
       }
     }
-    
   }
-}
 
-@media screen and (max-width: 500px) {
-  .DescriptionA_Container_Box_P_Small_Image {
+
+
+
+
+
+
+  //========================================================================Event URL
+  .EventURL_Container {
     width: 100%;
-    margin-bottom: var(--SmallSpace);
-    object-fit: cover;
-  }
-}
+    margin-bottom: var(--50pxSpace);
 
-
-
-
-
-//========================================================================DescriptionB
-.DescriptionB_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .DescriptionB_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .DescriptionB_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-    }
-    .DescriptionB_Container_Box_P_Small {
-      color: var(--whiteTextColor);
-
-      .DescriptionB_Container_Box_P_Small_P {
-        color: var(--whiteTextColor);
-        font-size: var(--0d94rem);
-        margin-bottom: 10px;
-      }
-      .DescriptionB_Container_Box_P_Small_Image {
-        max-width: 500px;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 15px;
-      }
-      .DescriptionB_Container_Box_P_Small_Input1 {
-        width: 100%;
-        border: none;
-        padding: 10px;
-        margin-bottom: 30px;
-      }
-      .DescriptionB_Container_Box_P_Small_Input2 {
-        width: 100%;
-        max-width: 500px;
-        height: 40px;
-        border: none;
-        padding: 10px;
-        font-size: var(--0d875rem);
-      }
-      .DescriptionB_Container_Box_P_Small_Textarea {
-        width: 100%;
-        max-width: 500px;
-        height: 150px;
-        border: none;
-        padding: 10px;
-        font-size: var(--0d875rem);
-      }
-    }
-    
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .DescriptionB_Container_Box_P_Small_Image {
-    width: 100%;
-    margin-bottom: var(--SmallSpace);
-    object-fit: cover;
-  }
-}
-
-
-//========================================================================DescriptionC
-.DescriptionC_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-
-  .DescriptionC_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .DescriptionC_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-    }
-    .DescriptionC_Container_Box_P_Small {
-      color: var(--whiteTextColor);
-
-      .DescriptionC_Container_Box_P_Small_P {
-        color: var(--whiteTextColor);
-        font-size: var(--0d94rem);
-        margin-bottom: 10px;
-      }
-      .DescriptionC_Container_Box_P_Small_Image {
-        max-width: 500px;
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 15px;
-      }
-      .DescriptionC_Container_Box_P_Small_Input1 {
-        width: 100%;
-        border: none;
-        padding: 10px;
-        margin-bottom: 30px;
-      }
-      .DescriptionC_Container_Box_P_Small_Input2 {
-        width: 100%;
-        max-width: 500px;
-        height: 40px;
-        border: none;
-        padding: 10px;
-        font-size: var(--0d875rem);
-      }
-      .DescriptionC_Container_Box_P_Small_Textarea {
-        width: 100%;
-        max-width: 500px;
-        height: 150px;
-        border: none;
-        padding: 10px;
-        font-size: var(--0d875rem);
-      }
-    }
-    
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .DescriptionC_Container_Box_P_Small_Image {
-    width: 100%;
-    margin-bottom: var(--SmallSpace);
-    object-fit: cover;
-  }
-}
-
-
-
-
-
-
-//========================================================================Manufacturer
-.Manufacturer_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-
-  .Manufacturer_Container_Box {
-    width: 100%;
-    padding: 15px;
-
-    .Manufacturer_Container_Box_P {
-      color: var(--whiteTextColor);
-      font-size: var(--0d94rem);
-      margin-bottom: 10px;
-
-    }
-    .Manufacturer_Container_Box_Label {
-      color: var(--whiteTextColor);
-
-    }
-    .Manufacturer_Container_Box_Select {
-      border: none;
-      padding: 10px;
-      max-width: 500px;
+    .EventURL_Container_Box {
       width: 100%;
-      height: 40px;
-      font-size: var(--0d94rem);
-      background: var(--requiredBlank);
 
-      .Manufacturer_Container_Box_Select_Option {
-        color: var(--blackTextColor);
-        font-size: var(--0d94rem);
+      .EventURL_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .EventURL_Container_Box_Label {
+      }
+      .EventURL_Container_Box_Input {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
       }
     }
   }
-}
 
 
 
 
 
-//========================================================================FORM
-.RegisterForm_Container_Box_Form {
-  .RegisterForm_Container_Box_Form_Input {
-    color: var(--blackTextColor);
-    width: 150px;
+
+
+  //========================================================================Event Type
+  .EventType_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .EventType_Container_Box {
+      width: 100%;
+
+      .EventType_Container_Box_P {
+        margin-bottom: 10px;
+
+      }
+      .EventType_Container_Box_Label {
+      }
+      .EventType_Container_Box_Select {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+
+        .EventType_Container_Box_Option {
+        }
+      }
+    }
+  }
+
+
+
+
+  //========================================================================Event Closed
+  .EventClosed_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .EventClosed_Container_Box {
+      width: 100%;
+
+      .EventClosed_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .EventClosed_Container_Box_Label {
+      }
+      .EventClosed_Container_Box_Input {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+      }
+    }
+  }
+
+
+
+  //========================================================================Event Purpose
+  .EventPurpose_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .EventPurpose_Container_Box {
+      width: 100%;
+
+      .EventPurpose_Container_Box_P {
+        margin-bottom: 10px;
+
+      }
+      .EventPurpose_Container_Box_Small {
+        display: flex;
+        margin-bottom: 5px;
+
+        .EventPurpose_Container_Box_Small_Input {
+          padding: 5px;
+        }
+        .EventPurpose_Container_Box_Small_Label {
+          margin-left: 5px;
+        }
+      }
+
+    }
+  }
+
+
+
+
+
+  //========================================================================DescriptionA
+  .DescriptionA_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .DescriptionA_Container_Box {
+      width: 100%;
+
+      .DescriptionA_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionA_Container_Box_P_Small {
+
+        .DescriptionA_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionA_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+          border: 1px solid red;
+        }
+        .DescriptionA_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 1px solid black;
+          padding: 8px;
+        }
+        .DescriptionA_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 1px solid black;
+          padding: 8px;
+        }
+        .DescriptionA_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 1px solid black;
+          padding: 8px;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .DescriptionA_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+
+
+
+  //========================================================================DescriptionB
+  .DescriptionB_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .DescriptionB_Container_Box {
+      width: 100%;
+
+      .DescriptionB_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionB_Container_Box_P_Small {
+
+        .DescriptionB_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionB_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+          border: 1px solid red;
+        }
+        .DescriptionB_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 1px solid black;
+          padding: 8px;
+        }
+        .DescriptionB_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 1px solid black;
+          padding: 8px;
+        }
+        .DescriptionB_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 1px solid black;
+          padding: 8px;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .DescriptionB_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+  //========================================================================DescriptionC
+  .DescriptionC_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .DescriptionC_Container_Box {
+      width: 100%;
+
+      .DescriptionC_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionC_Container_Box_P_Small {
+
+        .DescriptionC_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionC_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+          border: 1px solid red;
+        }
+        .DescriptionC_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 1px solid black;
+          padding: 8px;
+        }
+        .DescriptionC_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 1px solid black;
+          padding: 8px;
+        }
+        .DescriptionC_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 1px solid black;
+          padding: 8px;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .DescriptionC_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+
+
+
+
+  //========================================================================Manufacturer
+  .EventManufacturer_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+
+    .EventManufacturer_Container_Box {
+      width: 100%;
+
+      .EventManufacturer_Container_Box_P {
+        margin-bottom: 10px;
+
+      }
+      .EventManufacturer_Container_Box_Label {
+
+      }
+      .EventManufacturer_Container_Box_Select {
+        border: 1px solid black;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+
+        .EventManufacturer_Container_Box_Select_Option {
+        }
+      }
+    }
+  }
+
+  .EditUpdate_Submit_Button {
+    width: 100%;
     height: 40px;
-    font-size: var(--1d05rem);
-    font-weight: 600;
-    display: flex;
-    margin: 0 auto;
+    background: lightgray;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    font-size: var(--0d94rem);
+    letter-spacing: 3px;
   }
 }
 
-.EditUpdate_Submit_Button {
-  display : flex;
-  margin: 0 auto;
-  width: 120px;
-  height: 30px;
+.EditUpdate_Cancel_Button_Box {
+  width: 100%;
+  height: 40px;
+  padding: 15px;
+  padding-bottom: 100px;
   font-size: var(--0d94rem);
-  font-weight: 500;
-  letter-spacing: 3px;
-  border: none;
-  cursor: pointer;
+
+  .Edit_Cancel_Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: lightgray;
+    cursor: pointer;
+  }
 }
+
+

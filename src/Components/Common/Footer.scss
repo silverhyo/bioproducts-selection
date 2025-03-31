@@ -1,26 +1,40 @@
 :root {
   /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
   --backGroundColor: rgb(44, 44, 41);
-  --iconColor: rgb(167, 162, 162);
   --whiteTextColor: rgb(240, 240, 232);
+  --blackTextColor: rgb(0, 0, 0);
+  --requiredBlank: rgba(171, 250, 164, 0.991);
   /* Colors and Styles (Default) */
   /* Space (Default) */
-  --XXXLargeSpace: 100px;
-  --SmallSpace: 20px;
+  --100pxSpace: 100px;
+  --50pxSpace: 50px;
+  --30pxSpace: 30px;
+  --20pxSpace: 20px;
   /* Font Size (Default) */
   --XXXBigFontSize: 3.125rem;
-  --XXBigFontSize: 1.5rem
   --XBigFontSize: 1.375rem;
   --XXXLargeFontSize: 1.25rem;
   --XXLargeFontSize: 1.125rem; 
   --XLargeFontSize: 1.06rem; 
   --normalFontSize: 1rem; 
+   /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem; 
+  --1d05rem: 1.05rem; 
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem; 
 }
 
 .FooterSection_Container {
   width: 100%;
   height: 30vh;
-  background: var(--backGroundColor);
+  background: var(--blackTextColor);
 
   .FooterSection_Container_Box {
     width: 100%;
@@ -28,33 +42,37 @@
     position: relative;
 
     .FooterSection_Container_Box_Email {
-      width: 50px;
-      height: 50px;
-      text-decoration: none;
-      background: black;
-      border-radius: 50%;
+      display: flex;
+      column-gap: 50px;
       position: absolute;
       top: 80px;
       left: 50%;
-      transform: translateX(-25px);
-      font-size: 25px;
-      color: (var(--iconColor));
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
+      transform: translateX(-50%);
 
+      .FooterSection_Container_Box_Email_Text {
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+        background: var(--backGroundDarkColor);
+        border-radius: 50%;
+        font-size: 25px;
+        color: darkgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+    
     .FooterSection_Container_Box_Text {
       width: 100%;
-      // border: 1px solid red;
-      color: white;
       position: absolute;
       bottom: 30px;
 
       p {
         text-align: center;
         font-size: 12px;
+        color: darkgray;
       }
     }
   }

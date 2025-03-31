@@ -35,488 +35,350 @@
   --0d625rem: 0.625rem;
 }
 
-.EventUpdateImageURL_Container {
-  width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
-}
-.EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form {
   width: 100%;
   padding: 15px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-size: var(--0d875rem);
 }
-.EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Asking {
+.EventUpdateRegisterForm_Container_Box_Form .EventUpdateImageURL_Container {
   width: 100%;
-  margin-bottom: var(--20pxSpace);
+  margin-bottom: var(--50pxSpace);
 }
-.EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Asking .EventUpdateImageURL_Container_Box_Asking_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box {
+  width: 100%;
 }
-.EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Register {
-  color: var(--whiteTextColor);
+.EventUpdateRegisterForm_Container_Box_Form .EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Asking {
+  width: 100%;
+  margin-bottom: var(--10pxSpace);
+}
+.EventUpdateRegisterForm_Container_Box_Form .EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Register {
   width: 100%;
   overflow: hidden;
 }
-.EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Register .EventUpdateImageURL_Container_Box_Register_Image {
-  max-width: 500px;
-  margin-bottom: var(--20pxSpace);
+.EventUpdateRegisterForm_Container_Box_Form .EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Register .EventUpdateImageURL_Container_Box_Register_Image {
+  margin-bottom: var(--10pxSpace);
   object-fit: cover;
+  border: 1px solid red;
 }
-.EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Register .EventUpdateImageURL_Container_Box_Register_Input {
+.EventUpdateRegisterForm_Container_Box_Form .EventUpdateImageURL_Container .EventUpdateImageURL_Container_Box .EventUpdateImageURL_Container_Box_Register .EventUpdateImageURL_Container_Box_Register_Input {
   width: 100%;
   border: none;
-  margin-bottom: 30px;
 }
-
 @media screen and (max-width: 500px) {
-  .EventUpdateImageURL_Container_Box_Register_Image {
+  .EventUpdateRegisterForm_Container_Box_Form .EventUpdateImageURL_Container_Box_Register_Image {
     width: 100%;
     margin-bottom: var(--SmallSpace);
     object-fit: cover;
   }
 }
-.EventBannerImageURL_Container {
+.EventUpdateRegisterForm_Container_Box_Form .EventBannerImageURL_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.EventBannerImageURL_Container .EventBannerImageURL_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventBannerImageURL_Container .EventBannerImageURL_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Asking {
+.EventUpdateRegisterForm_Container_Box_Form .EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Asking {
   width: 100%;
-  margin-bottom: var(--20pxSpace);
+  margin-bottom: var(--10pxSpace);
 }
-.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Asking .EventBannerImageURL_Container_Box_Asking_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
-}
-.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register {
-  color: var(--whiteTextColor);
+.EventUpdateRegisterForm_Container_Box_Form .EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register {
   width: 100%;
   overflow: hidden;
 }
-.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register .EventBannerImageURL_Container_Box_Register_Image {
-  max-width: 500px;
-  margin-bottom: var(--20pxSpace);
+.EventUpdateRegisterForm_Container_Box_Form .EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register .EventBannerImageURL_Container_Box_Register_Image {
+  margin-bottom: var(--10pxSpace);
+  border: 1px solid red;
   object-fit: cover;
 }
-.EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register .EventBannerImageURL_Container_Box_Register_Input {
+.EventUpdateRegisterForm_Container_Box_Form .EventBannerImageURL_Container .EventBannerImageURL_Container_Box .EventBannerImageURL_Container_Box_Register .EventBannerImageURL_Container_Box_Register_Input {
   width: 100%;
   border: none;
-  margin-bottom: 30px;
 }
-
 @media screen and (max-width: 500px) {
-  .EventBannerImageURL_Container_Box_Register_Image {
+  .EventUpdateRegisterForm_Container_Box_Form .EventBannerImageURL_Container_Box_Register_Image {
     width: 100%;
     margin-bottom: var(--SmallSpace);
     object-fit: cover;
   }
 }
-.EventName_Container {
-  background: var(--backGroundColor);
+.EventUpdateRegisterForm_Container_Box_Form .EventName_Container {
   width: 100%;
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.EventName_Container .EventName_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventName_Container .EventName_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.EventName_Container .EventName_Container_Box .EventName_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventName_Container .EventName_Container_Box .EventName_Container_Box_P {
   margin-bottom: 10px;
 }
-.EventName_Container .EventName_Container_Box .EventName_Container_Box_Label {
-  color: var(--whiteTextColor);
-}
-.EventName_Container .EventName_Container_Box .EventName_Container_Box_Input {
+.EventUpdateRegisterForm_Container_Box_Form .EventName_Container .EventName_Container_Box .EventName_Container_Box_Input {
   border: none;
-  padding: 10px;
-  max-width: 500px;
+  padding: 8px;
   width: 100%;
   height: 40px;
-  font-size: var(--0d94rem);
   background: var(--requiredBlank);
 }
-
-.EventTitle_Container {
+.EventUpdateRegisterForm_Container_Box_Form .EventTitle_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.EventTitle_Container .EventTitle_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventTitle_Container .EventTitle_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.EventTitle_Container .EventTitle_Container_Box .EventTitle_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventTitle_Container .EventTitle_Container_Box .EventTitle_Container_Box_P {
   margin-bottom: 10px;
 }
-.EventTitle_Container .EventTitle_Container_Box .EventTitle_Container_Box_Label {
-  color: var(--whiteTextColor);
-}
-.EventTitle_Container .EventTitle_Container_Box .EventTitle_Container_Box_Input {
+.EventUpdateRegisterForm_Container_Box_Form .EventTitle_Container .EventTitle_Container_Box .EventTitle_Container_Box_Input {
   border: none;
-  padding: 10px;
-  max-width: 500px;
+  padding: 8px;
   width: 100%;
   height: 40px;
-  font-size: var(--0d94rem);
   background: var(--requiredBlank);
 }
-
-.EventURL_Container {
+.EventUpdateRegisterForm_Container_Box_Form .EventURL_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.EventURL_Container .EventURL_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventURL_Container .EventURL_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.EventURL_Container .EventURL_Container_Box .EventURL_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventURL_Container .EventURL_Container_Box .EventURL_Container_Box_P {
   margin-bottom: 10px;
 }
-.EventURL_Container .EventURL_Container_Box .EventURL_Container_Box_Label {
-  color: var(--whiteTextColor);
-}
-.EventURL_Container .EventURL_Container_Box .EventURL_Container_Box_Input {
+.EventUpdateRegisterForm_Container_Box_Form .EventURL_Container .EventURL_Container_Box .EventURL_Container_Box_Input {
   border: none;
-  padding: 10px;
-  max-width: 500px;
+  padding: 8px;
   width: 100%;
   height: 40px;
-  font-size: var(--0d94rem);
   background: var(--requiredBlank);
 }
-
-.EventType_Container {
+.EventUpdateRegisterForm_Container_Box_Form .EventType_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.EventType_Container .EventType_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventType_Container .EventType_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.EventType_Container .EventType_Container_Box .EventType_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventType_Container .EventType_Container_Box .EventType_Container_Box_P {
   margin-bottom: 10px;
 }
-.EventType_Container .EventType_Container_Box .EventType_Container_Box_Label {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
-}
-.EventType_Container .EventType_Container_Box .EventType_Container_Box_Select {
+.EventUpdateRegisterForm_Container_Box_Form .EventType_Container .EventType_Container_Box .EventType_Container_Box_Select {
   border: none;
-  padding: 10px;
-  max-width: 500px;
+  padding: 8px;
   width: 100%;
   height: 40px;
-  font-size: var(--0d94rem);
   background: var(--requiredBlank);
 }
-.EventType_Container .EventType_Container_Box .EventType_Container_Box_Select .EventType_Container_Box_Option {
-  color: var(--blackTextColor);
-  font-size: var(--0d94rem);
-}
-
-.EventClosed_Container {
+.EventUpdateRegisterForm_Container_Box_Form .EventClosed_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.EventClosed_Container .EventClosed_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventClosed_Container .EventClosed_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.EventClosed_Container .EventClosed_Container_Box .EventClosed_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventClosed_Container .EventClosed_Container_Box .EventClosed_Container_Box_P {
   margin-bottom: 10px;
 }
-.EventClosed_Container .EventClosed_Container_Box .EventClosed_Container_Box_Label {
-  color: var(--whiteTextColor);
-}
-.EventClosed_Container .EventClosed_Container_Box .EventClosed_Container_Box_Input {
+.EventUpdateRegisterForm_Container_Box_Form .EventClosed_Container .EventClosed_Container_Box .EventClosed_Container_Box_Input {
   border: none;
-  padding: 10px;
-  max-width: 500px;
+  padding: 8px;
   width: 100%;
   height: 40px;
-  font-size: var(--0d94rem);
   background: var(--requiredBlank);
 }
-
-.EventPurpose_Container {
+.EventUpdateRegisterForm_Container_Box_Form .EventPurpose_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.EventPurpose_Container .EventPurpose_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventPurpose_Container .EventPurpose_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_P {
   margin-bottom: 10px;
 }
-.EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_Small {
+.EventUpdateRegisterForm_Container_Box_Form .EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_Small {
   display: flex;
   margin-bottom: 5px;
 }
-.EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_Small .EventPurpose_Container_Box_Small_Input {
+.EventUpdateRegisterForm_Container_Box_Form .EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_Small .EventPurpose_Container_Box_Small_Input {
   padding: 5px;
-  font-size: var(--0d94rem);
 }
-.EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_Small .EventPurpose_Container_Box_Small_Label {
+.EventUpdateRegisterForm_Container_Box_Form .EventPurpose_Container .EventPurpose_Container_Box .EventPurpose_Container_Box_Small .EventPurpose_Container_Box_Small_Label {
   margin-left: 5px;
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
 }
-
-.DescriptionA_Container {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.DescriptionA_Container .DescriptionA_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P {
   margin-bottom: 10px;
 }
-.DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small {
-  color: var(--whiteTextColor);
-}
-.DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_P {
   margin-bottom: 10px;
 }
-.DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Image {
-  max-width: 500px;
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Image {
   width: 100%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 1px solid red;
 }
-.DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Input1 {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Input1 {
   width: 100%;
-  border: none;
-  padding: 10px;
-  margin-bottom: 30px;
+  border: 1px solid black;
+  padding: 8px;
 }
-.DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Input2 {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Input2 {
   width: 100%;
-  max-width: 500px;
   height: 40px;
-  border: none;
-  padding: 10px;
-  font-size: var(--0d875rem);
+  border: 1px solid black;
+  padding: 8px;
 }
-.DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Textarea {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Textarea {
   width: 100%;
-  max-width: 500px;
   height: 150px;
-  border: none;
-  padding: 10px;
-  font-size: var(--0d875rem);
+  border: 1px solid black;
+  padding: 8px;
 }
-
 @media screen and (max-width: 500px) {
-  .DescriptionA_Container_Box_P_Small_Image {
+  .EventUpdateRegisterForm_Container_Box_Form .DescriptionA_Container_Box_P_Small_Image {
     width: 100%;
     margin-bottom: var(--SmallSpace);
     object-fit: cover;
   }
 }
-.DescriptionB_Container {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.DescriptionB_Container .DescriptionB_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P {
   margin-bottom: 10px;
 }
-.DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small {
-  color: var(--whiteTextColor);
-}
-.DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_P {
   margin-bottom: 10px;
 }
-.DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Image {
-  max-width: 500px;
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Image {
   width: 100%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 1px solid red;
 }
-.DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Input1 {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Input1 {
   width: 100%;
-  border: none;
-  padding: 10px;
-  margin-bottom: 30px;
+  border: 1px solid black;
+  padding: 8px;
 }
-.DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Input2 {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Input2 {
   width: 100%;
-  max-width: 500px;
   height: 40px;
-  border: none;
-  padding: 10px;
-  font-size: var(--0d875rem);
+  border: 1px solid black;
+  padding: 8px;
 }
-.DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Textarea {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Textarea {
   width: 100%;
-  max-width: 500px;
   height: 150px;
-  border: none;
-  padding: 10px;
-  font-size: var(--0d875rem);
+  border: 1px solid black;
+  padding: 8px;
 }
-
 @media screen and (max-width: 500px) {
-  .DescriptionB_Container_Box_P_Small_Image {
+  .EventUpdateRegisterForm_Container_Box_Form .DescriptionB_Container_Box_P_Small_Image {
     width: 100%;
     margin-bottom: var(--SmallSpace);
     object-fit: cover;
   }
 }
-.DescriptionC_Container {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
-  color: var(--whiteTextColor);
+  margin-bottom: var(--50pxSpace);
 }
-.DescriptionC_Container .DescriptionC_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P {
   margin-bottom: 10px;
 }
-.DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small {
-  color: var(--whiteTextColor);
-}
-.DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_P {
   margin-bottom: 10px;
 }
-.DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Image {
-  max-width: 500px;
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Image {
   width: 100%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 1px solid red;
 }
-.DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Input1 {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Input1 {
   width: 100%;
-  border: none;
-  padding: 10px;
-  margin-bottom: 30px;
+  border: 1px solid black;
+  padding: 8px;
 }
-.DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Input2 {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Input2 {
   width: 100%;
-  max-width: 500px;
   height: 40px;
-  border: none;
-  padding: 10px;
-  font-size: var(--0d875rem);
+  border: 1px solid black;
+  padding: 8px;
 }
-.DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Textarea {
+.EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Textarea {
   width: 100%;
-  max-width: 500px;
   height: 150px;
-  border: none;
-  padding: 10px;
-  font-size: var(--0d875rem);
+  border: 1px solid black;
+  padding: 8px;
 }
-
 @media screen and (max-width: 500px) {
-  .DescriptionC_Container_Box_P_Small_Image {
+  .EventUpdateRegisterForm_Container_Box_Form .DescriptionC_Container_Box_P_Small_Image {
     width: 100%;
     margin-bottom: var(--SmallSpace);
     object-fit: cover;
   }
 }
-.Manufacturer_Container {
+.EventUpdateRegisterForm_Container_Box_Form .EventManufacturer_Container {
   width: 100%;
-  background: var(--backGroundColor);
-  margin-bottom: var(--20pxSpace);
+  margin-bottom: var(--50pxSpace);
 }
-.Manufacturer_Container .Manufacturer_Container_Box {
+.EventUpdateRegisterForm_Container_Box_Form .EventManufacturer_Container .EventManufacturer_Container_Box {
   width: 100%;
-  padding: 15px;
 }
-.Manufacturer_Container .Manufacturer_Container_Box .Manufacturer_Container_Box_P {
-  color: var(--whiteTextColor);
-  font-size: var(--0d94rem);
+.EventUpdateRegisterForm_Container_Box_Form .EventManufacturer_Container .EventManufacturer_Container_Box .EventManufacturer_Container_Box_P {
   margin-bottom: 10px;
 }
-.Manufacturer_Container .Manufacturer_Container_Box .Manufacturer_Container_Box_Label {
-  color: var(--whiteTextColor);
-}
-.Manufacturer_Container .Manufacturer_Container_Box .Manufacturer_Container_Box_Select {
-  border: none;
-  padding: 10px;
-  max-width: 500px;
+.EventUpdateRegisterForm_Container_Box_Form .EventManufacturer_Container .EventManufacturer_Container_Box .EventManufacturer_Container_Box_Select {
+  border: 1px solid black;
+  padding: 8px;
   width: 100%;
   height: 40px;
-  font-size: var(--0d94rem);
   background: var(--requiredBlank);
 }
-.Manufacturer_Container .Manufacturer_Container_Box .Manufacturer_Container_Box_Select .Manufacturer_Container_Box_Select_Option {
-  color: var(--blackTextColor);
-  font-size: var(--0d94rem);
-}
-
-.RegisterForm_Container_Box_Form .RegisterForm_Container_Box_Form_Input {
-  color: var(--blackTextColor);
-  width: 150px;
+.EventUpdateRegisterForm_Container_Box_Form .EditUpdate_Submit_Button {
+  width: 100%;
   height: 40px;
-  font-size: var(--1d05rem);
-  font-weight: 600;
-  display: flex;
-  margin: 0 auto;
+  background: lightgray;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  font-size: var(--0d94rem);
+  letter-spacing: 3px;
 }
 
-.EditUpdate_Submit_Button {
-  display: flex;
-  margin: 0 auto;
-  width: 120px;
-  height: 30px;
+.EditUpdate_Cancel_Button_Box {
+  width: 100%;
+  height: 40px;
+  padding: 15px;
+  padding-bottom: 100px;
   font-size: var(--0d94rem);
-  font-weight: 500;
-  letter-spacing: 3px;
-  border: none;
+}
+.EditUpdate_Cancel_Button_Box .Edit_Cancel_Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: lightgray;
   cursor: pointer;
 }/*# sourceMappingURL=AdminEventsUpdate.css.map */

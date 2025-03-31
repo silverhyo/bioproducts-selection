@@ -9,6 +9,7 @@ import "./AdminList.css";
 import AdminNavbar from '../../Common/AdminNavbar';
 import Footer from '../../Common/Footer';
 import NotFound from '../../Common/NotFound';
+import Navigation from '../../Common/Navigation';
 // ICONS
 import { MdDeleteOutline } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
@@ -27,7 +28,6 @@ export default function AdminList() {
 
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
   const userInformation = useContext(AuthContext).userDatabaseInfo;
-  const imageURL = useContext(ImageAddressContext).imageURL;
   const api = useContext(AxiosContext).api;
 
   const [dtBaseData, setDtBaseData] = useState(productsDataBase || []);
@@ -54,41 +54,38 @@ export default function AdminList() {
 
   return (
     <>
-    <AdminNavbar />
-
-    {userInformation.databaseLevel == 'Admin' ?
-    <>
-      <div className='AdminList_Container'>
-        <div className='AdminList_Container_Box'>
-          <div className='AdminList_Container_Box_Count'>{dtBaseData.length}개의 제품이 있습니다</div>
-
-          {dtBaseData?.map((item, index) => {
-            return (
-              <div key={item.ID} className='AdminList_Container_Box_ProductBox'>
-                <div className='AdminList_Container_Box_ProductBox_ImageBox'>
-                  <img className='AdminList_Container_Box_ProductBox_ImageBox_Image' src={item.ProductMainImage} alt=""></img>
+      {userInformation.databaseLevel == 'Admin' ?
+      <>
+        <div className='AdminList_Container'>
+          <div className='AdminList_Container_Box'>
+            <div className='AdminList_Container_Box_Count'>{dtBaseData.length}개의 제품이 있습니다</div>
+  
+            {dtBaseData?.map((item, index) => {
+              return (
+                <div key={item.ID} className='AdminList_Container_Box_ProductBox'>
+                  <div className='AdminList_Container_Box_ProductBox_ImageBox'>
+                    <img className='AdminList_Container_Box_ProductBox_ImageBox_Image' src={item.ProductMainImage} alt=""></img>
+                  </div>
+                  <div className='AdminList_Container_Box_ProductBox_TextBox'>
+                    <p className='AdminList_Container_Box_ProductBox_TextBox_P'>{item.ProductName}_({item.ID})</p>
+                    <p className='AdminList_Container_Box_ProductBox_TextBox_P'>{item.ProductMainTitle}</p>
+                    <p className='AdminList_Container_Box_ProductBox_TextBox_P'>{item.SpecialistName} / {item.RegiDate}</p>
+                    <p className='AdminList_Container_Box_ProductBox_TextBox_P'></p>
+                    <p className='AdminList_Container_Box_ProductBox_TextBox_P'></p>
+                  </div>
+                  <div className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox'>
+                    <button className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox_Button_Delete' onClick={() => handleDelete(item.ID)}><MdDeleteOutline /></button>
+                    <Link to={`/admin/products/update/${item.ID}`}><div className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox_Button_Update'><CiEdit /></div></Link>
+                  </div>
                 </div>
-                <div className='AdminList_Container_Box_ProductBox_TextBox'>
-                  <p className='AdminList_Container_Box_ProductBox_TextBox_P'>{item.ProductName}_({item.ID})</p>
-                  <p className='AdminList_Container_Box_ProductBox_TextBox_P'>{item.ProductMainTitle}</p>
-                  <p className='AdminList_Container_Box_ProductBox_TextBox_P'>{item.SpecialistName} / {item.RegiDate}</p>
-                  <p className='AdminList_Container_Box_ProductBox_TextBox_P'></p>
-                  <p className='AdminList_Container_Box_ProductBox_TextBox_P'></p>
-                </div>
-                <div className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox'>
-                  <button className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox_Button_Delete' onClick={() => handleDelete(item.ID)}><MdDeleteOutline /></button>
-                  <Link to={`/admin/products/update/${item.ID}`}><div className='AdminList_Container_Box_ProductBox_TextBox_ButtonBox_Button_Update'><CiEdit /></div></Link>
-                </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
-      </div>
-    </>
-    :
-    <NotFound />
-    }
-    <Footer />      
+      </>
+      :
+      <NotFound />
+      }
     </>
   )
 }
