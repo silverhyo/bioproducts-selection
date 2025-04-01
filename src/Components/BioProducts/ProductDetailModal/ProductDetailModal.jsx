@@ -120,17 +120,14 @@ export default function ProductDetailModal({JSONDATA01}) {
     <Outlet />
     <div className='ProductDetail_Container'>
       <div className='ProductDetail_Container_Box'>
-      {/* <div className='ProductDetail_Container_Box' style={{display:"none"}}> */}
-
-        {/* <div className='ProductDetail_Container_Box_ImageBox'>
-          <img className='ProductDetail_Container_Box_Image' src={imageAddress+productInfo.ProductMainImage} alt="" />
-        </div> */}
 
         <div className='ProductDetail_Container_Box_Product_Info'>
-          <p className='ProductDetail_Container_Box_Product_Info_P p1'>{productInfo.ProductName}</p>
-          <hr className='ProductDetail_Container_Box_Product_Info_hr'/>
-          <p className='ProductDetail_Container_Box_Product_Info_P p2'>{productInfo.ProductType}</p>
-          <p className='ProductDetail_Container_Box_Product_Info_P p3'>{productInfo.ProductManufacturer}</p>
+          <div className='ProductDetail_Container_Box_Product_Info_Box'>
+            <p className='ProductDetail_Container_Box_Product_Info_P p1'>{productInfo.ProductName}</p>
+            <hr className='ProductDetail_Container_Box_Product_Info_hr'/>
+            <p className='ProductDetail_Container_Box_Product_Info_P p2'>{productInfo.ProductType}</p>
+            <p className='ProductDetail_Container_Box_Product_Info_P p3'>{productInfo.ProductManufacturer}</p>
+          </div>
         </div>
 
         <div className='ProductDetail_Container_Box_Product_Brief'>
@@ -227,15 +224,14 @@ export default function ProductDetailModal({JSONDATA01}) {
       
     </div>
 
-    <div className='ProductDetail_Container_Bottom'>
-      <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
-    </div>
-
     <Contact CONTACTINFO={contactInfo} />
 
     <ProductsRelated PRODUCTINFO={productInfo} />
 
     <Comments />
+    <div className='ProductDetail_Container_Bottom'>
+      <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
+    </div>
 
     <Footer />
 

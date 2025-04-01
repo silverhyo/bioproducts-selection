@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
+import { shuffle } from 'lodash';
 // import Style
 import "./BioProductsFiltered.css";
 // import ICONS
@@ -24,7 +25,8 @@ export default function BioProductsFiltered({FILTEREDPRODUCTS}) {
   const imageURL = useContext(ImageAddressContext).imageURL;
 
   // ! Data 역배열로 놓기기
-  const filteredProducts = [...FILTEREDPRODUCTS].reverse();
+  const filteredProduct = [...FILTEREDPRODUCTS].reverse();
+  const filteredProducts = shuffle(filteredProduct);
   console.log("filteredProducts :", filteredProducts)
 
 

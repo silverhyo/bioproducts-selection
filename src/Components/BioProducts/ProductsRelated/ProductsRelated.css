@@ -45,14 +45,14 @@
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
   row-gap: 3px;
   margin-bottom: 40px;
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item {
   width: 100%;
-  height: 120px;
+  height: 130px;
   overflow: hidden;
   position: relative;
 }
@@ -62,7 +62,7 @@
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image {
   width: 100%;
   object-fit: cover;
-  scale: 1.5;
+  scale: 1;
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1 {
   width: 55px;
@@ -79,13 +79,13 @@
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Title {
   width: 100%;
   bottom: 0;
-  font-size: var(--0d75rem);
+  font-size: var(--0d625rem);
   background: var(--whiteTextColor);
   opacity: 0.6;
   text-align: center;
   padding: 5px;
   z-index: 0;
   position: absolute;
-  color: var(--backGroundDarkColor);
-  font-weight: 700;
+  color: black;
+  font-weight: 600;
 }/*# sourceMappingURL=ProductsRelated.css.map */

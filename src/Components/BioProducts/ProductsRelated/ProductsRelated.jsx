@@ -7,7 +7,6 @@ import { useEffect } from 'react';
 // import Style
 import './ProductsRelated.css';
 // import Context
-import { ImageAddressContext } from '../../../Context/ImageAddressContext';
 import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
 // import Image
 import ImageOfSartorius from '../../../Sources/image_logo/sartorius-logo-black.png';
@@ -18,7 +17,6 @@ import ImageOfThermo from '../../../Sources/image_logo/sartorius-logo-black.png'
 
 export default function ProductsRelated({PRODUCTINFO}) {
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
-  const imageURL = useContext(ImageAddressContext).imageURL;
 
   // ! 아래 매우 중요 : 주어진 조건을 만족하기 위해 두 데이터(PRODUCTINFO.ProductRelated와 item.ProductRelated)를 쉼표로 구분된 문자열로 간주하고, 이를 배열로 변환한 후 공통 요소가 있는지 확인해야 합니다. 이 경우 split(', ')를 활용해 문자열을 배열로 나누고, 배열 간의 교집합을 확인하여 일치 항목이 있는지를 판단합니다.
   const ProductRelated = [...productsDataBase].filter((item, index) => {
@@ -46,19 +44,19 @@ export default function ProductsRelated({PRODUCTINFO}) {
       
       for(let i = 0; i < productBrandColor.length; i++ ) {
         if(ProductRelated[i].ProductManufacturer === "Sartorius") {
-          productBrandColor[i].style.border = "3px solid #FFF100"
+          productBrandColor[i].style.border = "2px solid #FFF100"
           logoImage[i].src = `${ImageOfSartorius}`
         } else {
           if(ProductRelated[i].ProductManufacturer === "Cytiva") {
-            productBrandColor[i].style.border = "3px solid rgba(255, 166, 0, 1)"
+            productBrandColor[i].style.border = "2px solid rgba(255, 166, 0, 1)"
             logoImage[i].src = `${ImageOfCytiva}`
           }
           if(ProductRelated[i].ProductManufacturer === "Merck") {
-            productBrandColor[i].style.border = "3px solid rgba(112, 1, 112, 1)"
+            productBrandColor[i].style.border = "2px solid rgba(112, 1, 112, 1)"
             logoImage[i].src = `${ImageOfMerck}`
           }
           if(ProductRelated[i].ProductManufacturer === "Thermofisher") {
-            productBrandColor[i].style.border = "3px solid rgba(255, 0, 0, 1)"
+            productBrandColor[i].style.border = "2px solid rgba(255, 0, 0, 1)"
             logoImage[i].src = `${ImageOfThermo}`
           }
         }
@@ -79,8 +77,7 @@ export default function ProductsRelated({PRODUCTINFO}) {
           관련 제품 및 서비스
         </div>
         <div className='ProductsRelated_Container_Box_Description'>
-          위의 제품과 관련된 제품 및 서비스를 안내해 드려요.
-          아래에서 관련 제품 또는 서비스를 확인해 주세요!😍
+          위 제품과 관련된 다른 제품 및 서비스를 안내해 드립니다.
         </div>
 
         <div className='ProductsRelated_Container_Box_ProductsRelated'>

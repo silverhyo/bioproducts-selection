@@ -42,31 +42,36 @@
   scale: 1;
 }
 .ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info {
+  position: sticky;
+  top: 0;
   padding: 10px;
   padding-top: 15px;
   padding-bottom: 20px;
 }
-.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .p1 {
+.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .ProductDetail_Container_Box_Product_Info_Box {
+  width: 100%;
+}
+.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .ProductDetail_Container_Box_Product_Info_Box .p1 {
   font-size: var(--1d25rem);
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--backGroundColor);
   text-align: right;
 }
-.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .ProductDetail_Container_Box_Product_Info_hr {
+.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .ProductDetail_Container_Box_Product_Info_Box .ProductDetail_Container_Box_Product_Info_hr {
   width: 100%;
   margin: 0 auto;
   margin-top: 5px;
   margin-bottom: 5px;
   color: var(--backGroundDarkColor);
 }
-.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .p2 {
+.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .ProductDetail_Container_Box_Product_Info_Box .p2 {
   font-size: var(--1rem);
   font-weight: 500;
   color: var(--backGroundColor);
   text-align: right;
 }
-.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .p3 {
+.ProductDetail_Container .ProductDetail_Container_Box .ProductDetail_Container_Box_Product_Info .ProductDetail_Container_Box_Product_Info_Box .p3 {
   font-size: var(--0d94rem);
   font-weight: 500;
   color: var(--backGroundColor);
@@ -112,16 +117,15 @@
   position: sticky;
   bottom: 0;
   left: 0;
-  color: var(--whiteTextColor);
   width: 100%;
   height: 40px;
-  background: var(--backGroundDarkColor);
+  background: #FFF100;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .ProductDetail_Container_Bottom .ProductDetail_Container_Bottom_Button {
-  color: var(--whiteTextColor);
+  color: var(--backGroundDarkColor);
   font-size: var(--1d125rem);
   cursor: pointer;
 }

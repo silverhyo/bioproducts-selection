@@ -29,52 +29,52 @@
   "Filtration": [
     {
       "ID": "1",
-      "Value": "BufferSterileFiltration",
+      "Value": "Buffer_Sterile_Filtration",
       "Title": "Buffer Sterile Filtration"
     },
     {
       "ID": "2",
-      "Value": "MediaSterileFiltration",
+      "Value": "Media_Sterile_Filtration",
       "Title": "Media Sterile Filtration"
     },
     {
       "ID": "3",
-      "Value": "DepthFiltration",
+      "Value": "Depth_Filtration",
       "Title": "Depth Filtration"
     },
     {
       "ID": "4",
-      "Value": "DsPreFiltration",
+      "Value": "DS_Pre_Filtration",
       "Title": "DS Pre Filtration"
     },
     {
       "ID": "5",
-      "Value": "DsSterileFiltration",
+      "Value": "DS_Sterile_Filtration",
       "Title": "DS Sterile Filtration"
     },
     {
       "ID": "6",
-      "Value": "FinalSterileFiltration",
+      "Value": "Final_Sterile_Filtration",
       "Title": "Final Sterile Filtration"
     },
     {
       "ID": "7",
-      "Value": "TffUltraFiltration",
+      "Value": "TFF_Ultra_Filtration",
       "Title": "TFF Ultra Filtration"
     },
     {
       "ID": "8",
-      "Value": "TffMicroFiltration",
+      "Value": "TFF_Micro_Filtration",
       "Title": "TFF Micro Filtration"
     },
     {
       "ID": "9",
-      "Value": "VirusRemovalFiltration",
+      "Value": "Virus_Removal_Filtration",
       "Title": "Virus Removal Filtration"
     },
     {
       "ID": "10",
-      "Value": "AirGasFiltration",
+      "Value": "Air_Gas_Filtration",
       "Title": "Air/Gas Filtration"
     }
   ],
@@ -245,12 +245,12 @@
     },
     {
       "ID" : "19",
-      "Value": "Exosome",
+      "Value": "Exosome0",
       "Title": "Exosome"
     },
     {
       "ID" : "20",
-      "Value": "EndothelialCell",
+      "Value": "Endothelial_Cell",
       "Title": "Endothelial Cell"
     },
     {
@@ -282,8 +282,8 @@
   "Service" : [
     {
       "ID" : "1",
-      "Value" : "EXSIM",
-      "Title" : "EXSIM"
+      "Value" : "ExSim",
+      "Title" : "ExSim"
     },
     {
       "ID" : "2",
