@@ -50,7 +50,9 @@
   top: 0px;
   width: 30px;
   height: 18px;
-  background: black;
+  background: #FFF100;
+  color: black;
+  font-weight: 500;
   z-index: 1;
   font-size: 11px;
   border-radius: 0 0 10px 0;

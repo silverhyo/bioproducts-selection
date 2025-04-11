@@ -28,19 +28,16 @@
 
 .ProductsRelated_Container {
   width: 100%;
+  background-color: var(--backGroundDarkColor);
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box {
-  padding: 10px;
-  padding-top: 50px;
+  padding: 15px;
+  padding-top: 20px;
+  color: white;
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_Title {
   font-size: var(--1d25rem);
   margin-bottom: 30px;
-}
-.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_Description {
-  text-align: justify;
-  font-size: var(--0d94rem);
-  margin-bottom: 40px;
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated {
   width: 100%;
@@ -62,7 +59,7 @@
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image {
   width: 100%;
   object-fit: cover;
-  scale: 1;
+  scale: 1.1;
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1 {
   width: 55px;

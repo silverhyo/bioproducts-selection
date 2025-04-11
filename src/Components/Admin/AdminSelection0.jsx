@@ -6,8 +6,8 @@ import { useState } from 'react';
 import "./AdminSelection0.css";
 
 // import Component
-import AdminSelection_Product_Regi_Edit from './AdminSelection_Product_Regi_Edit';
-import AdminSelection_Event_Regi_Edit from './AdminSelection_Event_Regi_Edit';
+import AdminList from './AdminList/AdminList';
+import AdminEventsList from './AdminEvents/AdminEventsList';
 
 export default function AdminSelection0() {
 
@@ -38,8 +38,8 @@ export default function AdminSelection0() {
         </div>
       </div>
 
-      {productsStatus === 'event' && <AdminSelection_Event_Regi_Edit />}
-      {productsStatus === 'product' && <AdminSelection_Product_Regi_Edit />}
+      {productsStatus === 'event' && <AdminEventsList />}
+      {productsStatus === 'product' && <AdminList />}
     </>
   )
 }

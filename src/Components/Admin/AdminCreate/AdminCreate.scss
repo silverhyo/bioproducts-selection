@@ -1,897 +1,752 @@
-// @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-// :root {
-//   /* Colors and Styles (Default) */
-//   --backGroundDarkColor: rgb(23, 23, 22);
-//   --backGroundColor: rgb(44, 44, 41);
-//   --backGroundWhiteColor: rgb(255, 255, 255);
-//   --whiteTextColor: rgb(240, 240, 232);
-//   --blackTextColor: rgb(0, 0, 0);
-//   --requiredBlank: rgba(171, 250, 164, 0.991);
-//   /* Colors and Styles (Default) */
-//   /* Space (Default) */
-//   --100pxSpace: 100px;
-//   --50pxSpace: 50px;
-//   --30pxSpace: 30px;
-//   --20pxSpace: 20px;
-//   /* Font Size (Default) */
-//   --XXXBigFontSize: 3.125rem;
-//   --XBigFontSize: 1.375rem;
-//   --XXXLargeFontSize: 1.25rem;
-//   --XXLargeFontSize: 1.125rem; 
-//   --XLargeFontSize: 1.06rem; 
-//   --normalFontSize: 1rem; 
-//    /* Font Size (Default) */
-//   --3d125rem: 3.125rem;
-//   --1d375rem: 1.375rem;
-//   --1d25rem: 1.25rem;
-//   --1d125rem: 1.125rem; 
-//   --1d05rem: 1.05rem; 
-//   --1rem: 1rem;
-//   --0d94rem: 0.94rem;
-//   --0d875rem: 0.875rem;
-//   --0d75rem: 0.75rem;
-//   --0d625rem: 0.625rem; 
-// }
-
-// //======================================================================Product Name
-// .ProductName_Container {
-//   background: var(--backGroundColor);
-//   width: 100%;
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .ProductName_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .ProductName_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-
-//     }
-//     .ProductName_Container_Box_Label {
-//       color: var(--whiteTextColor);
-//     }
-//     .ProductName_Container_Box_Input {
-//       border: none;
-//       padding: 8px;
-//       max-width: 500px;
-//       width: 100%;
-//       height: 40px;
-//       font-size: var(--0d94rem);
-//       background: var(--requiredBlank);
-//     }
-//   }
-// }
-
-// //========================================================================Product Main Image
-// .MainProductImage_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .MainProductImage_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .MainProductImage_Container_Box_Asking {
-//       width: 100%;
-//       margin-bottom: var(--20pxSpace);
-
-//       .MainProductImage_Container_Box_Asking_P {
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//       }
-//     }
-
-//     .MainProductImage_Container_Box_Register {
-//       color: var(--whiteTextColor);
-//       width: 100%;
-//       overflow: hidden;
-
-//       .MainProductImage_Container_Box_Register_Image {
-//         max-width: 500px;
-//         margin-bottom: var(--20pxSpace);
-//         object-fit: cover;
-//       }
-//       .MainProductImage_Container_Box_Register_Input {
-//         width: 100%;
-//         border: none;
-//         margin-bottom: 30px;
-        
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 500px) {
-//   .MainProductImage_Container_Box_Register_Image {
-//     width: 100%;
-//     margin-bottom: var(--SmallSpace);
-//     object-fit: cover;
-//   }
-// }
-
-
-
-
-// //========================================================================Product Main Title
-// .ProductTitle_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .ProductTitle_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .ProductTitle_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .ProductTitle_Container_Box_Label {
-//       color: var(--whiteTextColor);
-//     }
-//     .ProductTitle_Container_Box_Input {
-//       border: none;
-//       padding: 8px;
-//       max-width: 500px;
-//       width: 100%;
-//       height: 40px;
-//       font-size: var(--0d94rem);
-//       background: var(--requiredBlank);
-//     }
-//   }
-// }
-
-
-// //========================================================================Product Type
-// .ProductType_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .ProductType_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .ProductType_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-
-//     }
-//     .ProductType_Container_Box_Label {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//     }
-//     .ProductType_Container_Box_Select {
-//       border: none;
-//       padding: 8px;
-//       max-width: 500px;
-//       width: 100%;
-//       height: 40px;
-//       font-size: var(--0d94rem);
-//       background: var(--requiredBlank);
-
-//       .ProductType_Container_Box_Option {
-//         color: var(--blackTextColor);
-//         font-size: var(--0d94rem);
-//       }
-//     }
-//   }
-// }
-
-
-// //========================================================================Product Modality
-// .ModalityProducts_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .ModalityProducts_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .ModalityProducts_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-
-//     }
-//     .ModalityProducts_Container_Box_Small {
-//       display: flex;
-//       margin-bottom: 5px;
-
-//       .ModalityProducts_Container_Box_Small_Input {
-//         padding: 5px;
-//         font-size: var(--0d94rem);
-//       }
-//       .ModalityProducts_Container_Box_Small_Label {
-//         margin-left: 5px;
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//       }
-//     }
-//   }
-// }
-
-
-// //========================================================================Application Filtration
-// .ApplicationFilterProducts_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .ApplicationFilterProducts_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .ApplicationFilterProducts_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-
-//     }
-//     .ApplicationFilterProducts_Container_Box_Small {
-//       display: flex;
-//       margin-bottom: 5px;
-
-//       .ApplicationFilterProducts_Container_Box_Small_Input {
-//         padding: 5px;
-//         font-size: var(--0d94rem);
-//       }
-//       .ApplicationFilterProducts_Container_Box_Small_Label {
-//         margin-left: 5px;
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//       }
-//     }
-    
-//   }
-// }
-
-
-
-// //========================================================================Application Cell Line
-// .ApplicationCellLine_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .ApplicationCellLine_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .ApplicationCellLine_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .ApplicationCellLine_Container_Box_Small {
-//       display: flex;
-//       margin-bottom: 5px;
-
-//       .ApplicationCellLine_Container_Box_Small_Input {
-//         padding: 5px;
-//         font-size: var(--0d94rem);
-//       }
-//       .ApplicationCellLine_Container_Box_Small_Label {
-//         margin-left: 5px;
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//       }
-//     }
-//   }
-// }
-
-
-
-
-// //========================================================================Manufacturer
-// .Manufacturer_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-
-//   .Manufacturer_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .Manufacturer_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-
-//     }
-//     .Manufacturer_Container_Box_Label {
-//       color: var(--whiteTextColor);
-
-//     }
-//     .Manufacturer_Container_Box_Select {
-//       border: none;
-//       padding: 8px;
-//       max-width: 500px;
-//       width: 100%;
-//       height: 40px;
-//       font-size: var(--0d94rem);
-//       background: var(--requiredBlank);
-
-//       .Manufacturer_Container_Box_Select_Option {
-//         color: var(--blackTextColor);
-//         font-size: var(--0d94rem);
-//       }
-//     }
-//   }
-// }
-
-
-// //========================================================================DescriptionA
-// .DescriptionA_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .DescriptionA_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .DescriptionA_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .DescriptionA_Container_Box_P_Small {
-//       color: var(--whiteTextColor);
-
-//       .DescriptionA_Container_Box_P_Small_P {
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//         margin-bottom: 10px;
-//       }
-//       .DescriptionA_Container_Box_P_Small_Image {
-//         max-width: 500px;
-//         width: 100%;
-//         object-fit: cover;
-//         margin-bottom: 15px;
-//       }
-//       .DescriptionA_Container_Box_P_Small_Input1 {
-//         width: 100%;
-//         border: none;
-//         padding: 8px;
-//         margin-bottom: 30px;
-//       }
-//       .DescriptionA_Container_Box_P_Small_Input2 {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 40px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//       .DescriptionA_Container_Box_P_Small_Textarea {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 150px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//     }
-    
-//   }
-// }
-
-// @media screen and (max-width: 500px) {
-//   .DescriptionA_Container_Box_P_Small_Image {
-//     width: 100%;
-//     margin-bottom: var(--SmallSpace);
-//     object-fit: cover;
-//   }
-// }
-
-
-
-
-
-// //========================================================================DescriptionB
-// .DescriptionB_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .DescriptionB_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .DescriptionB_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .DescriptionB_Container_Box_P_Small {
-//       color: var(--whiteTextColor);
-
-//       .DescriptionB_Container_Box_P_Small_P {
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//         margin-bottom: 10px;
-//       }
-//       .DescriptionB_Container_Box_P_Small_Image {
-//         max-width: 500px;
-//         width: 100%;
-//         object-fit: cover;
-//         margin-bottom: 15px;
-//       }
-//       .DescriptionB_Container_Box_P_Small_Input1 {
-//         width: 100%;
-//         border: none;
-//         padding: 8px;
-//         margin-bottom: 30px;
-//       }
-//       .DescriptionB_Container_Box_P_Small_Input2 {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 40px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//       .DescriptionB_Container_Box_P_Small_Textarea {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 150px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//     }
-    
-//   }
-// }
-
-// @media screen and (max-width: 500px) {
-//   .DescriptionB_Container_Box_P_Small_Image {
-//     width: 100%;
-//     margin-bottom: var(--SmallSpace);
-//     object-fit: cover;
-//   }
-// }
-
-
-// //========================================================================DescriptionC
-// .DescriptionC_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .DescriptionC_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .DescriptionC_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .DescriptionC_Container_Box_P_Small {
-//       color: var(--whiteTextColor);
-
-//       .DescriptionC_Container_Box_P_Small_P {
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//         margin-bottom: 10px;
-//       }
-//       .DescriptionC_Container_Box_P_Small_Image {
-//         max-width: 500px;
-//         width: 100%;
-//         object-fit: cover;
-//         margin-bottom: 15px;
-//       }
-//       .DescriptionC_Container_Box_P_Small_Input1 {
-//         width: 100%;
-//         border: none;
-//         padding: 8px;
-//         margin-bottom: 30px;
-//       }
-//       .DescriptionC_Container_Box_P_Small_Input2 {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 40px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//       .DescriptionC_Container_Box_P_Small_Textarea {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 150px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//     }
-    
-//   }
-// }
-
-// @media screen and (max-width: 500px) {
-//   .DescriptionC_Container_Box_P_Small_Image {
-//     width: 100%;
-//     margin-bottom: var(--SmallSpace);
-//     object-fit: cover;
-//   }
-// }
-
-
-// //========================================================================DescriptionD
-// .DescriptionD_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .DescriptionD_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .DescriptionD_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .DescriptionD_Container_Box_P_Small {
-//       color: var(--whiteTextColor);
-
-//       .DescriptionD_Container_Box_P_Small_P {
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//         margin-bottom: 10px;
-//       }
-//       .DescriptionD_Container_Box_P_Small_Image {
-//         max-width: 500px;
-//         width: 100%;
-//         object-fit: cover;
-//         margin-bottom: 15px;
-    
-//       }
-//       .DescriptionD_Container_Box_P_Small_Input1 {
-//         width: 100%;
-//         border: none;
-//         padding: 8px;
-//         margin-bottom: 30px;
-//       }
-//       .DescriptionD_Container_Box_P_Small_Input2 {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 40px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//       .DescriptionD_Container_Box_P_Small_Textarea {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 150px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//     }
-    
-//   }
-// }
-
-// @media screen and (max-width: 500px) {
-//   .DescriptionD_Container_Box_P_Small_Image {
-//     width: 100%;
-//     margin-bottom: var(--SmallSpace);
-//     object-fit: cover;
-//   }
-// }
-
-
-
-
-
-// //========================================================================DescriptionE
-// .DescriptionE_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .DescriptionE_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .DescriptionE_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .DescriptionE_Container_Box_P_Small {
-//       color: var(--whiteTextColor);
-
-//       .DescriptionE_Container_Box_P_Small_P {
-//         color: var(--whiteTextColor);
-//         font-size: var(--0d94rem);
-//         margin-bottom: 10px;
-//       }
-//       .DescriptionE_Container_Box_P_Small_Image {
-//         max-width: 500px;
-//         width: 100%;
-//         object-fit: cover;
-//         margin-bottom: 15px;
-//       }
-//       .DescriptionE_Container_Box_P_Small_Input1 {
-//         width: 100%;
-//         border: none;
-//         padding: 8px;
-//         margin-bottom: 30px;
-//       }
-//       .DescriptionE_Container_Box_P_Small_Input2 {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 40px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//       .DescriptionE_Container_Box_P_Small_Textarea {
-//         width: 100%;
-//         max-width: 500px;
-//         height: 150px;
-//         border: none;
-//         padding: 8px;
-//         font-size: var(--0d875rem);
-//       }
-//     }
-    
-//   }
-// }
-
-
-
-
-
-
-// //========================================================================Related Products Information
-// .RelatedProducts_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .RelatedProducts_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .RelatedProducts_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 20px;
-//     }
-//     .RelatedProducts_Container_Box_Related {
-//       display: flex;
-//       flex-direction: column;
-//       max-width: 500px;
-//       width: 100%;
-
-//       .RelatedProducts_Container_Box_Related_Text {
-//         margin-bottom: 10px;
-//         color: var(--whiteTextColor);
-//       }
-//       .RelatedProducts_Container_Box_Related_Text_Name {
-//         border: none;
-//         background: var(--requiredBlank);
-//         padding: 8px;
-//         width: 100%;
-//         height: 40px;
-//         font-size: var(--0d94rem);
-
-//       }
-//       .RelatedProducts_Container_Box_Related_Text_Position {
-//         border: none;
-//         padding: 8px;
-//         width: 100%;
-//         height: 40px;
-//         font-size: var(--0d94rem);
-//         background: var(--requiredBlank);
-//       }
-//       .RelatedProducts_Container_Box_Related_Text_Mobile {
-//         border: none;
-//         padding: 8px;
-//         width: 100%;
-//         height: 40px;
-//         font-size: var(--0d94rem);
-//         background: var(--requiredBlank);
-//       }
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-// //========================================================================Application Specialist Information
-// .ApplicationSpecialist_Container {
-//   width: 100%;
-//   background: var(--backGroundColor);
-//   margin-bottom: var(--20pxSpace);
-//   color: var(--whiteTextColor);
-
-//   .ApplicationSpecialist_Container_Box {
-//     width: 100%;
-//     padding: 15px;
-
-//     .ApplicationSpecialist_Container_Box_P {
-//       color: var(--whiteTextColor);
-//       font-size: var(--0d94rem);
-//       margin-bottom: 10px;
-//     }
-//     .ApplicationSpecialist_Container_Box_Specialist {
-//       display: flex;
-//       flex-direction: column;
-//       max-width: 500px;
-//       width: 100%;
-
-//       .ApplicationSpecialist_Container_Box_Specialist_Text {
-//         margin-bottom: 20px;
-//         color: var(--whiteTextColor);
-//       }
-//       .ApplicationSpecialist_Container_Box_Specialist_Text_Name {
-//         border: none;
-//         background: var(--requiredBlank);
-//         padding: 8px;
-//         width: 100%;
-//         height: 40px;
-//         font-size: var(--0d94rem);
-
-//       }
-//       .ApplicationSpecialist_Container_Box_Specialist_Text_Position {
-//         border: none;
-//         padding: 8px;
-//         width: 100%;
-//         height: 40px;
-//         font-size: var(--0d94rem);
-//         background: var(--requiredBlank);
-//       }
-//       .ApplicationSpecialist_Container_Box_Specialist_Text_Mobile {
-//         border: none;
-//         padding: 8px;
-//         width: 100%;
-//         height: 40px;
-//         font-size: var(--0d94rem);
-//         background: var(--requiredBlank);
-//       }
-//     }
-//   }
-// }
-
-// //========================================================================AdvertiseDo
-// // ! AdminCreate에서 광고 관련 사용할 경우 아래 사용하면 됨
-// // .AdvertiseDo_Container {
-// //   width: 100%;
-// //   background: var(--backGroundColor);
-// //   margin-bottom: var(--20pxSpace);
-// //   color: var(--whiteTextColor);
-
-// //   .AdvertiseDo_Container_Box{
-// //     width: 100%;
-// //     padding: 15px;
-    
-// //     .AdvertiseDo_Container_Box_P{
-// //       color: var(--whiteTextColor);
-// //       font-size: var(--0d94rem);
-// //       margin-bottom: 10px;
-// //     }
-// //     .AdvertiseDo_Container_Box_Small {
-// //       display: flex;
-// //       margin-bottom: 5px;
-
-// //       .AdvertiseDo_Container_Box_Small_Input {
-// //         padding: 5px;
-// //         font-size: var(--0d94rem);
-// //       }
-// //       .AdvertiseDo_Container_Box_Small_Label{
-// //         margin-left: 5px;
-// //         color: var(--whiteTextColor);
-// //         font-size: var(--0d94rem);
-// //       }
-// //     }
-// //   }
-// // }
-
-
-
-// //========================================================================AdvertiseText
-// // ! AdminCreate에서 광고 관련 사용할 경우 아래 사용하면 됨
-// // .AdvertiseText_Container {
-// //   background: var(--backGroundColor);
-// //   width: 100%;
-// //   margin-bottom: var(--20pxSpace);
-// //   color: var(--whiteTextColor);
-
-// //   .AdvertiseText_Container_Box {
-// //     width: 100%;
-// //     padding: 15px;
-
-// //     .AdvertiseText_Container_Box_P {
-// //       color: var(--whiteTextColor);
-// //       font-size: var(--0d94rem);
-// //       margin-bottom: 10px;
-// //     }
-// //     .AdvertiseText_Container_Box_Label {
-// //       color: var(--whiteTextColor);
-// //     }
-// //     .AdvertiseText_Container_Box_Input {
-// //       border: none;
-// //       padding: 10px;
-// //       max-width: 500px;
-// //       width: 100%;
-// //       height: 40px;
-// //       font-size: var(--0d94rem);
-// //       background: var(--requiredBlank);
-// //     }
-// //   }
-// // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //========================================================================FORM
-// .RegisterForm_Container_Box_Form {
-//   width: 100%;
-
-
-
-
-
-
-
-
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --backGroundWhiteColor: rgb(255, 255, 255);
+  --whiteTextColor: rgb(240, 240, 232);
+  --blackTextColor: rgb(0, 0, 0);
+  --requiredBlank: rgba(171, 250, 164, 0.991);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  --100pxSpace: 100px;
+  --50pxSpace: 50px;
+  --30pxSpace: 30px;
+  --20pxSpace: 20px;
+  /* Font Size (Default) */
+  --XXXBigFontSize: 3.125rem;
+  --XBigFontSize: 1.375rem;
+  --XXXLargeFontSize: 1.25rem;
+  --XXLargeFontSize: 1.125rem; 
+  --XLargeFontSize: 1.06rem; 
+  --normalFontSize: 1rem; 
+   /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem; 
+  --1d05rem: 1.05rem; 
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem; 
+}
+
+.RegisterForm_Container_Box_Form {
+  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100%;
+  font-size: var(--0d875rem);
+
+  .ProductName_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
   
-//   .RegisterForm_Container_Box_Form_Hr01 {
-//     width: 100%;
-//     margin: 30px auto;
-//   }
-//   .RegisterForm_Container_Box_Form_Input {
-//     color: var(--blackTextColor);
-//     border: none;
-//     width: 100px;
-//     height: 40px;
-//     font-size: var(--1d05rem);
+    .ProductName_Container_Box {
+      width: 100%;
+  
+      .ProductName_Container_Box_P {
+        margin-bottom: 10px;
+  
+      }
+      .ProductName_Container_Box_Label {
+      }
+      .ProductName_Container_Box_Input {
+        border: none;
+        padding: 8px;
+        max-width: 500px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+      }
+    }
+  }
+  
+  //========================================================================Product Main Image
+  .MainProductImage_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .MainProductImage_Container_Box {
+      width: 100%;
+  
+      .MainProductImage_Container_Box_Asking {
+        width: 100%;
+        margin-bottom: var(--20pxSpace);
+  
+        .MainProductImage_Container_Box_Asking_P {
+        }
+      }
+  
+      .MainProductImage_Container_Box_Register {
+        width: 100%;
+        overflow: hidden;
+  
+        .MainProductImage_Container_Box_Register_Image {
+          margin-bottom: var(--20pxSpace);
+          object-fit: cover;
+        }
+        .MainProductImage_Container_Box_Register_Input {
+          width: 100%;
+          border: none;
+          margin-bottom: 30px;
+          
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .MainProductImage_Container_Box_Register_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+  
+  
+  
+  
+  //========================================================================Product Main Title
+  .ProductTitle_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .ProductTitle_Container_Box {
+      width: 100%;
+  
+      .ProductTitle_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .ProductTitle_Container_Box_Label {
+      }
+      .ProductTitle_Container_Box_Input {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+      }
+    }
+  }
+  
+  
+  //========================================================================Product Type
+  .ProductType_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .ProductType_Container_Box {
+      width: 100%;
+  
+      .ProductType_Container_Box_P {
+        margin-bottom: 10px;
+  
+      }
+      .ProductType_Container_Box_Label {
+      }
+      .ProductType_Container_Box_Select {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+  
+        .ProductType_Container_Box_Option {
+        }
+      }
+    }
+  }
+  
+  
+  //========================================================================Product Modality
+  .ModalityProducts_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .ModalityProducts_Container_Box {
+      width: 100%;
+  
+      .ModalityProducts_Container_Box_P {
+        margin-bottom: 10px;
+  
+      }
+      .ModalityProducts_Container_Box_Small {
+        display: flex;
+        margin-bottom: 5px;
+  
+        .ModalityProducts_Container_Box_Small_Input {
+          padding: 5px;
+        }
+        .ModalityProducts_Container_Box_Small_Label {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  
+  
+  //========================================================================Application Filtration
+  .ApplicationFilterProducts_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .ApplicationFilterProducts_Container_Box {
+      width: 100%;
+  
+      .ApplicationFilterProducts_Container_Box_P {
+        margin-bottom: 10px;
+  
+      }
+      .ApplicationFilterProducts_Container_Box_Small {
+        display: flex;
+        margin-bottom: 5px;
+  
+        .ApplicationFilterProducts_Container_Box_Small_Input {
+          padding: 5px;
+        }
+        .ApplicationFilterProducts_Container_Box_Small_Label {
+          margin-left: 5px;
+        }
+      }
+      
+    }
+  }
+  
+  
+  
+  //========================================================================Application Cell Line
+  .ApplicationCellLine_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .ApplicationCellLine_Container_Box {
+      width: 100%;
+  
+      .ApplicationCellLine_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .ApplicationCellLine_Container_Box_Small {
+        display: flex;
+        margin-bottom: 5px;
+  
+        .ApplicationCellLine_Container_Box_Small_Input {
+          padding: 5px;
+        }
+        .ApplicationCellLine_Container_Box_Small_Label {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  //========================================================================Manufacturer
+  .Manufacturer_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .Manufacturer_Container_Box {
+      width: 100%;
+  
+      .Manufacturer_Container_Box_P {
+        margin-bottom: 10px;
+  
+      }
+      .Manufacturer_Container_Box_Label {
+  
+      }
+      .Manufacturer_Container_Box_Select {
+        border: none;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        background: var(--requiredBlank);
+  
+        .Manufacturer_Container_Box_Select_Option {
+        }
+      }
+    }
+  }
+  
+  
+  //========================================================================DescriptionA
+  .DescriptionA_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .DescriptionA_Container_Box {
+      width: 100%;
+  
+      .DescriptionA_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionA_Container_Box_P_Small {
+  
+        .DescriptionA_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionA_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .DescriptionA_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 0.5px solid black;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .DescriptionA_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+        .DescriptionA_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .DescriptionA_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+  
+  
+  
+  
+  
+  //========================================================================DescriptionB
+  .DescriptionB_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .DescriptionB_Container_Box {
+      width: 100%;
+  
+      .DescriptionB_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionB_Container_Box_P_Small {
+  
+        .DescriptionB_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionB_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .DescriptionB_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 0.5px solid black;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .DescriptionB_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+        .DescriptionB_Container_Box_P_Small_Textarea {
+          width: 100%;
+          max-width: 500px;
+          height: 150px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .DescriptionB_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+  
+  
+  //========================================================================DescriptionC
+  .DescriptionC_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .DescriptionC_Container_Box {
+      width: 100%;
+  
+      .DescriptionC_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionC_Container_Box_P_Small {
+  
+        .DescriptionC_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionC_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .DescriptionC_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 0.5px solid black;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .DescriptionC_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+        .DescriptionC_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .DescriptionC_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+  
+  
+  //========================================================================DescriptionD
+  .DescriptionD_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .DescriptionD_Container_Box {
+      width: 100%;
+  
+      .DescriptionD_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionD_Container_Box_P_Small {
+  
+        .DescriptionD_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionD_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+      
+        }
+        .DescriptionD_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 0.5px solid black;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .DescriptionD_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+        .DescriptionD_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+      }
+      
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .DescriptionD_Container_Box_P_Small_Image {
+      width: 100%;
+      margin-bottom: var(--SmallSpace);
+      object-fit: cover;
+    }
+  }
+  
+  
+  
+  
+  
+  //========================================================================DescriptionE
+  .DescriptionE_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .DescriptionE_Container_Box {
+      width: 100%;
+  
+      .DescriptionE_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .DescriptionE_Container_Box_P_Small {
+  
+        .DescriptionE_Container_Box_P_Small_P {
+          margin-bottom: 10px;
+        }
+        .DescriptionE_Container_Box_P_Small_Image {
+          width: 100%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+        .DescriptionE_Container_Box_P_Small_Input1 {
+          width: 100%;
+          border: 0.5px solid black;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+        .DescriptionE_Container_Box_P_Small_Input2 {
+          width: 100%;
+          height: 40px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+        .DescriptionE_Container_Box_P_Small_Textarea {
+          width: 100%;
+          height: 150px;
+          border: 0.5px solid black;
+          padding: 8px;
+        }
+      }
+    }
+  }
+  
+  
+  //========================================================================Related Products Information
+  .RelatedProducts_Container {
+    width: 100%;
+    margin-bottom: var(--50pxSpace);
+  
+    .RelatedProducts_Container_Box {
+      width: 100%;
+  
+      .RelatedProducts_Container_Box_P {
+        margin-bottom: 20px;
+      }
+      .RelatedProducts_Container_Box_Related {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+  
+        .RelatedProducts_Container_Box_Related_Text {
+          margin-bottom: 10px;
+        }
+        .RelatedProducts_Container_Box_Related_Text_Name {
+          border: none;
+          background: var(--requiredBlank);
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+  
+        }
+        .RelatedProducts_Container_Box_Related_Text_Position {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+        .RelatedProducts_Container_Box_Related_Text_Mobile {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  //========================================================================Application Specialist Information
+  .ApplicationSpecialist_Container {
+    width: 100%;
+    margin-bottom: var(--100pxSpace);
+  
+    .ApplicationSpecialist_Container_Box {
+      width: 100%;
+  
+      .ApplicationSpecialist_Container_Box_P {
+        margin-bottom: 10px;
+      }
+      .ApplicationSpecialist_Container_Box_Specialist {
+        width: 100%;
+  
+        .ApplicationSpecialist_Container_Box_Specialist_Text {
+          margin-bottom: 20px;
+        }
+        .ApplicationSpecialist_Container_Box_Specialist_Text_Name {
+          border: none;
+          background: var(--requiredBlank);
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+  
+        }
+        .ApplicationSpecialist_Container_Box_Specialist_Text_Position {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+        .ApplicationSpecialist_Container_Box_Specialist_Text_Mobile {
+          border: none;
+          padding: 8px;
+          width: 100%;
+          height: 40px;
+          background: var(--requiredBlank);
+        }
+      }
+    }
+  }
+  .RegisterForm_Container_Box_Form_Hr01 {
+    width: 100%;
+    margin: 30px auto;
+  }
+  .RegisterForm_Container_Box_Form_Input {
+    color: var(--blackTextColor);
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: var(--1rem);
+    letter-spacing: 3px;
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-bottom: 200px;
+  }
+}
+
+// .AdminCreate_Cancel_ButtonBox {
+//   width: 100%;
+//   background: white;
+//   padding: 15px;
+//   padding-top: 20px;
+//   padding-bottom: 50px;
+//   .AdminCreate_Cancel_ButtonBox_Button {
 //     display: flex;
-//     margin: 0 auto;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     height: 40px;
+//     font-size: var(--1rem);
+//     background: lightgray;
+//     letter-spacing: 3px;
+//     cursor: pointer;
+//   }
+}
+
+
+//========================================================================AdvertiseDo
+// ! AdminCreate에서 광고 관련 사용할 경우 아래 사용하면 됨
+// .AdvertiseDo_Container {
+//   width: 100%;
+//   background: var(--backGroundColor);
+//   margin-bottom: var(--20pxSpace);
+//   color: var(--whiteTextColor);
+
+//   .AdvertiseDo_Container_Box{
+//     width: 100%;
+//     padding: 15px;
+    
+//     .AdvertiseDo_Container_Box_P{
+//       color: var(--whiteTextColor);
+//       font-size: var(--0d94rem);
+//       margin-bottom: 10px;
+//     }
+//     .AdvertiseDo_Container_Box_Small {
+//       display: flex;
+//       margin-bottom: 5px;
+
+//       .AdvertiseDo_Container_Box_Small_Input {
+//         padding: 5px;
+//         font-size: var(--0d94rem);
+//       }
+//       .AdvertiseDo_Container_Box_Small_Label{
+//         margin-left: 5px;
+//         color: var(--whiteTextColor);
+//         font-size: var(--0d94rem);
+//       }
+//     }
 //   }
 // }
+
+
+
+//========================================================================AdvertiseText
+// ! AdminCreate에서 광고 관련 사용할 경우 아래 사용하면 됨
+// .AdvertiseText_Container {
+//   background: var(--backGroundColor);
+//   width: 100%;
+//   margin-bottom: var(--20pxSpace);
+//   color: var(--whiteTextColor);
+
+//   .AdvertiseText_Container_Box {
+//     width: 100%;
+//     padding: 15px;
+
+//     .AdvertiseText_Container_Box_P {
+//       color: var(--whiteTextColor);
+//       font-size: var(--0d94rem);
+//       margin-bottom: 10px;
+//     }
+//     .AdvertiseText_Container_Box_Label {
+//       color: var(--whiteTextColor);
+//     }
+//     .AdvertiseText_Container_Box_Input {
+//       border: none;
+//       padding: 10px;
+//       max-width: 500px;
+//       width: 100%;
+//       height: 40px;
+//       font-size: var(--0d94rem);
+//       background: var(--requiredBlank);
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
 

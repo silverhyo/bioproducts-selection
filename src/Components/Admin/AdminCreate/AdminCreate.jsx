@@ -199,7 +199,7 @@ export default function AdminCreate() {
     formData.append('PType', productType);
     formData.append('PModality', modalityProducts);
     formData.append('PFiltration', productFiltration);
-    formData.append('PCellLine', productCellLine);
+    formData.append('PCellLine', productCellLine || '');
     formData.append('PService', service || '');
     formData.append('PManufacturer', manufacturer);
     formData.append('PFileA1', descriptionA1 || '');
@@ -224,17 +224,6 @@ export default function AdminCreate() {
     
     console.log("formData :", formData);
     
-
-    // axios.post('/admin/create', formData, {
-    //   origin: `${process.env.REACT_APP_CLIENT_URL}`,
-    //   withCredentials: "true",
-    //   credentials: "true",
-    //   headers: { 
-    //     "xcustomheader": "silverhyo",
-    //     "Content-Type": "multipart/form-data",
-    //   },
-    // })
-
     api.post('/admin/products/create', formData)
     .then(res => {
       alert("정상적으로 등록되었습니다.")
@@ -250,12 +239,26 @@ export default function AdminCreate() {
 
   return (
     <>
-    <Navigation />
-    <AdminNavbar />
-    
     {userInformation.databaseLevel == 'Admin' ?
     <>
-      <form className='RegisterForm_Container_Box_Form' onSubmit={handleSubmit} encType="multipart/form-data" style={{background:"rgb(44, 44, 41)"}}>
+      <form className='RegisterForm_Container_Box_Form' onSubmit={handleSubmit} encType="multipart/form-data">
+        {/* Product Type */}
+        <div className='ProductType_Container'>
+          <div className='ProductType_Container_Box'>
+            <p className='ProductType_Container_Box_P'><span>😜</span> <strong>Product Type</strong>을 선택해 주세요.</p>
+            <label className='ProductType_Container_Box_Label' htmlFor='product_type'></label>
+            <select className='ProductType_Container_Box_Select' id="product_type" required onChange={e => setProductType(e.target.value)}>
+              <option className='ProductType_Container_Box_Option' name="ProductType" value="">Product Type을 선택해 주세요</option>
+              {jsonData01.ProductType.map((Product, index) => {
+                return (
+                  <option className='ProductType_Container_Box_Option' key={index} name="ProductType" value={Product.Value}>{Product.Title}</option>
+                )
+              })};
+            </select>
+          </div>
+        </div>
+
+
         {/* Product Name */}
         <div className='ProductName_Container'>
           <div className='ProductName_Container_Box'>
@@ -292,21 +295,7 @@ export default function AdminCreate() {
         </div>
 
 
-        {/* Product Type */}
-        <div className='ProductType_Container'>
-          <div className='ProductType_Container_Box'>
-            <p className='ProductType_Container_Box_P'><span>😜</span> <strong>Product Type</strong>을 선택해 주세요.</p>
-            <label className='ProductType_Container_Box_Label' htmlFor='product_type'></label>
-            <select className='ProductType_Container_Box_Select' id="product_type" required onChange={e => setProductType(e.target.value)}>
-              <option className='ProductType_Container_Box_Option' name="ProductType" value="">Product Type을 선택해 주세요</option>
-              {jsonData01.ProductType.map((Product, index) => {
-                return (
-                  <option className='ProductType_Container_Box_Option' key={index} name="ProductType" value={Product.Value}>{Product.Title}</option>
-                )
-              })};
-            </select>
-          </div>
-        </div>
+
 
 
         {/* Product Modality */}
@@ -555,17 +544,16 @@ export default function AdminCreate() {
 
         <hr className='RegisterForm_Container_Box_Form_Hr01'></hr>
         <input className='RegisterForm_Container_Box_Form_Input' type="submit" value="등록하기"></input>
-        <hr className='RegisterForm_Container_Box_Form_Hr02'></hr>
         
 
       </form>
+      {/* <div className='AdminCreate_Cancel_ButtonBox'>
+        <div className='AdminCreate_Cancel_ButtonBox_Button'>취소하기</div>
+      </div> */}
     </>
     :
-    <NotFound />
+    ''
     }
-    
-
-    <Footer />
     </>
   )
 }

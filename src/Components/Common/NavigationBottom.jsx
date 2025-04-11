@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 // import Icons
 import { HiOutlineHome } from "react-icons/hi2";
+import { BsMagic } from "react-icons/bs";
 
 import './NavigationBottom.css';
 
@@ -12,14 +13,6 @@ export default function NavigationBottom() {
       <div className='NavigationBottom_Container_Box'>
         <div className='NavigationBottom_Container_Box_IconContainer'>
 
-          <Link to='/event' style={{textDecoration:"none", color:"black"}}>
-          <div className='NavigationBottom_Container_Box_IconBox'>
-            <div className='NavigationBottom_Container_Box_IconBox_Icon'><HiOutlineHome /></div>
-            <div className='NavigationBottom_Container_Box_IconBox_Text'>Event</div>
-          </div>
-          </Link>
-
-
           <Link to='/bioproducts' style={{textDecoration:"none", color:"black"}}>
           <div className='NavigationBottom_Container_Box_IconBox'>
             <div className='NavigationBottom_Container_Box_IconBox_Icon'><HiOutlineHome /></div>
@@ -28,12 +21,20 @@ export default function NavigationBottom() {
           </Link>
 
 
-          <Link to='/bioproducts' style={{textDecoration:"none", color:"black"}}>
+          <Link to='/event' style={{textDecoration:"none", color:"black"}}>
+          <div className='NavigationBottom_Container_Box_IconBox'>
+            <div className='NavigationBottom_Container_Box_IconBox_Icon'><BsMagic /></div>
+            <div className='NavigationBottom_Container_Box_IconBox_Text'>Event</div>
+          </div>
+          </Link>
+
+
+          {/* <Link to='/bioproducts' style={{textDecoration:"none", color:"black"}}>
           <div className='NavigationBottom_Container_Box_IconBox'>
             <div className='NavigationBottom_Container_Box_IconBox_Icon'><HiOutlineHome /></div>
             <div className='NavigationBottom_Container_Box_IconBox_Text'>New</div>
           </div>
-          </Link>
+          </Link> */}
 
 
         </div>

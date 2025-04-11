@@ -58,8 +58,8 @@ export default function ProductDetailModal({JSONDATA01}) {
     let colorBox1 = document.querySelector('.ProductDetail_Container_Box_Product_Info');
     let colorBox2 = document.querySelector('.ProductDetail_Container_Box_Product_Brief');
     if(productInfo.ProductManufacturer === 'Sartorius') {
-      colorBox1.style.background = '#FFF100';
-      colorBox2.style.background = '#FFF100';
+      colorBox1.style.background = 'black';
+      colorBox2.style.background = 'black';
     } else {
       if(productInfo.ProductManufacturer === 'Cytiva'){
         colorBox1.style.background = 'rgba(255, 166, 0, 1)';
@@ -123,10 +123,10 @@ export default function ProductDetailModal({JSONDATA01}) {
 
         <div className='ProductDetail_Container_Box_Product_Info'>
           <div className='ProductDetail_Container_Box_Product_Info_Box'>
-            <p className='ProductDetail_Container_Box_Product_Info_P p1'>{productInfo.ProductName}</p>
-            <hr className='ProductDetail_Container_Box_Product_Info_hr'/>
-            <p className='ProductDetail_Container_Box_Product_Info_P p2'>{productInfo.ProductType}</p>
-            <p className='ProductDetail_Container_Box_Product_Info_P p3'>{productInfo.ProductManufacturer}</p>
+            <p className='ProductDetail_Container_Box_Product_Info_P p1'>{productInfo.ProductType} / <span>{productInfo.ProductManufacturer}</span></p>
+            {/* <hr className='ProductDetail_Container_Box_Product_Info_hr'/> */}
+            <p className='ProductDetail_Container_Box_Product_Info_P p2'>{productInfo.ProductName}</p>
+            {/* <p className='ProductDetail_Container_Box_Product_Info_P p3'>{productInfo.ProductManufacturer}</p> */}
           </div>
         </div>
 
@@ -224,11 +224,14 @@ export default function ProductDetailModal({JSONDATA01}) {
       
     </div>
 
-    <Contact CONTACTINFO={contactInfo} />
+    <div className='ProductDetailModal_Contact'>
+      <Contact CONTACTINFO={contactInfo} />
+    </div>
 
     <ProductsRelated PRODUCTINFO={productInfo} />
 
     <Comments />
+    
     <div className='ProductDetail_Container_Bottom'>
       <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
     </div>

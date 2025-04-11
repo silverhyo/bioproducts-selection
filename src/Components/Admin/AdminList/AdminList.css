@@ -31,6 +31,10 @@
   --0d625rem: 0.625rem;
 }
 
+.silverhyo {
+  display: none;
+}
+
 .AdminList_Container {
   width: 100%;
   background: var(--backGroundColor);
@@ -86,6 +90,25 @@
   text-align: center;
   line-height: 30px;
   text-decoration: none;
+}
+
+.AdminList_Registration_ButtonBox {
+  width: 100%;
+  background: #FFF100;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: sticky;
+  bottom: 0;
+}
+.AdminList_Registration_ButtonBox .AdminList_Registration_ButtonBox_Button {
+  color: var(--blackTextColor);
+  font-size: var(--1rem);
+  font-weight: 500;
+  letter-spacing: 3px;
 }
 
 .AdminList_Container_Box_Count {

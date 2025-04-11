@@ -54,7 +54,7 @@
         .Filtering_V1_Container_Box_Form_Filtering_Query01 {
           display: flex;
           flex-direction: column;
-          margin-bottom: 15px;
+          margin-bottom: 2px;
 
           .Filtering_V1_Container_Box_Form_Filtering_Query01_Label {
             margin-bottom: 5px;
@@ -62,9 +62,9 @@
           .Filtering_V1_Container_Box_Form_Filtering_Query01_Select {
             max-width: 500px;
             width: 100%;
-            height: 30px;
-            padding: 5px;
-            border: 2px solid black;
+            height: 35px;
+            padding: 3px;
+            border: 1px solid rgb(177, 178, 179);
             margin-bottom: 1px;
 
 
@@ -82,9 +82,10 @@
           }
           .Filtering_V1_Container_Box_Form_Filtering_Search_Box {
             display: flex;
+            column-gap: 20px;
             width: 100%;
             max-width: 500px;
-            height: 30px;
+            height: 35px;
 
             .Filtering_V1_Container_Box_Form_Filtering_Search_Input{
               max-width: 500px;
@@ -102,6 +103,10 @@
               flex-basis: 25%;
               padding: 5px;
               font-weight: 500;
+              background: black;
+              color: white;
+              border: none;
+              border-radius: 3px;
 
             }
           }
@@ -111,8 +116,8 @@
           display: flex;
           width: 100%;
           max-width: 500px;
-          height: 40px;
-          margin-bottom: 20px;
+          height: 35px;
+          margin-bottom: 10px;
           .Filtering_V1_Container_Box_Form_Filtering_Reset_Box{
             width: 100%;
             .Filtering_V1_Container_Box_Form_Filtering_Reset_Button {
@@ -120,7 +125,11 @@
               height: 100%;
               font-size: var(--1d05rem);
               font-weight: 600;
-              letter-spacing: 2px;
+              letter-spacing: 0px;
+              border: none;
+              background: black;
+              color: white;
+              border-radius: 3px;
 
             }
           }
@@ -141,7 +150,7 @@
       color: var(--whiteTextColor);
       padding: 20px;
       background: var(--backGroundVeryDarkColor);
-      margin-top: 20px;
+      margin-top: 0px;
       
       .Filtering_V1_Container_Box_Count_Text {
         width: 100%;

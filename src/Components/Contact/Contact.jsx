@@ -43,7 +43,8 @@ export default function Contact({CONTACTINFO}) {
             
           <div className='Contact_Container_Box_SmallBox_MobileBox'>
             <a href={`${vendorEmail}`} className='Contact_Container_Box_SmallBox_MobileBox_Icon'><MdContactMail /></a>
-            <a className='Contact_Container_Box_SmallBox_MobileBox_Text'>{contactInfo.manufacturer} Web</a>
+            <a className='Contact_Container_Box_SmallBox_MobileBox_Text'>재품 문의</a>
+            {/* <a className='Contact_Container_Box_SmallBox_MobileBox_Text'>{contactInfo.manufacturer} Web</a> */}
           </div>
         </div>
       </div>

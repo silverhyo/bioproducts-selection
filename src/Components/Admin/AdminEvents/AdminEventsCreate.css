@@ -38,7 +38,7 @@
 .EventRegisterForm_Container_Box_Form {
   width: 100%;
   padding: 15px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
   font-size: var(--0d875rem);
 }
 .EventRegisterForm_Container_Box_Form .EventImageURL_Container {
@@ -393,7 +393,9 @@
   color: var(--blackTextColor);
   width: 100%;
   height: 40px;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: var(--1rem);
+  letter-spacing: 3px;
   display: flex;
   margin: 0 auto;
   border: none;

@@ -24,7 +24,7 @@ export default function EventBanner() {
     infinite: true, // 슬라이드 반복 여부, true일 경우 마지막 슬ㄹ라이드 다음이 다시 처음 슬라이드가 된다.
     speed: 500, // 슬라이드 넘어가는 속도(ms)
     autoplay: true, // 자동재생
-    autoplaySpeed: 2000, // 자동재생 속도 (ms)
+    autoplaySpeed: 3000, // 자동재생 속도 (ms)
     slidesToShow: 1, // 한 화면에 표시할 수 있는 슬라이드의 개수
     slidesToScroll: 1, // 한 번에 넘어가는 슬라이드의 수
     pauseOnHover: true, // Hover시 일시 정지
@@ -41,8 +41,8 @@ export default function EventBanner() {
 
         {eventDataBase.map((item, index) => {
           return (
-            <div key={index} className='EventBanner_Container_Box_MapBox'>
-              <img className='EventBanner_Container_Box_MapBox_ImageBox_Image' style={{width:"100%"}} src={item.EventBannerImageURL} alt=''></img>
+            <div key={index} className='EventBanner_Container_ImageBox'>
+              <img className='EventBanner_Container_ImageBox_Image' src={item.EventBannerImageURL} alt=''></img>
             </div>
           )
         })}

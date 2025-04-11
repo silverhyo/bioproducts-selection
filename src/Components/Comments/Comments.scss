@@ -1,0 +1,271 @@
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundBlackColor: rgb(0, 0, 0);
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --whiteTextColor: rgb(240, 240, 232);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  --XXXLargeSpace: 100px;
+  --SmallSpace: 20px;
+  /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem;
+  --1d05rem: 1.05rem;
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem;
+}
+
+.Comments_Form_Container {
+  background: var(--backGroundBlackColor);
+  
+  .Comments_Form_Container_Form{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    .Comments_Form_Container_Form_FormBox {
+      display: flex;
+      column-gap: 15px;
+
+      .Comments_Form_Container_Form_FormBox_ImageBox {
+        width: 40px;
+        overflow: hidden;
+
+        .Comments_Form_Container_Form_FormBox_ImageBox_Image {
+          width: 35px;
+          height: 35px;
+          border: 2px solid var(--whiteTextColor);
+          border-radius: 40%;
+          object-fit: fill;
+        }
+      }
+    }
+    .Comments_Form_Container_Form_TextBox {
+      width: 100%;
+
+      .Comments_Form_Container_Form_TextBox_Textarea {
+        width: 100%;
+        background: transparent;
+        color: var(--whiteTextColor);
+      }
+    }
+    .Comments_Form_Container_Form_SubmitBox {
+      display: flex;
+      justify-content: right;
+      margin-top: 10px;
+
+      .Comments_Form_Container_Form_SubmitBox_Submit {
+        width: 70px;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+
+
+.Comments_Container {
+  width: 100%;
+  background: var(--backGroundBlackColor);
+  padding-bottom: 100px;
+
+  .Comments_Container_Box {
+    width: 100%;
+    padding: 10px;
+
+    .Comments_Container_Box_Text {
+      color: var(--whiteTextColor);
+      font-size: var(--0d875rem);
+      font-weight: 600;
+    }
+    .Comments_Container_Box_CommentsBox {
+      display: flex;
+
+      .Comments_Container_Box_CommentsBox_ImageBox {
+        width: 60px;
+        text-align: center;
+        justify-content: center;
+
+        .Comments_Container_Box_CommentsBox_ImageBox_Image {
+          width: 35px;
+          height: 35px;
+          border: 2px solid var(--whiteTextColor);
+          border-radius: 40%;
+        }
+      }
+      .Comments_Container_Box_CommentsBox_TextBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .Comments_Container_Box_CommentsBox_TextBox_Info {
+          color: var(--whiteTextColor);
+          font-size: var(--0d75rem);
+          padding-left: 10px;
+        }
+        .Comments_Container_Box_CommentsBox_TextBox_Comment {
+          color: var(--whiteTextColor);
+          font-size: var(--0d875rem);
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 5px;
+          padding-bottom: 2px;
+          text-align: justify;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+
+/* 대댓글 스타일 */
+.Comment_Thread {
+  margin-bottom: 20px;
+}
+
+.Comment_Replies {
+  margin-left: 50px;
+  border-left: 1px solid var(--whiteTextColor);
+  padding-left: 10px;
+}
+
+.Comments_Container_Box_CommentsBox.Reply {
+  margin-top: 10px;
+}
+
+.Comments_Container_Box_CommentsBox_TextBox_Date {
+  color: var(--whiteTextColor);
+  font-size: var(--0d625rem);
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.Comments_Reply_Button {
+  background: transparent;
+  border: none;
+  color: var(--whiteTextColor);
+  font-size: var(--0d75rem);
+  cursor: pointer;
+  margin-left: 15px;
+  text-decoration: underline;
+
+  &:hover {
+    color: #ccc;
+  }
+}
+
+.Comments_Edit_Button {
+  background: transparent;
+  border: none;
+  color: var(--whiteTextColor);
+  font-size: var(--0d75rem);
+  cursor: pointer;
+  margin-left: 15px;
+  text-decoration: underline;
+  color: #4a9af8;
+
+  &:hover {
+    color: #ccc;
+  }
+}
+.Comments_Delete_Button {
+  background: transparent;
+  border: none;
+  color: var(--whiteTextColor);
+  font-size: var(--0d75rem);
+  cursor: pointer;
+  margin-left: 15px;
+  text-decoration: underline;
+  color: #f86060;
+
+  &:hover {
+    color: #ccc;
+  }
+}
+
+
+.Comments_Edit_Form {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.Comments_Reply_Form {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.Comments_Container_Form_FormBox {
+  display: flex;
+  width: 100%;
+}
+
+.Comments_Container_Form_FormBox_ImageBox {
+  width: 50px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.Comments_Container_Form_FormBox_ImageBox_Image {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--whiteTextColor);
+  border-radius: 40%;
+}
+
+.Comments_Container_Form_TextBox {
+  width: 100%;
+}
+
+.Comments_Container_Form_TextBox_Textarea {
+  width: 100%;
+  resize: none;
+  background-color: var(--backGroundColor);
+  border: 1px solid var(--whiteTextColor);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--whiteTextColor);
+  font-size: var(--0d875rem);
+}
+
+.Comments_Reply_Form_Buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.Comments_Reply_Cancel_Button, 
+.Comments_Reply_Submit_Button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--0d75rem);
+}
+
+.Comments_Reply_Cancel_Button {
+  background-color: transparent;
+  border: 1px solid var(--whiteTextColor);
+  color: var(--whiteTextColor);
+}
+
+.Comments_Reply_Submit_Button {
+  background-color: var(--whiteTextColor);
+  border: 1px solid var(--whiteTextColor);
+  color: var(--backGroundBlackColor);
+}
+
+.No_Comments {
+  color: var(--whiteTextColor);
+  font-size: var(--0d875rem);
+  text-align: center;
+  margin: 20px 0;
+}/*# sourceMappingURL=Comments.css.map */

@@ -1,1 +1,523 @@
-/*# sourceMappingURL=AdminCreate.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  /* Colors and Styles (Default) */
+  --backGroundDarkColor: rgb(23, 23, 22);
+  --backGroundColor: rgb(44, 44, 41);
+  --backGroundWhiteColor: rgb(255, 255, 255);
+  --whiteTextColor: rgb(240, 240, 232);
+  --blackTextColor: rgb(0, 0, 0);
+  --requiredBlank: rgba(171, 250, 164, 0.991);
+  /* Colors and Styles (Default) */
+  /* Space (Default) */
+  --100pxSpace: 100px;
+  --50pxSpace: 50px;
+  --30pxSpace: 30px;
+  --20pxSpace: 20px;
+  /* Font Size (Default) */
+  --XXXBigFontSize: 3.125rem;
+  --XBigFontSize: 1.375rem;
+  --XXXLargeFontSize: 1.25rem;
+  --XXLargeFontSize: 1.125rem;
+  --XLargeFontSize: 1.06rem;
+  --normalFontSize: 1rem;
+  /* Font Size (Default) */
+  --3d125rem: 3.125rem;
+  --1d375rem: 1.375rem;
+  --1d25rem: 1.25rem;
+  --1d125rem: 1.125rem;
+  --1d05rem: 1.05rem;
+  --1rem: 1rem;
+  --0d94rem: 0.94rem;
+  --0d875rem: 0.875rem;
+  --0d75rem: 0.75rem;
+  --0d625rem: 0.625rem;
+}
+
+.RegisterForm_Container_Box_Form {
+  padding: 15px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  width: 100%;
+  font-size: var(--0d875rem);
+  background: white;
+}
+.RegisterForm_Container_Box_Form .ProductName_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .ProductName_Container .ProductName_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ProductName_Container .ProductName_Container_Box .ProductName_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .ProductName_Container .ProductName_Container_Box .ProductName_Container_Box_Input {
+  border: none;
+  padding: 8px;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .MainProductImage_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .MainProductImage_Container .MainProductImage_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .MainProductImage_Container .MainProductImage_Container_Box .MainProductImage_Container_Box_Asking {
+  width: 100%;
+  margin-bottom: var(--20pxSpace);
+}
+.RegisterForm_Container_Box_Form .MainProductImage_Container .MainProductImage_Container_Box .MainProductImage_Container_Box_Register {
+  width: 100%;
+  overflow: hidden;
+}
+.RegisterForm_Container_Box_Form .MainProductImage_Container .MainProductImage_Container_Box .MainProductImage_Container_Box_Register .MainProductImage_Container_Box_Register_Image {
+  margin-bottom: var(--20pxSpace);
+  object-fit: cover;
+}
+.RegisterForm_Container_Box_Form .MainProductImage_Container .MainProductImage_Container_Box .MainProductImage_Container_Box_Register .MainProductImage_Container_Box_Register_Input {
+  width: 100%;
+  border: none;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 500px) {
+  .RegisterForm_Container_Box_Form .MainProductImage_Container_Box_Register_Image {
+    width: 100%;
+    margin-bottom: var(--SmallSpace);
+    object-fit: cover;
+  }
+}
+.RegisterForm_Container_Box_Form .ProductTitle_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .ProductTitle_Container .ProductTitle_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ProductTitle_Container .ProductTitle_Container_Box .ProductTitle_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .ProductTitle_Container .ProductTitle_Container_Box .ProductTitle_Container_Box_Input {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .ProductType_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .ProductType_Container .ProductType_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ProductType_Container .ProductType_Container_Box .ProductType_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .ProductType_Container .ProductType_Container_Box .ProductType_Container_Box_Select {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .ModalityProducts_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .ModalityProducts_Container .ModalityProducts_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ModalityProducts_Container .ModalityProducts_Container_Box .ModalityProducts_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .ModalityProducts_Container .ModalityProducts_Container_Box .ModalityProducts_Container_Box_Small {
+  display: flex;
+  margin-bottom: 5px;
+}
+.RegisterForm_Container_Box_Form .ModalityProducts_Container .ModalityProducts_Container_Box .ModalityProducts_Container_Box_Small .ModalityProducts_Container_Box_Small_Input {
+  padding: 5px;
+}
+.RegisterForm_Container_Box_Form .ModalityProducts_Container .ModalityProducts_Container_Box .ModalityProducts_Container_Box_Small .ModalityProducts_Container_Box_Small_Label {
+  margin-left: 5px;
+}
+.RegisterForm_Container_Box_Form .ApplicationFilterProducts_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .ApplicationFilterProducts_Container .ApplicationFilterProducts_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ApplicationFilterProducts_Container .ApplicationFilterProducts_Container_Box .ApplicationFilterProducts_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .ApplicationFilterProducts_Container .ApplicationFilterProducts_Container_Box .ApplicationFilterProducts_Container_Box_Small {
+  display: flex;
+  margin-bottom: 5px;
+}
+.RegisterForm_Container_Box_Form .ApplicationFilterProducts_Container .ApplicationFilterProducts_Container_Box .ApplicationFilterProducts_Container_Box_Small .ApplicationFilterProducts_Container_Box_Small_Input {
+  padding: 5px;
+}
+.RegisterForm_Container_Box_Form .ApplicationFilterProducts_Container .ApplicationFilterProducts_Container_Box .ApplicationFilterProducts_Container_Box_Small .ApplicationFilterProducts_Container_Box_Small_Label {
+  margin-left: 5px;
+}
+.RegisterForm_Container_Box_Form .ApplicationCellLine_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .ApplicationCellLine_Container .ApplicationCellLine_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ApplicationCellLine_Container .ApplicationCellLine_Container_Box .ApplicationCellLine_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .ApplicationCellLine_Container .ApplicationCellLine_Container_Box .ApplicationCellLine_Container_Box_Small {
+  display: flex;
+  margin-bottom: 5px;
+}
+.RegisterForm_Container_Box_Form .ApplicationCellLine_Container .ApplicationCellLine_Container_Box .ApplicationCellLine_Container_Box_Small .ApplicationCellLine_Container_Box_Small_Input {
+  padding: 5px;
+}
+.RegisterForm_Container_Box_Form .ApplicationCellLine_Container .ApplicationCellLine_Container_Box .ApplicationCellLine_Container_Box_Small .ApplicationCellLine_Container_Box_Small_Label {
+  margin-left: 5px;
+}
+.RegisterForm_Container_Box_Form .Manufacturer_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .Manufacturer_Container .Manufacturer_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .Manufacturer_Container .Manufacturer_Container_Box .Manufacturer_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .Manufacturer_Container .Manufacturer_Container_Box .Manufacturer_Container_Box_Select {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: 0.5px solid black;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+.RegisterForm_Container_Box_Form .DescriptionA_Container .DescriptionA_Container_Box .DescriptionA_Container_Box_P_Small .DescriptionA_Container_Box_P_Small_Textarea {
+  width: 100%;
+  height: 150px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+@media screen and (max-width: 500px) {
+  .RegisterForm_Container_Box_Form .DescriptionA_Container_Box_P_Small_Image {
+    width: 100%;
+    margin-bottom: var(--SmallSpace);
+    object-fit: cover;
+  }
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: 0.5px solid black;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+.RegisterForm_Container_Box_Form .DescriptionB_Container .DescriptionB_Container_Box .DescriptionB_Container_Box_P_Small .DescriptionB_Container_Box_P_Small_Textarea {
+  width: 100%;
+  max-width: 500px;
+  height: 150px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+@media screen and (max-width: 500px) {
+  .RegisterForm_Container_Box_Form .DescriptionB_Container_Box_P_Small_Image {
+    width: 100%;
+    margin-bottom: var(--SmallSpace);
+    object-fit: cover;
+  }
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: 0.5px solid black;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+.RegisterForm_Container_Box_Form .DescriptionC_Container .DescriptionC_Container_Box .DescriptionC_Container_Box_P_Small .DescriptionC_Container_Box_P_Small_Textarea {
+  width: 100%;
+  height: 150px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+@media screen and (max-width: 500px) {
+  .RegisterForm_Container_Box_Form .DescriptionC_Container_Box_P_Small_Image {
+    width: 100%;
+    margin-bottom: var(--SmallSpace);
+    object-fit: cover;
+  }
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container .DescriptionD_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container .DescriptionD_Container_Box .DescriptionD_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container .DescriptionD_Container_Box .DescriptionD_Container_Box_P_Small .DescriptionD_Container_Box_P_Small_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container .DescriptionD_Container_Box .DescriptionD_Container_Box_P_Small .DescriptionD_Container_Box_P_Small_Image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container .DescriptionD_Container_Box .DescriptionD_Container_Box_P_Small .DescriptionD_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: 0.5px solid black;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container .DescriptionD_Container_Box .DescriptionD_Container_Box_P_Small .DescriptionD_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+.RegisterForm_Container_Box_Form .DescriptionD_Container .DescriptionD_Container_Box .DescriptionD_Container_Box_P_Small .DescriptionD_Container_Box_P_Small_Textarea {
+  width: 100%;
+  height: 150px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+@media screen and (max-width: 500px) {
+  .RegisterForm_Container_Box_Form .DescriptionD_Container_Box_P_Small_Image {
+    width: 100%;
+    margin-bottom: var(--SmallSpace);
+    object-fit: cover;
+  }
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Image {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Input1 {
+  width: 100%;
+  border: 0.5px solid black;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Input2 {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Textarea {
+  width: 100%;
+  height: 150px;
+  border: 0.5px solid black;
+  padding: 8px;
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container {
+  width: 100%;
+  margin-bottom: var(--50pxSpace);
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container .RelatedProducts_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container .RelatedProducts_Container_Box .RelatedProducts_Container_Box_P {
+  margin-bottom: 20px;
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container .RelatedProducts_Container_Box .RelatedProducts_Container_Box_Related {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container .RelatedProducts_Container_Box .RelatedProducts_Container_Box_Related .RelatedProducts_Container_Box_Related_Text {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container .RelatedProducts_Container_Box .RelatedProducts_Container_Box_Related .RelatedProducts_Container_Box_Related_Text_Name {
+  border: none;
+  background: var(--requiredBlank);
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container .RelatedProducts_Container_Box .RelatedProducts_Container_Box_Related .RelatedProducts_Container_Box_Related_Text_Position {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .RelatedProducts_Container .RelatedProducts_Container_Box .RelatedProducts_Container_Box_Related .RelatedProducts_Container_Box_Related_Text_Mobile {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container {
+  width: 100%;
+  margin-bottom: var(--100pxSpace);
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container .ApplicationSpecialist_Container_Box {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container .ApplicationSpecialist_Container_Box .ApplicationSpecialist_Container_Box_P {
+  margin-bottom: 10px;
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container .ApplicationSpecialist_Container_Box .ApplicationSpecialist_Container_Box_Specialist {
+  width: 100%;
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container .ApplicationSpecialist_Container_Box .ApplicationSpecialist_Container_Box_Specialist .ApplicationSpecialist_Container_Box_Specialist_Text {
+  margin-bottom: 20px;
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container .ApplicationSpecialist_Container_Box .ApplicationSpecialist_Container_Box_Specialist .ApplicationSpecialist_Container_Box_Specialist_Text_Name {
+  border: none;
+  background: var(--requiredBlank);
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container .ApplicationSpecialist_Container_Box .ApplicationSpecialist_Container_Box_Specialist .ApplicationSpecialist_Container_Box_Specialist_Text_Position {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .ApplicationSpecialist_Container .ApplicationSpecialist_Container_Box .ApplicationSpecialist_Container_Box_Specialist .ApplicationSpecialist_Container_Box_Specialist_Text_Mobile {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  background: var(--requiredBlank);
+}
+.RegisterForm_Container_Box_Form .RegisterForm_Container_Box_Form_Hr01 {
+  width: 100%;
+  margin: 30px auto;
+}
+.RegisterForm_Container_Box_Form .RegisterForm_Container_Box_Form_Input {
+  color: var(--blackTextColor);
+  border: none;
+  width: 100%;
+  height: 40px;
+  font-size: var(--1rem);
+  letter-spacing: 3px;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.AdminCreate_Cancel_ButtonBox {
+  width: 100%;
+  background: white;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.AdminCreate_Cancel_ButtonBox .AdminCreate_Cancel_ButtonBox_Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  font-size: var(--1rem);
+  background: lightgray;
+  letter-spacing: 3px;
+  cursor: pointer;
+}/*# sourceMappingURL=AdminCreate.css.map */

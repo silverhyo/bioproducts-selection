@@ -31,6 +31,10 @@
   --0d625rem: 0.625rem;
 }
 
+.AdminListEvent_None {
+  display: none;
+}
+
 .AdminListEvent_Container {
   width: 100%;
   background: var(--backGroundColor);
@@ -45,19 +49,22 @@
   margin-bottom: 5px;
   border-bottom: 1px solid var(--backGroundDarkColor);
 }
-.AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox .AdminListEvent_Container_Box_ProductBox_ImageBox_Image {
-  width: 120px;
+.AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox .AdminListEvent_Container_Box_ProductBox_ImageBox {
+  width: 100%;
   object-fit: cover;
+}
+.AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox .AdminListEvent_Container_Box_ProductBox_ImageBox .AdminListEvent_Container_Box_ProductBox_ImageBox_Image {
+  width: 100%;
   border-radius: 8px;
   cursor: pointer;
 }
-.AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox_TextBox {
+.AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox .AdminListEvent_Container_Box_ProductBox_TextBox {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
   color: var(--whiteTextColor);
 }
-.AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox_TextBox .AdminListEvent_Container_Box_ProductBox_TextBox_P {
+.AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox .AdminListEvent_Container_Box_ProductBox_TextBox .AdminListEvent_Container_Box_ProductBox_TextBox_P {
   font-size: var(--0d75rem);
 }
 .AdminListEvent_Container .AdminListEvent_Container_Box .AdminListEvent_Container_Box_ProductBox_TextBox_ButtonBox {

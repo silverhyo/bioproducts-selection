@@ -32,51 +32,53 @@
 .Event_Container {
   width: 100%;
   height: 100%;
-  background-color: var(--backGroundColor);
+  background-color: var(--backGroundWhiteColor);
   position: relative;
 
   .Event_Container_Box {
     width: 100%;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 50px;
-    color: var(--whiteTextColor);
+    color: black;
     font-weight: 600;
     font-size: var(--1d375rem);
+    text-align: center;
     
 
     .Event_Container_Box_EventItems {
       width: 100%;
       display: flex;
       flex-direction: column;
-      row-gap: 30px;
+      row-gap: 50px;
       // border: 2px solid blue;
-      margin-top: 20px;
+      margin-top: 30px;
 
 
       .Event_Container_Box_EventItems_Item {
         // border: 1px solid red;
         width: 100%;
         // height: 200px; // 차 후 지울것것
-        padding-top:10px;
-        padding-left: 13px;
-        padding-right: 13px;
-        padding-bottom: 15px;
+        padding-top: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-bottom: 1px;
         display: flex;
         flex-direction: column;
-        background-color: var(--backGroundWhiteColor);
+        background-color: darkgray;
         position: relative;
 
 
         .Event_Container_Box_EventItems_Item_ImageBox {
           width: 100%;
-          margin-bottom: 25px;
+          // border: 1px solid red;
+          overflow: hidden;
 
           .Event_Container_Box_EventItems_Item_ImageBox_Image {
             // border: 1px solid red;
             width: 100%;
-            // height: 400px;
+            height: 100%;
           }
         }
         .Event_Container_Box_EventItems_Item_TextBox {
@@ -85,20 +87,31 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 5 10 5 30;
 
-          .Event_Container_Box_EventItems_Item_TextBox_Text {
-            display: flex;
-            width: 160px;
-            height: 30px;
-            font-size: var(--0d875rem);
-            background-color: var(--Sartorius);
-            font-weight: 600;
-            letter-spacing: 1px;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
+          .Event_Container_Box_EventItems_Item_TextBox_Link {
+            width: 100%;
+            text-decoration: none;
+
+            .Event_Container_Box_EventItems_Item_TextBox_Link_T {
+              display: flex;
+              width: 100%;
+              height: 35px;
+              font-size: var(--0d875rem);
+              background-color: black;
+              color: white;
+              font-weight: 600;
+              letter-spacing: 1px;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+
+              .Event_Container_Box_EventItems_Item_TextBox_Link_T_Text {
+
+              }
+            }
           }
+
+          
         }
 
       }

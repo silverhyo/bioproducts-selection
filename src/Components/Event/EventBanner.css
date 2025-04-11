@@ -32,7 +32,15 @@
 
 .EventBanner_Container {
   width: 100%;
+  height: 200px;
 }
 .EventBanner_Container .EventBanner_Container_Box {
+  width: 100%;
+  height: 100%;
+}
+.EventBanner_Container .EventBanner_Container_Box .EventBanner_Container_ImageBox {
+  width: 100%;
+}
+.EventBanner_Container .EventBanner_Container_Box .EventBanner_Container_ImageBox .EventBanner_Container_ImageBox_Image {
   width: 100%;
 }/*# sourceMappingURL=EventBanner.css.map */

@@ -24,7 +24,7 @@
 
 .ProductDetail_Container {
   width: 100%;
-  background: var(--backGroundWhiteColor);
+  // background: var(--backGroundWhiteColor);
   color: var(--whiteTextColor);
   animation-duration: 2s;
   animation-name: fadeIn08;
@@ -33,7 +33,6 @@
   .ProductDetail_Container_Box {
     width:100%;
     
-    // padding-bottom: 100px;
 
     .ProductDetail_Container_Box_ImageBox {
       width: 100%;
@@ -53,39 +52,38 @@
       position: sticky;
       top: 0;
       padding: 10px;
-      padding-top: 15px;
-      padding-bottom: 20px;
-      // background: var(--sartoriusColor);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background: black;
 
       .ProductDetail_Container_Box_Product_Info_Box {
         width: 100%;
+        color: var(--whiteTextColor);
+        // background: black;
 
         .p1 {
-          font-size: var(--1d25rem);
+          font-size: var(--0d75rem);
           font-weight: 600;
           margin-bottom: 10px;
-          color: var(--backGroundColor);
           text-align: right;
-        }
+        } 
         .ProductDetail_Container_Box_Product_Info_hr{
           width: 100%;
           margin: 0 auto;
           margin-top: 5px;
           margin-bottom: 5px;
-          color: var(--backGroundDarkColor)
         }
         .p2 {
-          font-size: var(--1rem);
+          font-size: var(--1d125rem);
           font-weight: 500;
-          color: var(--backGroundColor);
-          text-align: right;
+          text-align: center;
         }
-        .p3 {
-          font-size: var(--0d94rem);
-          font-weight: 500;
-          color: var(--backGroundColor);
-          text-align: right;
-        }
+        // .p3 {
+        //   font-size: var(--0d94rem);
+        //   font-weight: 500;
+        //   color: var(--backGroundColor);
+        //   text-align: right;
+        // }
       }
     }
     .ProductDetail_Container_Box_Product_Brief {
@@ -138,7 +136,7 @@
   left: 0;
   width: 100%;
   height: 40px;
-  background: #FFF100;
+  background: #FFED00;
   display: flex;
   justify-content: center;
   align-items: center;

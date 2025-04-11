@@ -11,6 +11,8 @@ import { WebInformation } from '../../../Context/WebInformation';
 import { ProductsDataBaseContext } from '../../../Context/ProductsDataBaseContext';
 import { JsonDataContext } from '../../../Context/JsonDataContext';
 
+// import Icons
+
 export default function Filtering_V1() {
 
   // 아래는 Bioproducts Component로부터 전달받은 props
@@ -171,9 +173,18 @@ export default function Filtering_V1() {
       // 대소문자 구별없이 찾기 위해서는 아래와 같이 toLowerCase() 함수를 사용한다!!!
       if(valueFilter.productName?.value.toLowerCase() !== '') {
         if(!datum.ProductName?.toLowerCase().includes(valueFilter.productName.value.toLowerCase())) {
-          return false;
+          if(!datum.ProductRelated?.toLowerCase().includes(valueFilter.productName.value.toLowerCase())) {
+            return false;
+          }
         }
       }
+
+      // 대소문자 구별없이 찾기 위해서는 아래와 같이 toLowerCase() 함수를 사용한다!!!
+      // if(valueFilter.productName?.value.toLowerCase() !== '') {
+      //   if(!datum.ProductName?.toLowerCase().includes(valueFilter.productName.value.toLowerCase())) {
+      //     return false;
+      //   }
+      // }
 
       return true;
 
@@ -386,7 +397,7 @@ export default function Filtering_V1() {
             <div className='Filtering_V1_Container_Box_Form_Filtering_Search'>
               <label className='Filtering_V1_Container_Box_Form_Filtering_Search_Label' htmlFor="search"></label>
               <div className='Filtering_V1_Container_Box_Form_Filtering_Search_Box'>
-                <input id="search" type="search" className='Filtering_V1_Container_Box_Form_Filtering_Search_Input' value={searchValue} name="productName" placeholder="제품명을 입력해 주세요" onChange={(e) => searchFilter(e.target.value)}></input>
+                <input id="search" type="search" className='Filtering_V1_Container_Box_Form_Filtering_Search_Input' value={searchValue} name="productName" placeholder="제품명 또는 키워드를 입력해 주세요" onChange={(e) => searchFilter(e.target.value)}></input>
                 <button className='Filtering_V1_Container_Box_Form_Filtering_Search_Button' onClick={handleClear}>Reset</button>
               </div>
             </div>
@@ -394,7 +405,7 @@ export default function Filtering_V1() {
             {/* SEARCH : PRODUXT NAME */}
             <div className='Filtering_V1_Container_Box_Form_Filtering_Reset'>
               <div className='Filtering_V1_Container_Box_Form_Filtering_Reset_Box'>
-                <button className='Filtering_V1_Container_Box_Form_Filtering_Reset_Button' onClick={handleReset}>Reset</button>
+                <button className='Filtering_V1_Container_Box_Form_Filtering_Reset_Button' onClick={handleReset}>View All Products</button>
               </div>
             </div>
             
@@ -406,7 +417,7 @@ export default function Filtering_V1() {
         </form>
 
         <div className='Filtering_V1_Container_Box_Count'>
-          <div className='Filtering_V1_Container_Box_Count_Text'><strong style={{color:"red"}}>{filteredProducts.length}</strong>개의 제품을 찾았어요</div>
+          <div className='Filtering_V1_Container_Box_Count_Text'><strong style={{color:"#E6007D"}}>{filteredProducts.length}</strong>개의 제품을 찾았어요</div>
         </div>
     
       </div>

@@ -76,9 +76,9 @@ export default function ProductsRelated({PRODUCTINFO}) {
         <div className='ProductsRelated_Container_Box_Title'>
           관련 제품 및 서비스
         </div>
-        <div className='ProductsRelated_Container_Box_Description'>
+        {/* <div className='ProductsRelated_Container_Box_Description'>
           위 제품과 관련된 다른 제품 및 서비스를 안내해 드립니다.
-        </div>
+        </div> */}
 
         <div className='ProductsRelated_Container_Box_ProductsRelated'>
         

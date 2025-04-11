@@ -50,7 +50,7 @@ export default function App() {
     clientURL:process.env.REACT_APP_CLIENT_URL, // * Client URL
     serverURL:process.env.REACT_APP_SERVER_URL, // * Server URL
   });
-  console.log("[App]-URL :", URL);
+  // console.log("[App]-URL :", URL);
 
 
 
@@ -79,7 +79,7 @@ export default function App() {
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err))
   }, [setDtBaseData]);
-  console.log("[APP]-dtBaseData :", dtBaseData);
+  // console.log("[APP]-dtBaseData :", dtBaseData);
   
 
   // ! 아래는 database로부터 Event Data 가져오게하기
@@ -89,25 +89,10 @@ export default function App() {
     .then(res => setEventDtBaseData(res.data))
     .catch(err => console.log(err))
   }, [setEventDtBaseData]);
-  console.log("[APP]-eventBaseData :", eventBaseData);
+  // console.log("[APP]-eventBaseData :", eventBaseData);
 
 
 
-  // useEffect(() => {
-  //   const api = axios.create({
-  //     // origin: `${process.env.REACT_APP_CLIENT_URL}`, // * axios.create() 설정에서는 존재하지 않는 옵션
-  //     // secure: "true", // * axios에서 지원하지 않는 옵션
-  //     // credentials: "true", // * axios에서 지원하지 않는 옵션
-  //     // sameSite: "none", // * axios에서 지원하지 않는 옵션, 서버에서 쿠키를 설정할 때 사용하는 옵션임
-  //     baseURL: `${process.env.REACT_APP_BASE_URL}`,
-  //     withCredentials: true, // * withCredentials는 boolean값이어야 하므로 string인 "true" 가 아니라 true로 설정
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json",
-  //       "xcustomheader": "silverhyo",
-  //     }
-  //   })
-  // },[])
 
 
 
@@ -185,12 +170,13 @@ export default function App() {
       .then(res => setUserDatabaseInfo(
         {
           databaseID: res?.data[0].ID,
+          databaseName: res?.data[0].name,
           databaseLevel: res?.data[0].level,
           databaseProfileImage : res?.data[0].profileImage,
           databaseProfileImageThumbnail: res?.data[0].profileImageThumbnail,
           databaseUserId: res?.data[0].user_id
         }))
-      .then(console.log("User 정보를 Database로부터 가져왔습니다."))
+      .then(console.log("User 정보를 Database로부터 가져왔습니다. :"))
       .catch(err => console.log(err));
     } else {
       console.log("로그인된 user가 없습니다!")

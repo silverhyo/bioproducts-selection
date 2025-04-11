@@ -182,7 +182,7 @@ export default function Comments() {
             </div>
 
             <div className='Comments_Form_Container_Form_SubmitBox'>
-              <input className='Comments_Form_Container_Form_SubmitBox_Submit' type="submit" value="댓글등록"></input>
+              <input className='Comments_Form_Container_Form_SubmitBox_Submit' type="submit" value="등록"></input>
             </div>
           </form>
         </div>
@@ -335,7 +335,7 @@ export default function Comments() {
               </div>
             ))
           ) : (
-            <div className="No_Comments">아직 댓글이 없습니다. 첫 댓글을 남겨보세요!</div>
+            <div className="No_Comments">아직 댓글이 없습니다. 로그인 후 첫 댓글을 남겨보세요!</div>
           )}
         </div>
       </div>

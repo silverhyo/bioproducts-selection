@@ -28,17 +28,20 @@ export default function Event() {
             {eventDataBaseReverse?.map((item, index) => {
               return (
                 <div key={index} className='Event_Container_Box_EventItems_Item'>
+                  
                   <div className='Event_Container_Box_EventItems_Item_ImageBox'>
                     <img className='Event_Container_Box_EventItems_Item_ImageBox_Image' src={item.EventImageURL} alt=''></img>
                   </div>
-                  <div className='Event_Container_Box_EventItems_Item_TextBox0'></div>
-                  <a href={item.EventURL} style={{textDecoration:"none", color:"black"}}>
-                    <div className='Event_Container_Box_EventItems_Item_TextBox'>
-                      <div className='Event_Container_Box_EventItems_Item_TextBox_Text'>
-                        자세히
+
+                  <div className='Event_Container_Box_EventItems_Item_TextBox'>
+                    <a className='Event_Container_Box_EventItems_Item_TextBox_Link' href={item.EventURL}>
+                      <div className='Event_Container_Box_EventItems_Item_TextBox_Link_T'>
+                        <div className='Event_Container_Box_EventItems_Item_TextBox_Link_T_Text'>
+                          자세히 보기
+                        </div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               )
             })}

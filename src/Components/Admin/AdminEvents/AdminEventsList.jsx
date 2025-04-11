@@ -21,6 +21,8 @@ import AdminNavbar from '../../Common/AdminNavbar';
 import NotFound from '../../Common/NotFound';
 import Footer from '../../Common/Footer';
 import Navigation from '../../Common/Navigation';
+import AdminEventsCreate from './AdminEventsCreate';
+
 
 export default function AdminEventsList() {
 
@@ -42,7 +44,7 @@ export default function AdminEventsList() {
 
   // 삭제를 위한 함수
   const handleDelete = (id) => {
-    api.delete('/admin/events/delete/'+id)
+    api.delete('/api/admin/events/delete/'+id)
     .then(res => {
       alert("삭제되었습니다.")
       console.log(res);
@@ -51,6 +53,16 @@ export default function AdminEventsList() {
     .catch(err => console.log(err))
   }
 
+  // ! 제품등록을 위한 작업
+  const [text, setText] = useState('이벤트 등록하기')
+  const [isOn, setIsOn] = useState(false);
+  const [nameOfClass, setNameOfClass] = useState('AdminList_Container');
+  function toggleHandler() {
+    
+    setIsOn(!isOn);
+    isOn ? setText('이벤트 등록하기') : setText('취소하기');
+    isOn ? setNameOfClass('AdminListEvent_Container') : setNameOfClass('AdminListEvent_None');
+  };
 
   return (
     <>
@@ -81,6 +93,17 @@ export default function AdminEventsList() {
               </div>
             )
           })}
+        </div>
+      </div>
+
+
+      <>
+        {isOn ? <AdminEventsCreate /> : ''}
+      </>
+
+      <div className='AdminList_Registration_ButtonBox' onClick={toggleHandler}>
+        <div className='AdminList_Registration_ButtonBox_Button'>
+          {text}
         </div>
       </div>
     </>

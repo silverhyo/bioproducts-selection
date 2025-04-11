@@ -1,15 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 // Import Style css
 import "./AdminList.css";
 // Import Components
-import AdminNavbar from '../../Common/AdminNavbar';
-import Footer from '../../Common/Footer';
 import NotFound from '../../Common/NotFound';
-import Navigation from '../../Common/Navigation';
+import AdminCreate from '../AdminCreate/AdminCreate';
 // ICONS
 import { MdDeleteOutline } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
@@ -40,23 +37,35 @@ export default function AdminList() {
 
   // 삭제를 위한 함수
   const handleDelete = (id) => {
-    api.delete('/admin/products/delete/'+id)
+    api.delete('/api/admin/products/delete/'+id)
     .then(res => {
       alert("삭제되었습니다.")
-      console.log(res);
+      // console.log(res);
       window.location.reload();
     })
     .catch(err => console.log(err))
   }
 
-  
+
+  // ! 제품등록을 위한 작업
+  const [text, setText] = useState('제품등록하기')
+  const [isOn, setIsOn] = useState(false);
+  const [nameOfClass, setNameOfClass] = useState('AdminList_Container');
+  function toggleHandler() {
+    
+    setIsOn(!isOn);
+    isOn ? setText('제품등록하기') : setText('취소하기');
+    isOn ? setNameOfClass('AdminList_Container') : setNameOfClass('silverhyo');
+    // document.querySelector('.AdminList_Container').classList.toggle('silverhyo', isOn===false);
+  };
 
 
   return (
     <>
       {userInformation.databaseLevel == 'Admin' ?
       <>
-        <div className='AdminList_Container'>
+
+        <div className={nameOfClass}>
           <div className='AdminList_Container_Box'>
             <div className='AdminList_Container_Box_Count'>{dtBaseData.length}개의 제품이 있습니다</div>
   
@@ -82,6 +91,18 @@ export default function AdminList() {
             })}
           </div>
         </div>
+
+        <>
+          {isOn ? <AdminCreate /> : ''}
+        </>
+        
+        <div className='AdminList_Registration_ButtonBox' onClick={toggleHandler}>
+          <div className='AdminList_Registration_ButtonBox_Button'>
+            {text}
+          </div>
+        </div>
+
+
       </>
       :
       <NotFound />
