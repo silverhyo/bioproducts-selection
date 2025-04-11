@@ -214,7 +214,6 @@
           margin-left: 5px;
         }
       }
-      
     }
   }
   
@@ -317,7 +316,6 @@
           padding: 8px;
         }
       }
-      
     }
   }
   
@@ -426,7 +424,6 @@
           padding: 8px;
         }
       }
-      
     }
   }
   
@@ -480,7 +477,6 @@
           padding: 8px;
         }
       }
-      
     }
   }
   
@@ -496,42 +492,44 @@
   
   
   
-  //========================================================================DescriptionE
-  .DescriptionE_Container {
+  //========================================================================Documentation
+  .Documentation_Container {
     width: 100%;
     margin-bottom: var(--50pxSpace);
   
-    .DescriptionE_Container_Box {
+    .Documentation_Container_Box {
       width: 100%;
   
-      .DescriptionE_Container_Box_P {
+      .Documentation_Container_Box_P {
         margin-bottom: 10px;
       }
-      .DescriptionE_Container_Box_P_Small {
+      .Documentation_Container_Box_P_Small {
   
-        .DescriptionE_Container_Box_P_Small_P {
+        .Documentation_Container_Box_P_Small_P {
           margin-bottom: 10px;
         }
-        .DescriptionE_Container_Box_P_Small_Image {
+        .Documentation_Container_Box_P_Small_Image {
           width: 100%;
           object-fit: cover;
           margin-bottom: 15px;
         }
-        .DescriptionE_Container_Box_P_Small_Input1 {
+        .Documentation_Container_Box_P_Small_Input01 {
+          display: block;
           width: 100%;
           border: 0.5px solid black;
           padding: 8px;
-          margin-bottom: 30px;
+          margin-bottom: 15px;
         }
-        .DescriptionE_Container_Box_P_Small_Input2 {
+        .Documentation_Container_Box_P_Small_Input02 {
           width: 100%;
           height: 40px;
           border: 0.5px solid black;
           padding: 8px;
+          margin-bottom: 15px;
         }
-        .DescriptionE_Container_Box_P_Small_Textarea {
+        .Documentation_Container_Box_P_Small_Input03 {
           width: 100%;
-          height: 150px;
+          height: 40px;
           border: 0.5px solid black;
           padding: 8px;
         }
@@ -668,7 +666,6 @@
 //     letter-spacing: 3px;
 //     cursor: pointer;
 //   }
-}
 
 
 //========================================================================AdvertiseDo

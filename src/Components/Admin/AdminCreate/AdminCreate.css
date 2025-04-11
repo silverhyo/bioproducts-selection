@@ -36,11 +36,11 @@
 
 .RegisterForm_Container_Box_Form {
   padding: 15px;
-  padding-top: 50px;
-  padding-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 50px;
   width: 100%;
+  height: 100%;
   font-size: var(--0d875rem);
-  background: white;
 }
 .RegisterForm_Container_Box_Form .ProductName_Container {
   width: 100%;
@@ -375,39 +375,41 @@
     object-fit: cover;
   }
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container {
+.RegisterForm_Container_Box_Form .Documentation_Container {
   width: 100%;
   margin-bottom: var(--50pxSpace);
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box {
+.RegisterForm_Container_Box_Form .Documentation_Container .Documentation_Container_Box {
   width: 100%;
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P {
+.RegisterForm_Container_Box_Form .Documentation_Container .Documentation_Container_Box .Documentation_Container_Box_P {
   margin-bottom: 10px;
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_P {
+.RegisterForm_Container_Box_Form .Documentation_Container .Documentation_Container_Box .Documentation_Container_Box_P_Small .Documentation_Container_Box_P_Small_P {
   margin-bottom: 10px;
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Image {
+.RegisterForm_Container_Box_Form .Documentation_Container .Documentation_Container_Box .Documentation_Container_Box_P_Small .Documentation_Container_Box_P_Small_Image {
   width: 100%;
   object-fit: cover;
   margin-bottom: 15px;
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Input1 {
+.RegisterForm_Container_Box_Form .Documentation_Container .Documentation_Container_Box .Documentation_Container_Box_P_Small .Documentation_Container_Box_P_Small_Input01 {
+  display: block;
   width: 100%;
   border: 0.5px solid black;
   padding: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Input2 {
+.RegisterForm_Container_Box_Form .Documentation_Container .Documentation_Container_Box .Documentation_Container_Box_P_Small .Documentation_Container_Box_P_Small_Input02 {
   width: 100%;
   height: 40px;
   border: 0.5px solid black;
   padding: 8px;
+  margin-bottom: 15px;
 }
-.RegisterForm_Container_Box_Form .DescriptionE_Container .DescriptionE_Container_Box .DescriptionE_Container_Box_P_Small .DescriptionE_Container_Box_P_Small_Textarea {
+.RegisterForm_Container_Box_Form .Documentation_Container .Documentation_Container_Box .Documentation_Container_Box_P_Small .Documentation_Container_Box_P_Small_Input03 {
   width: 100%;
-  height: 150px;
+  height: 40px;
   border: 0.5px solid black;
   padding: 8px;
 }
@@ -501,23 +503,5 @@
   display: flex;
   margin: 0 auto;
   cursor: pointer;
-}
-
-.AdminCreate_Cancel_ButtonBox {
-  width: 100%;
-  background: white;
-  padding: 15px;
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-.AdminCreate_Cancel_ButtonBox .AdminCreate_Cancel_ButtonBox_Button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 40px;
-  font-size: var(--1rem);
-  background: lightgray;
-  letter-spacing: 3px;
-  cursor: pointer;
+  margin-bottom: 200px;
 }/*# sourceMappingURL=AdminCreate.css.map */

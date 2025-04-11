@@ -24,13 +24,8 @@ import { AxiosContext } from '../../../Context/AxiosContext';
 // ! 아래 Props는 APP.js로부터 받아옴
 export default function ProductDetailModal({JSONDATA01}) {
 
-  const imageURL = useContext(ImageAddressContext).imageURL;
-  const URL = useContext(WebInformation).URL;
-  const jsonData01 = useContext(JsonDataContext).jsonData01;
   const api = useContext(AxiosContext).api;
   const {id} = useParams();
-
-
 
 
   const [productInfo, setProductInfo] = useState('' || '');
@@ -47,9 +42,6 @@ export default function ProductDetailModal({JSONDATA01}) {
   useEffect(() => {
     brandColor()
   },[productInfo])
-
-
-
 
 
 
@@ -224,17 +216,42 @@ export default function ProductDetailModal({JSONDATA01}) {
       
     </div>
 
-    <div className='ProductDetailModal_Contact'>
+
+
+
+
+    <div className='ProductDetail_DownloadBox'>
+      <a className='ProductDetail_DownloadBox_01' href={productInfo.ProductTitle04}><div className='ProductDetail_DownloadBox_01_Download'>Data-Sheet 다운받기</div></a>
+      <a className='ProductDetail_DownloadBox_02' href={productInfo.ProductTitle05}><div className='ProductDetail_DownloadBox_02_Download'>기타 자료 다운받기</div></a>
+    </div>
+
+
+
+
+
+    <div className='ProductDetail_Contact'>
       <Contact CONTACTINFO={contactInfo} />
     </div>
 
+
+
+
     <ProductsRelated PRODUCTINFO={productInfo} />
+
+
+
 
     <Comments />
     
+
+
+
     <div className='ProductDetail_Container_Bottom'>
       <Link to='/bioproducts' className='ProductDetail_Container_Bottom_Button' style={{textDecoration: "none"}}><MdOutlineArrowBackIosNew /></Link>
     </div>
+
+
+
 
     <Footer />
 

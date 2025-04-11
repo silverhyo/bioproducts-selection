@@ -110,7 +110,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 45px;
   background: #FFED00;
   display: flex;
   justify-content: center;
@@ -129,4 +129,30 @@
   to {
     opacity: 1;
   }
+}
+.ProductDetail_DownloadBox {
+  width: 100%;
+  height: 50px;
+  background: black;
+  display: flex;
+  position: sticky;
+  bottom: 44px;
+}
+.ProductDetail_DownloadBox .ProductDetail_DownloadBox_01 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.ProductDetail_DownloadBox .ProductDetail_DownloadBox_02 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=ProductDetailModal.css.map */

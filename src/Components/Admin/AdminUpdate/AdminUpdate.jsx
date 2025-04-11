@@ -614,14 +614,14 @@ export default function AdminUpdate() {
           <div className='Edit_DescriptionE_Container'>
             <div className='Edit_DescriptionE_Container_Box'>
 
-              <p className='Edit_DescriptionE_Container_Box_P'><span>제품등록 5</span> : 제품에 대한 <strong>상세 설명</strong>을 입력해 주세요.</p>
+              <p className='Edit_DescriptionE_Container_Box_P'><span>자료등록 1</span> : 자료에 대한 <strong>정보</strong>를 입력해 주세요.</p>
 
               <div className="Edit_DescriptionE_Container_Box_P_Small">
                 <p className='Edit_DescriptionE_Container_Box_P_Small_P'></p>
                 <img className='Edit_DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : values.PFileE1} alt="" /><br />
                 <input className='Edit_DescriptionE_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionE1" id="Edit_fileInputE" ref={imgRefE} accept="image/*" onChange={settingDetailE1} /><br/><br/>
                 <input className='Edit_DescriptionE_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionE2" value={values.PTitleE2} onChange={e => setValues({...values, PTitleE2: e.target.value})} ></input><br/><br/>
-                <textarea className='Edit_DescriptionE_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionE3" value={values.PDescriptionE3} onChange={e => setValues({...values, PDescriptionE3: e.target.value})} />
+                <input className='Edit_DescriptionE_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionE3" value={values.PDescriptionE3} onChange={e => setValues({...values, PDescriptionE3: e.target.value})} />
               </div>
 
             </div>

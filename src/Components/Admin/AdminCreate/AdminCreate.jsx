@@ -5,11 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from 'react';
 // import Style css
 import "./AdminCreate.css";
-import Footer from '../../Common/Footer';
-import AdminNavbar from '../../Common/AdminNavbar';
+
 // import Components
 import NotFound from '../../Common/NotFound';
 import Navigation from '../../Common/Navigation';
+import Footer from '../../Common/Footer';
+import AdminNavbar from '../../Common/AdminNavbar';
 // useContext
 import { AuthContext } from '../../../Context/AuthContext';
 import { useContext } from 'react';
@@ -242,6 +243,7 @@ export default function AdminCreate() {
     {userInformation.databaseLevel == 'Admin' ?
     <>
       <form className='RegisterForm_Container_Box_Form' onSubmit={handleSubmit} encType="multipart/form-data">
+
         {/* Product Type */}
         <div className='ProductType_Container'>
           <div className='ProductType_Container_Box'>
@@ -445,17 +447,18 @@ export default function AdminCreate() {
 
 
         {/* DescriptionD */}
-        <div className='DescriptionD_Container'>
-          <div className='DescriptionD_Container_Box'>
+        {/* Documents */}
+        <div className='Documentation_Container'>
+          <div className='Documentation_Container_Box'>
             
-            <p className='DescriptionD_Container_Box_P'><span>제품등록 4</span> : 제품에 대한 <strong>상세 설명</strong>을 입력해 주세요.</p>
+            <p className='Documentation_Container_Box_P'><span>자료등록 1</span> : 자료에 대한 <strong>정보</strong>를 입력해 주세요.</p>
 
-            <div className="DescriptionD_Container_Box_P_Small">
-              <p className='DescriptionD_Container_Box_P_Small_P'></p>
-              <img className='DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : ``} alt="" /><br />
-              <input className='DescriptionD_Container_Box_P_Small_Input1' type="file" name="DescriptionD1" ref={imgRefD} id="fileInputD" accept="image/*" onChange={settingDetailD1} /><br/><br/>
-              <input className='DescriptionD_Container_Box_P_Small_Input2' type="text" name="DescriptionD2" placeholder="주요 문구를 입력해 주세요" onChange={e => setDescriptionD2(e.target.value)}></input><br/><br/>
-              <textarea className='DescriptionD_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionD3" placeholder="간단한 설명을 입력해 주세요" onChange={e => setDescriptionD3(e.target.value)} />
+            <div className='Documentation_Container_Box_P_Small'>
+              <p className='Documentation_Container_Box_P_Small_P'></p>
+              <img className='Documentation_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : ``} alt="" /><br />
+              <input className='Documentation_Container_Box_P_Small_Input01' type="file" name="DescriptionD1" ref={imgRefD} id="fileInputD" accept="image/*" onChange={settingDetailD1}></input>
+              <input className='Documentation_Container_Box_P_Small_Input02' type="text" name="DescriptionD2" placeholder="Data Sheet 링크를 입력해 주세요." onChange={e => setDescriptionD2(e.target.value)}></input>
+              <input className='Documentation_Container_Box_P_Small_Input03' type="text" name="DescriptionD3" placeholder="자료에 대한 간단한 설명을 입력해 주세요" onChange={e => setDescriptionD3(e.target.value)}></input>
             </div>
 
           </div>
@@ -463,17 +466,18 @@ export default function AdminCreate() {
 
 
         {/* DescriptionE */}
-        <div className='DescriptionE_Container'>
-          <div className='DescriptionE_Container_Box'>
+        {/* Documents */}
+        <div className='Documentation_Container'>
+          <div className='Documentation_Container_Box'>
             
-            <p className='DescriptionE_Container_Box_P'><span>제품등록 5</span> : 제품에 대한 <strong>상세 설명</strong>을 입력해 주세요.</p>
+            <p className='Documentation_Container_Box_P'><span>자료등록 2</span> : 자료에 대한 <strong>정보</strong>를 입력해 주세요.</p>
 
-            <div className="DescriptionE_Container_Box_P_Small">
-              <p className='DescriptionE_Container_Box_P_Small_P'></p>
-              <img className='DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : ``} alt="" /><br />
-              <input className='DescriptionE_Container_Box_P_Small_Input1' type="file" name="DescriptionE1" ref={imgRefE} id="fileInputE" accept="image/*" onChange={settingDetailE1} /><br/><br/>
-              <input className='DescriptionE_Container_Box_P_Small_Input2' type="text" name="DescriptionE2" placeholder="주요 문구를 입력해 주세요" onChange={e => setDescriptionE2(e.target.value)}></input><br/><br/>
-              <textarea className='DescriptionE_Container_Box_P_Small_Textarea' cols="60" rows="10" name="DescriptionE3" placeholder="간단한 설명을 입력해 주세요" onChange={e => setDescriptionE3(e.target.value)} />
+            <div className='Documentation_Container_Box_P_Small'>
+              <p className='Documentation_Container_Box_P_Small_P'></p>
+              <img className='Documentation_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : ``} alt="" /><br />
+              <input className='Documentation_Container_Box_P_Small_Input01' type="file" name="DescriptionE1" ref={imgRefE} id="fileInputE" accept="image/*" onChange={settingDetailE1}></input>
+              <input className='Documentation_Container_Box_P_Small_Input02' type="text" name="DescriptionE2" placeholder="Data Sheet 링크를 입력해 주세요." onChange={e => setDescriptionE2(e.target.value)}></input>
+              <input className='Documentation_Container_Box_P_Small_Input03' type="text" name="DescriptionE3" placeholder="자료에 대한 간단한 설명을 입력해 주세요" onChange={e => setDescriptionE3(e.target.value)}></input>
             </div>
 
           </div>
@@ -510,8 +514,6 @@ export default function AdminCreate() {
 
           </div>
         </div>
-
-
 
 
 
