@@ -9,6 +9,7 @@ import NavigationBottom from '../Common/NavigationBottom';
 // import Context
 import { UserEventDataBaseContext } from '../../Context/UserEventDataBaseContext';
 import { ImageAddressContext } from '../../Context/ImageAddressContext';
+import Footer from '../Common/Footer';
 
 export default function Event() {
   
@@ -35,13 +36,12 @@ export default function Event() {
 
                   <div className='Event_Container_Box_EventItems_Item_TextBox'>
                     <a className='Event_Container_Box_EventItems_Item_TextBox_Link' href={item.EventURL}>
-                      <div className='Event_Container_Box_EventItems_Item_TextBox_Link_T'>
-                        <div className='Event_Container_Box_EventItems_Item_TextBox_Link_T_Text'>
-                          자세히 보기
-                        </div>
+                      <div className='Event_Container_Box_EventItems_Item_TextBox_Text'>
+                        자세히 보기
                       </div>
                     </a>
                   </div>
+
                 </div>
               )
             })}
@@ -52,6 +52,7 @@ export default function Event() {
           <NavigationBottom />
         </div>
       </div>
+      <Footer />
     </>
   )
 };

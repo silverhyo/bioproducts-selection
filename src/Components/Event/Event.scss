@@ -59,15 +59,13 @@
       .Event_Container_Box_EventItems_Item {
         // border: 1px solid red;
         width: 100%;
-        // height: 200px; // 차 후 지울것것
-        padding-top: 1px;
-        padding-left: 1px;
-        padding-right: 1px;
-        padding-bottom: 1px;
+        padding-top: 1.2px;
+        padding-left: 1.2px;
+        padding-right: 1.2px;
         display: flex;
         flex-direction: column;
-        background-color: darkgray;
-        position: relative;
+        background-color: black;
+        // position: relative;
 
 
         .Event_Container_Box_EventItems_Item_ImageBox {
@@ -78,24 +76,20 @@
           .Event_Container_Box_EventItems_Item_ImageBox_Image {
             // border: 1px solid red;
             width: 100%;
-            height: 100%;
           }
         }
         .Event_Container_Box_EventItems_Item_TextBox {
           // border: 1px solid blue;
           width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
 
           .Event_Container_Box_EventItems_Item_TextBox_Link {
             width: 100%;
             text-decoration: none;
 
-            .Event_Container_Box_EventItems_Item_TextBox_Link_T {
+            .Event_Container_Box_EventItems_Item_TextBox_Text {
               display: flex;
               width: 100%;
-              height: 35px;
+              height: 40px;
               font-size: var(--0d875rem);
               background-color: black;
               color: white;
@@ -104,10 +98,7 @@
               justify-content: center;
               align-items: center;
               cursor: pointer;
-
-              .Event_Container_Box_EventItems_Item_TextBox_Link_T_Text {
-
-              }
+              
             }
           }
 

@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 // import Style.css
 import "./Home.css";
 
+// import Image
+import MobileWebService from '../../../Sources/Images/mobilewebservice.svg';
+
 // import Components
 import Footer from '../../Common/Footer';
 import Navigation from '../../Common/Navigation';
@@ -93,15 +96,21 @@ export default function Home() {
         <div className='Home_Container_Box'>
           <div className='Home_Container_Box_Greeting'>
             {userInformation.isLoggedIn
-            ? 
-            <div className='Home_Container_Box_Greeting_P1'>{userInformation.currentUserFullName}님 반갑습니다!<br></br><br></br>
-            이 webpage를 통하여 bio 제품에 대한 정보를 확인하고, 담당자와의 연락을 통하여 제품에 대하여 궁금한 사항을 빠르게 해소할 수 있습니다.   </div>
+            ?
+            <>
+              <div className='Home_Container_Box_Greeting_P1'>{userInformation.currentUserFullName}님! 반갑습니다!</div>
+
+              <div className='Home_Container_Box_Greeting_ImageBox'>
+                <img className='Home_Container_Box_Greeting_ImageBox_Image' src={MobileWebService} alt=''></img>
+              
+              </div>
+            </>
             : 
             '' 
             }
             
-            <p className='Home_Container_Box_Greeting_P2'> </p>
-            <p className='Home_Container_Box_Greeting_P2'></p>
+            {/* <p className='Home_Container_Box_Greeting_P2'> </p> */}
+            {/* <p className='Home_Container_Box_Greeting_P2'></p> */}
           </div>
 
           {/* <div className='Product_New_Registered_Container'>

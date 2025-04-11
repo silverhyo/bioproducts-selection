@@ -15,6 +15,7 @@ import { GrLogout } from "react-icons/gr";
 
 // import Image
 import LogoSartoriusWhite from '../../Sources/image_logo/sartorius-logo-white.png';
+import SartoriusOn from '../../Sources/Images/on.png';
 
 export default function Navigation() {
 
@@ -58,9 +59,15 @@ export default function Navigation() {
     <div className='Navigation_Container'>
       <div className='Navigation_Container_Box'>
 
-        <div className='Navigation_Container_ImageBox'>
-          <img className='Navigation_Container_ImageBox_Image' src={LogoSartoriusWhite} alt=""></img>
+        <div className='Navigation_Container_ImageBox01'>
+          <img className='Navigation_Container_ImageBox_Image01' src={LogoSartoriusWhite} alt=""></img>
         </div>
+
+        <div className='Navigation_Container_ImageBox02'>
+          <img className='Navigation_Container_ImageBox_Image02' src={SartoriusOn} alt=""></img>
+        </div>
+
+        
 
         <div className='Navigation_Container_NavBox'>
           {/* <Link to="/home"><div className='Navigation_Container_NavBox_Menu'>HOME</div></Link> */}

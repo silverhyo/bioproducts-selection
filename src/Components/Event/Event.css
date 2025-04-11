@@ -56,14 +56,12 @@
 }
 .Event_Container .Event_Container_Box .Event_Container_Box_EventItems .Event_Container_Box_EventItems_Item {
   width: 100%;
-  padding-top: 1px;
-  padding-left: 1px;
-  padding-right: 1px;
-  padding-bottom: 1px;
+  padding-top: 1.2px;
+  padding-left: 1.2px;
+  padding-right: 1.2px;
   display: flex;
   flex-direction: column;
-  background-color: darkgray;
-  position: relative;
+  background-color: black;
 }
 .Event_Container .Event_Container_Box .Event_Container_Box_EventItems .Event_Container_Box_EventItems_Item .Event_Container_Box_EventItems_Item_ImageBox {
   width: 100%;
@@ -71,22 +69,18 @@
 }
 .Event_Container .Event_Container_Box .Event_Container_Box_EventItems .Event_Container_Box_EventItems_Item .Event_Container_Box_EventItems_Item_ImageBox .Event_Container_Box_EventItems_Item_ImageBox_Image {
   width: 100%;
-  height: 100%;
 }
 .Event_Container .Event_Container_Box .Event_Container_Box_EventItems .Event_Container_Box_EventItems_Item .Event_Container_Box_EventItems_Item_TextBox {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .Event_Container .Event_Container_Box .Event_Container_Box_EventItems .Event_Container_Box_EventItems_Item .Event_Container_Box_EventItems_Item_TextBox .Event_Container_Box_EventItems_Item_TextBox_Link {
   width: 100%;
   text-decoration: none;
 }
-.Event_Container .Event_Container_Box .Event_Container_Box_EventItems .Event_Container_Box_EventItems_Item .Event_Container_Box_EventItems_Item_TextBox .Event_Container_Box_EventItems_Item_TextBox_Link .Event_Container_Box_EventItems_Item_TextBox_Link_T {
+.Event_Container .Event_Container_Box .Event_Container_Box_EventItems .Event_Container_Box_EventItems_Item .Event_Container_Box_EventItems_Item_TextBox .Event_Container_Box_EventItems_Item_TextBox_Link .Event_Container_Box_EventItems_Item_TextBox_Text {
   display: flex;
   width: 100%;
-  height: 35px;
+  height: 40px;
   font-size: var(--0d875rem);
   background-color: black;
   color: white;

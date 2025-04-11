@@ -76,6 +76,31 @@
       "ID": "10",
       "Value": "Air_Gas_Filtration",
       "Title": "Air/Gas Filtration"
+    },
+    {
+      "ID": "11",
+      "Value": "Affinity",
+      "Title": "Affinity Chromatography"
+    },
+    {
+      "ID": "12",
+      "Value": "Ion_Exchange",
+      "Title": "Ion Exchange"
+    },
+    {
+      "ID": "13",
+      "Value": "Hydrophobic_Interaction",
+      "Title": "Hydrophobic Interaction"
+    },
+    {
+      "ID": "14",
+      "Value": "Mixed_Mode",
+      "Title": "Mixed Mode"
+    },
+    {
+      "ID": "15",
+      "Value": "Immobilization",
+      "Title": "Immobilization"
     }
   ],
   "Modality" : [
@@ -128,6 +153,11 @@
       "ID" : "10",
       "Value": "Life_Science_Transfection_Reagents",
       "Title": "Life Science Transfection Reagents"
+    },
+    {
+      "ID" : "11",
+      "Value": "Recombinant_Protein",
+      "Title": "Recombinant Protein"
     }
   ],
   "Manufacturer" : [

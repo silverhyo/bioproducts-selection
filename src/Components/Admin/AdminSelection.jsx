@@ -11,11 +11,6 @@ import { AuthContext } from '../../Context/AuthContext';
 
 
 // Import components
-import AdminCreate_Media from './AdminCreate/AdminCreate_Media';
-import AdminCreate_Reagent from './AdminCreate/AdminCreate_Reagent';
-import AdminCreate_Filter from './AdminCreate/AdminCreate_Filter';
-import AdminCreate_Chromatography from './AdminCreate/AdminCreate_Chromatography';
-import AdminCreate_Service from './AdminCreate/AdminCreate_Service';
 import NotFound from '../Common/NotFound';
 
 
@@ -55,12 +50,6 @@ export default function AdminSelection() {
 
         </div>
       </div>
-
-      {productsType === 'Media' && <AdminCreate_Media productsType={productsType}/>}
-      {productsType === 'Reagent' && <AdminCreate_Reagent productsType={productsType}/>}
-      {productsType === 'Filter' && <AdminCreate_Filter productsType={productsType}/>}
-      {productsType === 'Chromatography' && <AdminCreate_Chromatography productsType={productsType}/>}
-      {productsType === 'Service' && <AdminCreate_Service productsType={productsType}/>}
 
       </>
       :
