@@ -507,7 +507,8 @@ export default function AdminCreate() {
             <p className='ApplicationSpecialist_Container_Box_P'><span>😜</span> 제품에 대한 <strong>담당자 정보</strong>를 입력해 주세요. (이름, 직급, 연락처)</p>
             <div className="ApplicationSpecialist_Container_Box_Specialist">
               <p className='ApplicationSpecialist_Container_Box_Specialist_Text'><strong>담당자 정보 입력</strong></p>
-              <input className='ApplicationSpecialist_Container_Box_Specialist_Text_Name' type="text" name="SpecialistName" id="asname" placeholder="담당자 이름을 입력해 주세요" onChange={e => setApplicationSpecialistName(e.target.value)} /><br/><br/>
+              <input className='ApplicationSpecialist_Container_Box_Specialist_Text_Name' type="text" list='specialist' name="SpecialistName" id="asname" placeholder="담당자 이름을 입력해 주세요" onChange={e => setApplicationSpecialistName(e.target.value)} /><br/><br/>
+              {}
               <input className='ApplicationSpecialist_Container_Box_Specialist_Text_Position' type="text" name="SpecialistPosition" id="asposition" placeholder="담당작 직급을 입력해 주세요" onChange={e => setApplicationSpecialistPosition(e.target.value)}></input><br/><br/>
               <input className='ApplicationSpecialist_Container_Box_Specialist_Text_Mobile' type="text" name="SpecialistPhone" id="asphone" placeholder="담당자 연락처를 입력해 주세요" onChange={e => setApplicationSpecialistPhone(e.target.value)} />
             </div>

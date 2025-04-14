@@ -230,7 +230,7 @@ export default function ProductDetailModal({JSONDATA01}) {
 
 
     <div className='ProductDetail_Contact'>
-      <Contact CONTACTINFO={contactInfo} />
+      <Contact CONTACTINFO={contactInfo} productInfo={productInfo}/>
     </div>
 
 

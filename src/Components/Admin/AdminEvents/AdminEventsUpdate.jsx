@@ -210,7 +210,7 @@ export default function AdminEventsUpdate() {
     api.put('/admin/events/update/'+id, formData)
     .then(res => {
       alert('정상적으로 업데이트 되었습니다')
-      navigate('/admin/events/list')
+      navigate('/admin/home')
     })
     .catch(err => console.log(err))
   }

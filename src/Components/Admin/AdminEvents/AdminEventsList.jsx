@@ -17,11 +17,9 @@ import { MdDeleteOutline } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 
 // import Components
-import AdminNavbar from '../../Common/AdminNavbar';
 import NotFound from '../../Common/NotFound';
-import Footer from '../../Common/Footer';
-import Navigation from '../../Common/Navigation';
 import AdminEventsCreate from './AdminEventsCreate';
+
 
 
 export default function AdminEventsList() {

@@ -9,12 +9,12 @@ import { MdContactMail } from "react-icons/md";
 import { JsonDataContext } from '../../Context/JsonDataContext';
 
 // ! 아래 Prop은 ProductDetailModal로부터 받아온 것 (CONTACTINFO(mobile, manufacturer))
-export default function Contact({CONTACTINFO}) {
+export default function Contact({CONTACTINFO, productInfo}) {
 
   // ! a Tag의 정보를 넣기 위해 받아옴
   const contactInfo = CONTACTINFO;
   const jsonData01 = useContext(JsonDataContext).jsonData01.Contact;
-
+  console.log("productInfo :", productInfo)
   
   // ! 내가 부여한 조건에 맞는 값을 변수에 할당할 수 있다!!!
   let vendorEmail;
@@ -38,12 +38,12 @@ export default function Contact({CONTACTINFO}) {
         <div className='Contact_Container_Box_SmallBox'>
           <div className='Contact_Container_Box_SmallBox_EmailBox'>
             <a href={`tel:${contactInfo.mobile}`} className='Contact_Container_Box_SmallBox_EmailBox_Icon'><FaPhoneAlt /></a>
-            <a className='Contact_Container_Box_SmallBox_EmailBox_Text'>{contactInfo.inCharge} {contactInfo.position}</a>
+            <div className='Contact_Container_Box_SmallBox_EmailBox_Text'>{contactInfo.inCharge} {contactInfo.position}</div>
           </div>
             
           <div className='Contact_Container_Box_SmallBox_MobileBox'>
-            <a href={`${vendorEmail}`} className='Contact_Container_Box_SmallBox_MobileBox_Icon'><MdContactMail /></a>
-            <a className='Contact_Container_Box_SmallBox_MobileBox_Text'>제품 문의</a>
+            <a href={`${vendorEmail}`+'?details='+`${productInfo.ProductName}`} className='Contact_Container_Box_SmallBox_MobileBox_Icon'><MdContactMail /></a>
+            <div className='Contact_Container_Box_SmallBox_MobileBox_Text'>제품 문의</div>
             {/* <a className='Contact_Container_Box_SmallBox_MobileBox_Text'>{contactInfo.manufacturer} Web</a> */}
           </div>
         </div>

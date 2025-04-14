@@ -31,7 +31,7 @@
 
 .EventBanner_Container {
   width: 100%;
-  height: 200px;
+  // height: 200px;
   // border: 2px solid red;
 
   .EventBanner_Container_Box {
@@ -41,9 +41,14 @@
     .EventBanner_Container_ImageBox {
       width: 100%;
 
-      .EventBanner_Container_ImageBox_Image {
-        width: 100%;
+      .EventBanner_Container_ImageBox_Link {
+        text-decoration: none;
+
+        .EventBanner_Container_ImageBox_Image {
+          width: 100%;
+        }
       }
+
     }
   }
 }

@@ -139,7 +139,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dots {
     position: absolute;
-    bottom: -25px;
+    bottom: 0px;
     list-style: none;
     display: block;
     text-align: center;
@@ -162,9 +162,9 @@ $slick-opacity-not-active: 0.25 !default;
             width: 20px;
             outline: none;
             line-height: 0px;
-            font-size: 100px;
+            font-size: 10px; // ! silverhyo : 이 사이즈를 조절해 볼 것!
             color: transparent;
-            padding: 5px;
+            padding: 20px; // ! silverhyo : 아래서부터 dot의 높이를 설정
             cursor: pointer;
             &:hover, &:focus {
                 outline: none;
@@ -172,15 +172,16 @@ $slick-opacity-not-active: 0.25 !default;
                     opacity: $slick-opacity-on-hover;
                 }
             }
+            // ! Dot 설정하기
             &:before {
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: $slick-dot-character;
+                content: '❤️';
                 width: 20px;
                 height: 20px;
                 font-family: $slick-font-family;
-                font-size: 25px;
+                font-size: 10px; // ! silverhyo : dot 크기 설정
                 line-height: 25px;
                 text-align: center;
                 color: black; // * Color 설정

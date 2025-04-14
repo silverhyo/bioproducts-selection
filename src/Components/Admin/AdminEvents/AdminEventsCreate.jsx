@@ -161,7 +161,7 @@ export default function AdminEventsCreate() {
       .then(res => {
         alert("정상적으로 등록되었습니다.")
         console.log(res)
-        navigate('/admin/events/list')
+        navigate('/admin/home')
       })
       .catch(err => console.log(err))
     }

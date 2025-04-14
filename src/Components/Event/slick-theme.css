@@ -83,7 +83,7 @@
 
 .slick-dots {
   position: absolute;
-  bottom: -25px;
+  bottom: 0px;
   list-style: none;
   display: block;
   text-align: center;
@@ -108,9 +108,9 @@
   width: 20px;
   outline: none;
   line-height: 0px;
-  font-size: 100px;
+  font-size: 10px;
   color: transparent;
-  padding: 5px;
+  padding: 20px;
   cursor: pointer;
 }
 .slick-dots li button:hover, .slick-dots li button:focus {
@@ -123,11 +123,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  content: "•";
+  content: "❤️";
   width: 20px;
   height: 20px;
   font-family: "slick";
-  font-size: 25px;
+  font-size: 10px;
   line-height: 25px;
   text-align: center;
   color: black;
