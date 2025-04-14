@@ -31,7 +31,7 @@
   --0d625rem: 0.625rem; 
 }
 
-.AdminListEvent_None {
+.DisplayNone02 {
   display: none;
 }
 
@@ -42,6 +42,10 @@
   .AdminListEvent_Container_Box {
     width: 100%;
     padding: 10px;
+
+    .AdminListEvent_Container_Box_Count {
+      
+    }
 
     .AdminListEvent_Container_Box_ProductBox {
       width: 100%;

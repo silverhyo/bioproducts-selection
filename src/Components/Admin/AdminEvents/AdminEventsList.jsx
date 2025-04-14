@@ -33,17 +33,17 @@ export default function AdminEventsList() {
   const api = useContext(AxiosContext).api;
 
 
-  const [eventDtBase, setEventDtBase] = useState(eventDataBase || []);
-  useEffect(() => {
-    if(eventDataBase) {
-      setEventDtBase(eventDataBase)
-    }
-  }, [eventDataBase]);
-
-
 
   // 삭제를 위한 함수
   const handleDelete = (id) => {
+    if(window.confirm('정말 삭제하시겠습니까?')) {
+      handleProduct(id)
+    } else {
+      alert('취소되었습니다.')
+    }
+  }
+
+  const handleProduct = (id) => {
     api.delete('/api/admin/events/delete/'+id)
     .then(res => {
       alert("삭제되었습니다.")
@@ -56,60 +56,71 @@ export default function AdminEventsList() {
   // ! 제품등록을 위한 작업
   const [text, setText] = useState('이벤트 등록하기')
   const [isOn, setIsOn] = useState(false);
-  const [nameOfClass, setNameOfClass] = useState('AdminList_Container');
+  const [nameOfClass, setNameOfClass] = useState('AdminListEvent_Container');
   function toggleHandler() {
-    
     setIsOn(!isOn);
     isOn ? setText('이벤트 등록하기') : setText('취소하기');
-    isOn ? setNameOfClass('AdminListEvent_Container') : setNameOfClass('AdminListEvent_None');
+    isOn ? setNameOfClass('AdminListEvent_Container') : setNameOfClass('DisplayNone02');
   };
+
+  const [eventDtBase, setEventDtBase] = useState(eventDataBase || []);
+  useEffect(() => {
+    if(eventDataBase) {
+      setEventDtBase(eventDataBase)
+    }
+  }, [eventDataBase]);
 
   return (
     <>
 
-    {userInformation.databaseLevel == 'Admin' ?
-    <>
-      <div className='AdminListEvent_Container'>
-        <div className='AdminListEvent_Container_Box'>
-          <div className='AdminListEvent_Container_Box_Count'>{eventDtBase.length}개의 Event가 있습니다</div>
-
-          {eventDtBase?.map((item, index) => {
-            return (
-              <div key={item.ID} className='AdminListEvent_Container_Box_ProductBox'>
-                <div className='AdminListEvent_Container_Box_ProductBox_ImageBox'>
-                  <img className='AdminListEvent_Container_Box_ProductBox_ImageBox_Image' src={item.EventImageURL} alt=""></img>
-                </div>
-                <div className='AdminListEvent_Container_Box_ProductBox_TextBox'>
-                  <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'>{item.EventName}_({item.ID})</p>
-                  <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'>{item.EventTitle}</p>
-                  <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'>{item.EventClose} / {item.RegiDate}</p>
-                  <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'></p>
-                  <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'></p>
-                </div>
-                <div className='AdminListEvent_Container_Box_ProductBox_TextBox_ButtonBox'>
-                  <button className='AdminListEvent_Container_Box_ProductBox_TextBox_ButtonBox_Button_Delete' onClick={() => handleDelete(item.ID)}><MdDeleteOutline /></button>
-                  <Link to={`/admin/events/update/${item.ID}`}><div className='AdminListEvent_Container_Box_ProductBox_TextBox_ButtonBox_Button_Update'><CiEdit /></div></Link>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-
-
+      {userInformation.databaseLevel == 'Admin' ?
       <>
-        {isOn ? <AdminEventsCreate /> : ''}
-      </>
+        <div className={nameOfClass}>
+          <div className='AdminListEvent_Container_Box'>
+            <div className='AdminListEvent_Container_Box_Count'>{eventDtBase.length}개의 Event가 있습니다</div>
+  
+            {eventDtBase?.map((item, index) => {
+              return (
+                <div key={item.ID} className='AdminListEvent_Container_Box_ProductBox'>
 
-      <div className='AdminList_Registration_ButtonBox' onClick={toggleHandler}>
-        <div className='AdminList_Registration_ButtonBox_Button'>
-          {text}
+                  <div className='AdminListEvent_Container_Box_ProductBox_ImageBox'>
+                    <img className='AdminListEvent_Container_Box_ProductBox_ImageBox_Image' src={item.EventImageURL} alt=""></img>
+                  </div>
+
+                  <div className='AdminListEvent_Container_Box_ProductBox_TextBox'>
+                    <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'>{item.EventName}_({item.ID})</p>
+                    <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'>{item.EventTitle}</p>
+                    <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'>{item.EventClose} / {item.RegiDate}</p>
+                    <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'></p>
+                    <p className='AdminListEvent_Container_Box_ProductBox_TextBox_P'></p>
+                  </div>
+
+                  <div className='AdminListEvent_Container_Box_ProductBox_TextBox_ButtonBox'>
+                    <button className='AdminListEvent_Container_Box_ProductBox_TextBox_ButtonBox_Button_Delete' onClick={() => handleDelete(item.ID)}><MdDeleteOutline /></button>
+                    <Link to={`/admin/events/update/${item.ID}`}><div className='AdminListEvent_Container_Box_ProductBox_TextBox_ButtonBox_Button_Update'><CiEdit /></div></Link>
+                  </div>
+
+                </div>
+              )
+            })}
+          </div>
         </div>
-      </div>
-    </>
-    :
-    <NotFound />
-    }
+  
+  
+        <>
+          {isOn ? <AdminEventsCreate /> : ''}
+        </>
+  
+        <div className='AdminList_Registration_ButtonBox' onClick={toggleHandler}>
+          <div className='AdminList_Registration_ButtonBox_Button'>
+            {text}
+          </div>
+        </div>
+        
+      </>
+      :
+      <NotFound />
+      }
     </>
   )
 }

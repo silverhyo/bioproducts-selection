@@ -143,7 +143,7 @@ export default function AdminUpdate() {
       setCheckedValueLists(checkedValueLists.filter((el) => el!==checkedValue))
     }
   };
-  console.log("modalityChecked :",checkedValueLists);
+  // console.log("modalityChecked :",checkedValueLists);
 
 
   // Filtration
@@ -155,7 +155,7 @@ export default function AdminUpdate() {
       setProductFiltration(productFiltration.filter((el) => el!==checkedValue))
     }
   }
-  console.log("productFiltration :", productFiltration);
+  // console.log("productFiltration :", productFiltration);
 
 
   // CellLine
@@ -167,7 +167,7 @@ export default function AdminUpdate() {
       setProductCellLine(productCellLine.filter((el) => el!==checkedValue))
     }
   }
-  console.log("productCellLine :", productCellLine);
+  // console.log("productCellLine :", productCellLine);
 
   
   // Product Description A
@@ -253,7 +253,7 @@ export default function AdminUpdate() {
       setTrueFalse(false)
     }    
   }
-  console.log("trueFalse :", trueFalse);
+  // console.log("trueFalse :", trueFalse);
 
 
 
@@ -263,15 +263,15 @@ export default function AdminUpdate() {
   const [ modalityChecked, setModalityChecked] = useState([])
   function isModalityChecked() {
     let modalityChecked = document.querySelectorAll(".Edit_ModalityProducts_Container_Box_Small_Input");
-    console.log("================================modalityChecked :", modalityChecked);
+    // console.log("================================modalityChecked :", modalityChecked);
     let valueOfModalityProducts = values.modalityProducts;
-    console.log("================================valueOfModalityProducts :", valueOfModalityProducts);
+    // console.log("================================valueOfModalityProducts :", valueOfModalityProducts);
     let modalityIsChecked = valueOfModalityProducts?.split(',');
-    console.log("================================modalityIsChecked :", modalityIsChecked);
+    // console.log("================================modalityIsChecked :", modalityIsChecked);
     for(let i = 0; i < modalityChecked.length; i++) {
       if(modalityIsChecked?.includes(modalityChecked[i].value)) {
-        console.log("================================modalityIsChecked.includes(modalityChecked[i].value :", valueOfModalityProducts.includes(modalityChecked[i].value));
-        console.log("================================modalityChecked[i].value :", modalityChecked[i].value);
+        // console.log("================================modalityIsChecked.includes(modalityChecked[i].value :", valueOfModalityProducts.includes(modalityChecked[i].value));
+        // console.log("================================modalityChecked[i].value :", modalityChecked[i].value);
         modalityChecked[i].checked = true;
       }
     }
@@ -284,16 +284,16 @@ export default function AdminUpdate() {
 
   function isFiltrationChecked() {
     let filtrationChecked = document.querySelectorAll(".Edit_ApplicationFilterProducts_Container_Box_Small_Input");
-    console.log("================================filtrationChecked :", filtrationChecked);
+    // console.log("================================filtrationChecked :", filtrationChecked);
     let valueOfPFiltration = values.PFiltration;
-    console.log("================================valueOfPFiltration :", valueOfPFiltration);
+    // console.log("================================valueOfPFiltration :", valueOfPFiltration);
     // 아래에 valueOfPFiltration에 ?를 붙여준 이유는 이 곳에 data가 없을 수 있기 때문이다. ?를 붙임으로써 없는 것에 대한 대응을 할 수 있다.
     let filtrationIsChecked = valueOfPFiltration?.split(',');
-    console.log("================================filtrationIsChecked :", filtrationIsChecked);
+    // console.log("================================filtrationIsChecked :", filtrationIsChecked);
     for(let i = 0; i < filtrationChecked.length; i++) {
       if(filtrationIsChecked?.includes(filtrationChecked[i].value)) {
-        console.log("================================filtrationIsChecked.includes(filtrationChecked[i].value) :", filtrationIsChecked.includes(filtrationChecked[i].value));
-        console.log("================================filtrationChecked[i].value :", filtrationChecked[i].value);
+        // console.log("================================filtrationIsChecked.includes(filtrationChecked[i].value) :", filtrationIsChecked.includes(filtrationChecked[i].value));
+        // console.log("================================filtrationChecked[i].value :", filtrationChecked[i].value);
         filtrationChecked[i].checked = true;
       }
     }
@@ -305,19 +305,19 @@ export default function AdminUpdate() {
     // Cell Line
     // 01. 자! 먼저 Product Cell Line의 모든 input box를 모두 가져온다!!
     let cellLineChecked = document.querySelectorAll(".Edit_ApplicationCellLine_Container_Box_Small_Input");
-    console.log("================================cellLineChecked :", cellLineChecked);
+    // console.log("================================cellLineChecked :", cellLineChecked);
     // 02. 선택한 제품에서 이미 선택된 value값을 모두 가져온다. 배열은 아니네
     let valueOfPCellLine = values.PCellLine;
-    console.log("================================valueOfPCellLine :", valueOfPCellLine);
+    // console.log("================================valueOfPCellLine :", valueOfPCellLine);
     // 아래에 valueOfPFiltration에 ?를 붙여준 이유는 이 곳에 data가 없을 수 있기 때문이다. ?를 붙임으로써 없는 것에 대한 대응을 할 수 있다.
     // 03. 하나씩 분리하여 배열을 만든다. 
     let cellLineIsChecked = valueOfPCellLine?.split(',');
-    console.log("================================cellLineIsChecked :", cellLineIsChecked);
+    // console.log("================================cellLineIsChecked :", cellLineIsChecked);
     // 04. 배열의 각 index를 순회하며 각각의 item에 checked 표시를 한다.
     for(let i = 0; i < cellLineChecked.length; i++) {
       if(cellLineIsChecked?.includes(cellLineChecked[i].value)){
-        console.log("================================cellLineIsChecked.includes(cellLineChecked[i].value) :", cellLineIsChecked.includes(cellLineChecked[i].value));
-        console.log("================================cellLineChecked[i].value :", cellLineChecked[i].value);
+        // console.log("================================cellLineIsChecked.includes(cellLineChecked[i].value) :", cellLineIsChecked.includes(cellLineChecked[i].value));
+        // console.log("================================cellLineChecked[i].value :", cellLineChecked[i].value);
         cellLineChecked[i].checked = true;
       }
     }
@@ -326,9 +326,9 @@ export default function AdminUpdate() {
 
   function isAdvertiseChecked() {
     let advertiseChecked = document.querySelector('.AdvertiseDo_Container_Box_Small_Input');
-    console.log("================================advertiseChecked_1 :", advertiseChecked);
+    // console.log("================================advertiseChecked_1 :", advertiseChecked);
     let valueOfAdvertise = values?.AdDo;
-    console.log("================================valueOfAdvertise_2 :", valueOfAdvertise);
+    // console.log("================================valueOfAdvertise_2 :", valueOfAdvertise);
     if(valueOfAdvertise === 1) {
       advertiseChecked.checked = true;
     } else {
@@ -383,7 +383,7 @@ export default function AdminUpdate() {
     .then(res => {
       alert("정상적으로 수정되었습니다.")
       console.log(res)
-      navigate('/admin/products/list')
+      navigate('/admin/home')
     })
     .catch(err => console.log(err))
   }
@@ -593,17 +593,18 @@ export default function AdminUpdate() {
 
 
           {/* Product Description D */}
+          {/* Documentation */}
           <div className='Edit_DescriptionD_Container'>
             <div className='Edit_DescriptionD_Container_Box'>
 
-              <p className='Edit_DescriptionD_Container_Box_P'><span>제품등록 4</span> : 제품에 대한 <strong>상세 설명</strong>을 입력해 주세요.</p>
+              <p className='Edit_DescriptionD_Container_Box_P'><span>자료등록 1</span> : 자료에 대한 <strong>정보</strong>를 입력해 주세요.</p>
 
               <div className="Edit_DescriptionD_Container_Box_P_Small">
                 <p className='Edit_DescriptionD_Container_Box_P_Small_P'></p>
                 <img className='Edit_DescriptionD_Container_Box_P_Small_Image' src={imgFileD ? imgFileD : values.PFileD1} alt="" /><br />
-                <input className='Edit_DescriptionD_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionD1" ref={imgRefD} id="Edit_fileInputD" accept="image/*" onChange={settingDetailD1} /><br/><br/>
-                <input className='Edit_DescriptionD_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionD2" value={values.PTitleD2} onChange={e => setValues({...values, PTitleD2: e.target.value})} ></input><br/><br/>
-                <textarea className='Edit_DescriptionD_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionD3" value={values.PDescriptionD3} onChange={e => setValues({...values, PDescriptionD3: e.target.value})} />
+                <input className='Edit_DescriptionD_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionD1" ref={imgRefD} id="Edit_fileInputD" accept="image/*" onChange={settingDetailD1}></input>
+                <input className='Edit_DescriptionD_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionD2" value={values.PTitleD2} onChange={e => setValues({...values, PTitleD2: e.target.value})} ></input>
+                <input className='Edit_DescriptionD_Container_Box_P_Small_Input3' type='text' name="Edit_DescriptionD3" value={values.PDescriptionD3} onChange={e => setValues({...values, PDescriptionD3: e.target.value})}></input>
               </div>
 
             </div>
@@ -611,17 +612,18 @@ export default function AdminUpdate() {
 
 
           {/* Product Description E */}
+          {/* Documentation */}
           <div className='Edit_DescriptionE_Container'>
             <div className='Edit_DescriptionE_Container_Box'>
 
-              <p className='Edit_DescriptionE_Container_Box_P'><span>자료등록 1</span> : 자료에 대한 <strong>정보</strong>를 입력해 주세요.</p>
+              <p className='Edit_DescriptionE_Container_Box_P'><span>자료등록 2</span> : 자료에 대한 <strong>정보</strong>를 입력해 주세요.</p>
 
               <div className="Edit_DescriptionE_Container_Box_P_Small">
                 <p className='Edit_DescriptionE_Container_Box_P_Small_P'></p>
                 <img className='Edit_DescriptionE_Container_Box_P_Small_Image' src={imgFileE ? imgFileE : values.PFileE1} alt="" /><br />
-                <input className='Edit_DescriptionE_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionE1" id="Edit_fileInputE" ref={imgRefE} accept="image/*" onChange={settingDetailE1} /><br/><br/>
-                <input className='Edit_DescriptionE_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionE2" value={values.PTitleE2} onChange={e => setValues({...values, PTitleE2: e.target.value})} ></input><br/><br/>
-                <input className='Edit_DescriptionE_Container_Box_P_Small_Textarea' cols="60" rows="10" name="Edit_DescriptionE3" value={values.PDescriptionE3} onChange={e => setValues({...values, PDescriptionE3: e.target.value})} />
+                <input className='Edit_DescriptionE_Container_Box_P_Small_Input1' type="file" name="Edit_DescriptionE1" id="Edit_fileInputE" ref={imgRefE} accept="image/*" onChange={settingDetailE1}></input>
+                <input className='Edit_DescriptionE_Container_Box_P_Small_Input2' type="text" name="Edit_DescriptionE2" value={values.PTitleE2} onChange={e => setValues({...values, PTitleE2: e.target.value})} ></input>
+                <input className='Edit_DescriptionE_Container_Box_P_Small_Input3' type='text' name="Edit_DescriptionE3" value={values.PDescriptionE3} onChange={e => setValues({...values, PDescriptionE3: e.target.value})}></input>
               </div>
 
             </div>

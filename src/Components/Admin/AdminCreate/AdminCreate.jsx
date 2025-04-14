@@ -229,7 +229,7 @@ export default function AdminCreate() {
     .then(res => {
       alert("정상적으로 등록되었습니다.")
       console.log(res)
-      navigate('/admin/products/list')
+      navigate('/admin/home')
     })
     .catch(err => console.log(err))
   }
