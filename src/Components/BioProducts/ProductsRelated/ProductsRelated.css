@@ -43,7 +43,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 6px;
   margin-bottom: 40px;
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item {
@@ -88,20 +88,16 @@
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02 .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title01 {
   flex: 1;
 }
-.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02 .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title02 {
-  flex: 1;
-  font-size: 13px;
-  text-align: left;
-  padding-left: 10px;
-  padding-top: 5px;
-}
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02 .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title03 {
-  flex: 1;
+  flex: 2;
   width: 100%;
   font-size: var(--0d625rem);
   text-align: left;
   font-weight: 700;
   padding-top: 5px;
   padding-left: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
+}
+.ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02 .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title03 .ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title03_Span {
+  font-weight: 600;
 }/*# sourceMappingURL=ProductsRelated.css.map */

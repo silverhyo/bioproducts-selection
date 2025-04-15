@@ -99,8 +99,8 @@ export default function ProductsRelated({PRODUCTINFO}) {
                 <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02'>
 
                   <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title01'></div>
-                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title02'>{item.ProductMainTitle}</div>
-                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title03'>{item.ProductName}</div>
+                  {/* <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title02'>{item.ProductMainTitle}</div> */}
+                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title03'>{item.ProductName} <span className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title03_Span'>({item.ProductMainTitle})</span></div>
                 
 
                 </div>
