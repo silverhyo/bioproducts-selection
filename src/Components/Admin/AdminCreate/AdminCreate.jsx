@@ -321,7 +321,7 @@ export default function AdminCreate() {
         <div className='ApplicationFilterProducts_Container'>
           <div className='ApplicationFilterProducts_Container_Box'>
 
-            <p className='ApplicationFilterProducts_Container_Box_P'><span>😜</span> <strong>Filtration</strong>의 목적을 선택해 주세요. (중복 선택)</p>
+            <p className='ApplicationFilterProducts_Container_Box_P'><span>😜</span> <strong>DSP 공정 단계</strong>를 선택해 주세요. (중복 선택)</p>
             {jsonData01.Filtration.map((filter, index) => {
               return (
                 <div className='ApplicationFilterProducts_Container_Box_Small' key={filter.ID}>

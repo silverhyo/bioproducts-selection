@@ -471,7 +471,7 @@ export default function AdminUpdate() {
           <div className='Edit_ApplicationFilterProducts_Container'>
             <div className='Edit_ApplicationFilterProducts_Container_Box'>
 
-              <p className='Edit_ApplicationFilterProducts_Container_Box_P'><span>😘</span> <strong>Filtration</strong>의 목적을 선택해 주세요. (중복 선택 가능)</p>
+              <p className='Edit_ApplicationFilterProducts_Container_Box_P'><span>😘</span> <strong>DSP 공정 단계</strong>를 선택해 주세요. (중복 선택 가능)</p>
               {jsonData01.Filtration.map((filtration, index) => {
                 return (
                   <div className='Edit_ApplicationFilterProducts_Container_Box_Small' key={filtration.ID}>

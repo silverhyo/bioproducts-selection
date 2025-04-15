@@ -76,9 +76,6 @@ export default function ProductsRelated({PRODUCTINFO}) {
         <div className='ProductsRelated_Container_Box_Title'>
           관련 제품 및 서비스
         </div>
-        {/* <div className='ProductsRelated_Container_Box_Description'>
-          위 제품과 관련된 다른 제품 및 서비스를 안내해 드립니다.
-        </div> */}
 
         <div className='ProductsRelated_Container_Box_ProductsRelated'>
         
@@ -86,16 +83,29 @@ export default function ProductsRelated({PRODUCTINFO}) {
           return (
             <Link key={index} to={`/bioproducts/${item.ID}`} style={{textDecoration:"none"}}>
               <div className='ProductsRelated_Container_Box_ProductsRelated_Item' onClick={(e) => pageMove(item.ID)}>
-                
-                <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox'>
-                  <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image' src={item.ProductMainImage} alt=''></img>
+
+                <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_01'>
+
+                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox'>
+                    <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox_Image' src={item.ProductMainImage} alt=''></img>
+                  </div>
+                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1'>
+                    <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1_Image'src='' alt=''></img>
+                  </div>
+
                 </div>
-                <div className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1'>
-                  <img className='ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox1_Image'src='' alt=''></img>
-                </div>
-                <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Title'>{item.ProductName}</div>
+
+
+                <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02'>
+
+                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title01'></div>
+                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title02'>{item.ProductMainTitle}</div>
+                  <div className='ProductsRelated_Container_Box_ProductsRelated_Item_Part_02_Title03'>{item.ProductName}</div>
                 
+
+                </div>
               </div>
+    
             </Link>
           )
         })}

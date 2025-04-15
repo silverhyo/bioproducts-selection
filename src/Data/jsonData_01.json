@@ -312,36 +312,26 @@
   "Service" : [
     {
       "ID" : "1",
-      "Value" : "ExSim",
-      "Title" : "ExSim"
+      "Value" : "Confidence_Service",
+      "Title" : "Confidence Service"
     },
     {
       "ID" : "2",
-      "Value" : "Container_Validation",
-      "Title" : "Container Validation"
+      "Value" : "Biosafe_Service",
+      "Title" : "Biosafe_ ervice"
     },
     {
       "ID" : "3",
-      "Value" : "Filter_Validation",
-      "Title" : "Filter Validation"
-    },
-    {
-      "ID" : "4",
-      "Value" : "Virus_Clearance_Study",
-      "Title" : "Virus Clearance Study"
-    },
-    {
-      "ID" : "5",
       "Value" : "Plasmid_Engineering_Service",
       "Title" : "Plasmid Engineering Service"
     },
     {
-      "ID" : "6",
+      "ID" : "4",
       "Value" : "Plasmid_Manufacturing_Service",
       "Title" : "Plasmid Manufacturing Service"
     },
     {
-      "ID" : "7",
+      "ID" : "5",
       "Value" : "Protein_Antibody_Manufacturing_Service",
       "Title" : "Protein Antibody Manufacturing Service"
     }

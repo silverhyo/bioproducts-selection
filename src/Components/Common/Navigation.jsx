@@ -60,7 +60,7 @@ export default function Navigation() {
       <div className='Navigation_Container_Box'>
 
         <div className='Navigation_Container_ImageBox01'>
-          <img className='Navigation_Container_ImageBox_Image01' src={LogoSartoriusWhite} alt=""></img>
+          <Link to='/bioproducts'><img className='Navigation_Container_ImageBox_Image01' src={LogoSartoriusWhite} alt=""></img></Link>
         </div>
 
         <div className='Navigation_Container_ImageBox02'>
