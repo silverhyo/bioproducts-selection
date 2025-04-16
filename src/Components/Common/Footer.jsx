@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
 
         <div className='FooterSection_Container_Box_Text'>
-          <Link to='/admin/home' style={{textDecoration:"none", color:"white", cursor:"pointer"}}><p>Copyright 2025. silverhyo All rights reserved.</p></Link>
+          <Link to='/admin/home' style={{textDecoration:"none", color:"white", cursor:"pointer"}}><p>Copyright 2025. Sartorius All rights reserved.</p></Link>
         </div>
 
       </div>
