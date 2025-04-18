@@ -13,15 +13,15 @@ export default function Footer() {
       <div className='FooterSection_Container_Box'>
 
         <div className='FooterSection_Container_Box_Email'>
-          <a href="mailto:silverhyo1@naver.com" className='FooterSection_Container_Box_Email_Text'>
+          <a href="https://www.instagram.com/sartorius_korea/" className='FooterSection_Container_Box_Email_Text'>
             <FaInstagram />
           </a>
 
-          <a href="mailto:silverhyo1@naver.com" className='FooterSection_Container_Box_Email_Text'>
+          <a href="https://www.sartorius.co.kr/mobile/request-mobile.html" className='FooterSection_Container_Box_Email_Text'>
             <TfiEmail />
           </a>
 
-          <a href="mailto:silverhyo1@naver.com" className='FooterSection_Container_Box_Email_Text'>
+          <a href="https://www.facebook.com/sartoriuskorea" className='FooterSection_Container_Box_Email_Text'>
             <FiFacebook />
           </a>
         </div>

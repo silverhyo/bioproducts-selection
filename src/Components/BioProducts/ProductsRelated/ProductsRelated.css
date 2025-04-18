@@ -56,6 +56,7 @@
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Part_01 {
   flex: 1;
+  background: white;
 }
 .ProductsRelated_Container .ProductsRelated_Container_Box .ProductsRelated_Container_Box_ProductsRelated .ProductsRelated_Container_Box_ProductsRelated_Item .ProductsRelated_Container_Box_ProductsRelated_Item_Part_01 .ProductsRelated_Container_Box_ProductsRelated_Item_ImageBox {
   width: 100%;
