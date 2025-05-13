@@ -24,7 +24,7 @@ export default function Home() {
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
 
 
-  console.log("userInformation :", userInformation);
+  console.log("userInformation :", 'userInformation');
   const [dtBaseData, setDtBaseData] = useState(productsDataBase);
   const [productRegisteredNewly, setProductRegisteredNewly] = useState(productsDataBase);
   const [productsOfThisMonth, setProductsOfThisMonth] =useState(productsDataBase);

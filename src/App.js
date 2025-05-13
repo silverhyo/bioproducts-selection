@@ -182,7 +182,7 @@ export default function App() {
       console.log("로그인된 user가 없습니다!")
     }
   },[userStatus?.isLoggedIn]);
-  console.log("userDatabaseInfo :", userDatabaseInfo);
+  console.log("userDatabaseInfo :", 'userDatabaseInfo');
 
 
 
