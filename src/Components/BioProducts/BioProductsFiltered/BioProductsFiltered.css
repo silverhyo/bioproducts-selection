@@ -100,19 +100,29 @@
   text-decoration: none;
 }
 .BioProductsFiltered_Container .BioProductsFiltered_Box .BioProductsFiltered_Box_Text .BioProductsFiltered_Box_Text_Emotion {
-  width: 200px;
-  font-size: var(--0d875rem);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: auto;
+  display: flex;
+  column-gap: 30px;
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 0px;
+  right: 24px;
+  z-index: 0;
 }
-.BioProductsFiltered_Container .BioProductsFiltered_Box .BioProductsFiltered_Box_Text .BioProductsFiltered_Box_Text_Emotion .emotion {
+.BioProductsFiltered_Container .BioProductsFiltered_Box .BioProductsFiltered_Box_Text .BioProductsFiltered_Box_Text_Emotion .BioProductsFiltered_Box_Text_Emotion_Detail,
+.BioProductsFiltered_Container .BioProductsFiltered_Box .BioProductsFiltered_Box_Text .BioProductsFiltered_Box_Text_Emotion .BioProductsFiltered_Box_Text_Emotion_Heart,
+.BioProductsFiltered_Container .BioProductsFiltered_Box .BioProductsFiltered_Box_Text .BioProductsFiltered_Box_Text_Emotion .BioProductsFiltered_Box_Text_Emotion_Like {
+  flex: 1;
+  font-size: 16px;
   display: inline-block;
   cursor: pointer;
   z-index: 100;
   text-align: center;
+  line-height: 0px;
+}
+.BioProductsFiltered_Container .BioProductsFiltered_Box .BioProductsFiltered_Box_Text .BioProductsFiltered_Box_Text_Emotion .BioProductsFiltered_Box_Text_Emotion_Like_Text {
+  font-size: 12px;
+  position: absolute;
+  bottom: 9px;
 }
 
 @keyframes fadeIn07 {
@@ -133,4 +143,23 @@
     column-gap: 10px;
     transition: 0.5s;
   }
+}
+.material-symbols-outlined {
+  font-size: 18px;
+  color: lightgray;
+  margin-right: 6px;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 20, "opsz" 48;
+}
+
+.material-symbols-outlined:hover {
+  font-size: 18px;
+  color: #FFF100;
+  transition: 0.2s;
+}
+
+.material-symbols-outlined .active {
+  font-size: 18px;
+  color: lightgray;
+  margin-right: 6px;
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 20, "opsz" 48;
 }/*# sourceMappingURL=BioProductsFiltered.css.map */

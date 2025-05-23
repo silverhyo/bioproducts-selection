@@ -14,7 +14,7 @@ export default function Contact({CONTACTINFO, productInfo}) {
   // ! a Tag의 정보를 넣기 위해 받아옴
   const contactInfo = CONTACTINFO;
   const jsonData01 = useContext(JsonDataContext).jsonData01.Contact;
-  console.log("productInfo :", productInfo)
+  // console.log("productInfo :", productInfo)
   
   // ! 내가 부여한 조건에 맞는 값을 변수에 할당할 수 있다!!!
   let vendorEmail;
@@ -28,7 +28,7 @@ export default function Contact({CONTACTINFO, productInfo}) {
     vendorEmail = jsonData01[0].Thermo;
   }
   
-  console.log("contactInfo :", contactInfo);
+  // console.log("contactInfo :", contactInfo);
 
 
   return (

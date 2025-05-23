@@ -22,9 +22,6 @@ export default function Home() {
   const userInformation = useContext(AuthContext).userStatus;
   const imageURL = useContext(ImageAddressContext).imageURL;
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
-
-
-  console.log("userInformation :", 'userInformation');
   const [dtBaseData, setDtBaseData] = useState(productsDataBase);
   const [productRegisteredNewly, setProductRegisteredNewly] = useState(productsDataBase);
   const [productsOfThisMonth, setProductsOfThisMonth] =useState(productsDataBase);

@@ -176,13 +176,13 @@ export default function App() {
           databaseProfileImageThumbnail: res?.data[0].profileImageThumbnail,
           databaseUserId: res?.data[0].user_id
         }))
-      .then(console.log("User 정보를 Database로부터 가져왔습니다. :"))
+      .then(console.log("안녕하세요"))
       .catch(err => console.log(err));
     } else {
-      console.log("로그인된 user가 없습니다!")
+      // console.log("로그인된 user가 없습니다!")
     }
   },[userStatus?.isLoggedIn]);
-  console.log("userDatabaseInfo :", 'userDatabaseInfo');
+  // console.log("userDatabaseInfo :", 'userDatabaseInfo');
 
 
 

@@ -24,7 +24,7 @@ export default function ProductsRelated({PRODUCTINFO}) {
     const itemProductArray = item.ProductRelated?.split(', ').map((s) => s.trim());
     return productInfoArray?.some((value) => itemProductArray?.includes(value));
   });
-  console.log("ProductRelated :", ProductRelated)
+  // console.log("ProductRelated :", ProductRelated)
 
 
   // ! 화면을 새로 고쳐서 관련 제품 페이지로 이동

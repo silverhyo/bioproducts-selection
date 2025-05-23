@@ -17,7 +17,7 @@ export default function EventBanner() {
 
   const eventDataBase = useContext(UserEventDataBaseContext).eventBaseData || [];
   const imageURL = useContext(ImageAddressContext).imageURL;
-  console.log("eventDataBase :", eventDataBase);
+  // console.log("eventDataBase :", eventDataBase);
 
   let settings = {
     dots: true, // 사진 및에 뜨는  동그라미 적용 여부

@@ -21,8 +21,6 @@ export default function Filtering_V1() {
   const productsDataBase = useContext(ProductsDataBaseContext).dtBaseData;
   const jsonData01 = useContext(JsonDataContext).jsonData01;
 
-  console.log("[Filtering_V1]-URL :", URL);
-
   const [filteredProducts, setFilteredProducts] = useState(productsDataBase || []);
   
   // 01. Filter가 적용된 Products를 BioProductsFiltered에 Props로 전달해야 함, 처음엔 모든 아이템이 보여야 함
@@ -31,7 +29,7 @@ export default function Filtering_V1() {
       setFilteredProducts(productsDataBase)
     }
   },[productsDataBase]);
-  console.log("filteredProducts :", filteredProducts);
+  // console.log("filteredProducts :", filteredProducts);
 
 
 
@@ -49,7 +47,7 @@ export default function Filtering_V1() {
     .filter(item => item.trim() != ''); // 빈문자열 제거
   let finalNewProductTypeOptionArr = [...new Set(newProductTypeOptionArr)];
   let sortFinalNewProductTypeOptionArr = finalNewProductTypeOptionArr.sort(); // 알파벳 순서대로 정열
-  console.log("sortFinalNewProductTypeOptionArr ;", sortFinalNewProductTypeOptionArr)
+  // console.log("sortFinalNewProductTypeOptionArr ;", sortFinalNewProductTypeOptionArr)
 
 
   // TODO Modality로 중복, null 제거 / 분리
@@ -64,7 +62,7 @@ export default function Filtering_V1() {
     .filter(item => item.trim() != ''); // 빈문자열 제거
   let finalNewProductModalityOptionArr = [...new Set(newProductModalityOptionArr)];
   let sortFinalNewProductModalityOptionArr = finalNewProductModalityOptionArr.sort(); // 알파벳 순서대로 정열
-  console.log("sortFinalNewProductModalityOptionArr ;", sortFinalNewProductModalityOptionArr)
+  // console.log("sortFinalNewProductModalityOptionArr ;", sortFinalNewProductModalityOptionArr)
 
 
    // TODO CellLine 중복, null 제거 / 분리
@@ -79,7 +77,7 @@ export default function Filtering_V1() {
     .filter(item => item.trim() != ''); // 빈문자열 제거
   let finalNewProductCellLineOptionArr = [...new Set(newProductCellLineOptionArr)];
   let sortFinalNewProductCellLineOptionArr = finalNewProductCellLineOptionArr.sort(); // 알파벳 순서대로 정열
-  console.log("sortFinalNewProductCellLineOptionArr ;", sortFinalNewProductCellLineOptionArr)
+  // console.log("sortFinalNewProductCellLineOptionArr ;", sortFinalNewProductCellLineOptionArr)
 
 
   // TODO Filtration 중복, null 제거 / 분리
@@ -94,7 +92,7 @@ export default function Filtering_V1() {
     .filter(item => item.trim() != ''); // 빈문자열 제거
   let finalNewProductFiltrationOptionArr = [...new Set(newProductFiltrationOptionArr)];
   let sortFinalNewProductFiltrationOptionArr = finalNewProductFiltrationOptionArr.sort(); // 알파벳 순서대로 정열
-  console.log("sortFinalNewProductFiltrationOptionArr ;", sortFinalNewProductFiltrationOptionArr)
+  // console.log("sortFinalNewProductFiltrationOptionArr ;", sortFinalNewProductFiltrationOptionArr)
 
 
   // TODO Service 중복, null 제거 / 분리
@@ -109,7 +107,7 @@ export default function Filtering_V1() {
     .filter(item => item.trim() != ''); // 빈문자열 제거
   let finalNewServiceOptionArr = [...new Set(newServiceOptionArr)];
   let sortFinalNewServiceOptionArr = finalNewServiceOptionArr.sort(); // 알파벳 순서대로 정열
-  console.log("sortFinalNewServiceOptionArr ;", sortFinalNewServiceOptionArr)
+  // console.log("sortFinalNewServiceOptionArr ;", sortFinalNewServiceOptionArr)
 
 
   // TODO Manufacture 중복, null 제거 / 분리
@@ -124,7 +122,7 @@ export default function Filtering_V1() {
     .filter(item => item.trim() != ''); // 빈문자열 제거
   let finalNewProductManufacturerOptionArr = [...new Set(newProductManufacturerOptionArr)];
   let sortFinalNewProductManufacturerOptionArr = finalNewProductManufacturerOptionArr.sort(); // 알파벳 순서대로 정열
-  console.log("sortFinalNewProductManufacturerOptionArr ;", sortFinalNewProductManufacturerOptionArr)
+  // console.log("sortFinalNewProductManufacturerOptionArr ;", sortFinalNewProductManufacturerOptionArr)
 
 
   // ! 03 : Filtering 구현 위한 조건
