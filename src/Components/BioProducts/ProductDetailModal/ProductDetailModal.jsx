@@ -30,8 +30,9 @@ export default function ProductDetailModal({JSONDATA01}) {
 
   const [productInfo, setProductInfo] = useState('' || '');
   useEffect(() => {
-    api.get('/bioproducts/'+id)
+    api.get('/products/'+id)
     .then(res => {
+      console.log(res)
       setProductInfo(res.data[0])
     })
     .catch(err => console.log(err))
