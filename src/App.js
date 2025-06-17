@@ -75,13 +75,14 @@ export default function App() {
   // ! 아래는 database로부터 products 정보를 가져오기 위한 code임
   const [dtBaseData, setDtBaseData] = useState('' || '')
   useEffect(() => {
-    api.get('/api')
+    api.get('/api/products')
     .then(res => setDtBaseData(res.data))
     .catch(err => console.log(err))
   }, [setDtBaseData]);
   // console.log("[APP]-dtBaseData :", dtBaseData);
   
 
+  
   // ! 아래는 database로부터 Event Data 가져오게하기
   const [eventBaseData, setEventDtBaseData] = useState('' || '')
   useEffect(() => {

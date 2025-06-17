@@ -289,8 +289,15 @@ export default function Filtering_V1() {
       setSearchValue('');
   };
 
-  function handleReset() {
-    window.location.reload();
+  async function handleReset() {
+    document.getElementById('productType').value = ''
+    document.getElementById('productModality').value = ''
+    document.getElementById('productCellLine').value = ''
+    document.getElementById('productFiltration').value = ''
+    document.getElementById('services').value = ''
+    document.getElementById('productManufacturer').value = ''
+    setSearchValue('');
+    document.getElementById('submit').click();
   }
 
 
