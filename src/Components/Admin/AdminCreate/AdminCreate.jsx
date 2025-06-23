@@ -80,26 +80,20 @@ export default function AdminCreate() {
   }
 
   // Product Modality
-  const [checkedValueLists, setCheckedValueLists] = useState([]);
-  const settingModalityProducts = (isChecked, checkedValue) => {
+  const settingModalityProducts = (isChecked, value) => {
     if(isChecked) {
-      setCheckedValueLists([...checkedValueLists, checkedValue])
-      setModalityProducts([...checkedValueLists, checkedValue])
+      setModalityProducts(prev => [...prev, value])
     }else {
-      setCheckedValueLists(checkedValueLists.filter((el) => el!==checkedValue));
-      setModalityProducts(checkedValueLists.filter((el) => el!==checkedValue))
+      setModalityProducts(prev => prev.filter((el) => el !== value))
     }
   };
 
   // Application Filtration
-  const [filterProduct, setFilterProduct] = useState([]);
-  const settingFilterProducts = (isChecked, checkedValue) => {
+  const settingFilterProducts = (isChecked, value) => {
     if(isChecked) {
-      setFilterProduct([...filterProduct, checkedValue])
-      setProductFiltration([...filterProduct, checkedValue])
+      setProductFiltration(prev => [...prev, value])
     }else {
-      setFilterProduct(filterProduct.filter((el) => el!==checkedValue));
-      setProductFiltration(filterProduct.filter((el) => el!==checkedValue))
+      setProductFiltration(prev => prev.filter((el) => el!==value))
     }
   }
 
@@ -170,21 +164,13 @@ export default function AdminCreate() {
   }
 
   // Application Cell Line
-  const [cellLine, setCellLine] = useState([]);
-  const settingCellLine = (isChecked, checkedValue) => {
+  const settingCellLine = (isChecked, value) => {
     if(isChecked) {
-      setCellLine([...cellLine, checkedValue])
-      setProductCellLine([...cellLine, checkedValue])
+      setProductCellLine(prev => [...prev, value])
     }else {
-      setCellLine(cellLine.filter((el) => el!==checkedValue));
-      setProductCellLine(cellLine.filter((el) => el!==checkedValue))
+      setProductCellLine(prev => prev.filter((el) => el!==value))
     }
   }
-
-
-
-
-
 
   const navigate = useNavigate();
   // const config = {"Content-Type": 'application/json'}

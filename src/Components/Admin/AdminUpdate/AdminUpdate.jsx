@@ -74,7 +74,7 @@ export default function AdminUpdate() {
       console.log(res.data[0])
       setValues({
         ...values,
-        PName: res.data[0].ProductName || null,
+        PName: res.data[0].ProductName,
         PMainImage: res.data[0].ProductMainImage,
         PMainTitle: res.data[0].ProductMainTitle,
         PType: res.data[0].ProductType,
@@ -110,9 +110,11 @@ export default function AdminUpdate() {
   },[]);
 
 
-  useEffect(() => {
-    isModalityChecked()
-  },[values]);
+
+
+
+
+
 
 
 
@@ -135,36 +137,33 @@ export default function AdminUpdate() {
 
   // Modality
   // ! Modality, Filtration, CellLine과 같이 checkbox 인 것들 어떻게 formData로 넘겼는지 중요!
-  const [checkedValueLists, setCheckedValueLists] = useState([]);
-  function settingModalityProducts(isChecked, checkedValue) {
+  function settingModalityProducts(isChecked, value) {
     if(isChecked) {  // 체크가 될 때
-      setCheckedValueLists([...checkedValueLists, checkedValue])
+      setSelectedModality(prev => [...prev, value])
     }else {  // 체크가 해제될 때
-      setCheckedValueLists(checkedValueLists.filter((el) => el!==checkedValue))
+      setSelectedModality(prev => prev.filter((el) => el!==value))
     }
   };
   // console.log("modalityChecked :",checkedValueLists);
 
 
   // Filtration
-  const [productFiltration, setProductFiltration] = useState([]);
-  function settingFilterProducts(isChecked, checkedValue) {
+  function settingFilterProducts(isChecked, value) {
     if(isChecked) {
-      setProductFiltration([...productFiltration, checkedValue])
+      setProductFiltration(prev => [...prev, value])
     }else {
-      setProductFiltration(productFiltration.filter((el) => el!==checkedValue))
+      setProductFiltration(prev => prev.filter((el) => el!==value))
     }
   }
   // console.log("productFiltration :", productFiltration);
 
 
   // CellLine
-  const [productCellLine, setProductCellLine] = useState([]);
-  function settingCellLine(isChecked, checkedValue) {
+  function settingCellLine(isChecked, value) {
     if(isChecked) {
-      setProductCellLine([...productCellLine, checkedValue])
+      setProductCellLine(prev => [...prev, value])
     }else {
-      setProductCellLine(productCellLine.filter((el) => el!==checkedValue))
+      setProductCellLine(prev => prev.filter((el) => el!==value))
     }
   }
   // console.log("productCellLine :", productCellLine);
@@ -257,72 +256,32 @@ export default function AdminUpdate() {
 
 
 
-  // ! 04 : Checkbox일 경우 읽은 후 화면에 표시하기 위하여 아래 진행 필요
-  // 아래의 Funtion들은 Checkbox / Radio Box 에 대하여 Database로부터 가져온 data를 바탕으로 어떤 것이 체크되었는지 확인하고 web에 표현하는 부분이다. : START
-  // 아래의 Funtion들은 Checkbox / Radio Box 에 대하여 Database로부터 가져온 data를 바탕으로 어떤 것이 체크되었는지 확인하고 web에 표현하는 부분이다. : START
-  const [ modalityChecked, setModalityChecked] = useState([])
-  function isModalityChecked() {
-    let modalityChecked = document.querySelectorAll(".Edit_ModalityProducts_Container_Box_Small_Input");
-    // console.log("================================modalityChecked :", modalityChecked);
-    let valueOfModalityProducts = values.modalityProducts;
-    // console.log("================================valueOfModalityProducts :", valueOfModalityProducts);
-    let modalityIsChecked = valueOfModalityProducts?.split(',');
-    // console.log("================================modalityIsChecked :", modalityIsChecked);
-    for(let i = 0; i < modalityChecked.length; i++) {
-      if(modalityIsChecked?.includes(modalityChecked[i].value)) {
-        // console.log("================================modalityIsChecked.includes(modalityChecked[i].value :", valueOfModalityProducts.includes(modalityChecked[i].value));
-        // console.log("================================modalityChecked[i].value :", modalityChecked[i].value);
-        modalityChecked[i].checked = true;
-      }
+  const [selectedModality,setSelectedModality] = useState([]);
+  useEffect(() => {
+    if (values.modalityProducts){
+      setSelectedModality(values.modalityProducts.split(',').map(item => item.trim()))
     }
-    setCheckedValueLists(modalityIsChecked);
-    isCellLineChecked();
-    isFiltrationChecked();
-    isAdvertiseChecked();
-  }
+  },[values.modalityProducts, values.PFiltration, values.PCellLine]);
 
 
-  function isFiltrationChecked() {
-    let filtrationChecked = document.querySelectorAll(".Edit_ApplicationFilterProducts_Container_Box_Small_Input");
-    // console.log("================================filtrationChecked :", filtrationChecked);
-    let valueOfPFiltration = values.PFiltration;
-    // console.log("================================valueOfPFiltration :", valueOfPFiltration);
-    // 아래에 valueOfPFiltration에 ?를 붙여준 이유는 이 곳에 data가 없을 수 있기 때문이다. ?를 붙임으로써 없는 것에 대한 대응을 할 수 있다.
-    let filtrationIsChecked = valueOfPFiltration?.split(',');
-    // console.log("================================filtrationIsChecked :", filtrationIsChecked);
-    for(let i = 0; i < filtrationChecked.length; i++) {
-      if(filtrationIsChecked?.includes(filtrationChecked[i].value)) {
-        // console.log("================================filtrationIsChecked.includes(filtrationChecked[i].value) :", filtrationIsChecked.includes(filtrationChecked[i].value));
-        // console.log("================================filtrationChecked[i].value :", filtrationChecked[i].value);
-        filtrationChecked[i].checked = true;
-      }
+  const [productFiltration,setProductFiltration] = useState([]);
+  useEffect(() => {
+    if (values.PFiltration){
+      setProductFiltration(values.PFiltration.split(',').map(item => item.trim()))
     }
-    setProductFiltration(filtrationIsChecked);
-  }
+  },[values.modalityProducts, values.PFiltration, values.PCellLine]);
 
 
-  function isCellLineChecked() {
-    // Cell Line
-    // 01. 자! 먼저 Product Cell Line의 모든 input box를 모두 가져온다!!
-    let cellLineChecked = document.querySelectorAll(".Edit_ApplicationCellLine_Container_Box_Small_Input");
-    // console.log("================================cellLineChecked :", cellLineChecked);
-    // 02. 선택한 제품에서 이미 선택된 value값을 모두 가져온다. 배열은 아니네
-    let valueOfPCellLine = values.PCellLine;
-    // console.log("================================valueOfPCellLine :", valueOfPCellLine);
-    // 아래에 valueOfPFiltration에 ?를 붙여준 이유는 이 곳에 data가 없을 수 있기 때문이다. ?를 붙임으로써 없는 것에 대한 대응을 할 수 있다.
-    // 03. 하나씩 분리하여 배열을 만든다. 
-    let cellLineIsChecked = valueOfPCellLine?.split(',');
-    // console.log("================================cellLineIsChecked :", cellLineIsChecked);
-    // 04. 배열의 각 index를 순회하며 각각의 item에 checked 표시를 한다.
-    for(let i = 0; i < cellLineChecked.length; i++) {
-      if(cellLineIsChecked?.includes(cellLineChecked[i].value)){
-        // console.log("================================cellLineIsChecked.includes(cellLineChecked[i].value) :", cellLineIsChecked.includes(cellLineChecked[i].value));
-        // console.log("================================cellLineChecked[i].value :", cellLineChecked[i].value);
-        cellLineChecked[i].checked = true;
-      }
+  const [productCellLine,setProductCellLine] = useState([]);
+  useEffect(() => {
+    if (values.PCellLine){
+      setProductCellLine(values.PCellLine.split(',').map(item => item.trim()))
     }
-    setProductCellLine(cellLineIsChecked);
-  }
+  },[values.modalityProducts, values.PFiltration, values.PCellLine]);
+
+
+
+
 
   function isAdvertiseChecked() {
     let advertiseChecked = document.querySelector('.AdvertiseDo_Container_Box_Small_Input');
@@ -345,37 +304,37 @@ export default function AdminUpdate() {
     e.preventDefault();
     const formData = new FormData();
     
-    formData.append('PName', values.PName || '');
-    formData.append('PMainImage', values.PMainImage || '');
-    formData.append('PMainTitle', values.PMainTitle || '');
-    formData.append('PType', values.PType || '');
-    formData.append('PModality', checkedValueLists || '');
-    formData.append('PFiltration', productFiltration || '');
-    formData.append('PCellLine', productCellLine || '');
+    formData.append('PName', values.PName);
+    formData.append('PMainImage', values.PMainImage);
+    formData.append('PMainTitle', values.PMainTitle);
+    formData.append('PType', values.PType);
+    formData.append('PModality', selectedModality);
+    formData.append('PFiltration', productFiltration);
+    formData.append('PCellLine', productCellLine);
     formData.append('PManufacturer', values.PManufacturer);
-    formData.append('PFileA1', values.PFileA1 || '');
-    formData.append('PTitleA2', values.PTitleA2 || '');
+    formData.append('PFileA1', values.PFileA1);
+    formData.append('PTitleA2', values.PTitleA2);
     formData.append('PDescriptionA3', values.PDescriptionA3);
-    formData.append('PFileB1', values.PFileB1 || '');
-    formData.append('PTitleB2', values.PTitleB2 || '');
+    formData.append('PFileB1', values.PFileB1);
+    formData.append('PTitleB2', values.PTitleB2);
     formData.append('PDescriptionB3', values.PDescriptionB3);
-    formData.append('PFileC1', values.PFileC1 || '');
-    formData.append('PTitleC2', values.PTitleC2 || '');
+    formData.append('PFileC1', values.PFileC1);
+    formData.append('PTitleC2', values.PTitleC2);
     formData.append('PDescriptionC3', values.PDescriptionC3);
-    formData.append('PFileD1', values.PFileD1 || '');
-    formData.append('PTitleD2', values.PTitleD2 || '');
+    formData.append('PFileD1', values.PFileD1);
+    formData.append('PTitleD2', values.PTitleD2);
     formData.append('PDescriptionD3', values.PDescriptionD3);
-    formData.append('PFileE1', values.PFileE1 || '');
-    formData.append('PTitleE2', values.PTitleE2 || '');
-    formData.append('PDescriptionE3', values.PDescriptionE3 || '');
-    formData.append('SName', values.SName || '');
-    formData.append('SPosition', values.SPosition || '');
-    formData.append('SPhone', values.SPhone || '');
-    formData.append('PRelated', values.PRelated || '');
+    formData.append('PFileE1', values.PFileE1);
+    formData.append('PTitleE2', values.PTitleE2);
+    formData.append('PDescriptionE3', values.PDescriptionE3);
+    formData.append('SName', values.SName);
+    formData.append('SPosition', values.SPosition);
+    formData.append('SPhone', values.SPhone);
+    formData.append('PRelated', values.PRelated);
     // 광고
     formData.append('AdDo', trueFalse);
-    formData.append('AdText', values.AdText || '');
-    formData.append('PService', values.PService || '');
+    formData.append('AdText', values.AdText);
+    formData.append('PService', values.PService);
     
     console.log("formData :", formData);
 
@@ -388,6 +347,9 @@ export default function AdminUpdate() {
     .catch(err => console.log(err))
   }
 
+  useEffect(() => {
+    console.log('Hello')
+  },[values])
 
   // ! Return에 적절한 곳에 추가 (AdminCreate와 같은 구조!)
   return (
@@ -457,7 +419,13 @@ export default function AdminUpdate() {
               {jsonData01.Modality.map((modality, index) => {
                   return (
                     <div className='Edit_ModalityProducts_Container_Box_Small' key={modality.ID}>
-                      <input className='Edit_ModalityProducts_Container_Box_Small_Input' id={'Edit_'+modality.Value} type="checkbox" name="Edit_ModalityProducts" value={modality.Value} onChange={e => settingModalityProducts(e.target.checked, e.target.value)}/>
+                      <input className='Edit_ModalityProducts_Container_Box_Small_Input' 
+                        id={'Edit_'+modality.Value} 
+                        type="checkbox" 
+                        name="Edit_ModalityProducts" 
+                        value={modality.Value}
+                        checked={selectedModality.includes(`${modality.Value}`)}
+                        onChange={e => settingModalityProducts(e.target.checked, e.target.value)}/>
                       <label className='Edit_ModalityProducts_Container_Box_Small_Label' htmlFor={'Edit_'+modality.Value}>{modality.Title}</label>
                     </div>
                   )
@@ -475,7 +443,13 @@ export default function AdminUpdate() {
               {jsonData01.Filtration.map((filtration, index) => {
                 return (
                   <div className='Edit_ApplicationFilterProducts_Container_Box_Small' key={filtration.ID}>
-                    <input className='Edit_ApplicationFilterProducts_Container_Box_Small_Input' id={'Edit_'+filtration.Value} type="checkbox" name="Edit_FilterProduct" value={filtration.Value} onChange={e => settingFilterProducts(e.target.checked, e.target.value)}/>
+                    <input className='Edit_ApplicationFilterProducts_Container_Box_Small_Input' 
+                      id={'Edit_'+filtration.Value} 
+                      type="checkbox" 
+                      name="Edit_FilterProduct" 
+                      value={filtration.Value} 
+                      checked={productFiltration.includes(`${filtration.Value}`)}
+                      onChange={e => settingFilterProducts(e.target.checked, e.target.value)}/>
                     <label className='Edit_ApplicationFilterProducts_Container_Box_Small_Label' htmlFor={'Edit_'+filtration.Value}>{filtration.Title}</label>
                   </div>
                 )
@@ -492,7 +466,13 @@ export default function AdminUpdate() {
               {jsonData01.ApplicationCellLine.map((cellLine, index) => {
                 return (
                   <div className='Edit_ApplicationCellLine_Container_Box_Small' key={cellLine.ID}>
-                    <input className='Edit_ApplicationCellLine_Container_Box_Small_Input' name="Edit_ApplicationCellLine" id={cellLine.Value} type="checkbox" value={cellLine.Value} onChange={e => settingCellLine(e.target.checked, e.target.value)}/>
+                    <input className='Edit_ApplicationCellLine_Container_Box_Small_Input' 
+                      name="Edit_ApplicationCellLine" 
+                      id={cellLine.Value} 
+                      type="checkbox" 
+                      value={cellLine.Value} 
+                      checked={productCellLine.includes(`${cellLine.Value}`)}
+                      onChange={e => settingCellLine(e.target.checked, e.target.value)}/>
                     <label className='Edit_ApplicationCellLine_Container_Box_Small_Label' htmlFor={cellLine.Value}>{cellLine.Title}</label>
                   </div>
                 )
